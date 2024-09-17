@@ -1,0 +1,11 @@
+C:\Users\Omar\source\ejemplos\_udemy\blazor\BlazorPeliculas\Shared\bin\Debug\net7.0\BlazorPeliculas.Shared.deps.json
+C:\Users\Omar\source\ejemplos\_udemy\blazor\BlazorPeliculas\Shared\bin\Debug\net7.0\BlazorPeliculas.Shared.dll
+C:\Users\Omar\source\ejemplos\_udemy\blazor\BlazorPeliculas\Shared\bin\Debug\net7.0\BlazorPeliculas.Shared.pdb
+C:\Users\Omar\source\ejemplos\_udemy\blazor\BlazorPeliculas\Shared\obj\Debug\net7.0\BlazorPeliculas.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Omar\source\ejemplos\_udemy\blazor\BlazorPeliculas\Shared\obj\Debug\net7.0\BlazorPeliculas.Shared.AssemblyInfoInputs.cache
+C:\Users\Omar\source\ejemplos\_udemy\blazor\BlazorPeliculas\Shared\obj\Debug\net7.0\BlazorPeliculas.Shared.AssemblyInfo.cs
+C:\Users\Omar\source\ejemplos\_udemy\blazor\BlazorPeliculas\Shared\obj\Debug\net7.0\BlazorPeliculas.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Omar\source\ejemplos\_udemy\blazor\BlazorPeliculas\Shared\obj\Debug\net7.0\BlazorPeliculas.Shared.dll
+C:\Users\Omar\source\ejemplos\_udemy\blazor\BlazorPeliculas\Shared\obj\Debug\net7.0\refint\BlazorPeliculas.Shared.dll
+C:\Users\Omar\source\ejemplos\_udemy\blazor\BlazorPeliculas\Shared\obj\Debug\net7.0\BlazorPeliculas.Shared.pdb
+C:\Users\Omar\source\ejemplos\_udemy\blazor\BlazorPeliculas\Shared\obj\Debug\net7.0\ref\BlazorPeliculas.Shared.dll
