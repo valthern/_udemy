@@ -9,3 +9,4 @@ C:\Users\Omar\source\ejemplos\_udemy\blazor\BlazorPeliculas\Shared\obj\Debug\net
 C:\Users\Omar\source\ejemplos\_udemy\blazor\BlazorPeliculas\Shared\obj\Debug\net7.0\refint\BlazorPeliculas.Shared.dll
 C:\Users\Omar\source\ejemplos\_udemy\blazor\BlazorPeliculas\Shared\obj\Debug\net7.0\BlazorPeliculas.Shared.pdb
 C:\Users\Omar\source\ejemplos\_udemy\blazor\BlazorPeliculas\Shared\obj\Debug\net7.0\ref\BlazorPeliculas.Shared.dll
+C:\Users\Omar\source\ejemplos\_udemy\blazor\BlazorPeliculas\Shared\obj\Debug\net7.0\BlazorPeliculas.Shared.sourcelink.json

@@ -833,3 +833,4 @@ C:\Users\Omar\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net
 C:\Users\Omar\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\refint\BlazorPeliculas.Client.dll
 C:\Users\Omar\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\BlazorPeliculas.Client.pdb
 C:\Users\Omar\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\ref\BlazorPeliculas.Client.dll
+C:\Users\Omar\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\BlazorPeliculas.Client.sourcelink.json

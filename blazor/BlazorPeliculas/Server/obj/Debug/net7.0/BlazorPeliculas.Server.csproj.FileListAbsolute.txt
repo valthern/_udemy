@@ -53,3 +53,4 @@ C:\Users\Omar\source\ejemplos\_udemy\blazor\BlazorPeliculas\Server\obj\Debug\net
 C:\Users\Omar\source\ejemplos\_udemy\blazor\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.pdb
 C:\Users\Omar\source\ejemplos\_udemy\blazor\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.genruntimeconfig.cache
 C:\Users\Omar\source\ejemplos\_udemy\blazor\BlazorPeliculas\Server\obj\Debug\net7.0\ref\BlazorPeliculas.Server.dll
+C:\Users\Omar\source\ejemplos\_udemy\blazor\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.sourcelink.json
