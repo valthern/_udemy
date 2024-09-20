@@ -2,39 +2,6 @@
 
 <div>
     <h3>Películas</h3>
-    <h4>Ejemplo foreach</h4>
-    @if(Peliculas is null)
-    {
-        <img alt="cargando..." src="https://www.superiorlawncareusa.com/wp-content/uploads/2020/05/loading-gif-png-5.gif" width="100px" />
-    }
-    else if (Peliculas.Count == 0)
-    {
-        <p>No hay películas para mostrar.</p>
-    }
-    else
-    {
-        @foreach(var pelicula in ObtenerPeliculas())
-        {
-            <div>
-                <p>Titulo: <b>@pelicula.Titulo</b>
-                    @if(DateTime.Today.Subtract(pelicula.FechaLanzamiento).Days<=14)
-                    {
-                        <span style="color: red;">(NUEVO!)</span>
-                    }
-                </p>
-                <p>Fecha de lanzamiento: <b>@pelicula.FechaLanzamiento.ToString("dd MM yyyy")</b></p>
-            </div>
-        }
-    }
-
-    @* <h4>Ejemplo for</h4>
-    @for(int i=0; i < Peliculas.Count; i++)
-    {
-        <div>
-            <p>@(i + 1).- Titulo: <b>@Peliculas[i].Titulo</b></p>
-            <p>Fecha de lanzamiento: <b>@Peliculas[i].FechaLanzamiento.ToString("dd MM yyyy")</b></p>
-        </div>
-    } *@
 </div>
 
 @code {
@@ -46,8 +13,8 @@
     protected override async Task OnInitializedAsync()
     {
         await Task.Delay(3000);
-        //Peliculas = ObtenerPeliculas();
-        Peliculas = new List<Pelicula>();
+        Peliculas = ObtenerPeliculas();
+        @* Peliculas = new List<Pelicula>(); *@
     }
 
     Pelicula ObtenerPelicula()
@@ -63,8 +30,8 @@
     {
         return new List<Pelicula>()
         {
-            new Pelicula{Titulo="Wakanda Forever", FechaLanzamiento=new DateTime(2024,9,18)},
-            new Pelicula{Titulo="Moana", FechaLanzamiento=new DateTime(2016,11,23)},
+            new Pelicula{Titulo="<b>Wakanda Forever</b>", FechaLanzamiento=new DateTime(2024,9,18)},
+            new Pelicula{Titulo="<i>Moana</i>", FechaLanzamiento=new DateTime(2016,11,23)},
             new Pelicula{Titulo="Inception", FechaLanzamiento=new DateTime(2010,7,16)},
         };
     }
