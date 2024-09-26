@@ -2,42 +2,9 @@
 
 <div>
     <h3>Películas</h3>
+    <ListadoPeliculas />
 </div>
 
 @code {
-    string nombre = "Eusebio";
 
-    Pelicula WakandaForever { get => ObtenerPelicula(); }
-    List<Pelicula>? Peliculas { get; set; }
-
-    protected override async Task OnInitializedAsync()
-    {
-        await Task.Delay(3000);
-        Peliculas = ObtenerPeliculas();
-        @* Peliculas = new List<Pelicula>(); *@
-    }
-
-    Pelicula ObtenerPelicula()
-    {
-        return new Pelicula
-        {
-            Titulo = "Wakanda Forever",
-            FechaLanzamiento = new DateTime(2022, 11, 11)
-        };
-    }
-
-    List<Pelicula> ObtenerPeliculas()
-    {
-        return new List<Pelicula>()
-        {
-            new Pelicula{Titulo="<b>Wakanda Forever</b>", FechaLanzamiento=new DateTime(2024,9,18)},
-            new Pelicula{Titulo="<i>Moana</i>", FechaLanzamiento=new DateTime(2016,11,23)},
-            new Pelicula{Titulo="Inception", FechaLanzamiento=new DateTime(2010,7,16)},
-        };
-    }
-
-    void ManejarClickBoton()
-    {
-        Console.WriteLine("¡Que me han crickeaO desde una función! ¡Y olE!");
-    }
 }

@@ -1,27 +1,48 @@
-@if(Peliculas is null)
+@if (Peliculas is null)
+{
+    <img alt="cargando..." 
+        src="https://www.superiorlawncareusa.com/wp-content/uploads/2020/05/loading-gif-png-5.gif" 
+        width="100px" />
+}
+else if (Peliculas.Count == 0)
+{
+    <p>No hay películas para mostrar.</p>
+}
+else
+{
+    @foreach (var pelicula in ObtenerPeliculas())
     {
-        <img alt="cargando..." src="https://www.superiorlawncareusa.com/wp-content/uploads/2020/05/loading-gif-png-5.gif" width="100px" />
+        <div>
+            <p>
+                Titulo: @pelicula.Titulo
+                
+                @if (DateTime.Today.Subtract(pelicula.FechaLanzamiento).Days <= 14)
+                {
+                    <span style="color: red;">(¡NUEVO!)</span>
+                }
+            </p>
+            <p>Fecha de lanzamiento: <b>@pelicula.FechaLanzamiento.ToString("dd MMM yyyy")</b></p>
+        </div>
     }
-    else if (Peliculas.Count == 0)
-    {
-        <p>No hay películas para mostrar.</p>
-    }
-    else
-    {
-        @foreach(var pelicula in ObtenerPeliculas())
-        {
-            <div>
-                <p>Titulo: @((MarkupString)pelicula.Titulo)
-                    @if(DateTime.Today.Subtract(pelicula.FechaLanzamiento).Days<=14)
-                    {
-                        <span style="color: red;">(NUEVO!)</span>
-                    }
-                </p>
-                <p>Fecha de lanzamiento: <b>@pelicula.FechaLanzamiento.ToString("dd MM yyyy")</b></p>
-            </div>
-        }
-    }
+}
 
 @code {
+    public List<Pelicula>? Peliculas { get; set; }
 
+    protected override async Task OnInitializedAsync()
+    {
+        await Task.Delay(1);
+        Peliculas = ObtenerPeliculas();
+        // Peliculas = new List<Pelicula>();
+    }
+
+    List<Pelicula> ObtenerPeliculas()
+    {
+        return new List<Pelicula>()
+        {
+            new Pelicula{Titulo="Wakanda Forever", FechaLanzamiento=new DateTime(2024,9,18)},
+            new Pelicula{Titulo="Moana", FechaLanzamiento=new DateTime(2016,11,23)},
+            new Pelicula{Titulo="Inception", FechaLanzamiento=new DateTime(2010,7,16)},
+        };
+    }
 }
