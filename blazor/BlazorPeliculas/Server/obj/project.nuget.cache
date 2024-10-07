@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+xBJc4c5bYc=",
+  "dgSpecHash": "Wx/u0QSS7VM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Omar\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\Server\\BlazorPeliculas.Server.csproj",
+  "projectFilePath": "C:\\Users\\Omar\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\server\\BlazorPeliculas.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Omar\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.20\\microsoft.aspnetcore.authorization.7.0.20.nupkg.sha512",
     "C:\\Users\\Omar\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.20\\microsoft.aspnetcore.components.7.0.20.nupkg.sha512",

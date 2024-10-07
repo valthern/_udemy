@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Omar\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\Server\\BlazorPeliculas.Server.csproj": {}
+    "C:\\Users\\Omar\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\server\\BlazorPeliculas.Server.csproj": {}
   },
   "projects": {
     "C:\\Users\\Omar\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\Client\\BlazorPeliculas.Client.csproj": {
@@ -106,14 +106,14 @@
         }
       }
     },
-    "C:\\Users\\Omar\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\Server\\BlazorPeliculas.Server.csproj": {
+    "C:\\Users\\Omar\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\server\\BlazorPeliculas.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Omar\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\Server\\BlazorPeliculas.Server.csproj",
+        "projectUniqueName": "C:\\Users\\Omar\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\server\\BlazorPeliculas.Server.csproj",
         "projectName": "BlazorPeliculas.Server",
-        "projectPath": "C:\\Users\\Omar\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\Server\\BlazorPeliculas.Server.csproj",
+        "projectPath": "C:\\Users\\Omar\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\server\\BlazorPeliculas.Server.csproj",
         "packagesPath": "C:\\Users\\Omar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Omar\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\Server\\obj\\",
+        "outputPath": "C:\\Users\\Omar\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
