@@ -12,9 +12,15 @@
 </div>
 
 @code {
-    List<Pelicula> ObtenerPeliculas()
+    private Dictionary<string, object> EjemploTextboxParametros = new Dictionary<string, object>
     {
-        return new List<Pelicula>()
+        {"placeholder", "nuevo placeholder 2"},
+        {"disabled", "true"}
+    };
+
+    private List<Pelicula> ObtenerPeliculas()
+    {
+        return new List<Pelicula>
         {
             new Pelicula{Titulo="Wakanda Forever", FechaLanzamiento=new DateTime(2024,9,18)},
             new Pelicula{Titulo="Moana", FechaLanzamiento=new DateTime(2016,11,23)},

@@ -8,10 +8,23 @@
         }
     </p>
     <p>Fecha de lanzamiento: <b>@Pelicula.FechaLanzamiento.ToString("dd MMM yyyy")</b></p>
+    @if (MostrarBotones)
+    {
+        <div>
+            <button @onclick="Eliminar">Borrar</button>
+        </div>
+    }
 </div>
 
 @code {
     [Parameter]
     [EditorRequired]
     public Pelicula Pelicula { get; set; } = null!;
+    [Parameter]
+    public bool MostrarBotones { get; set; } = false;
+
+    void Eliminar()
+    {
+        Console.WriteLine($"Eliminando la película {Pelicula.Titulo}");
+    }
 }
