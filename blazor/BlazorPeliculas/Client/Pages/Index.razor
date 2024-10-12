@@ -1,6 +1,6 @@
 ﻿@page "/"
 
-<div>
+@* <div>
     <h3>Películas</h3>
     <ListadoPeliculas Peliculas="ObtenerPeliculas()" />
 </div>
@@ -9,7 +9,9 @@
     <h2>Crear una nueva película</h2>
 
     <EjemploTextbox />
-</div>
+</div> *@
+
+<BindGetSetDemo />
 
 @code {
     private Dictionary<string, object> EjemploTextboxParametros = new Dictionary<string, object>
