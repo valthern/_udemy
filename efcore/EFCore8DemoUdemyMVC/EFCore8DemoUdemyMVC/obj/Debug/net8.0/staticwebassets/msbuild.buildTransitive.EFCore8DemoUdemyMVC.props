@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\EFCore8DemoUdemyMVC.props" />
+</Project>

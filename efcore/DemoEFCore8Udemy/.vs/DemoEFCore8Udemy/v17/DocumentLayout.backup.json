@@ -1,0 +1,103 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Omar\\source\\ejemplos\\_udemy\\efcore\\DemoEFCore8Udemy\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{26B58ACE-125A-48D6-AD1B-3E4035B7960B}|DemoEFCore8Udemy\\DemoEFCore8Udemy.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\efcore\\demoefcore8udemy\\demoefcore8udemy\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26B58ACE-125A-48D6-AD1B-3E4035B7960B}|DemoEFCore8Udemy\\DemoEFCore8Udemy.csproj|solutionrelative:demoefcore8udemy\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26B58ACE-125A-48D6-AD1B-3E4035B7960B}|DemoEFCore8Udemy\\DemoEFCore8Udemy.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\efcore\\demoefcore8udemy\\demoefcore8udemy\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26B58ACE-125A-48D6-AD1B-3E4035B7960B}|DemoEFCore8Udemy\\DemoEFCore8Udemy.csproj|solutionrelative:demoefcore8udemy\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26B58ACE-125A-48D6-AD1B-3E4035B7960B}|DemoEFCore8Udemy\\DemoEFCore8Udemy.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\efcore\\demoefcore8udemy\\demoefcore8udemy\\migrations\\20241016041548_inicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26B58ACE-125A-48D6-AD1B-3E4035B7960B}|DemoEFCore8Udemy\\DemoEFCore8Udemy.csproj|solutionrelative:demoefcore8udemy\\migrations\\20241016041548_inicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26B58ACE-125A-48D6-AD1B-3E4035B7960B}|DemoEFCore8Udemy\\DemoEFCore8Udemy.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\efcore\\demoefcore8udemy\\demoefcore8udemy\\demoefcore8udemy.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{26B58ACE-125A-48D6-AD1B-3E4035B7960B}|DemoEFCore8Udemy\\DemoEFCore8Udemy.csproj|solutionrelative:demoefcore8udemy\\demoefcore8udemy.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26B58ACE-125A-48D6-AD1B-3E4035B7960B}|DemoEFCore8Udemy\\DemoEFCore8Udemy.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\efcore\\demoefcore8udemy\\demoefcore8udemy\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26B58ACE-125A-48D6-AD1B-3E4035B7960B}|DemoEFCore8Udemy\\DemoEFCore8Udemy.csproj|solutionrelative:demoefcore8udemy\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20241016041548_Inicial.cs",
+              "DocumentMoniker": "C:\\Users\\Omar\\source\\ejemplos\\_udemy\\efcore\\DemoEFCore8Udemy\\DemoEFCore8Udemy\\Migrations\\20241016041548_Inicial.cs",
+              "RelativeDocumentMoniker": "DemoEFCore8Udemy\\Migrations\\20241016041548_Inicial.cs",
+              "ToolTip": "C:\\Users\\Omar\\source\\ejemplos\\_udemy\\efcore\\DemoEFCore8Udemy\\DemoEFCore8Udemy\\Migrations\\20241016041548_Inicial.cs",
+              "RelativeToolTip": "DemoEFCore8Udemy\\Migrations\\20241016041548_Inicial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T04:15:49.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Persona.cs",
+              "DocumentMoniker": "C:\\Users\\Omar\\source\\ejemplos\\_udemy\\efcore\\DemoEFCore8Udemy\\DemoEFCore8Udemy\\Persona.cs",
+              "RelativeDocumentMoniker": "DemoEFCore8Udemy\\Persona.cs",
+              "ToolTip": "C:\\Users\\Omar\\source\\ejemplos\\_udemy\\efcore\\DemoEFCore8Udemy\\DemoEFCore8Udemy\\Persona.cs",
+              "RelativeToolTip": "DemoEFCore8Udemy\\Persona.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T04:07:36.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Omar\\source\\ejemplos\\_udemy\\efcore\\DemoEFCore8Udemy\\DemoEFCore8Udemy\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "DemoEFCore8Udemy\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Omar\\source\\ejemplos\\_udemy\\efcore\\DemoEFCore8Udemy\\DemoEFCore8Udemy\\ApplicationDbContext.cs",
+              "RelativeToolTip": "DemoEFCore8Udemy\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T03:56:39.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DemoEFCore8Udemy.csproj",
+              "DocumentMoniker": "C:\\Users\\Omar\\source\\ejemplos\\_udemy\\efcore\\DemoEFCore8Udemy\\DemoEFCore8Udemy\\DemoEFCore8Udemy.csproj",
+              "RelativeDocumentMoniker": "DemoEFCore8Udemy\\DemoEFCore8Udemy.csproj",
+              "ToolTip": "C:\\Users\\Omar\\source\\ejemplos\\_udemy\\efcore\\DemoEFCore8Udemy\\DemoEFCore8Udemy\\DemoEFCore8Udemy.csproj",
+              "RelativeToolTip": "DemoEFCore8Udemy\\DemoEFCore8Udemy.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-16T03:55:35.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Omar\\source\\ejemplos\\_udemy\\efcore\\DemoEFCore8Udemy\\DemoEFCore8Udemy\\Program.cs",
+              "RelativeDocumentMoniker": "DemoEFCore8Udemy\\Program.cs",
+              "ToolTip": "C:\\Users\\Omar\\source\\ejemplos\\_udemy\\efcore\\DemoEFCore8Udemy\\DemoEFCore8Udemy\\Program.cs",
+              "RelativeToolTip": "DemoEFCore8Udemy\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T03:50:24.247Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
