@@ -5,22 +5,23 @@
 namespace EFCorePeliculas.Migrations
 {
     /// <inheritdoc />
-    public partial class Inicial : Migration
+    public partial class Cines : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Generos",
+                name: "Cines",
                 columns: table => new
                 {
-                    Identificador = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Nombre = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
+                    Precio = table.Column<decimal>(type: "decimal(9,2)", precision: 9, scale: 2, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Generos", x => x.Identificador);
+                    table.PrimaryKey("PK_Cines", x => x.Id);
                 });
         }
 
@@ -28,7 +29,7 @@ namespace EFCorePeliculas.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Generos");
+                name: "Cines");
         }
     }
 }
