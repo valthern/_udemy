@@ -34,8 +34,7 @@
               "RelativeToolTip": "EFCorePeliculas\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T23:43:11.777Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T23:43:11.777Z"
             },
             {
               "$type": "Document",
@@ -45,7 +44,7 @@
               "RelativeDocumentMoniker": "EFCorePeliculas\\Controllers\\GenerosController.cs",
               "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Controllers\\GenerosController.cs",
               "RelativeToolTip": "EFCorePeliculas\\Controllers\\GenerosController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAADwvzgAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-18T20:10:16.746Z",
               "EditorCaption": ""
@@ -60,8 +59,7 @@
               "RelativeToolTip": "EFCorePeliculas\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAxwBAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T16:24:13.165Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T16:24:13.165Z"
             }
           ]
         }
