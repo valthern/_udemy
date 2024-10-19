@@ -1,5 +1,8 @@
 ﻿using EFCorePeliculas.Entidades;
+using EFCorePeliculas.Entidades.Configuraciones;
+using EFCorePeliculas.Entidades.Seeding;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 namespace EFCorePeliculas
 {
@@ -7,37 +10,32 @@ namespace EFCorePeliculas
     {
         public ApplicationDbContext(DbContextOptions options) : base(options) { }
 
+        protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
+        {
+            configurationBuilder.Properties<DateTime>().HaveColumnType("date");
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Genero>().HasKey(g => g.Identificador);
-            modelBuilder.Entity<Genero>()
-                .Property(g => g.Nombre)
-                //.HasColumnName("NombreGenero")
-                .HasMaxLength(150)
-                .IsRequired();
-            //modelBuilder.Entity<Genero>().ToTable(name: "TablaGeneros", schema: "Peliculas");
-
-            modelBuilder.Entity<Actor>()
-                .Property(a => a.Name)
-                .HasMaxLength(150)
-                .IsRequired();
-            modelBuilder.Entity<Actor>()
-                .Property(a => a.FechaNacimiento)
-                .HasColumnType("date");
-
-            modelBuilder.Entity<Cine>()
-                .Property(c => c.Nombre)
-                .HasMaxLength(150)
-                .IsRequired();
-            modelBuilder.Entity<Cine>()
-                .Property(c => c.Precio)
-                .HasPrecision(precision: 9, scale: 2);
+            //modelBuilder.ApplyConfiguration(new GeneroConfig());
+            //modelBuilder.ApplyConfiguration(new ActorConfig());
+            //modelBuilder.ApplyConfiguration(new CineConfig());
+            //modelBuilder.ApplyConfiguration(new SalaDeCineConfig());
+            //modelBuilder.ApplyConfiguration(new PeliculaConfig());
+            //modelBuilder.ApplyConfiguration(new CineOfertaConfig());
+            //modelBuilder.ApplyConfiguration(new PeliculaActorConfig());
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+            SeedingModuloConsulta.Seed(modelBuilder);
         }
 
         public DbSet<Genero> Generos { get; set; }
-        public DbSet<Actor> Actors { get; set; }
+        public DbSet<Actor> Actores { get; set; }
         public DbSet<Cine> Cines { get; set; }
+        public DbSet<CineOferta> CinesOfertas { get; set; }
+        public DbSet<SalaDeCine> SalasDeCine { get; set; }
+        public DbSet<Pelicula> Peliculas { get; set; }
+        public DbSet<PeliculaActor> PeliculasActores { get; set; }
     }
 }

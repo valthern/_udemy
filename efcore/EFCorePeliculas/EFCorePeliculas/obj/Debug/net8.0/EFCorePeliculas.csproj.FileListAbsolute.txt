@@ -284,3 +284,7 @@ C:\Users\magno\source\ejemplos\_udemy\efcore\EFCorePeliculas\EFCorePeliculas\obj
 C:\Users\magno\source\ejemplos\_udemy\efcore\EFCorePeliculas\EFCorePeliculas\obj\Debug\net8.0\EFCorePe.F3A99D05.Up2Date
 C:\Users\magno\source\ejemplos\_udemy\efcore\EFCorePeliculas\EFCorePeliculas\obj\Debug\net8.0\EFCorePeliculas.genruntimeconfig.cache
 C:\Users\magno\source\ejemplos\_udemy\efcore\EFCorePeliculas\EFCorePeliculas\obj\Debug\net8.0\ref\EFCorePeliculas.dll
+C:\Users\magno\source\ejemplos\_udemy\efcore\EFCorePeliculas\EFCorePeliculas\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite.dll
+C:\Users\magno\source\ejemplos\_udemy\efcore\EFCorePeliculas\EFCorePeliculas\bin\Debug\net8.0\NetTopologySuite.dll
+C:\Users\magno\source\ejemplos\_udemy\efcore\EFCorePeliculas\EFCorePeliculas\bin\Debug\net8.0\NetTopologySuite.IO.SqlServerBytes.dll
+C:\Users\magno\source\ejemplos\_udemy\efcore\EFCorePeliculas\EFCorePeliculas\obj\Debug\net8.0\EFCoreSqlServerNetTopologySuite.cs

@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EFCorePeliculas.Entidades
 {
-    [Table("TablaGeneros", Schema = "peliculas")]
+    //[Table("TablaGeneros", Schema = "peliculas")]
     public class Genero
     {
         //[Key]
@@ -15,8 +15,9 @@ namespace EFCorePeliculas.Entidades
         //[StringLength(150)]
         //[MaxLength(150)]
         //[Required]
-        [Column("NombreGenero")]
+        //[Column("NombreGenero")]
         public string Nombre { get; set; }
+        public HashSet<Pelicula> Peliculas { get; set; }
     }
 }
  
