@@ -52,5 +52,38 @@ namespace EFCorePeliculas.Controllers
 
             return pelicula;
         }
+
+        [HttpGet("cargadoselectivo/{id:int}")]
+        public async Task<ActionResult> GetSelectivo(int id)
+        {
+            var pelicula = await context.Peliculas.Select(p =>
+            new
+            {
+                p.Id,
+                p.Titulo,
+                Generos = p.Generos.OrderByDescending(g => g.Nombre).Select(g => g.Nombre).ToList(),
+                CantidadActores = p.PeliculasActores.Count(),
+                CantidadCines = p.SalasDeCine.Select(sc => sc.CineId).Distinct().Count()
+            }).FirstOrDefaultAsync(p => p.Id == id);
+
+            if (pelicula is null) return NotFound();
+
+            return Ok(pelicula);
+        }
+
+        [HttpGet("cargadoexplicito/{id:int}")]
+        public async Task<ActionResult<PeliculaDTO>> GetExplicito(int id)
+        {
+            var pelicula = await context.Peliculas.AsTracking().FirstOrDefaultAsync(p => p.Id == id);
+
+            //await context.Entry(pelicula).Collection(p => p.Generos).LoadAsync();
+            var cantidadGeneros = await context.Entry(pelicula).Collection(p => p.Generos).Query().CountAsync();
+
+            if (pelicula is null) return NotFound();
+
+            var peliculaDTO = mapper.Map<PeliculaDTO>(pelicula);
+
+            return peliculaDTO;
+        }
     }
 }

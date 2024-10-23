@@ -206,6 +206,48 @@
   },
   {
     "ContainingType": "EFCorePeliculas.Controllers.PeliculasController",
+    "Method": "GetExplicito",
+    "RelativePath": "api/peliculas/cargadoexplicito/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "EFCorePeliculas.DTOs.PeliculaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EFCorePeliculas.Controllers.PeliculasController",
+    "Method": "GetSelectivo",
+    "RelativePath": "api/peliculas/cargadoselectivo/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EFCorePeliculas.Controllers.PeliculasController",
     "Method": "GetProjectTo",
     "RelativePath": "api/peliculas/conprojectto/{id}",
     "HttpMethod": "GET",
