@@ -290,3 +290,5 @@ C:\Users\magno\source\ejemplos\_udemy\efcore\EFCorePeliculas\EFCorePeliculas\bin
 C:\Users\magno\source\ejemplos\_udemy\efcore\EFCorePeliculas\EFCorePeliculas\obj\Debug\net8.0\EFCoreSqlServerNetTopologySuite.cs
 C:\Users\magno\source\ejemplos\_udemy\efcore\EFCorePeliculas\EFCorePeliculas\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\magno\source\ejemplos\_udemy\efcore\EFCorePeliculas\EFCorePeliculas\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\magno\source\ejemplos\_udemy\efcore\EFCorePeliculas\EFCorePeliculas\bin\Debug\net8.0\Castle.Core.dll
+C:\Users\magno\source\ejemplos\_udemy\efcore\EFCorePeliculas\EFCorePeliculas\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Proxies.dll

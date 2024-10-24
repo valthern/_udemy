@@ -31,33 +31,12 @@ namespace EFCorePeliculas.Controllers
             return genero;
         }
 
-        [HttpGet("primer")]
-        public async Task<ActionResult<Genero>> Primer()
+        [HttpPost]
+        public async Task<ActionResult> Post(Genero genero)
         {
-            var genero = await context.Generos.FirstOrDefaultAsync(g => g.Nombre.StartsWith("C"));
-
-            if (genero is null) return NotFound();
-
-            return genero;
-        }
-
-        [HttpGet("filtrar")]
-        public async Task<IEnumerable<Genero>> Filtrar(string nombre)
-        {
-            return await context.Generos
-                .Where(g => g.Nombre.Contains(nombre))
-                .ToListAsync();
-        }
-
-        [HttpGet("paginacion")]
-        public async Task<ActionResult<IEnumerable<Genero>>> Getpaginacion(int pagina = 1)
-        {
-            var cantidadRegistrosPorPagina = 2;
-            var generos = await context.Generos
-                .Skip((pagina-1)*cantidadRegistrosPorPagina)
-                .Take(cantidadRegistrosPorPagina)
-                .ToListAsync();
-            return generos;
+            context.Add(genero);
+            await context.SaveChangesAsync();
+            return Ok();
         }
     }
 }

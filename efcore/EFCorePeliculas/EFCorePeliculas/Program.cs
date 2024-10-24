@@ -15,6 +15,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(opciones =>
 {
     opciones.UseSqlServer(connectionString, sqlServer => sqlServer.UseNetTopologySuite());
     opciones.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+    //opciones.UseLazyLoadingProxies();
 });
 
 builder.Services.AddAutoMapper(typeof(Program));
@@ -25,7 +26,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(); 
 }
 
 app.UseHttpsRedirection();
