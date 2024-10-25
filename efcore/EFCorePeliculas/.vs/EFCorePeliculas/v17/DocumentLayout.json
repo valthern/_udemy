@@ -1,14 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\",
+  "WorkspaceRootPath": "C:\\Users\\Omar\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\efcore\\efcorepeliculas\\efcorepeliculas\\controllers\\peliculascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|solutionrelative:efcorepeliculas\\controllers\\peliculascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\efcore\\efcorepeliculas\\efcorepeliculas\\entidades\\pelicula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|solutionrelative:efcorepeliculas\\entidades\\pelicula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\efcore\\efcorepeliculas\\efcorepeliculas\\servicios\\automapperprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|solutionrelative:efcorepeliculas\\servicios\\automapperprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Pelicula.cs",
-              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Entidades\\Pelicula.cs",
-              "RelativeDocumentMoniker": "EFCorePeliculas\\Entidades\\Pelicula.cs",
-              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Entidades\\Pelicula.cs",
-              "RelativeToolTip": "EFCorePeliculas\\Entidades\\Pelicula.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T23:15:37.608Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PeliculasController.cs",
-              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Controllers\\PeliculasController.cs",
-              "RelativeDocumentMoniker": "EFCorePeliculas\\Controllers\\PeliculasController.cs",
-              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Controllers\\PeliculasController.cs",
-              "RelativeToolTip": "EFCorePeliculas\\Controllers\\PeliculasController.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAwwFEAAAAAAAAAAAAAAA==",
+              "Title": "AutoMapperProfiles.cs",
+              "DocumentMoniker": "C:\\Users\\Omar\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Servicios\\AutoMapperProfiles.cs",
+              "RelativeDocumentMoniker": "EFCorePeliculas\\Servicios\\AutoMapperProfiles.cs",
+              "ToolTip": "C:\\Users\\Omar\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Servicios\\AutoMapperProfiles.cs",
+              "RelativeToolTip": "EFCorePeliculas\\Servicios\\AutoMapperProfiles.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAgwCoAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T22:53:55.088Z",
+              "WhenOpened": "2024-10-25T04:52:18.153Z",
               "EditorCaption": ""
             }
           ]
