@@ -34,7 +34,18 @@ namespace EFCorePeliculas.Controllers
         [HttpPost]
         public async Task<ActionResult> Post(Genero genero)
         {
+            var estatus1=context.Entry(genero).State;
             context.Add(genero);
+            var estatus2=context.Entry(genero).State;
+            await context.SaveChangesAsync();
+            var estatus3=context.Entry(genero).State;
+            return Ok();
+        }
+
+        [HttpPost("varios")]
+        public async Task<ActionResult> Post(Genero[] generos)
+        {
+            context.AddRange(generos);
             await context.SaveChangesAsync();
             return Ok();
         }

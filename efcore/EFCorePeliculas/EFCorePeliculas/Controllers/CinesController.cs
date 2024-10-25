@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualBasic;
 using NetTopologySuite;
 using NetTopologySuite.Geometries;
+using System.Threading.Tasks.Dataflow;
 
 namespace EFCorePeliculas.Controllers
 {
@@ -47,6 +48,50 @@ namespace EFCorePeliculas.Controllers
                 }).ToListAsync();
 
             return Ok(cines);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> Post()
+        {
+            var geometryFactory = NtsGeometryServices.Instance.CreateGeometryFactory(srid: 4326);
+            var ubicacionCine = geometryFactory.CreatePoint(new Coordinate(-69.896979, 18.476276));
+
+            var Cine = new Cine
+            {
+                Nombre = "Mi Cine",
+                Ubicacion = ubicacionCine,
+                CineOferta = new CineOferta
+                {
+                    PorcentajeDescuento = 5,
+                    FechaInicio = DateTime.Today,
+                    FechaFin = DateTime.Today.AddDays(7)
+                },
+                SalasDeCine = new HashSet<SalaDeCine>
+                {
+                    new SalaDeCine {
+                        Precio=200,
+                        TipoSalaDeCine=TipoSalaDeCine.DosDimensiones
+                    },
+                    new SalaDeCine {
+                        Precio=350,
+                        TipoSalaDeCine=TipoSalaDeCine.TresDimensiones
+                    }
+                }
+            };
+
+            context.Add(Cine);
+            await context.SaveChangesAsync();
+
+            return Ok();
+        }
+
+        [HttpPost("conDTO")]
+        public async Task<ActionResult> Post(CineCreacionDTO cineCreacion)
+        {
+            var cine = mapper.Map<Cine>(cineCreacion);
+            context.Add(cine);
+            await context.SaveChangesAsync();
+            return Ok();
         }
     }
 }
