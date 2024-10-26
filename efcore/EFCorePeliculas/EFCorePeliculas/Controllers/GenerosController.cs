@@ -34,11 +34,11 @@ namespace EFCorePeliculas.Controllers
         [HttpPost]
         public async Task<ActionResult> Post(Genero genero)
         {
-            var estatus1=context.Entry(genero).State;
+            var estatus1 = context.Entry(genero).State;
             context.Add(genero);
-            var estatus2=context.Entry(genero).State;
+            var estatus2 = context.Entry(genero).State;
             await context.SaveChangesAsync();
-            var estatus3=context.Entry(genero).State;
+            var estatus3 = context.Entry(genero).State;
             return Ok();
         }
 
@@ -46,6 +46,16 @@ namespace EFCorePeliculas.Controllers
         public async Task<ActionResult> Post(Genero[] generos)
         {
             context.AddRange(generos);
+            await context.SaveChangesAsync();
+            return Ok();
+        }
+
+        [HttpPost("agregar2")]
+        public async Task<ActionResult> Agregar2(int id)
+        {
+            var genero = await context.Generos.AsTracking().SingleOrDefaultAsync(g => g.Identificador == id);
+            if (genero is null) return NotFound();
+            genero.Nombre += " 2";
             await context.SaveChangesAsync();
             return Ok();
         }

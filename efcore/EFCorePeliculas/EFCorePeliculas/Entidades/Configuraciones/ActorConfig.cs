@@ -14,6 +14,8 @@ namespace EFCorePeliculas.Entidades.Configuraciones
                 .IsRequired();
             //modelBuilder.Entity<Actor>().Property(a => a.FechaNacimiento)
             //    .HasColumnType("date");
+
+            builder.Property(a => a.Nombre).HasField("nombre");
         }
     }
 }

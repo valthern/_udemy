@@ -32,18 +32,25 @@ namespace EFCorePeliculas.Servicios
                 .ForMember(dto => dto.Cines, ent => ent.MapFrom(p => p.SalasDeCine.Select(s => s.Cine)))
                 .ForMember(dto => dto.Actores, ent => ent.MapFrom(p => p.PeliculasActores.Select(pa => pa.Actor)));
 
-            var geometryFactory = NtsGeometryServices.Instance.CreateGeometryFactory(srid: 4326);
             #endregion
 
             #region De Creación
             /***** De Creación *****/
+            var geometryFactory = NtsGeometryServices.Instance.CreateGeometryFactory(srid: 4326);
+
             CreateMap<CineCreacionDTO, Cine>().ForMember(c => c.Ubicacion, ent => ent.MapFrom(dto => geometryFactory.CreatePoint(new Coordinate(dto.Longitud, dto.Latitud))));
+
             CreateMap<CineOfertaCreacionDTO, CineOferta>();
+
             CreateMap<SalaDeCineCreacionDTO, SalaDeCine>();
+
             CreateMap<PeliculaCreacionDTO, Pelicula>()
                 .ForMember(p => p.Generos, ent => ent.MapFrom(dto => dto.Generos.Select(id => new Genero { Identificador = id })))
                 .ForMember(p => p.SalasDeCine, ent => ent.MapFrom(dto => dto.SalasDeCine.Select(id => new SalaDeCine { Id = id })));
+
             CreateMap<PeliculaActorCreacionDTO, PeliculaActor>();
+
+            CreateMap<ActorCreacionDTO, Actor>();
             #endregion
         }
     }
