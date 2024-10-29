@@ -36,6 +36,48 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "EFCorePeliculas.Controllers.ActoresController",
+    "Method": "Put",
+    "RelativePath": "api/actores/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "actorCreacionDTO",
+        "Type": "EFCorePeliculas.DTOs.ActorCreacionDTO",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EFCorePeliculas.Controllers.ActoresController",
+    "Method": "PutDesconectado",
+    "RelativePath": "api/actores/desconectado/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "actorCreacionDTO",
+        "Type": "EFCorePeliculas.DTOs.ActorCreacionDTO",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EFCorePeliculas.Controllers.CinesController",
     "Method": "Get",
     "RelativePath": "api/cines",
@@ -68,6 +110,43 @@
   {
     "ContainingType": "EFCorePeliculas.Controllers.CinesController",
     "Method": "Get",
+    "RelativePath": "api/cines/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EFCorePeliculas.Controllers.CinesController",
+    "Method": "Put",
+    "RelativePath": "api/cines/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cineCreacionDTO",
+        "Type": "EFCorePeliculas.DTOs.CineCreacionDTO",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EFCorePeliculas.Controllers.CinesController",
+    "Method": "Get",
     "RelativePath": "api/cines/cercanos",
     "HttpMethod": "GET",
     "IsController": true,
@@ -82,6 +161,22 @@
         "Name": "longitud",
         "Type": "System.Double",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EFCorePeliculas.Controllers.CinesController",
+    "Method": "PutCineOferta",
+    "RelativePath": "api/cines/cineOferta",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cineOferta",
+        "Type": "EFCorePeliculas.Entidades.CineOferta",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

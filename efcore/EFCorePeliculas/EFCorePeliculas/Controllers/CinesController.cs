@@ -93,5 +93,42 @@ namespace EFCorePeliculas.Controllers
             await context.SaveChangesAsync();
             return Ok();
         }
+
+        [HttpGet("{id:int}")]
+        public async Task<ActionResult> Get(int id)
+        {
+            var cineDB = await context.Cines.AsTracking()
+                .Include(c => c.SalasDeCine)
+                .Include(c => c.CineOferta)
+                .FirstOrDefaultAsync(c => c.Id == id);
+
+            if (cineDB is null) return NotFound();
+
+            cineDB.Ubicacion = null;
+            return Ok(cineDB);
+        }
+
+        [HttpPut("{id:int}")]
+        public async Task<ActionResult> Put(CineCreacionDTO cineCreacionDTO, int id)
+        {
+            var cineDB = await context.Cines.AsTracking()
+                .Include(c => c.SalasDeCine)
+                .Include(c => c.CineOferta)
+                .FirstOrDefaultAsync(c => c.Id == id);
+
+            if (cineDB is null) return NotFound();
+
+            cineDB = mapper.Map(cineCreacionDTO, cineDB);
+            await context.SaveChangesAsync();
+            return Ok();
+        }
+
+        [HttpPut("cineOferta")]
+        public async Task<ActionResult> PutCineOferta(CineOferta cineOferta)
+        {
+            context.Update(cineOferta);
+            await context.SaveChangesAsync();
+            return Ok();
+        }
     }
 }

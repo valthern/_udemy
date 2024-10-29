@@ -4,8 +4,13 @@ namespace EFCorePeliculas.Entidades
 {
     public class Actor
     {
+        #region Campos
         private string nombre;
+        #endregion
 
+
+
+        #region Propiedades
         public int Id { get; set; }
         public string Nombre
         {
@@ -16,5 +21,6 @@ namespace EFCorePeliculas.Entidades
         //[Column(TypeName = "Date")]
         public DateTime? FechaNacimiento { get; set; }
         public HashSet<PeliculaActor> PeliculasActores { get; set; }
+        #endregion
     }
 }
