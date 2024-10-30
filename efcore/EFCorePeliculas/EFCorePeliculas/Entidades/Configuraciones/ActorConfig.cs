@@ -16,6 +16,8 @@ namespace EFCorePeliculas.Entidades.Configuraciones
             //    .HasColumnType("date");
 
             builder.Property(a => a.Nombre).HasField("nombre");
+            //builder.Ignore(a => a.Edad);
+            builder.Ignore(a => a.Direccion);
         }
     }
 }

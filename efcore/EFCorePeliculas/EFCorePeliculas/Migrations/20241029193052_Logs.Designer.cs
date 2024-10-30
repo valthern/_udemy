@@ -4,6 +4,7 @@ using EFCorePeliculas;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NetTopologySuite.Geometries;
 
@@ -12,9 +13,11 @@ using NetTopologySuite.Geometries;
 namespace EFCorePeliculas.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241029193052_Logs")]
+    partial class Logs
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,7 +47,7 @@ namespace EFCorePeliculas.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Actores", (string)null);
+                    b.ToTable("Actores");
 
                     b.HasData(
                         new
@@ -118,7 +121,7 @@ namespace EFCorePeliculas.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Cines", (string)null);
+                    b.ToTable("Cines");
 
                     b.HasData(
                         new
@@ -173,7 +176,7 @@ namespace EFCorePeliculas.Migrations
                     b.HasIndex("CineId")
                         .IsUnique();
 
-                    b.ToTable("CinesOfertas", (string)null);
+                    b.ToTable("CinesOfertas");
 
                     b.HasData(
                         new
@@ -212,7 +215,7 @@ namespace EFCorePeliculas.Migrations
 
                     b.HasKey("Identificador");
 
-                    b.ToTable("Generos", (string)null);
+                    b.ToTable("Generos");
 
                     b.HasData(
                         new
@@ -258,7 +261,7 @@ namespace EFCorePeliculas.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Logs", (string)null);
+                    b.ToTable("Logs");
                 });
 
             modelBuilder.Entity("EFCorePeliculas.Entidades.Pelicula", b =>
@@ -287,7 +290,7 @@ namespace EFCorePeliculas.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Peliculas", (string)null);
+                    b.ToTable("Peliculas");
 
                     b.HasData(
                         new
@@ -351,7 +354,7 @@ namespace EFCorePeliculas.Migrations
 
                     b.HasIndex("ActorId");
 
-                    b.ToTable("PeliculasActores", (string)null);
+                    b.ToTable("PeliculasActores");
 
                     b.HasData(
                         new
@@ -429,7 +432,7 @@ namespace EFCorePeliculas.Migrations
 
                     b.HasIndex("CineId");
 
-                    b.ToTable("SalasDeCine", (string)null);
+                    b.ToTable("SalasDeCine");
 
                     b.HasData(
                         new
@@ -502,7 +505,7 @@ namespace EFCorePeliculas.Migrations
 
                     b.HasIndex("PeliculasId");
 
-                    b.ToTable("GeneroPelicula", (string)null);
+                    b.ToTable("GeneroPelicula");
 
                     b.HasData(
                         new
@@ -579,7 +582,7 @@ namespace EFCorePeliculas.Migrations
 
                     b.HasIndex("SalasDeCineId");
 
-                    b.ToTable("PeliculaSalaDeCine", (string)null);
+                    b.ToTable("PeliculaSalaDeCine");
 
                     b.HasData(
                         new

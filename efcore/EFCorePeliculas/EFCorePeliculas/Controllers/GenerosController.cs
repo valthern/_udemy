@@ -18,6 +18,12 @@ namespace EFCorePeliculas.Controllers
         [HttpGet]
         public async Task<IEnumerable<Genero>> Get()
         {
+            context.Logs.Add(new Log
+            {
+                Id = Guid.NewGuid(),
+                Mensaje = "Ejecutando el método GenerosController.Get"
+            });
+            await context.SaveChangesAsync();
             return await context.Generos.OrderByDescending(g => g.Nombre).ToListAsync();
         }
 
@@ -56,6 +62,42 @@ namespace EFCorePeliculas.Controllers
             var genero = await context.Generos.AsTracking().SingleOrDefaultAsync(g => g.Identificador == id);
             if (genero is null) return NotFound();
             genero.Nombre += " 2";
+            await context.SaveChangesAsync();
+            return Ok();
+        }
+
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult> Delete(int id)
+        {
+            var genero = await context.Generos.FirstOrDefaultAsync(g => g.Identificador == id);
+
+            if (genero is null) return NotFound();
+
+            context.Remove(genero);
+            await context.SaveChangesAsync();
+            return Ok();
+        }
+
+        [HttpDelete("borradoSuave/{id:int}")]
+        public async Task<ActionResult> DeleteSuave(int id)
+        {
+            var genero = await context.Generos.AsTracking().FirstOrDefaultAsync(g => g.Identificador == id);
+
+            if (genero is null) return NotFound();
+
+            genero.EstaBorrado = true;
+            await context.SaveChangesAsync();
+            return Ok();
+        }
+
+        [HttpPost("Restaurar/{id:int}")]
+        public async Task<ActionResult> Restaurar(int id)
+        {
+            var genero = await context.Generos.AsTracking().IgnoreQueryFilters().FirstOrDefaultAsync(g => g.Identificador == id);
+
+            if (genero is null) return NotFound();
+
+            genero.EstaBorrado = false;
             await context.SaveChangesAsync();
             return Ok();
         }
