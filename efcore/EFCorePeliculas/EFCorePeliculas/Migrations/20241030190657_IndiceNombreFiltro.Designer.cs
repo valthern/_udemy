@@ -4,6 +4,7 @@ using EFCorePeliculas;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NetTopologySuite.Geometries;
 
@@ -12,9 +13,11 @@ using NetTopologySuite.Geometries;
 namespace EFCorePeliculas.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241030190657_IndiceNombreFiltro")]
+    partial class IndiceNombreFiltro
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -419,19 +422,14 @@ namespace EFCorePeliculas.Migrations
                     b.Property<int>("CineId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Moneda")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<decimal>("Precio")
                         .HasPrecision(9, 2)
                         .HasColumnType("decimal(9,2)");
 
-                    b.Property<string>("TipoSalaDeCine")
-                        .IsRequired()
+                    b.Property<int>("TipoSalaDeCine")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("nvarchar(max)")
-                        .HasDefaultValue("DosDimensiones");
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
 
                     b.HasKey("Id");
 
@@ -444,65 +442,57 @@ namespace EFCorePeliculas.Migrations
                         {
                             Id = 5,
                             CineId = 3,
-                            Moneda = "",
                             Precio = 250m,
-                            TipoSalaDeCine = "DosDimensiones"
+                            TipoSalaDeCine = 1
                         },
                         new
                         {
                             Id = 6,
                             CineId = 3,
-                            Moneda = "",
                             Precio = 330m,
-                            TipoSalaDeCine = "TresDimensiones"
+                            TipoSalaDeCine = 2
                         },
                         new
                         {
                             Id = 7,
                             CineId = 3,
-                            Moneda = "",
                             Precio = 450m,
-                            TipoSalaDeCine = "CXC"
+                            TipoSalaDeCine = 3
                         },
                         new
                         {
                             Id = 8,
                             CineId = 4,
-                            Moneda = "",
                             Precio = 250m,
-                            TipoSalaDeCine = "DosDimensiones"
+                            TipoSalaDeCine = 1
                         },
                         new
                         {
                             Id = 1,
                             CineId = 1,
-                            Moneda = "",
                             Precio = 220m,
-                            TipoSalaDeCine = "DosDimensiones"
+                            TipoSalaDeCine = 1
                         },
                         new
                         {
                             Id = 2,
                             CineId = 1,
-                            Moneda = "",
                             Precio = 320m,
-                            TipoSalaDeCine = "TresDimensiones"
+                            TipoSalaDeCine = 2
                         },
                         new
                         {
                             Id = 3,
                             CineId = 2,
-                            Moneda = "",
                             Precio = 200m,
-                            TipoSalaDeCine = "DosDimensiones"
+                            TipoSalaDeCine = 1
                         },
                         new
                         {
                             Id = 4,
                             CineId = 2,
-                            Moneda = "",
                             Precio = 290m,
-                            TipoSalaDeCine = "TresDimensiones"
+                            TipoSalaDeCine = 2
                         });
                 });
 

@@ -40,11 +40,13 @@ namespace EFCorePeliculas.Controllers
         [HttpPost]
         public async Task<ActionResult> Post(Genero genero)
         {
-            var estatus1 = context.Entry(genero).State;
+            var existeGeneroConNombre = await context.Generos.AnyAsync(g => g.Nombre == genero.Nombre);
+
+            if (existeGeneroConNombre)
+                return BadRequest($"ya existe un género con ese nombre: {genero.Nombre}");
+
             context.Add(genero);
-            var estatus2 = context.Entry(genero).State;
             await context.SaveChangesAsync();
-            var estatus3 = context.Entry(genero).State;
             return Ok();
         }
 

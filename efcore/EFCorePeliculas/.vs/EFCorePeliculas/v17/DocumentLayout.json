@@ -1,71 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\efcore\\efcorepeliculas\\efcorepeliculas\\entidades\\configuraciones\\actorconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|solutionrelative:efcorepeliculas\\entidades\\configuraciones\\actorconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\efcore\\efcorepeliculas\\efcorepeliculas\\entidades\\actor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|solutionrelative:efcorepeliculas\\entidades\\actor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\efcore\\efcorepeliculas\\efcorepeliculas\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|solutionrelative:efcorepeliculas\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ActorConfig.cs",
-              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Entidades\\Configuraciones\\ActorConfig.cs",
-              "RelativeDocumentMoniker": "EFCorePeliculas\\Entidades\\Configuraciones\\ActorConfig.cs",
-              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Entidades\\Configuraciones\\ActorConfig.cs",
-              "RelativeToolTip": "EFCorePeliculas\\Entidades\\Configuraciones\\ActorConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T20:11:05.236Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Actor.cs",
-              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Entidades\\Actor.cs",
-              "RelativeDocumentMoniker": "EFCorePeliculas\\Entidades\\Actor.cs",
-              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Entidades\\Actor.cs",
-              "RelativeToolTip": "EFCorePeliculas\\Entidades\\Actor.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwCgAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T19:57:02.654Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "EFCorePeliculas\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\ApplicationDbContext.cs",
-              "RelativeToolTip": "EFCorePeliculas\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA1wB4AAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T19:28:33.833Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

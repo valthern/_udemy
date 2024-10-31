@@ -29,6 +29,7 @@ namespace EFCorePeliculas
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
             SeedingModuloConsulta.Seed(modelBuilder);
             //modelBuilder.Entity<Log>().Property(l=>l.Id).ValueGeneratedNever();
+            //modelBuilder.Ignore<Direccion>();
         }
 
         public DbSet<Genero> Generos { get; set; }

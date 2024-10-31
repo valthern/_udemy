@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\efcore\\efcorepeliculas\\efcorepeliculas\\entidades\\configuraciones\\actorconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|solutionrelative:efcorepeliculas\\entidades\\configuraciones\\actorconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\efcore\\efcorepeliculas\\efcorepeliculas\\controllers\\cinescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|solutionrelative:efcorepeliculas\\controllers\\cinescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\efcore\\efcorepeliculas\\efcorepeliculas\\entidades\\actor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|solutionrelative:efcorepeliculas\\entidades\\actor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\efcore\\efcorepeliculas\\efcorepeliculas\\entidades\\saladecine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|solutionrelative:efcorepeliculas\\entidades\\saladecine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\efcore\\efcorepeliculas\\efcorepeliculas\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|solutionrelative:efcorepeliculas\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\efcore\\efcorepeliculas\\efcorepeliculas\\entidades\\configuraciones\\saladecineconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|solutionrelative:efcorepeliculas\\entidades\\configuraciones\\saladecineconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Migrations\\20241030232828_CampoMoneda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EFCorePeliculas\\Migrations\\20241030232828_CampoMoneda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +31,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ActorConfig.cs",
-              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Entidades\\Configuraciones\\ActorConfig.cs",
-              "RelativeDocumentMoniker": "EFCorePeliculas\\Entidades\\Configuraciones\\ActorConfig.cs",
-              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Entidades\\Configuraciones\\ActorConfig.cs",
-              "RelativeToolTip": "EFCorePeliculas\\Entidades\\Configuraciones\\ActorConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAtAAAAAAAAAA==",
+              "Title": "CinesController.cs",
+              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Controllers\\CinesController.cs",
+              "RelativeDocumentMoniker": "EFCorePeliculas\\Controllers\\CinesController.cs",
+              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Controllers\\CinesController.cs",
+              "RelativeToolTip": "EFCorePeliculas\\Controllers\\CinesController.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAwwEYAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T20:11:05.236Z",
+              "WhenOpened": "2024-10-30T23:29:25.397Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Actor.cs",
-              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Entidades\\Actor.cs",
-              "RelativeDocumentMoniker": "EFCorePeliculas\\Entidades\\Actor.cs",
-              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Entidades\\Actor.cs",
-              "RelativeToolTip": "EFCorePeliculas\\Entidades\\Actor.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwCgAAAAwAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "20241030232828_CampoMoneda.cs",
+              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Migrations\\20241030232828_CampoMoneda.cs",
+              "RelativeDocumentMoniker": "EFCorePeliculas\\Migrations\\20241030232828_CampoMoneda.cs",
+              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Migrations\\20241030232828_CampoMoneda.cs",
+              "RelativeToolTip": "EFCorePeliculas\\Migrations\\20241030232828_CampoMoneda.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T19:57:02.654Z",
+              "WhenOpened": "2024-10-30T23:28:28.294Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "EFCorePeliculas\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\ApplicationDbContext.cs",
-              "RelativeToolTip": "EFCorePeliculas\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA1wB4AAABRAAAAAAAAAA==",
+              "Title": "SalaDeCineConfig.cs",
+              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Entidades\\Configuraciones\\SalaDeCineConfig.cs",
+              "RelativeDocumentMoniker": "EFCorePeliculas\\Entidades\\Configuraciones\\SalaDeCineConfig.cs",
+              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Entidades\\Configuraciones\\SalaDeCineConfig.cs",
+              "RelativeToolTip": "EFCorePeliculas\\Entidades\\Configuraciones\\SalaDeCineConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T19:28:33.833Z",
+              "WhenOpened": "2024-10-30T23:12:41.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SalaDeCine.cs",
+              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Entidades\\SalaDeCine.cs",
+              "RelativeDocumentMoniker": "EFCorePeliculas\\Entidades\\SalaDeCine.cs",
+              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Entidades\\SalaDeCine.cs",
+              "RelativeToolTip": "EFCorePeliculas\\Entidades\\SalaDeCine.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T22:43:06.817Z",
               "EditorCaption": ""
             }
           ]
