@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OmhxYrqQH6Y=",
+  "dgSpecHash": "hsyGaWq7YgehQxNIE0k9dEq9ewPuDmItnjquX8/SlKvXbWaSV7ecBruap4BjYVQVxqdDTBYtM/wK7cdCWqF2qg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Omar\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\Shared\\BlazorPeliculas.Shared.csproj",
+  "projectFilePath": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\Shared\\BlazorPeliculas.Shared.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
