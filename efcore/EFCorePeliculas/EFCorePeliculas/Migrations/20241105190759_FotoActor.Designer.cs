@@ -4,6 +4,7 @@ using EFCorePeliculas;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NetTopologySuite.Geometries;
 
@@ -12,9 +13,11 @@ using NetTopologySuite.Geometries;
 namespace EFCorePeliculas.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241105190759_FotoActor")]
+    partial class FotoActor
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -160,7 +163,7 @@ namespace EFCorePeliculas.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("CineId")
+                    b.Property<int>("CineId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("FechaFin")
@@ -176,8 +179,7 @@ namespace EFCorePeliculas.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CineId")
-                        .IsUnique()
-                        .HasFilter("[CineId] IS NOT NULL");
+                        .IsUnique();
 
                     b.ToTable("CinesOfertas");
 
@@ -687,7 +689,9 @@ namespace EFCorePeliculas.Migrations
                 {
                     b.HasOne("EFCorePeliculas.Entidades.Cine", null)
                         .WithOne("CineOferta")
-                        .HasForeignKey("EFCorePeliculas.Entidades.CineOferta", "CineId");
+                        .HasForeignKey("EFCorePeliculas.Entidades.CineOferta", "CineId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("EFCorePeliculas.Entidades.PeliculaActor", b =>

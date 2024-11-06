@@ -23,7 +23,7 @@ namespace EFCorePeliculas.Controllers
         [HttpGet]
         public async Task<IEnumerable<ActorDTO>> Get()
         {
-            //var actores = await context.Actores.Select(a => new ActorDTO { Id = a.Id, Nombre = a.Nombre }).ToListAsync();
+            //var actores = await context.Actores.Select(a => new ActorDTO { Id = a.Id, Titulo = a.Titulo }).ToListAsync();
             var actores = await context.Actores.ProjectTo<ActorDTO>(mapper.ConfigurationProvider).ToListAsync();
 
             return actores;

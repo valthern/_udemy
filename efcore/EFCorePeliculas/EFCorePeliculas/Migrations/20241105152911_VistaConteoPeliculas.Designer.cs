@@ -4,6 +4,7 @@ using EFCorePeliculas;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NetTopologySuite.Geometries;
 
@@ -12,9 +13,11 @@ using NetTopologySuite.Geometries;
 namespace EFCorePeliculas.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241105152911_VistaConteoPeliculas")]
+    partial class VistaConteoPeliculas
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -36,11 +39,6 @@ namespace EFCorePeliculas.Migrations
 
                     b.Property<DateTime?>("FechaNacimiento")
                         .HasColumnType("date");
-
-                    b.Property<string>("FotoURL")
-                        .HasMaxLength(500)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(500)");
 
                     b.Property<string>("Nombre")
                         .IsRequired()
@@ -160,7 +158,7 @@ namespace EFCorePeliculas.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("CineId")
+                    b.Property<int>("CineId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("FechaFin")
@@ -176,8 +174,7 @@ namespace EFCorePeliculas.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CineId")
-                        .IsUnique()
-                        .HasFilter("[CineId] IS NOT NULL");
+                        .IsUnique();
 
                     b.ToTable("CinesOfertas");
 
@@ -210,11 +207,6 @@ namespace EFCorePeliculas.Migrations
 
                     b.Property<bool>("EstaBorrado")
                         .HasColumnType("bit");
-
-                    b.Property<DateTime>("FechaCreacion")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GetDate()");
 
                     b.Property<string>("Nombre")
                         .IsRequired()
@@ -532,28 +524,6 @@ namespace EFCorePeliculas.Migrations
                     b.ToSqlQuery("SELECT id, nombre FROM Cines");
                 });
 
-            modelBuilder.Entity("EFCorePeliculas.Entidades.SinLlaves.PeliculaConConteos", b =>
-                {
-                    b.Property<int>("CantidadActores")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CantidadCines")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CantidadGeneros")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Id")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Titulo")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.ToTable((string)null);
-
-                    b.ToView("PeliculasConConteos", (string)null);
-                });
-
             modelBuilder.Entity("GeneroPelicula", b =>
                 {
                     b.Property<int>("GenerosIdentificador")
@@ -687,7 +657,9 @@ namespace EFCorePeliculas.Migrations
                 {
                     b.HasOne("EFCorePeliculas.Entidades.Cine", null)
                         .WithOne("CineOferta")
-                        .HasForeignKey("EFCorePeliculas.Entidades.CineOferta", "CineId");
+                        .HasForeignKey("EFCorePeliculas.Entidades.CineOferta", "CineId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("EFCorePeliculas.Entidades.PeliculaActor", b =>

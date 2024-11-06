@@ -23,6 +23,7 @@ namespace EFCorePeliculas.Entidades
         //[Column(TypeName = "Date")]
         public DateTime? FechaNacimiento { get; set; }
         public HashSet<PeliculaActor> PeliculasActores { get; set; }
+        public string FotoURL { get; set; }
         [NotMapped]
         public int? Edad
         {

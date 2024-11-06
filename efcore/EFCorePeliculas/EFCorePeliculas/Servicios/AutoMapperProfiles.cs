@@ -27,7 +27,7 @@ namespace EFCorePeliculas.Servicios
 
             // Con ProjectTo()
             CreateMap<Pelicula, PeliculaDTO>()
-                // Para ordenar los géneros con el Nombre de forma descendente
+                // Para ordenar los géneros con el Titulo de forma descendente
                 .ForMember(dto => dto.Generos, ent => ent.MapFrom(p => p.Generos.OrderByDescending(g => g.Nombre)))
                 .ForMember(dto => dto.Cines, ent => ent.MapFrom(p => p.SalasDeCine.Select(s => s.Cine)))
                 .ForMember(dto => dto.Actores, ent => ent.MapFrom(p => p.PeliculasActores.Select(pa => pa.Actor)));

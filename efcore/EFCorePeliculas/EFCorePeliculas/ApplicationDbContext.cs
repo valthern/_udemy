@@ -32,7 +32,19 @@ namespace EFCorePeliculas
             //modelBuilder.Entity<Log>().Property(l=>l.Id).ValueGeneratedNever();
             //modelBuilder.Ignore<Direccion>();
             modelBuilder.Entity<CineSinUbicacion>().HasNoKey().ToSqlQuery("SELECT id, nombre FROM Cines").ToView(null);
+            modelBuilder.Entity<PeliculaConConteos>().HasNoKey().ToView("PeliculasConConteos");
 
+            foreach (var tipoEntidad in modelBuilder.Model.GetEntityTypes())
+            {
+                foreach (var propiedad in tipoEntidad.GetProperties())
+                {
+                    if (propiedad.ClrType == typeof(string) && propiedad.Name.Contains("url", StringComparison.CurrentCultureIgnoreCase))
+                    {
+                        propiedad.SetIsUnicode(false);
+                        propiedad.SetMaxLength(500);
+                    }
+                }
+            }
         }
 
         public DbSet<Genero> Generos { get; set; }

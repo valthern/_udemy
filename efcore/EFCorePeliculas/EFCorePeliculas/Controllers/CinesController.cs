@@ -5,10 +5,8 @@ using EFCorePeliculas.Entidades;
 using EFCorePeliculas.Entidades.SinLlaves;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualBasic;
 using NetTopologySuite;
 using NetTopologySuite.Geometries;
-using System.Threading.Tasks.Dataflow;
 
 namespace EFCorePeliculas.Controllers
 {
@@ -66,7 +64,7 @@ namespace EFCorePeliculas.Controllers
 
             var Cine = new Cine
             {
-                Nombre = "Mi Cine con Monedas",
+                Nombre = "Mi Cine para borrarlo relacion opcional",
                 Ubicacion = ubicacionCine,
                 CineOferta = new CineOferta
                 {
@@ -137,6 +135,18 @@ namespace EFCorePeliculas.Controllers
         public async Task<ActionResult> PutCineOferta(CineOferta cineOferta)
         {
             context.Update(cineOferta);
+            await context.SaveChangesAsync();
+            return Ok();
+        }
+
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult> Delete(int id)
+        {
+            var cine = await context.Cines.Include(c => c.CineOferta).FirstOrDefaultAsync(c => c.Id == id);
+
+            if (cine is null) return NotFound();
+
+            context.Remove(cine);
             await context.SaveChangesAsync();
             return Ok();
         }
