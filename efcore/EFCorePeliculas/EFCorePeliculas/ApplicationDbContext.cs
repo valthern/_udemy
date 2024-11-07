@@ -29,6 +29,7 @@ namespace EFCorePeliculas
             //modelBuilder.ApplyConfiguration(new PeliculaActorConfig());
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
             SeedingModuloConsulta.Seed(modelBuilder);
+            SeedingPersonaMensaje.Seed(modelBuilder);
             //modelBuilder.Entity<Log>().Property(l=>l.Id).ValueGeneratedNever();
             //modelBuilder.Ignore<Direccion>();
             modelBuilder.Entity<CineSinUbicacion>().HasNoKey().ToSqlQuery("SELECT id, nombre FROM Cines").ToView(null);
@@ -56,5 +57,8 @@ namespace EFCorePeliculas
         public DbSet<PeliculaActor> PeliculasActores { get; set; }
         public DbSet<Log> Logs { get; set; }
         public DbSet<CineSinUbicacion> CinesSinUbicacion { get; set; }
+        public DbSet<Persona> Personas { get; set; }
+        public DbSet<Mensaje> Mensajes { get; set; }
+        public DbSet<CineDetalle> CinesDetalle { get; set; }
     }
 }

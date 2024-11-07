@@ -4,6 +4,7 @@ using EFCorePeliculas;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NetTopologySuite.Geometries;
 
@@ -12,9 +13,11 @@ using NetTopologySuite.Geometries;
 namespace EFCorePeliculas.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241106224959_NoPodemosBorrarCineConSalasDeCine")]
+    partial class NoPodemosBorrarCineConSalasDeCine
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -150,29 +153,6 @@ namespace EFCorePeliculas.Migrations
                             Nombre = "Agora Mall",
                             Ubicacion = (NetTopologySuite.Geometries.Point)new NetTopologySuite.IO.WKTReader().Read("SRID=4326;POINT (-69.9388777 18.4839233)")
                         });
-                });
-
-            modelBuilder.Entity("EFCorePeliculas.Entidades.CineDetalle", b =>
-                {
-                    b.Property<int>("Id")
-                        .HasColumnType("int");
-
-                    b.Property<string>("CodigoDeEtica")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Historia")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Misiones")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Valores")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Cines", (string)null);
                 });
 
             modelBuilder.Entity("EFCorePeliculas.Entidades.CineOferta", b =>
@@ -790,17 +770,6 @@ namespace EFCorePeliculas.Migrations
                         });
                 });
 
-            modelBuilder.Entity("EFCorePeliculas.Entidades.CineDetalle", b =>
-                {
-                    b.HasOne("EFCorePeliculas.Entidades.Cine", "Cine")
-                        .WithOne("CineDetalle")
-                        .HasForeignKey("EFCorePeliculas.Entidades.CineDetalle", "Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Cine");
-                });
-
             modelBuilder.Entity("EFCorePeliculas.Entidades.CineOferta", b =>
                 {
                     b.HasOne("EFCorePeliculas.Entidades.Cine", null)
@@ -894,8 +863,6 @@ namespace EFCorePeliculas.Migrations
 
             modelBuilder.Entity("EFCorePeliculas.Entidades.Cine", b =>
                 {
-                    b.Navigation("CineDetalle");
-
                     b.Navigation("CineOferta");
 
                     b.Navigation("SalasDeCine");

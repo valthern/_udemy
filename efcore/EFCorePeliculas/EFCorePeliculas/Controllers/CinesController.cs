@@ -64,7 +64,7 @@ namespace EFCorePeliculas.Controllers
 
             var Cine = new Cine
             {
-                Nombre = "Mi Cine para borrarlo relacion opcional",
+                Nombre = "Mi Cine con Restrict",
                 Ubicacion = ubicacionCine,
                 CineOferta = new CineOferta
                 {
@@ -142,9 +142,15 @@ namespace EFCorePeliculas.Controllers
         [HttpDelete("{id:int}")]
         public async Task<ActionResult> Delete(int id)
         {
-            var cine = await context.Cines.Include(c => c.CineOferta).FirstOrDefaultAsync(c => c.Id == id);
+            var cine = await context.Cines
+                .Include(c=>c.SalasDeCine)
+                .Include(c => c.CineOferta)
+                .FirstOrDefaultAsync(c => c.Id == id);
 
             if (cine is null) return NotFound();
+
+            context.RemoveRange(cine.SalasDeCine);
+            await context.SaveChangesAsync();
 
             context.Remove(cine);
             await context.SaveChangesAsync();
