@@ -11,5 +11,6 @@ namespace EFCorePeliculas.Entidades
         public CineOferta CineOferta { get; set; }
         public HashSet<SalaDeCine> SalasDeCine { get; set; }
         public CineDetalle CineDetalle { get; set; }
+        public Direccion Direccion { get; set; }
     }
 }

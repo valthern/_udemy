@@ -31,7 +31,7 @@ namespace EFCorePeliculas
             SeedingModuloConsulta.Seed(modelBuilder);
             SeedingPersonaMensaje.Seed(modelBuilder);
             //modelBuilder.Entity<Log>().Property(l=>l.Id).ValueGeneratedNever();
-            //modelBuilder.Ignore<Direccion>();
+            //modelBuilder.Ignore<DireccionHogar>();
             modelBuilder.Entity<CineSinUbicacion>().HasNoKey().ToSqlQuery("SELECT id, nombre FROM Cines").ToView(null);
             modelBuilder.Entity<PeliculaConConteos>().HasNoKey().ToView("PeliculasConConteos");
 
@@ -46,6 +46,9 @@ namespace EFCorePeliculas
                     }
                 }
             }
+
+            modelBuilder.Entity<Merchandising>().ToTable("Merchandising");
+            modelBuilder.Entity<PeliculaAlquilable>().ToTable("PeliculasAlquilables");
         }
 
         public DbSet<Genero> Generos { get; set; }
@@ -59,6 +62,8 @@ namespace EFCorePeliculas
         public DbSet<CineSinUbicacion> CinesSinUbicacion { get; set; }
         public DbSet<Persona> Personas { get; set; }
         public DbSet<Mensaje> Mensajes { get; set; }
-        public DbSet<CineDetalle> CinesDetalle { get; set; }
+        public DbSet<CineDetalle> CineDetalle { get; set; }
+        public DbSet<Pago> Pagos { get; set; }
+        public DbSet<Producto> Productos { get; set; }
     }
 }

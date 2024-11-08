@@ -376,6 +376,66 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "EFCorePeliculas.Controllers.PagosController",
+    "Method": "Get",
+    "RelativePath": "api/pagos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[EFCorePeliculas.Entidades.Pago, EFCorePeliculas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EFCorePeliculas.Controllers.PagosController",
+    "Method": "GetPaypal",
+    "RelativePath": "api/pagos/paypal",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[EFCorePeliculas.Entidades.PagoPaypal, EFCorePeliculas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EFCorePeliculas.Controllers.PagosController",
+    "Method": "GetTarjetas",
+    "RelativePath": "api/pagos/tarjetas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[EFCorePeliculas.Entidades.PagoTarjeta, EFCorePeliculas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "EFCorePeliculas.Controllers.PeliculasController",
     "Method": "Post",
     "RelativePath": "api/peliculas",
