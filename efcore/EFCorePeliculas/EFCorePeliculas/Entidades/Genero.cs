@@ -18,5 +18,7 @@ namespace EFCorePeliculas.Entidades
         public string Nombre { get; set; }
         public bool EstaBorrado { get; set; }
         public HashSet<Pelicula> Peliculas { get; set; }
+        public string Ejemplo { get; set; }
+        //public string Ejemplo2 { get; set; }
     }
 }

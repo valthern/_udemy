@@ -4,17 +4,20 @@ using EFCorePeliculas;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NetTopologySuite.Geometries;
 
 #nullable disable
 
-namespace EFCorePeliculas.Migrations
+namespace EFCorePeliculas.Migraciones
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241108234309_RemoverColumnaEjemplo")]
+    partial class RemoverColumnaEjemplo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -230,9 +233,6 @@ namespace EFCorePeliculas.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Identificador"));
-
-                    b.Property<string>("Ejemplo")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("EstaBorrado")
                         .HasColumnType("bit");
