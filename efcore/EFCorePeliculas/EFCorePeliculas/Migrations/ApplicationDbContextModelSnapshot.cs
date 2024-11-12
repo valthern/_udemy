@@ -209,16 +209,16 @@ namespace EFCorePeliculas.Migrations
                         {
                             Id = 2,
                             CineId = 4,
-                            FechaFin = new DateTime(2024, 11, 13, 0, 0, 0, 0, DateTimeKind.Local),
-                            FechaInicio = new DateTime(2024, 11, 8, 0, 0, 0, 0, DateTimeKind.Local),
+                            FechaFin = new DateTime(2024, 11, 16, 0, 0, 0, 0, DateTimeKind.Local),
+                            FechaInicio = new DateTime(2024, 11, 11, 0, 0, 0, 0, DateTimeKind.Local),
                             PorcentajeDescuento = 15m
                         },
                         new
                         {
                             Id = 1,
                             CineId = 1,
-                            FechaFin = new DateTime(2024, 11, 15, 0, 0, 0, 0, DateTimeKind.Local),
-                            FechaInicio = new DateTime(2024, 11, 8, 0, 0, 0, 0, DateTimeKind.Local),
+                            FechaFin = new DateTime(2024, 11, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            FechaInicio = new DateTime(2024, 11, 11, 0, 0, 0, 0, DateTimeKind.Local),
                             PorcentajeDescuento = 10m
                         });
                 });
@@ -292,6 +292,9 @@ namespace EFCorePeliculas.Migrations
                 {
                     b.Property<Guid>("Id")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Ejemplo")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Mensaje")
                         .HasColumnType("nvarchar(max)");

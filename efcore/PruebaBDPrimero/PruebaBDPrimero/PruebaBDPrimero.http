@@ -1,0 +1,6 @@
+@PruebaBDPrimero_HostAddress = http://localhost:5095
+
+GET {{PruebaBDPrimero_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
