@@ -271,6 +271,22 @@
   },
   {
     "ContainingType": "EFCorePeliculas.Controllers.GenerosController",
+    "Method": "Put",
+    "RelativePath": "api/generos",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "genero",
+        "Type": "EFCorePeliculas.Entidades.Genero",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EFCorePeliculas.Controllers.GenerosController",
     "Method": "Get",
     "RelativePath": "api/generos/{id}",
     "HttpMethod": "GET",

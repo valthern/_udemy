@@ -52,7 +52,8 @@ namespace EFCorePeliculas.Controllers
             if (existeGeneroConNombre)
                 return BadRequest($"ya existe un género con ese nombre: {genero.Nombre}");
 
-            context.Add(genero);
+            //context.Add(genero);
+            context.Entry(genero).State = EntityState.Added;
             await context.SaveChangesAsync();
             return Ok();
         }
@@ -61,6 +62,14 @@ namespace EFCorePeliculas.Controllers
         public async Task<ActionResult> Post(Genero[] generos)
         {
             context.AddRange(generos);
+            await context.SaveChangesAsync();
+            return Ok();
+        }
+
+        [HttpPut]
+        public async Task<ActionResult> Put(Genero genero)
+        {
+            context.Update(genero);
             await context.SaveChangesAsync();
             return Ok();
         }
