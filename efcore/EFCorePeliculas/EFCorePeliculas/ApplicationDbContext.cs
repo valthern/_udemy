@@ -19,8 +19,11 @@ namespace EFCorePeliculas
             this.servicioUsuario = servicioUsuario;
             if (eventosDbContext is not null)
             {
-                ChangeTracker.Tracked += eventosDbContext.ManejarTracked;
-                ChangeTracker.StateChanged += eventosDbContext.ManejarStateChange;
+                //ChangeTracker.Tracked += eventosDbContext.ManejarTracked;
+                //ChangeTracker.StateChanged += eventosDbContext.ManejarStateChange;
+                SavingChanges += eventosDbContext.ManejarSavingChanges;
+                SavedChanges += eventosDbContext.ManejarSavedChanges;
+                SaveChangesFailed += eventosDbContext.ManejarSaveChangesFailed;
             }
         }
 
@@ -80,7 +83,31 @@ namespace EFCorePeliculas
             //modelBuilder.Entity<Log>().Property(l=>l.Id).ValueGeneratedNever();
             //modelBuilder.Ignore<DireccionHogar>();
             modelBuilder.Entity<CineSinUbicacion>().HasNoKey().ToSqlQuery("SELECT id, nombre FROM Cines").ToView(null);
-            modelBuilder.Entity<PeliculaConConteos>().HasNoKey().ToView("PeliculasConConteos");
+            //modelBuilder.Entity<PeliculaConConteos>().HasNoKey().ToView("PeliculasConConteos");
+
+            modelBuilder.Entity<PeliculaConConteos>().ToSqlQuery(@"
+            sELECt 
+                id, 
+                titulo,
+                (SELECT 
+                    count(*)
+                FROM GeneroPelicula
+                WHERE PeliculasId = Peliculas.Id
+                ) as CantidadGeneros,
+                (SELECT 
+                    count(DISTINCT ElCine)
+                FROM PeliculaSalaDeCine
+                INNER JOIN SalasDeCine
+                    ON SalasDeCine.Id = PeliculaSalaDeCine.SalasDeCineId
+                WHERE PeliculasId = Peliculas.Id
+                ) as CantidadCines,
+                (SELECT 
+                    count(*)
+                FROM PeliculasActores
+                WHERE PeliculaId = Peliculas.Id
+                ) as CantidadActores
+            fROm Peliculas
+            ");
 
             foreach (var tipoEntidad in modelBuilder.Model.GetEntityTypes())
             {

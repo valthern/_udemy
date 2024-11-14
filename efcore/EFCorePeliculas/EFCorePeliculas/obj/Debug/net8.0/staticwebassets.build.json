@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "X2cafi/+v6Do4vZIJAmhLAaLE/x2gr4IMrI0VLdpRd4=",
+  "Hash": "R/0IkuvQcQCmLrXvCaKuMNfjDgskGagRNk8X+ZKj2dA=",
   "Source": "EFCorePeliculas",
   "BasePath": "_content/EFCorePeliculas",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

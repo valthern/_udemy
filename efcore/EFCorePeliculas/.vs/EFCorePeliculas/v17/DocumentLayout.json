@@ -3,36 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\efcore\\efcorepeliculas\\efcorepeliculas\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|solutionrelative:efcorepeliculas\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\efcore\\efcorepeliculas\\efcorepeliculas\\servicios\\eventosdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|solutionrelative:efcorepeliculas\\servicios\\eventosdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\efcore\\efcorepeliculas\\efcorepeliculas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|solutionrelative:efcorepeliculas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\efcore\\efcorepeliculas\\efcorepeliculas\\servicios\\serviciousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|solutionrelative:efcorepeliculas\\servicios\\serviciousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Migraciones\\20241112184908_GeneroAuditable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EFCorePeliculas\\Migraciones\\20241112184908_GeneroAuditable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\efcore\\efcorepeliculas\\efcorepeliculas\\controllers\\generoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|solutionrelative:efcorepeliculas\\controllers\\generoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\efcore\\efcorepeliculas\\efcorepeliculas\\entidades\\genero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|solutionrelative:efcorepeliculas\\entidades\\genero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\efcore\\efcorepeliculas\\efcorepeliculas\\entidades\\entidadauditable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|solutionrelative:efcorepeliculas\\entidades\\entidadauditable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Migraciones\\20241113195109_ProcedimientosAlmacenados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EFCorePeliculas\\Migraciones\\20241113195109_ProcedimientosAlmacenados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,110 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EventosDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Servicios\\EventosDbContext.cs",
-              "RelativeDocumentMoniker": "EFCorePeliculas\\Servicios\\EventosDbContext.cs",
-              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Servicios\\EventosDbContext.cs",
-              "RelativeToolTip": "EFCorePeliculas\\Servicios\\EventosDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T22:25:56.818Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Program.cs",
-              "RelativeDocumentMoniker": "EFCorePeliculas\\Program.cs",
-              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Program.cs",
-              "RelativeToolTip": "EFCorePeliculas\\Program.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABoAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T19:54:58.058Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ServicioUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Servicios\\ServicioUsuario.cs",
-              "RelativeDocumentMoniker": "EFCorePeliculas\\Servicios\\ServicioUsuario.cs",
-              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Servicios\\ServicioUsuario.cs",
-              "RelativeToolTip": "EFCorePeliculas\\Servicios\\ServicioUsuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T19:51:47.912Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "GenerosController.cs",
               "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Controllers\\GenerosController.cs",
               "RelativeDocumentMoniker": "EFCorePeliculas\\Controllers\\GenerosController.cs",
               "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Controllers\\GenerosController.cs",
               "RelativeToolTip": "EFCorePeliculas\\Controllers\\GenerosController.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAwwEIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAmwHYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T19:33:41.564Z",
+              "WhenOpened": "2024-11-13T20:20:51.467Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "EFCorePeliculas\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\ApplicationDbContext.cs",
-              "RelativeToolTip": "EFCorePeliculas\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAANAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "20241113195109_ProcedimientosAlmacenados.cs",
+              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Migraciones\\20241113195109_ProcedimientosAlmacenados.cs",
+              "RelativeDocumentMoniker": "EFCorePeliculas\\Migraciones\\20241113195109_ProcedimientosAlmacenados.cs",
+              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Migraciones\\20241113195109_ProcedimientosAlmacenados.cs",
+              "RelativeToolTip": "EFCorePeliculas\\Migraciones\\20241113195109_ProcedimientosAlmacenados.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwDUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T18:51:22.605Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "20241112184908_GeneroAuditable.cs",
-              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Migraciones\\20241112184908_GeneroAuditable.cs",
-              "RelativeDocumentMoniker": "EFCorePeliculas\\Migraciones\\20241112184908_GeneroAuditable.cs",
-              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Migraciones\\20241112184908_GeneroAuditable.cs",
-              "RelativeToolTip": "EFCorePeliculas\\Migraciones\\20241112184908_GeneroAuditable.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T18:49:08.854Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Genero.cs",
-              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Entidades\\Genero.cs",
-              "RelativeDocumentMoniker": "EFCorePeliculas\\Entidades\\Genero.cs",
-              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Entidades\\Genero.cs",
-              "RelativeToolTip": "EFCorePeliculas\\Entidades\\Genero.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T18:45:39.744Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "EntidadAuditable.cs",
-              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Entidades\\EntidadAuditable.cs",
-              "RelativeDocumentMoniker": "EFCorePeliculas\\Entidades\\EntidadAuditable.cs",
-              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Entidades\\EntidadAuditable.cs",
-              "RelativeToolTip": "EFCorePeliculas\\Entidades\\EntidadAuditable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T18:41:08.7Z",
+              "WhenOpened": "2024-11-13T19:51:10.13Z",
               "EditorCaption": ""
             }
           ]
