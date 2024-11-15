@@ -3,10 +3,12 @@ using AutoMapper.QueryableExtensions;
 using EFCorePeliculas.DTOs;
 using EFCorePeliculas.Entidades;
 using EFCorePeliculas.Entidades.SinLlaves;
+using EFCorePeliculas.Servicios;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NetTopologySuite;
 using NetTopologySuite.Geometries;
+using System.Collections.ObjectModel;
 
 namespace EFCorePeliculas.Controllers
 {
@@ -16,11 +18,13 @@ namespace EFCorePeliculas.Controllers
     {
         private readonly ApplicationDbContext context;
         private readonly IMapper mapper;
+        private readonly IActualizadorObservableCollection actualizadorObservableCollection;
 
-        public CinesController(ApplicationDbContext context, IMapper mapper)
+        public CinesController(ApplicationDbContext context, IMapper mapper, IActualizadorObservableCollection actualizadorObservableCollection)
         {
             this.context = context;
             this.mapper = mapper;
+            this.actualizadorObservableCollection = actualizadorObservableCollection;
         }
 
         [HttpGet("SinUbicacion")]
@@ -78,7 +82,7 @@ namespace EFCorePeliculas.Controllers
                     FechaInicio = DateTime.Today,
                     FechaFin = DateTime.Today.AddDays(7)
                 },
-                SalasDeCine = new HashSet<SalaDeCine>
+                SalasDeCine = new ObservableCollection<SalaDeCine>
                 {
                     new SalaDeCine {
                         Precio=200,
@@ -141,6 +145,7 @@ namespace EFCorePeliculas.Controllers
             if (cineDB is null) return NotFound();
 
             cineDB = mapper.Map(cineCreacionDTO, cineDB);
+            actualizadorObservableCollection.Actualizar(cineDB.SalasDeCine, cineCreacionDTO.SalasDeCine);
             await context.SaveChangesAsync();
             return Ok();
         }

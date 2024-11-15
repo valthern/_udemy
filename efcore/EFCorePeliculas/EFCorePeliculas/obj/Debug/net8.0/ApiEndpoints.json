@@ -234,6 +234,16 @@
     ]
   },
   {
+    "ContainingType": "EFCorePeliculas.Controllers.FacturasController",
+    "Method": "Post",
+    "RelativePath": "api/facturas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EFCorePeliculas.Controllers.GenerosController",
     "Method": "Get",
     "RelativePath": "api/generos",

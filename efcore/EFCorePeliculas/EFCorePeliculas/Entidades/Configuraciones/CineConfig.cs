@@ -9,6 +9,8 @@ namespace EFCorePeliculas.Entidades.Configuraciones
     {
         public void Configure(EntityTypeBuilder<Cine> builder)
         {
+            builder.HasChangeTrackingStrategy(ChangeTrackingStrategy.ChangedNotifications);
+
             // Cine
             builder.Property(c => c.Nombre)
                 .HasMaxLength(150)
@@ -21,7 +23,7 @@ namespace EFCorePeliculas.Entidades.Configuraciones
             builder.HasMany(c => c.SalasDeCine)
                 .WithOne(s => s.Cine)
                 .HasForeignKey(s => s.ElCine)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasOne(c => c.CineDetalle)
                 .WithOne(cd => cd.Cine)

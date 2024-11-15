@@ -23,6 +23,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(opciones =>
 
 //builder.Services.AddDbContext<ApplicationDbContext>();
 
+builder.Services.AddScoped<IActualizadorObservableCollection, ActualizadorObservableCollection>();
 builder.Services.AddScoped<IServicioUsuario, ServicioUsuario>();
 builder.Services.AddScoped<IEventosDbContext,EventosDbContext>();
 

@@ -46,7 +46,8 @@ namespace EFCorePeliculas.Controllers
             if (actorBD is null) return NotFound();
 
             actorBD = mapper.Map(actorCreacionDTO, actorBD);
-            await context.SaveChangesAsync();
+            var entry = context.Entry(actorBD);
+            //await context.SaveChangesAsync();
             return Ok();
         }
 
@@ -60,7 +61,7 @@ namespace EFCorePeliculas.Controllers
             var actor = mapper.Map<Actor>(actorCreacionDTO);
             actor.Id = id;
             //context.Update(actor);
-            context.Entry(actor).Property(a=>a.Nombre).IsModified = true;
+            context.Entry(actor).Property(a => a.Nombre).IsModified = true;
 
             await context.SaveChangesAsync();
             return Ok();

@@ -418,6 +418,18 @@
         }
       }
     },
+    "/api/facturas": {
+      "post": {
+        "tags": [
+          "Facturas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/generos": {
       "get": {
         "tags": [
@@ -1344,7 +1356,6 @@
             "$ref": "#/components/schemas/CineOferta"
           },
           "salasDeCine": {
-            "uniqueItems": true,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/SalaDeCine"
