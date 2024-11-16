@@ -6,4 +6,4 @@
         public DateTime FechaCreacion { get; set; }
         public int NumeroFactura { get; set; }
     }
-}
+} 

@@ -13,7 +13,7 @@ using NetTopologySuite.Geometries;
 namespace EFCorePeliculas.Migraciones
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241116002712_SecuenciaEjemplo")]
+    [Migration("20241116182826_SecuenciaEjemplo")]
     partial class SecuenciaEjemplo
     {
         /// <inheritdoc />
@@ -214,16 +214,16 @@ namespace EFCorePeliculas.Migraciones
                         {
                             Id = 2,
                             CineId = 4,
-                            FechaFin = new DateTime(2024, 11, 20, 0, 0, 0, 0, DateTimeKind.Local),
-                            FechaInicio = new DateTime(2024, 11, 15, 0, 0, 0, 0, DateTimeKind.Local),
+                            FechaFin = new DateTime(2024, 11, 21, 0, 0, 0, 0, DateTimeKind.Local),
+                            FechaInicio = new DateTime(2024, 11, 16, 0, 0, 0, 0, DateTimeKind.Local),
                             PorcentajeDescuento = 15m
                         },
                         new
                         {
                             Id = 1,
                             CineId = 1,
-                            FechaFin = new DateTime(2024, 11, 22, 0, 0, 0, 0, DateTimeKind.Local),
-                            FechaInicio = new DateTime(2024, 11, 15, 0, 0, 0, 0, DateTimeKind.Local),
+                            FechaFin = new DateTime(2024, 11, 23, 0, 0, 0, 0, DateTimeKind.Local),
+                            FechaInicio = new DateTime(2024, 11, 16, 0, 0, 0, 0, DateTimeKind.Local),
                             PorcentajeDescuento = 10m
                         });
                 });
