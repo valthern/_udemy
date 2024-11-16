@@ -1,5 +1,7 @@
 ﻿using EFCorePeliculas.Entidades;
+using EFCorePeliculas.Entidades.Funciones;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace EFCorePeliculas.Controllers
 {
@@ -12,6 +14,31 @@ namespace EFCorePeliculas.Controllers
         public FacturasController(ApplicationDbContext context)
         {
             this.context = context;
+        }
+
+        [HttpGet("{id:int}/detalle")]
+        public async Task<ActionResult<IEnumerable<FacturaDetalle>>> GetDetalle(int id)
+        {
+            return await context.FacturaDetalles
+                .Where(f=>f.FacturaId == id)
+                .OrderByDescending(f=>f.Total)
+                .ToListAsync();
+        }
+
+        [HttpGet("Funciones_escalares")]
+        public async Task<ActionResult> GetFuncionesEscalares()
+        {
+            var facturas=await context.Facturas
+                .Select(f => new
+                {
+                    f.Id,
+                    Total=context.FacturaDetalleSuma(f.Id),
+                    Promedio=Escalares.FacturaDetallePromedio(f.Id)
+                })
+                .OrderByDescending(f=>context.FacturaDetalleSuma(f.Id))
+                .ToListAsync();
+
+            return Ok(facturas);
         }
 
         [HttpPost]

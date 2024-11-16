@@ -4,17 +4,20 @@ using EFCorePeliculas;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NetTopologySuite.Geometries;
 
 #nullable disable
 
-namespace EFCorePeliculas.Migrations
+namespace EFCorePeliculas.Migraciones
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241115224056_TotalCalculado")]
+    partial class TotalCalculado
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -22,8 +25,6 @@ namespace EFCorePeliculas.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.HasSequence<int>("NumeroFactura", "factura");
 
             modelBuilder.Entity("EFCorePeliculas.Entidades.Actor", b =>
                 {
@@ -236,11 +237,6 @@ namespace EFCorePeliculas.Migrations
                     b.Property<DateTime>("FechaCreacion")
                         .HasColumnType("date");
 
-                    b.Property<int>("NumeroFactura")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValueSql("NEXT VALUE FOR factura.NumeroFactura");
-
                     b.HasKey("Id");
 
                     b.ToTable("Facturas");
@@ -249,26 +245,22 @@ namespace EFCorePeliculas.Migrations
                         new
                         {
                             Id = 2,
-                            FechaCreacion = new DateTime(2022, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            NumeroFactura = 0
+                            FechaCreacion = new DateTime(2022, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 3,
-                            FechaCreacion = new DateTime(2022, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            NumeroFactura = 0
+                            FechaCreacion = new DateTime(2022, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 4,
-                            FechaCreacion = new DateTime(2022, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            NumeroFactura = 0
+                            FechaCreacion = new DateTime(2022, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 5,
-                            FechaCreacion = new DateTime(2022, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            NumeroFactura = 0
+                            FechaCreacion = new DateTime(2022, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 

@@ -22,10 +22,14 @@ namespace EFCorePeliculas.Controllers
             this.mapper = mapper;
         }
 
-        [HttpGet("PeliculasConConteos")]
-        public async Task<ActionResult<IEnumerable<PeliculaConConteos>>> GetPeliculasConConteos()
+        [HttpGet("PeliculasConConteos/{id:int}")]
+        public async Task<ActionResult<PeliculaConConteos>> GetPeliculasConConteos(int id)
         {
-            return await context.Set<PeliculaConConteos>().ToListAsync();
+            var  resultado = await context.PeliculaConConteos(id).FirstOrDefaultAsync();
+
+            if(resultado is null) return NotFound();
+
+            return Ok(resultado);
         }
 
         [HttpGet("{id:int}")]

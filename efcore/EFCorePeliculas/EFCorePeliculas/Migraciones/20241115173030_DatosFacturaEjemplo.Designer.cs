@@ -4,17 +4,20 @@ using EFCorePeliculas;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NetTopologySuite.Geometries;
 
 #nullable disable
 
-namespace EFCorePeliculas.Migrations
+namespace EFCorePeliculas.Migraciones
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241115173030_DatosFacturaEjemplo")]
+    partial class DatosFacturaEjemplo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -22,8 +25,6 @@ namespace EFCorePeliculas.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.HasSequence<int>("NumeroFactura", "factura");
 
             modelBuilder.Entity("EFCorePeliculas.Entidades.Actor", b =>
                 {
@@ -236,11 +237,6 @@ namespace EFCorePeliculas.Migrations
                     b.Property<DateTime>("FechaCreacion")
                         .HasColumnType("date");
 
-                    b.Property<int>("NumeroFactura")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValueSql("NEXT VALUE FOR factura.NumeroFactura");
-
                     b.HasKey("Id");
 
                     b.ToTable("Facturas");
@@ -249,26 +245,22 @@ namespace EFCorePeliculas.Migrations
                         new
                         {
                             Id = 2,
-                            FechaCreacion = new DateTime(2022, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            NumeroFactura = 0
+                            FechaCreacion = new DateTime(2022, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 3,
-                            FechaCreacion = new DateTime(2022, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            NumeroFactura = 0
+                            FechaCreacion = new DateTime(2022, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 4,
-                            FechaCreacion = new DateTime(2022, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            NumeroFactura = 0
+                            FechaCreacion = new DateTime(2022, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 5,
-                            FechaCreacion = new DateTime(2022, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            NumeroFactura = 0
+                            FechaCreacion = new DateTime(2022, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 
@@ -280,9 +272,6 @@ namespace EFCorePeliculas.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Cantidad")
-                        .HasColumnType("int");
-
                     b.Property<int>("FacturaId")
                         .HasColumnType("int");
 
@@ -292,12 +281,6 @@ namespace EFCorePeliculas.Migrations
 
                     b.Property<string>("Producto")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("Total")
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasPrecision(18, 2)
-                        .HasColumnType("decimal(18,2)")
-                        .HasComputedColumnSql("Precio * Cantidad");
 
                     b.HasKey("Id");
 
@@ -309,114 +292,86 @@ namespace EFCorePeliculas.Migrations
                         new
                         {
                             Id = 3,
-                            Cantidad = 0,
                             FacturaId = 2,
-                            Precio = 350.99m,
-                            Total = 0m
+                            Precio = 350.99m
                         },
                         new
                         {
                             Id = 4,
-                            Cantidad = 0,
                             FacturaId = 2,
-                            Precio = 10m,
-                            Total = 0m
+                            Precio = 10m
                         },
                         new
                         {
                             Id = 5,
-                            Cantidad = 0,
                             FacturaId = 2,
-                            Precio = 45.50m,
-                            Total = 0m
+                            Precio = 45.50m
                         },
                         new
                         {
                             Id = 6,
-                            Cantidad = 0,
                             FacturaId = 3,
-                            Precio = 17.99m,
-                            Total = 0m
+                            Precio = 17.99m
                         },
                         new
                         {
                             Id = 7,
-                            Cantidad = 0,
                             FacturaId = 3,
-                            Precio = 14m,
-                            Total = 0m
+                            Precio = 14m
                         },
                         new
                         {
                             Id = 8,
-                            Cantidad = 0,
                             FacturaId = 3,
-                            Precio = 45m,
-                            Total = 0m
+                            Precio = 45m
                         },
                         new
                         {
                             Id = 9,
-                            Cantidad = 0,
                             FacturaId = 3,
-                            Precio = 100m,
-                            Total = 0m
+                            Precio = 100m
                         },
                         new
                         {
                             Id = 10,
-                            Cantidad = 0,
                             FacturaId = 4,
-                            Precio = 371m,
-                            Total = 0m
+                            Precio = 371m
                         },
                         new
                         {
                             Id = 11,
-                            Cantidad = 0,
                             FacturaId = 4,
-                            Precio = 114.99m,
-                            Total = 0m
+                            Precio = 114.99m
                         },
                         new
                         {
                             Id = 12,
-                            Cantidad = 0,
                             FacturaId = 4,
-                            Precio = 425m,
-                            Total = 0m
+                            Precio = 425m
                         },
                         new
                         {
                             Id = 13,
-                            Cantidad = 0,
                             FacturaId = 4,
-                            Precio = 1000m,
-                            Total = 0m
+                            Precio = 1000m
                         },
                         new
                         {
                             Id = 14,
-                            Cantidad = 0,
                             FacturaId = 4,
-                            Precio = 5m,
-                            Total = 0m
+                            Precio = 5m
                         },
                         new
                         {
                             Id = 15,
-                            Cantidad = 0,
                             FacturaId = 4,
-                            Precio = 2.99m,
-                            Total = 0m
+                            Precio = 2.99m
                         },
                         new
                         {
                             Id = 16,
-                            Cantidad = 0,
                             FacturaId = 5,
-                            Precio = 50m,
-                            Total = 0m
+                            Precio = 50m
                         });
                 });
 
@@ -901,6 +856,9 @@ namespace EFCorePeliculas.Migrations
 
             modelBuilder.Entity("EFCorePeliculas.Entidades.SinLlaves.PeliculaConConteos", b =>
                 {
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
                     b.Property<int>("CantidadActores")
                         .HasColumnType("int");
 
@@ -910,13 +868,14 @@ namespace EFCorePeliculas.Migrations
                     b.Property<int>("CantidadGeneros")
                         .HasColumnType("int");
 
-                    b.Property<int>("Id")
-                        .HasColumnType("int");
-
                     b.Property<string>("Titulo")
                         .HasColumnType("nvarchar(max)");
 
+                    b.HasKey("Id");
+
                     b.ToTable((string)null);
+
+                    b.ToSqlQuery("\r\n            sELECt \r\n                id, \r\n                titulo,\r\n                (SELECT \r\n                    count(*)\r\n                FROM GeneroPelicula\r\n                WHERE PeliculasId = Peliculas.Id\r\n                ) as CantidadGeneros,\r\n                (SELECT \r\n                    count(DISTINCT ElCine)\r\n                FROM PeliculaSalaDeCine\r\n                INNER JOIN SalasDeCine\r\n                    ON SalasDeCine.Id = PeliculaSalaDeCine.SalasDeCineId\r\n                WHERE PeliculasId = Peliculas.Id\r\n                ) as CantidadCines,\r\n                (SELECT \r\n                    count(*)\r\n                FROM PeliculasActores\r\n                WHERE PeliculaId = Peliculas.Id\r\n                ) as CantidadActores\r\n            fROm Peliculas\r\n            ");
                 });
 
             modelBuilder.Entity("GeneroPelicula", b =>

@@ -8,6 +8,9 @@ namespace EFCorePeliculas.Entidades.Configuraciones
         public void Configure(EntityTypeBuilder<Factura> builder)
         {
             builder.HasMany(typeof(FacturaDetalle)).WithOne();
+
+            builder.Property(f => f.NumeroFactura)
+                .HasDefaultValueSql("NEXT VALUE FOR factura.NumeroFactura");
         }
     }
 }
