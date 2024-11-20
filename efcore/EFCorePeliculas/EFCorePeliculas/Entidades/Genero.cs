@@ -15,6 +15,7 @@ namespace EFCorePeliculas.Entidades
         //[MaxLength(150)]
         //[Required]
         //[Column("NombreGenero")]
+        [ConcurrencyCheck]
         public string Nombre { get; set; }
         public bool EstaBorrado { get; set; }
         public HashSet<Pelicula> Peliculas { get; set; }

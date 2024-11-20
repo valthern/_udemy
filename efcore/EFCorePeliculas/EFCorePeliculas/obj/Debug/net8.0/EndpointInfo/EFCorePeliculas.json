@@ -467,6 +467,30 @@
         }
       }
     },
+    "/api/facturas/Concurrencia_fila": {
+      "post": {
+        "tags": [
+          "Facturas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/facturas/Concurrencia_fila_Manejando_Error": {
+      "post": {
+        "tags": [
+          "Facturas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/facturas/Funciones_escalares": {
       "get": {
         "tags": [
@@ -484,6 +508,76 @@
         "tags": [
           "Facturas"
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/facturas/ObtenerFactura": {
+      "get": {
+        "tags": [
+          "Facturas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Factura"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Factura"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Factura"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/facturas/ActualizarFactura": {
+      "put": {
+        "tags": [
+          "Facturas"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Factura"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Factura"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Factura"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -565,17 +659,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Genero"
+                "$ref": "#/components/schemas/GeneroActualizacionDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Genero"
+                "$ref": "#/components/schemas/GeneroActualizacionDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Genero"
+                "$ref": "#/components/schemas/GeneroActualizacionDTO"
               }
             }
           }
@@ -819,6 +913,18 @@
               "format": "int32"
             }
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/generos/concurrency_token": {
+      "post": {
+        "tags": [
+          "Generos"
         ],
         "responses": {
           "200": {
@@ -1772,6 +1878,29 @@
         },
         "additionalProperties": false
       },
+      "Factura": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fechaCreacion": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "numeroFactura": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "version": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "FacturaDetalle": {
         "type": "object",
         "properties": {
@@ -1839,6 +1968,28 @@
           "ejemplo": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GeneroActualizacionDTO": {
+        "required": [
+          "nombre",
+          "nombre_Original"
+        ],
+        "type": "object",
+        "properties": {
+          "identificador": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "nombre_Original": {
+            "minLength": 1,
+            "type": "string"
           }
         },
         "additionalProperties": false

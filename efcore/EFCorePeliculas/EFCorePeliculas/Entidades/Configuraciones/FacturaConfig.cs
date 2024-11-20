@@ -11,6 +11,8 @@ namespace EFCorePeliculas.Entidades.Configuraciones
 
             builder.Property(f => f.NumeroFactura)
                 .HasDefaultValueSql("NEXT VALUE FOR factura.NumeroFactura");
+
+            //builder.Property(f => f.Version).IsRowVersion();
         }
     }
 }

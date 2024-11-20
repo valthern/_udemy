@@ -12,12 +12,18 @@ namespace EFCorePeliculas.Entidades.Configuraciones
             // Genero
             //modelBuilder.Entity<Genero>().ToTable(name: "TablaGeneros", schema: "Peliculas");
 
+            builder.ToTable(name: "Generos", opciones => opciones.IsTemporal());
+
+            builder.Property("PeriodStart").HasColumnType("datetime2");
+            builder.Property("PeriodEnd").HasColumnType("datetime2");
+
             builder.HasKey(g => g.Identificador);
-            
+
             builder.Property(g => g.Nombre)
                 //.HasColumnName("NombreGenero")
                 .HasMaxLength(150)
                 .IsRequired();
+                //.IsConcurrencyToken();
 
             builder.HasQueryFilter(g => !g.EstaBorrado);
 

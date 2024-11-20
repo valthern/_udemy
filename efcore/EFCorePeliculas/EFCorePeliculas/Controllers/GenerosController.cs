@@ -1,4 +1,6 @@
-﻿using EFCorePeliculas.Entidades;
+﻿using AutoMapper;
+using EFCorePeliculas.DTOs;
+using EFCorePeliculas.Entidades;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
@@ -11,10 +13,12 @@ namespace EFCorePeliculas.Controllers
     public class GenerosController : ControllerBase
     {
         private readonly ApplicationDbContext context;
+        private readonly IMapper mapper;
 
-        public GenerosController(ApplicationDbContext context)
+        public GenerosController(ApplicationDbContext context, IMapper mapper)
         {
             this.context = context;
+            this.mapper = mapper;
         }
 
         [HttpGet]
@@ -66,9 +70,9 @@ namespace EFCorePeliculas.Controllers
         [HttpGet("{id:int}")]
         public async Task<ActionResult<Genero>> Get(int id)
         {
-            //var genero = await context.Generos.AsTracking().FirstOrDefaultAsync(g => g.Identificador == id);
+            //var generoActualizacionDTO = await context.Generos.AsTracking().FirstOrDefaultAsync(g => g.Identificador == id);
 
-            //var genero = await context.Generos
+            //var generoActualizacionDTO = await context.Generos
             //    .FromSqlRaw("SeLecT * FrOm Generos wHeRe Identificador = {0}", id)
             //    .IgnoreQueryFilters()
             //    .FirstOrDefaultAsync();
@@ -98,8 +102,8 @@ namespace EFCorePeliculas.Controllers
             if (existeGeneroConNombre)
                 return BadRequest($"ya existe un género con ese nombre: {genero.Nombre}");
 
-            //context.Add(genero);
-            //context.Entry(genero).State = EntityState.Added;
+            //context.Add(generoActualizacionDTO);
+            //context.Entry(generoActualizacionDTO).State = EntityState.Added;
 
             await context.Database
                 .ExecuteSqlInterpolatedAsync($@"
@@ -119,9 +123,13 @@ namespace EFCorePeliculas.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult> Put(Genero genero)
+        public async Task<ActionResult> Put(GeneroActualizacionDTO generoActualizacionDTO)
         {
+            var genero = mapper.Map<Genero>(generoActualizacionDTO);
             context.Update(genero);
+            context.Entry(genero)
+                .Property(g => g.Nombre)
+                .OriginalValue = generoActualizacionDTO.Nombre_Original;
             await context.SaveChangesAsync();
             return Ok();
         }
@@ -169,6 +177,25 @@ namespace EFCorePeliculas.Controllers
 
             genero.EstaBorrado = false;
             await context.SaveChangesAsync();
+            return Ok();
+        }
+
+        [HttpPost("concurrency_token")]
+        public async Task<ActionResult> ConcurrencyToken()
+        {
+            var generoId = 1;
+
+            // Felipe Lee el registor de la BD.
+            var genero = await context.Generos.AsTracking().FirstOrDefaultAsync(g => g.Identificador == generoId);
+            genero.Nombre = "Felipe estuvo aquí";
+
+            // Claudia actualiza el registro den la BD
+            await context.Database.ExecuteSqlInterpolatedAsync(@$"UPDATE Generos SET Nombre = 'Claudia estuvo aquí'
+                where Identificador = {generoId}");
+
+            // Felipe intenta actualizar.
+            await context.SaveChangesAsync();
+
             return Ok();
         }
     }

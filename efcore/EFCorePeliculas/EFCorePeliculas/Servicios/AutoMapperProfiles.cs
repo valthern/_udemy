@@ -55,6 +55,12 @@ namespace EFCorePeliculas.Servicios
 
             CreateMap<ActorCreacionDTO, Actor>();
             #endregion
+
+
+
+            #region De Actualización
+            CreateMap<GeneroActualizacionDTO, Genero>();
+            #endregion
         }
     }
 }

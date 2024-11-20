@@ -271,6 +271,42 @@
   },
   {
     "ContainingType": "EFCorePeliculas.Controllers.FacturasController",
+    "Method": "ActualizarFactura",
+    "RelativePath": "api/facturas/ActualizarFactura",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "factura",
+        "Type": "EFCorePeliculas.Entidades.Factura",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EFCorePeliculas.Controllers.FacturasController",
+    "Method": "ConcurrenciaFila",
+    "RelativePath": "api/facturas/Concurrencia_fila",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EFCorePeliculas.Controllers.FacturasController",
+    "Method": "ConcurrenciaFilaManejandoError",
+    "RelativePath": "api/facturas/Concurrencia_fila_Manejando_Error",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EFCorePeliculas.Controllers.FacturasController",
     "Method": "GetFuncionesEscalares",
     "RelativePath": "api/facturas/Funciones_escalares",
     "HttpMethod": "GET",
@@ -278,6 +314,32 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EFCorePeliculas.Controllers.FacturasController",
+    "Method": "ObtenerFactura",
+    "RelativePath": "api/facturas/ObtenerFactura",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "EFCorePeliculas.Entidades.Factura",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "EFCorePeliculas.Controllers.GenerosController",
@@ -324,8 +386,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "genero",
-        "Type": "EFCorePeliculas.Entidades.Genero",
+        "Name": "generoActualizacionDTO",
+        "Type": "EFCorePeliculas.DTOs.GeneroActualizacionDTO",
         "IsRequired": true
       }
     ],
@@ -403,6 +465,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EFCorePeliculas.Controllers.GenerosController",
+    "Method": "ConcurrencyToken",
+    "RelativePath": "api/generos/concurrency_token",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
