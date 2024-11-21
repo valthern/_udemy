@@ -15,6 +15,7 @@ namespace EFCorePeliculas.Entidades.Configuraciones
             builder.ToTable(name: "Generos", opciones => opciones.IsTemporal());
 
             builder.Property("PeriodStart").HasColumnType("datetime2");
+
             builder.Property("PeriodEnd").HasColumnType("datetime2");
 
             builder.HasKey(g => g.Identificador);

@@ -47,6 +47,39 @@ namespace EFCorePeliculas.Controllers
             return NotFound();
         }
 
+        [HttpPut("modificar_varias_veces")]
+        public async Task<ActionResult> ModificarVariasVeces()
+        {
+            var id = 3;
+            var genero = await context.Generos.AsTracking().FirstOrDefaultAsync(g => g.Identificador == id);
+
+            genero.Nombre = "Comedia 2";
+            await context.SaveChangesAsync();
+            await Task.Delay(2000);
+
+            genero.Nombre = "Comedia 3";
+            await context.SaveChangesAsync();
+            await Task.Delay(2000);
+
+            genero.Nombre = "Comedia 4";
+            await context.SaveChangesAsync();
+            await Task.Delay(2000);
+
+            genero.Nombre = "Comedia 5";
+            await context.SaveChangesAsync();
+            await Task.Delay(2000);
+
+            genero.Nombre = "Comedia 6";
+            await context.SaveChangesAsync();
+            await Task.Delay(2000);
+
+            genero.Nombre = "Comedia Actual";
+            await context.SaveChangesAsync();
+            await Task.Delay(2000);
+
+            return Ok();
+        }
+
         [HttpPost("Procedimiento_almacenado")]
         public async Task<ActionResult> PostSp(Genero genero)
         {
@@ -70,28 +103,122 @@ namespace EFCorePeliculas.Controllers
         [HttpGet("{id:int}")]
         public async Task<ActionResult<Genero>> Get(int id)
         {
-            //var generoActualizacionDTO = await context.Generos.AsTracking().FirstOrDefaultAsync(g => g.Identificador == id);
+            var genero = await context.Generos.AsTracking().FirstOrDefaultAsync(g => g.Identificador == id);
 
             //var generoActualizacionDTO = await context.Generos
             //    .FromSqlRaw("SeLecT * FrOm Generos wHeRe Identificador = {0}", id)
             //    .IgnoreQueryFilters()
             //    .FirstOrDefaultAsync();
 
-            var genero = await context.Generos
-                .FromSqlInterpolated($"SeLeCt * fRoM Generos WhErE Identificador = {id}")
-                .IgnoreQueryFilters()
-                .FirstOrDefaultAsync();
+            //var genero = await context.Generos
+            //    .FromSqlInterpolated($"SeLeCt * fRoM Generos WhErE Identificador = {id}")
+            //    .IgnoreQueryFilters()
+            //    .FirstOrDefaultAsync();
 
             if (genero is null) return NotFound();
 
             var fechaCreacion = context.Entry(genero).Property<DateTime>("FechaCreacion").CurrentValue;
+            var periodStart = context.Entry(genero).Property<DateTime>("PeriodStart").CurrentValue;
+            var periodEnd = context.Entry(genero).Property<DateTime>("PeriodEnd").CurrentValue;
 
             return Ok(new
             {
                 Id = genero.Identificador,
-                NoContent = genero.Nombre,
-                fechaCreacion
+                genero.Nombre,
+                fechaCreacion,
+                periodStart,
+                periodEnd
             });
+        }
+
+        [HttpGet("TemporalAll/{id:int}")]
+        public async Task<ActionResult> GetTEmporalAll(int id)
+        {
+            var generos=await context.Generos
+                .TemporalAll()
+                .AsTracking()
+                .Where(g => g.Identificador == id)
+                .Select(g => new
+                {
+                    Id = g.Identificador,
+                    g.Nombre,
+                    PeriodStart = EF.Property<DateTime>(g,"PeriodStart"),
+                    PeriodEnd= EF.Property<DateTime>(g,"PeriodEnd")
+                }).ToListAsync();
+
+            return Ok(generos);
+        }
+
+        [HttpGet("TemporalAsOf/{id:int}")]
+        public async Task<ActionResult> GetTemporalAsOf(int id, DateTime fecha)
+        {
+            var genero= await context.Generos
+                .TemporalAsOf(fecha)
+                .AsTracking()
+                .Where(g=>g.Identificador == id)
+                .Select(g => new
+                {
+                    Id = g.Identificador,
+                    g.Nombre,
+                    PeriodStart=EF.Property<DateTime>(g,"PeriodStart"),
+                    PeriodEdn=EF.Property<DateTime>(g,"PeriodEnd")
+                }).FirstOrDefaultAsync();
+
+            return Ok(genero);
+        }
+
+        [HttpGet("TemporalFromTo/{id:int}")]
+        public async Task<ActionResult> GetTemporalFromTo(int id, DateTime desde, DateTime hasta)
+        {
+            var generos = await context.Generos
+                .TemporalFromTo(desde, hasta)
+                .AsTracking()
+                .Where(g => g.Identificador == id)
+                .Select(g => new
+                {
+                    Id = g.Identificador,
+                    g.Nombre,
+                    PeriodStart = EF.Property<DateTime>(g, "PeriodStart"),
+                    PeriodEnd = EF.Property<DateTime>(g, "PeriodEnd")
+                }).ToListAsync();
+
+            return Ok(generos);
+        }
+
+        [HttpGet("TemporalContainedIn/{id:int}")]
+        public async Task<ActionResult> GetTemporalContainedIn(int id, DateTime desde, DateTime hasta)
+        {
+            var generos = await context.Generos
+                .TemporalContainedIn(desde, hasta)
+                .AsTracking()
+                .Where(g => g.Identificador == id)
+                .Select(g => new
+                {
+                    Id = g.Identificador,
+                    g.Nombre,
+                    PeriodStart = EF.Property<DateTime>(g, "PeriodStart"),
+                    PeriodEnd = EF.Property<DateTime>(g, "PeriodEnd")
+                }).ToListAsync();
+
+            return Ok(generos);
+        }
+
+        [HttpGet("TemporalBetween/{id:int}")]
+        public async Task<ActionResult> GetTemporalBetween(int id, DateTime desde, DateTime hasta)
+        {
+            var generos = await context.Generos
+                .TemporalBetween(desde, hasta)
+                .AsTracking()
+                .Where(g => g.Identificador == id)
+                .Select(g => new
+                {
+                    Id = g.Identificador,
+                    g.Nombre,
+                    PeriodStart = EF.Property<DateTime>(g, "PeriodStart"),
+                    PeriodEnd = EF.Property<DateTime>(g, "PeriodEnd")
+                }).ToListAsync();
+
+            return Ok(generos);
         }
 
         [HttpPost]
@@ -177,6 +304,35 @@ namespace EFCorePeliculas.Controllers
 
             genero.EstaBorrado = false;
             await context.SaveChangesAsync();
+            return Ok();
+        }
+
+        [HttpPost("Restaurar_Borrado/{id:int}")]
+        public async Task<ActionResult> RestaurarBorrado(int id,DateTime fecha)
+        {
+            var genero = await context.Generos
+                .TemporalAsOf(fecha)
+                .AsTracking()
+                .IgnoreQueryFilters()
+                .FirstOrDefaultAsync(g => g.Identificador == id);
+
+            if (genero is null) return NotFound();
+
+            try
+            {
+                await context.Database.ExecuteSqlInterpolatedAsync($@"
+                    SET IDENTITY_INSERT Generos ON;
+
+                    INSERT INTO Generos (Identificador, Nombre)
+                    VALUES
+                    ({genero.Identificador}, {genero.Nombre})
+                ");
+            }
+            finally
+            {
+                await context.Database.ExecuteSqlRawAsync("SET IDENTITY_INSERT Generos OFF;");
+            }
+
             return Ok();
         }
 

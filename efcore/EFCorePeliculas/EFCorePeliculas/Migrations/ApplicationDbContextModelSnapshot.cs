@@ -211,16 +211,16 @@ namespace EFCorePeliculas.Migrations
                         {
                             Id = 2,
                             CineId = 4,
-                            FechaFin = new DateTime(2024, 11, 24, 0, 0, 0, 0, DateTimeKind.Local),
-                            FechaInicio = new DateTime(2024, 11, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            FechaFin = new DateTime(2024, 11, 25, 0, 0, 0, 0, DateTimeKind.Local),
+                            FechaInicio = new DateTime(2024, 11, 20, 0, 0, 0, 0, DateTimeKind.Local),
                             PorcentajeDescuento = 15m
                         },
                         new
                         {
                             Id = 1,
                             CineId = 1,
-                            FechaFin = new DateTime(2024, 11, 26, 0, 0, 0, 0, DateTimeKind.Local),
-                            FechaInicio = new DateTime(2024, 11, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            FechaFin = new DateTime(2024, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            FechaInicio = new DateTime(2024, 11, 20, 0, 0, 0, 0, DateTimeKind.Local),
                             PorcentajeDescuento = 10m
                         });
                 });
@@ -233,8 +233,18 @@ namespace EFCorePeliculas.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<DateTime>("Desde")
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("datetime2")
+                        .HasColumnName("Desde");
+
                     b.Property<DateTime>("FechaCreacion")
                         .HasColumnType("date");
+
+                    b.Property<DateTime>("Hasta")
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("datetime2")
+                        .HasColumnName("Hasta");
 
                     b.Property<int>("NumeroFactura")
                         .ValueGeneratedOnAdd()
@@ -248,7 +258,18 @@ namespace EFCorePeliculas.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Facturas");
+                    b.ToTable("Faturas", (string)null);
+
+                    b.ToTable(tb => tb.IsTemporal(ttb =>
+                            {
+                                ttb.UseHistoryTable("FacturasHistorico");
+                                ttb
+                                    .HasPeriodStart("Desde")
+                                    .HasColumnName("Desde");
+                                ttb
+                                    .HasPeriodEnd("Hasta")
+                                    .HasColumnName("Hasta");
+                            }));
 
                     b.HasData(
                         new

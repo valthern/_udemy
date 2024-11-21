@@ -479,6 +479,16 @@
   },
   {
     "ContainingType": "EFCorePeliculas.Controllers.GenerosController",
+    "Method": "ModificarVariasVeces",
+    "RelativePath": "api/generos/modificar_varias_veces",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EFCorePeliculas.Controllers.GenerosController",
     "Method": "PostSp",
     "RelativePath": "api/generos/Procedimiento_almacenado",
     "HttpMethod": "POST",
@@ -521,6 +531,27 @@
   },
   {
     "ContainingType": "EFCorePeliculas.Controllers.GenerosController",
+    "Method": "RestaurarBorrado",
+    "RelativePath": "api/generos/Restaurar_Borrado/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "fecha",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EFCorePeliculas.Controllers.GenerosController",
     "Method": "Restaurar",
     "RelativePath": "api/generos/Restaurar/{id}",
     "HttpMethod": "POST",
@@ -531,6 +562,121 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EFCorePeliculas.Controllers.GenerosController",
+    "Method": "GetTEmporalAll",
+    "RelativePath": "api/generos/TemporalAll/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EFCorePeliculas.Controllers.GenerosController",
+    "Method": "GetTemporalAsOf",
+    "RelativePath": "api/generos/TemporalAsOf/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "fecha",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EFCorePeliculas.Controllers.GenerosController",
+    "Method": "GetTemporalBetween",
+    "RelativePath": "api/generos/TemporalBetween/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "desde",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "hasta",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EFCorePeliculas.Controllers.GenerosController",
+    "Method": "GetTemporalContainedIn",
+    "RelativePath": "api/generos/TemporalContainedIn/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "desde",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "hasta",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EFCorePeliculas.Controllers.GenerosController",
+    "Method": "GetTemporalFromTo",
+    "RelativePath": "api/generos/TemporalFromTo/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "desde",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "hasta",
+        "Type": "System.DateTime",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
