@@ -11,6 +11,7 @@ namespace EFCorePeliculas.Servicios
         void ManejarStateChange(object sender, EntityStateChangedEventArgs args);
         void ManejarTracked(object sender, EntityTrackedEventArgs args);
     }
+
     public class EventosDbContext:IEventosDbContext
     {
         private readonly ILogger<EventosDbContext> logger;

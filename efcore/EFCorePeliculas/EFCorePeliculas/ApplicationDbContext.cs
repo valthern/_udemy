@@ -81,9 +81,12 @@ namespace EFCorePeliculas
             //modelBuilder.ApplyConfiguration(new CineOfertaConfig());
             //modelBuilder.ApplyConfiguration(new PeliculaActorConfig());
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-            SeedingModuloConsulta.Seed(modelBuilder);
-            SeedingPersonaMensaje.Seed(modelBuilder);
-            SeedingFacturas.Seed(modelBuilder);
+            if (!Database.IsInMemory())
+            {
+                SeedingModuloConsulta.Seed(modelBuilder);
+                SeedingPersonaMensaje.Seed(modelBuilder);
+                SeedingFacturas.Seed(modelBuilder);
+            }
 
             Escalares.RegistrarFunciones(modelBuilder);
 

@@ -304,3 +304,5 @@ C:\Users\magno\source\ejemplos\_udemy\efcore\EFCorePeliculas\EFCorePeliculas\bin
 C:\Users\magno\source\ejemplos\_udemy\efcore\EFCorePeliculas\EFCorePeliculas\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 C:\Users\magno\source\ejemplos\_udemy\efcore\EFCorePeliculas\EFCorePeliculas\obj\Debug\net8.0\staticwebassets\msbuild.EFCorePeliculas.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
 C:\Users\magno\source\ejemplos\_udemy\efcore\EFCorePeliculas\EFCorePeliculas\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\magno\source\ejemplos\_udemy\efcore\EFCorePeliculas\EFCorePeliculas\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\magno\source\ejemplos\_udemy\efcore\EFCorePeliculas\EFCorePeliculas\bin\Debug\net8.0\System.ClientModel.dll

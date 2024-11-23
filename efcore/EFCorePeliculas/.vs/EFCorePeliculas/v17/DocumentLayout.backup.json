@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D4E6F98E-2E08-45A2-9395-CBDC7D37FE84}|EFCorePeliculas.Pruebas\\EFCorePeliculas.Pruebas.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\efcore\\efcorepeliculas\\efcorepeliculas.pruebas\\serviciousuariopruebas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4E6F98E-2E08-45A2-9395-CBDC7D37FE84}|EFCorePeliculas.Pruebas\\EFCorePeliculas.Pruebas.csproj|solutionrelative:efcorepeliculas.pruebas\\serviciousuariopruebas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D4E6F98E-2E08-45A2-9395-CBDC7D37FE84}|EFCorePeliculas.Pruebas\\EFCorePeliculas.Pruebas.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\efcore\\efcorepeliculas\\efcorepeliculas.pruebas\\generoscontrollerpruebas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4E6F98E-2E08-45A2-9395-CBDC7D37FE84}|EFCorePeliculas.Pruebas\\EFCorePeliculas.Pruebas.csproj|solutionrelative:efcorepeliculas.pruebas\\generoscontrollerpruebas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\efcore\\efcorepeliculas\\efcorepeliculas\\servicios\\serviciousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|solutionrelative:efcorepeliculas\\servicios\\serviciousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D4E6F98E-2E08-45A2-9395-CBDC7D37FE84}|EFCorePeliculas.Pruebas\\EFCorePeliculas.Pruebas.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\efcore\\efcorepeliculas\\efcorepeliculas.pruebas\\basepruebas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4E6F98E-2E08-45A2-9395-CBDC7D37FE84}|EFCorePeliculas.Pruebas\\EFCorePeliculas.Pruebas.csproj|solutionrelative:efcorepeliculas.pruebas\\basepruebas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\efcore\\efcorepeliculas\\efcorepeliculas\\entidades\\genero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|solutionrelative:efcorepeliculas\\entidades\\genero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\efcore\\efcorepeliculas\\efcorepeliculas\\controllers\\generoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D890CE7E-01A8-4EAB-949D-2C1D676BA518}|EFCorePeliculas\\EFCorePeliculas.csproj|solutionrelative:efcorepeliculas\\controllers\\generoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ServicioUsuarioPruebas.cs",
-              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas.Pruebas\\ServicioUsuarioPruebas.cs",
-              "RelativeDocumentMoniker": "EFCorePeliculas.Pruebas\\ServicioUsuarioPruebas.cs",
-              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas.Pruebas\\ServicioUsuarioPruebas.cs",
-              "RelativeToolTip": "EFCorePeliculas.Pruebas\\ServicioUsuarioPruebas.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAoAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Genero.cs",
+              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Entidades\\Genero.cs",
+              "RelativeDocumentMoniker": "EFCorePeliculas\\Entidades\\Genero.cs",
+              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Entidades\\Genero.cs",
+              "RelativeToolTip": "EFCorePeliculas\\Entidades\\Genero.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T00:18:25.911Z",
+              "WhenOpened": "2024-11-22T23:46:44.484Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ServicioUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Servicios\\ServicioUsuario.cs",
-              "RelativeDocumentMoniker": "EFCorePeliculas\\Servicios\\ServicioUsuario.cs",
-              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Servicios\\ServicioUsuario.cs",
-              "RelativeToolTip": "EFCorePeliculas\\Servicios\\ServicioUsuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAzAAAAAAAAAA==",
+              "Title": "BasePruebas.cs",
+              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas.Pruebas\\BasePruebas.cs",
+              "RelativeDocumentMoniker": "EFCorePeliculas.Pruebas\\BasePruebas.cs",
+              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas.Pruebas\\BasePruebas.cs",
+              "RelativeToolTip": "EFCorePeliculas.Pruebas\\BasePruebas.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T00:03:30.543Z",
+              "WhenOpened": "2024-11-22T22:35:59.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GenerosController.cs",
+              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Controllers\\GenerosController.cs",
+              "RelativeDocumentMoniker": "EFCorePeliculas\\Controllers\\GenerosController.cs",
+              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas\\Controllers\\GenerosController.cs",
+              "RelativeToolTip": "EFCorePeliculas\\Controllers\\GenerosController.cs",
+              "ViewState": "AgIAAPcAAAAAAAAAAAAgwPwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T20:18:16.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GenerosControllerPruebas.cs",
+              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas.Pruebas\\GenerosControllerPruebas.cs",
+              "RelativeDocumentMoniker": "EFCorePeliculas.Pruebas\\GenerosControllerPruebas.cs",
+              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\efcore\\EFCorePeliculas\\EFCorePeliculas.Pruebas\\GenerosControllerPruebas.cs",
+              "RelativeToolTip": "EFCorePeliculas.Pruebas\\GenerosControllerPruebas.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAcwE8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T20:17:17.2Z",
               "EditorCaption": ""
             }
           ]

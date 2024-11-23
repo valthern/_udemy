@@ -231,3 +231,5 @@ C:\Users\magno\source\ejemplos\_udemy\efcore\EFCorePeliculas\EFCorePeliculas.Pru
 C:\Users\magno\source\ejemplos\_udemy\efcore\EFCorePeliculas\EFCorePeliculas.Pruebas\obj\Debug\net8.0\EFCorePeliculas.Pruebas.pdb
 C:\Users\magno\source\ejemplos\_udemy\efcore\EFCorePeliculas\EFCorePeliculas.Pruebas\obj\Debug\net8.0\EFCorePeliculas.Pruebas.genruntimeconfig.cache
 C:\Users\magno\source\ejemplos\_udemy\efcore\EFCorePeliculas\EFCorePeliculas.Pruebas\obj\Debug\net8.0\ref\EFCorePeliculas.Pruebas.dll
+C:\Users\magno\source\ejemplos\_udemy\efcore\EFCorePeliculas\EFCorePeliculas.Pruebas\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\magno\source\ejemplos\_udemy\efcore\EFCorePeliculas\EFCorePeliculas.Pruebas\bin\Debug\net8.0\System.ClientModel.dll
