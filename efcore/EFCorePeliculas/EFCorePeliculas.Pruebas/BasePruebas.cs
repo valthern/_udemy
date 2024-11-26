@@ -14,8 +14,9 @@ namespace EFCorePeliculas.Pruebas
         protected ApplicationDbContext ConstruirContext(string nombreDB)
         {
             var opciones = new DbContextOptionsBuilder<ApplicationDbContext>().UseInMemoryDatabase(nombreDB).Options;
-            var servicioUsuario = new ServicioUsuario();
-            var dbContext = new ApplicationDbContext(opciones, servicioUsuario, eventosDbContext: null);
+            //var servicioUsuario = new ServicioUsuario();
+            //var dbContext = new ApplicationDbContext(opciones, servicioUsuario, eventosDbContext: null);
+            var dbContext = new ApplicationDbContext(opciones);
             
             return dbContext;
         }

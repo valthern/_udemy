@@ -18,7 +18,7 @@ namespace EFCorePeliculas.Pruebas
             // Arrange
             var nombreDb = Guid.NewGuid().ToString();
             var contexto1 = ConstruirContext(nombreDb);
-            var generosController = new GenerosController(contexto1, mapper: null);
+            var generosController = new GenerosController(contexto1, mapper: null, dbContextFactory: null);
             var generos = new Genero[]
             {
                 new Genero{Nombre="Genero 1"},
@@ -53,7 +53,7 @@ namespace EFCorePeliculas.Pruebas
             await contexto1.SaveChangesAsync();
 
             var contexto2 = ConstruirContext(nombreDB);
-            var generosController = new GenerosController(contexto2, mapper);
+            var generosController = new GenerosController(contexto2, mapper, dbContextFactory: null);
 
             // Act & Assert
             await Assert.ThrowsExceptionAsync<DbUpdateConcurrencyException>(() => generosController.Put(new DTOs.GeneroActualizacionDTO
@@ -76,7 +76,7 @@ namespace EFCorePeliculas.Pruebas
             await contexto1.SaveChangesAsync();
 
             var contexto2 = ConstruirContext(nombreDB);
-            var generosController = new GenerosController(contexto2, mapper);
+            var generosController = new GenerosController(contexto2, mapper, dbContextFactory: null);
 
             // Act & Assert
             await generosController.Put(new DTOs.GeneroActualizacionDTO

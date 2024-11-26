@@ -151,7 +151,7 @@ namespace EFCorePeliculas.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest("Hubo un error");
+                return BadRequest("Hubo un error: " + ex.Message);
             }
         }
 

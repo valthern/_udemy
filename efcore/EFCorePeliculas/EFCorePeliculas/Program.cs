@@ -13,7 +13,7 @@ builder.Services.AddControllers().AddJsonOptions(opciones => opciones.JsonSerial
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<ApplicationDbContext>(opciones =>
+builder.Services.AddDbContextFactory<ApplicationDbContext>(opciones =>
 {
     opciones.UseSqlServer(connectionString, sqlServer => sqlServer.UseNetTopologySuite());
     opciones.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
@@ -26,6 +26,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(opciones =>
 builder.Services.AddScoped<IActualizadorObservableCollection, ActualizadorObservableCollection>();
 builder.Services.AddScoped<IServicioUsuario, ServicioUsuario>();
 builder.Services.AddScoped<IEventosDbContext,EventosDbContext>();
+builder.Services.AddSingleton<Singleton>();
 
 builder.Services.AddAutoMapper(typeof(Program));
 

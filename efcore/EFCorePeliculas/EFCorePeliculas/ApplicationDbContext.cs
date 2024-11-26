@@ -13,45 +13,46 @@ namespace EFCorePeliculas
 {
     public class ApplicationDbContext : DbContext
     {
-        private readonly IServicioUsuario servicioUsuario;
+        //private readonly IServicioUsuario servicioUsuario;
 
-        public ApplicationDbContext() { }
+        //public ApplicationDbContext() { }
 
-        public ApplicationDbContext(DbContextOptions options, IServicioUsuario servicioUsuario, IEventosDbContext eventosDbContext) : base(options)
-        {
-            this.servicioUsuario = servicioUsuario;
-            if (eventosDbContext is not null)
-            {
-                //ChangeTracker.Tracked += eventosDbContext.ManejarTracked;
-                //ChangeTracker.StateChanged += eventosDbContext.ManejarStateChange;
-                SavingChanges += eventosDbContext.ManejarSavingChanges;
-                SavedChanges += eventosDbContext.ManejarSavedChanges;
-                SaveChangesFailed += eventosDbContext.ManejarSaveChangesFailed;
-            }
-        }
+        //public ApplicationDbContext(DbContextOptions options, IServicioUsuario servicioUsuario, IEventosDbContext eventosDbContext) : base(options)
+        //{
+        //    this.servicioUsuario = servicioUsuario;
+        //    if (eventosDbContext is not null)
+        //    {
+        //        //ChangeTracker.Tracked += eventosDbContext.ManejarTracked;
+        //        //ChangeTracker.StateChanged += eventosDbContext.ManejarStateChange;
+        //        SavingChanges += eventosDbContext.ManejarSavingChanges;
+        //        SavedChanges += eventosDbContext.ManejarSavedChanges;
+        //        SaveChangesFailed += eventosDbContext.ManejarSaveChangesFailed;
+        //    }
+        //}
+        public ApplicationDbContext(DbContextOptions options) : base(options) { }
 
-        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
-        {
-            ProcesarSalvado();
-            return base.SaveChangesAsync(cancellationToken);
-        }
+        //public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        //{
+        //    ProcesarSalvado();
+        //    return base.SaveChangesAsync(cancellationToken);
+        //}
 
-        private void ProcesarSalvado()
-        {
-            foreach (var item in ChangeTracker.Entries().Where(e => e.State == EntityState.Added && e.Entity is EntidadAuditable))
-            {
-                var entidad = item.Entity as EntidadAuditable;
-                entidad.UsuarioCreacion = servicioUsuario.ObtenerUsuarioId();
-                entidad.UsuarioModificacion = servicioUsuario.ObtenerUsuarioId();
-            }
+        //private void ProcesarSalvado()
+        //{
+        //    foreach (var item in ChangeTracker.Entries().Where(e => e.State == EntityState.Added && e.Entity is EntidadAuditable))
+        //    {
+        //        var entidad = item.Entity as EntidadAuditable;
+        //        entidad.UsuarioCreacion = servicioUsuario.ObtenerUsuarioId();
+        //        entidad.UsuarioModificacion = servicioUsuario.ObtenerUsuarioId();
+        //    }
 
-            foreach (var item in ChangeTracker.Entries().Where(e => e.State == EntityState.Modified && e.Entity is EntidadAuditable))
-            {
-                var entidad = item.Entity as EntidadAuditable;
-                item.Property(nameof(entidad.UsuarioCreacion)).IsModified = false;
-                entidad.UsuarioModificacion = servicioUsuario.ObtenerUsuarioId();
-            }
-        }
+        //    foreach (var item in ChangeTracker.Entries().Where(e => e.State == EntityState.Modified && e.Entity is EntidadAuditable))
+        //    {
+        //        var entidad = item.Entity as EntidadAuditable;
+        //        item.Property(nameof(entidad.UsuarioCreacion)).IsModified = false;
+        //        entidad.UsuarioModificacion = servicioUsuario.ObtenerUsuarioId();
+        //    }
+        //}
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

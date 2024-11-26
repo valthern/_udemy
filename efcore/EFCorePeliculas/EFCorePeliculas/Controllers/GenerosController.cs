@@ -14,23 +14,28 @@ namespace EFCorePeliculas.Controllers
     {
         private readonly ApplicationDbContext context;
         private readonly IMapper mapper;
+        private readonly IDbContextFactory<ApplicationDbContext> dbContextFactory;
 
-        public GenerosController(ApplicationDbContext context, IMapper mapper)
+        public GenerosController(ApplicationDbContext context, IMapper mapper, IDbContextFactory<ApplicationDbContext> dbContextFactory)
         {
             this.context = context;
             this.mapper = mapper;
+            this.dbContextFactory = dbContextFactory;
         }
 
         [HttpGet]
         public async Task<IEnumerable<Genero>> Get()
         {
-            context.Logs.Add(new Log
+            using (var nuevoContext = dbContextFactory.CreateDbContext())
             {
-                Id = Guid.NewGuid(),
-                Mensaje = "Ejecutando el método GenerosController.Get"
-            });
-            await context.SaveChangesAsync();
-            return await context.Generos.OrderByDescending(g => EF.Property<DateTime>(g, "FechaCreacion")).ToListAsync();
+                nuevoContext.Logs.Add(new Log
+                {
+                    Id = Guid.NewGuid(),
+                    Mensaje = "Ejecutando el método GenerosController.Get"
+                });
+                await nuevoContext.SaveChangesAsync();
+                return await nuevoContext.Generos.OrderByDescending(g => EF.Property<DateTime>(g, "FechaCreacion")).ToListAsync();
+            }
         }
 
         [HttpGet("procedimiento_almacenado/{id:int}")]
@@ -134,7 +139,7 @@ namespace EFCorePeliculas.Controllers
         [HttpGet("TemporalAll/{id:int}")]
         public async Task<ActionResult> GetTEmporalAll(int id)
         {
-            var generos=await context.Generos
+            var generos = await context.Generos
                 .TemporalAll()
                 .AsTracking()
                 .Where(g => g.Identificador == id)
@@ -142,8 +147,8 @@ namespace EFCorePeliculas.Controllers
                 {
                     Id = g.Identificador,
                     g.Nombre,
-                    PeriodStart = EF.Property<DateTime>(g,"PeriodStart"),
-                    PeriodEnd= EF.Property<DateTime>(g,"PeriodEnd")
+                    PeriodStart = EF.Property<DateTime>(g, "PeriodStart"),
+                    PeriodEnd = EF.Property<DateTime>(g, "PeriodEnd")
                 }).ToListAsync();
 
             return Ok(generos);
@@ -152,16 +157,16 @@ namespace EFCorePeliculas.Controllers
         [HttpGet("TemporalAsOf/{id:int}")]
         public async Task<ActionResult> GetTemporalAsOf(int id, DateTime fecha)
         {
-            var genero= await context.Generos
+            var genero = await context.Generos
                 .TemporalAsOf(fecha)
                 .AsTracking()
-                .Where(g=>g.Identificador == id)
+                .Where(g => g.Identificador == id)
                 .Select(g => new
                 {
                     Id = g.Identificador,
                     g.Nombre,
-                    PeriodStart=EF.Property<DateTime>(g,"PeriodStart"),
-                    PeriodEdn=EF.Property<DateTime>(g,"PeriodEnd")
+                    PeriodStart = EF.Property<DateTime>(g, "PeriodStart"),
+                    PeriodEdn = EF.Property<DateTime>(g, "PeriodEnd")
                 }).FirstOrDefaultAsync();
 
             return Ok(genero);
@@ -308,7 +313,7 @@ namespace EFCorePeliculas.Controllers
         }
 
         [HttpPost("Restaurar_Borrado/{id:int}")]
-        public async Task<ActionResult> RestaurarBorrado(int id,DateTime fecha)
+        public async Task<ActionResult> RestaurarBorrado(int id, DateTime fecha)
         {
             var genero = await context.Generos
                 .TemporalAsOf(fecha)
