@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{707EDAE4-DCF8-4ADA-9954-C3B8DA694E88}|BlazorPeliculas\\Client\\BlazorPeliculas.Client.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\blazor\\blazorpeliculas\\blazorpeliculas\\client\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{707EDAE4-DCF8-4ADA-9954-C3B8DA694E88}|BlazorPeliculas\\Client\\BlazorPeliculas.Client.csproj|solutionrelative:blazorpeliculas\\client\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\BlazorPeliculas\\Client\\Pages\\Index.razor",
+              "RelativeDocumentMoniker": "BlazorPeliculas\\Client\\Pages\\Index.razor",
+              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\BlazorPeliculas\\Client\\Pages\\Index.razor",
+              "RelativeToolTip": "BlazorPeliculas\\Client\\Pages\\Index.razor",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAE0AAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-27T19:24:34.471Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
