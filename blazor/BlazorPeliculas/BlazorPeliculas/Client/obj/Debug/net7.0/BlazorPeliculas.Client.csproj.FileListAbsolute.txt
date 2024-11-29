@@ -822,8 +822,6 @@ C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Cli
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\vsi1ddkxfy-tptq2av103.gz
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\7s1upqpeo2-lfu7j35m59.gz
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\fled2qoztj-7cxe8oq9xu.gz
-C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\hdwh5jms1z-i6zpi51uwq.gz
-C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\7p8x1v19z6-t3cey64eb2.gz
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net7.0\staticwebassets.build.json
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net7.0\staticwebassets.development.json
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net7.0\staticwebassets.build.endpoints.json
@@ -839,6 +837,8 @@ C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Cli
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net7.0\refint\BlazorPeliculas.Client.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net7.0\BlazorPeliculas.Client.pdb
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net7.0\ref\BlazorPeliculas.Client.dll
-C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\zhgh98znp4-ovnl4h4yov.gz
-C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\5c5js4y383-r85xe8ayrh.gz
-C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\6cesjtjddn-0d5j7n7ec4.gz
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\hdwh5jms1z-5uq4gmi2oh.gz
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\7p8x1v19z6-ac8d5hkv87.gz
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\zhgh98znp4-ceezefucbm.gz
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\5c5js4y383-syrif660k0.gz
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\6cesjtjddn-lecmnddiib.gz

@@ -1,0 +1,7 @@
+﻿@* Los atributos colocados a la derecha tienen mayor precedencia que los colocados a la izquierda *@
+<input type="text" placeholder="placeholder por defecto" @attributes="ParametrosAdicionales" />
+
+@code {
+    [Parameter(CaptureUnmatchedValues = true)]
+    public IDictionary<string, object> ParametrosAdicionales { get; set; } = null!;
+}

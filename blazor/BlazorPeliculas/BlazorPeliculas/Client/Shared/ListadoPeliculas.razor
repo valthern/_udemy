@@ -1,0 +1,34 @@
+﻿@if (Peliculas is null)
+{
+    @ChildContent
+}
+else if (Peliculas.Count == 0)
+{
+    <p>No hay películas para mostrar</p>
+}
+else
+{
+    <input type="checkbox" @bind="MostrarBotones" />
+    <span> Mostrar Botones</span>
+    @foreach (var pelicula in Peliculas)
+    {
+        <PeliculaIndividual Pelicula="pelicula" EliminarPelicula="EliminarPelicula" MostrarBotones="MostrarBotones" />
+    }
+}
+
+@code {
+    [Parameter]
+    [EditorRequired]
+    public List<Pelicula>? Peliculas { get; set; }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; } = null!;
+
+    bool MostrarBotones = true;
+
+    private void EliminarPelicula(Pelicula pelicula)
+    {
+        Console.WriteLine("Eliminando una película");
+        Peliculas!.Remove(pelicula);
+    }
+}
