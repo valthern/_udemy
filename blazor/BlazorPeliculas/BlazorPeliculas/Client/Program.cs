@@ -1,4 +1,5 @@
 using BlazorPeliculas.Client;
+using BlazorPeliculas.Client.Repositorios;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
@@ -7,5 +8,15 @@ builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+//builder.Services.AddSingleton<ServicioSingleton>();
+//builder.Services.AddTransient<ServicioTransient>();
+ConfigureServices(builder.Services);
 
 await builder.Build().RunAsync();
+
+void ConfigureServices(IServiceCollection services)
+{
+    services.AddSingleton<ServicioSingleton>();
+    services.AddTransient<ServicioTransient>();
+    services.AddSingleton<IRepositorio, Repositorio>();
+}

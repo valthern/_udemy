@@ -1,30 +1,34 @@
 ﻿@page "/"
+@inject ServicioSingleton singleton
+@inject IRepositorio repositorio
+
+<HeadContent>
+    <meta name="description" content="Página para visualizar películas" />
+</HeadContent>
+
+<PageTitle>BlaZor Películas®</PageTitle>
+
+<p>Valor del Singleton: @singleton.Valor</p>
 
 <div>
     <h3>Películas</h3>
-    <ListadoPeliculas Peliculas="ObtenerPeliculas()">
-        <img alt="Cargando..." src="https://th.bing.com/th/id/R.581a72dd11d8e82c21c86d4e2052fb45?rik=FnpfBRPWg8n9Rg&riu=http%3a%2f%2fi293.photobucket.com%2falbums%2fmm49%2foficinademultimedia%2fLoading_Animation.gif&ehk=QZvkbWk%2bxZdTQ46whTuvTlp9bzD2GWwzhmB9%2bt2wsm4%3d&risl=&pid=ImgRaw&r=0" />
-    </ListadoPeliculas>
+    <ListadoPeliculas Peliculas="Peliculas" />
 </div>
-@* <div>
-    <h2>Crear nueva película</h2>
-    <EjemploTexbox placeholder="placeholder index"/>
-</div>
- *@
+
+@* <img alt="Cargando..." src="https://th.bing.com/th/id/R.581a72dd11d8e82c21c86d4e2052fb45?rik=FnpfBRPWg8n9Rg&riu=http%3a%2f%2fi293.photobucket.com%2falbums%2fmm49%2foficinademultimedia%2fLoading_Animation.gif" /> *@
+
+<button @onclick="AgregarPelicula">Agregar Película</button>
 
 @code {
-    private Dictionary<string, object> EjemploTextboxParametros = new Dictionary<string, object>{
-        {"placeholder", "placeholder"},
-        {"disabled", "true"}
-    };
+    public List<Pelicula>? Peliculas { get; set; }
 
-    List<Pelicula> ObtenerPeliculas()
+    protected override void OnInitialized()
     {
-        return new List<Pelicula>
-        {
-            new Pelicula{Titulo = "Wakanda Forever",FechaLanzamiento = new DateTime(2024, 11, 26)},
-            new Pelicula{Titulo="Moana", FechaLanzamiento=new DateTime(2016,11,23)},
-            new Pelicula{Titulo="Inception", FechaLanzamiento=new DateTime(2010,7,16)}
-        };
+        Peliculas = repositorio.ObtenerPeliculas();
+    }
+
+    private void AgregarPelicula()
+    {
+        Peliculas!.Add(new() { Titulo = "Nueva", FechaLanzamiento = DateTime.Today });
     }
 }
