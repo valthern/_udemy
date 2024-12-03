@@ -1,19 +1,16 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using BlazorPeliculas.Client.Helpers;
+using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
 
 namespace BlazorPeliculas.Client.Pages
 {
     public partial class Counter
     {
-        [Inject] ServicioSingleton singleton { get; set; } = null!;
-        [Inject] ServicioTransient transient { get; set; } = null!;
-
         private int currentCount = 0;
 
-        private void IncrementCount()
+        public void IncrementCount()
         {
             currentCount++;
-            singleton.Valor = currentCount;
-            transient.Valor = currentCount;
         }
     }
 }

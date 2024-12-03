@@ -69,6 +69,14 @@
       "PackagePath": "staticwebassets\\index.html"
     },
     {
+      "Id": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\BlazorPeliculas\\Client\\wwwroot\\js\\Counter.js",
+      "PackagePath": "staticwebassets\\js\\Counter.js"
+    },
+    {
+      "Id": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\BlazorPeliculas\\Client\\wwwroot\\js\\Utilidades.js",
+      "PackagePath": "staticwebassets\\js\\Utilidades.js"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BlazorPeliculas.Client.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },

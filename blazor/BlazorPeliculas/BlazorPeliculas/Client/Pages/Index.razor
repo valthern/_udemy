@@ -1,14 +1,7 @@
 ﻿@page "/"
-@inject ServicioSingleton singleton
 @inject IRepositorio repositorio
 
-<HeadContent>
-    <meta name="description" content="Página para visualizar películas" />
-</HeadContent>
-
 <PageTitle>BlaZor Películas®</PageTitle>
-
-<p>Valor del Singleton: @singleton.Valor</p>
 
 <div>
     <h3>Películas</h3>
@@ -17,18 +10,11 @@
 
 @* <img alt="Cargando..." src="https://th.bing.com/th/id/R.581a72dd11d8e82c21c86d4e2052fb45?rik=FnpfBRPWg8n9Rg&riu=http%3a%2f%2fi293.photobucket.com%2falbums%2fmm49%2foficinademultimedia%2fLoading_Animation.gif" /> *@
 
-<button @onclick="AgregarPelicula">Agregar Película</button>
-
 @code {
     public List<Pelicula>? Peliculas { get; set; }
 
     protected override void OnInitialized()
     {
         Peliculas = repositorio.ObtenerPeliculas();
-    }
-
-    private void AgregarPelicula()
-    {
-        Peliculas!.Add(new() { Titulo = "Nueva", FechaLanzamiento = DateTime.Today });
     }
 }
