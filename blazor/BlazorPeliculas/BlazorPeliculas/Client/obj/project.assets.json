@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net7.0": {
+      "MathNet.Numerics/5.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/MathNet.Numerics.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/MathNet.Numerics.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Authorization/7.0.19": {
         "type": "package",
         "dependencies": {
@@ -507,6 +520,19 @@
       }
     },
     "net7.0/browser-wasm": {
+      "MathNet.Numerics/5.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/MathNet.Numerics.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/MathNet.Numerics.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Authorization/7.0.19": {
         "type": "package",
         "dependencies": {
@@ -1007,6 +1033,28 @@
     }
   },
   "libraries": {
+    "MathNet.Numerics/5.0.0": {
+      "sha512": "pg1W2VwaEQMAiTpGK840hZgzavnqjlCMTVSbtVCXVyT+7AX4mc1o89SPv4TBlAjhgCOo9c1Y+jZ5m3ti2YgGgA==",
+      "type": "package",
+      "path": "mathnet.numerics/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net461/MathNet.Numerics.dll",
+        "lib/net461/MathNet.Numerics.xml",
+        "lib/net48/MathNet.Numerics.dll",
+        "lib/net48/MathNet.Numerics.xml",
+        "lib/net5.0/MathNet.Numerics.dll",
+        "lib/net5.0/MathNet.Numerics.xml",
+        "lib/net6.0/MathNet.Numerics.dll",
+        "lib/net6.0/MathNet.Numerics.xml",
+        "lib/netstandard2.0/MathNet.Numerics.dll",
+        "lib/netstandard2.0/MathNet.Numerics.xml",
+        "mathnet.numerics.5.0.0.nupkg.sha512",
+        "mathnet.numerics.nuspec"
+      ]
+    },
     "Microsoft.AspNetCore.Authorization/7.0.19": {
       "sha512": "w36g/GKu4rAXPMEPcG05pfEuHmEUdZhRXT5sfqJZMjnVFDbbhogOTvcs/+JHCd5VWG9yEdVOl0xyaRiC8gTQIw==",
       "type": "package",
@@ -1949,6 +1997,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "BlazorPeliculas.Shared >= 1.0.0",
+      "MathNet.Numerics >= 5.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 7.0.19",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 7.0.19",
       "Microsoft.NET.ILLink.Analyzers >= 7.0.100-1.23211.1",
@@ -2005,7 +2054,7 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
+        "auditMode": "direct"
       },
       "SdkAnalysisLevel": "9.0.100"
     },
@@ -2013,6 +2062,10 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "MathNet.Numerics": {
+            "target": "Package",
+            "version": "[5.0.0, )"
+          },
           "Microsoft.AspNetCore.Components.WebAssembly": {
             "target": "Package",
             "version": "[7.0.19, )"
@@ -2057,7 +2110,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
@@ -2065,18 +2118,5 @@
         "#import": []
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "El paquete \"System.Text.Json\" 7.0.0 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-hh2w-p6rv-4g7w",
-      "libraryId": "System.Text.Json",
-      "targetGraphs": [
-        "net7.0",
-        "net7.0/browser-wasm"
-      ]
-    }
-  ]
+  }
 }
