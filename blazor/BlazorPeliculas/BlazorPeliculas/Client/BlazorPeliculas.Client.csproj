@@ -16,4 +16,8 @@
     <ProjectReference Include="..\Shared\BlazorPeliculas.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <BlazorWebAssemblyLazyLoad Include="MathNet.Numerics.dll" />
+  </ItemGroup>
+
 </Project>
