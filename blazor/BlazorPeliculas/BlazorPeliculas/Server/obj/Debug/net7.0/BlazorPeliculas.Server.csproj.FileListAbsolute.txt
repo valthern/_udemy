@@ -1,3 +1,12 @@
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.csproj.AssemblyReference.cache
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.AssemblyInfoInputs.cache
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.AssemblyInfo.cs
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.csproj.CoreCompileInputs.cache
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.RazorAssemblyInfo.cache
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.RazorAssemblyInfo.cs
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.sourcelink.json
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\BlazorPeliculas.Client.staticwebassets.runtime.json
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\BlazorPeliculas.Client.staticwebassets.endpoints.json
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\appsettings.Development.json
@@ -17,6 +26,8 @@ C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Ser
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\BlazorPeliculas.Server.runtimeconfig.json
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\BlazorPeliculas.Server.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\BlazorPeliculas.Server.pdb
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\CurrieTechnologies.Razor.SweetAlert2.dll
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\MathNet.Numerics.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Forms.dll
@@ -33,15 +44,6 @@ C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Ser
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\BlazorPeliculas.Shared.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\BlazorPeliculas.Client.pdb
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\BlazorPeliculas.Shared.pdb
-C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.csproj.AssemblyReference.cache
-C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.AssemblyInfoInputs.cache
-C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.AssemblyInfo.cs
-C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.csproj.CoreCompileInputs.cache
-C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.RazorAssemblyInfo.cache
-C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.RazorAssemblyInfo.cs
-C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.sourcelink.json
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\obj\Debug\net7.0\scopedcss\bundle\BlazorPeliculas.Server.styles.css
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\obj\Debug\net7.0\staticwebassets.build.json
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\obj\Debug\net7.0\staticwebassets.development.json
@@ -59,5 +61,3 @@ C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Ser
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.pdb
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.genruntimeconfig.cache
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\obj\Debug\net7.0\ref\BlazorPeliculas.Server.dll
-C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\MathNet.Numerics.dll
-C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\CurrieTechnologies.Razor.SweetAlert2.dll

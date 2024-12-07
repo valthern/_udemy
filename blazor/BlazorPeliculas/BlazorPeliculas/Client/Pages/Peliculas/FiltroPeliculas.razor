@@ -5,10 +5,9 @@
 
 <div class="row g-3 align-items-center mb-3">
     <div class="col-sm-3">
-        <input type="text" class="form-control" id="titulo" placeholder="Título Pelicula" 
-        @bind-value="titulo" 
-        @bind-value:event="oninput" 
-        @onkeypress="@((KeyboardEventArgs e) => TituloKeyPress(e))" />
+        <input type="text" class="form-control" id="titulo" placeholder="Título Pelicula"
+               @bind-value="titulo" @bind-value:event="oninput"
+               @onkeypress="@((KeyboardEventArgs e) => TituloKeyPress(e))" />
     </div>
     <div class="col-sm-3">
         <select class="form-select" @bind="generoSeleccionado">
@@ -41,14 +40,14 @@
     </div>
 </div>
 
-<ListadoPeliculas Peliculas="peliculas"></ListadoPeliculas>
+<ListadoPeliculas Peliculas="peliculas" />
 
 
 
 @code {
     public string titulo = "";
     private string generoSeleccionado = "0";
-    private List<Genero> generos = new();
+    private List<Genero> generos = new List<Genero>();
     private bool futurosEstrenos = false;
     private bool enCartelera = false;
     private bool masVotadas = false;
