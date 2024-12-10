@@ -1,11 +1,14 @@
 ﻿@page "/peliculas/crear"
 @inject NavigationManager navigationManager
 
-<h3>CrearPelicula</h3>
+<h3>Crear Película</h3>
 
-<button @onclick="Crear">Salvar Película</button>
+<FormularioPelicula Pelicula="pelicula" OnValidSubmit="Crear"></FormularioPelicula>
+
 
 @code {
+    private Pelicula pelicula = new Pelicula();
+
     void Crear()
     {
         Console.WriteLine(navigationManager.Uri);

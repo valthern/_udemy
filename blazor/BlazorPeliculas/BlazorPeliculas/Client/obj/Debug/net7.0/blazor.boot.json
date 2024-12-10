@@ -1,7 +1,7 @@
 {
   "entryAssembly": "BlazorPeliculas.Client",
   "resources": {
-    "hash": "sha256-R+RVFhAp9YZ8RXtSBdyXolE2YxNGfptN8wBcuZ6/6RU=",
+    "hash": "sha256-8b4odZEHSQMmVfyj4f5PLQTqBwS4qTsmdceE4wMzjMU=",
     "runtime": {
       "dotnet.js": "sha256-eaJTmow4t8eE7FZMZR5Ja41JMOefGCbIYDTdpclGsac=",
       "dotnet.timezones.blat": "sha256-gbATD5HDsHYtW8vdPYh9iSBY4O5CjvMeCSF5xXWF1xo=",
@@ -13,6 +13,7 @@
     "coreAssembly": {},
     "assembly": {
       "CurrieTechnologies.Razor.SweetAlert2.dll": "sha256-V4rclcTTvKIxhV67DRYtyzbs1LpoTdX6US3I0ioqUNs=",
+      "Markdig.dll": "sha256-FO2cHA+bYiaoES1IBse+gkHNBpFkjELK2/dENm6ebSw=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-q9AUr6YREj9/X4+WRaZRjc702tbEa/rrr8g22evSgR8=",
       "Microsoft.AspNetCore.Components.dll": "sha256-5zBQKhoDwzKg4A1REu0LG6g4rUkGM9DcTHfpj7OGJsM=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-PQEfLjFr6mwq92V4yJorBRlMkdICr9h8FvNqKGAn6cs=",
@@ -204,12 +205,12 @@
       "mscorlib.dll": "sha256-HYyp9hO+GKFyupcEiY1PxtBBXbHzefsO3Q8RiQTaNCA=",
       "netstandard.dll": "sha256-N5CcC3sLzGBesbmeJAp5bwxABN9u7SwkIO5qfFjzoik=",
       "System.Private.CoreLib.dll": "sha256-bJS1DJmhjP7PvegYG+Z8O9EDtRY78HKinA3LUMVLlSQ=",
-      "BlazorPeliculas.Shared.dll": "sha256-GJ+LAVoH15HrkgiU3m6RYuA+q4yCH1w/6UujIV98kDY=",
-      "BlazorPeliculas.Client.dll": "sha256-Toy7h4HIxGgx509d/NeQVYoWS3y9MK7epB7AmMULRus="
+      "BlazorPeliculas.Shared.dll": "sha256-QeS+snGyW7DVacOh8jCKRGs7pbfkZJqwtkKvbEOic9w=",
+      "BlazorPeliculas.Client.dll": "sha256-xHpbyjZJ18RmutbTKk/mnzm3gDzVmVtXZMHuoYhYLcA="
     },
     "pdb": {
-      "BlazorPeliculas.Shared.pdb": "sha256-j0wSKJX2Lk3DPNimjsKqm6A8ZyeTqX73UWYnn5sKJ6A=",
-      "BlazorPeliculas.Client.pdb": "sha256-cWppYCt7PoSHaIjSaBJ0hhzMmU/LB6idKfCcJ1KENZQ="
+      "BlazorPeliculas.Shared.pdb": "sha256-YqLPiuhVSBCUcEVAPTYVgmLCoQUSQQcQFrBw68/7lt4=",
+      "BlazorPeliculas.Client.pdb": "sha256-80qfax9MiTCOHBVQoFo9Q0IQL6bjJkjysLd6lwPrDnQ="
     },
     "lazyAssembly": {
       "MathNet.Numerics.dll": "sha256-g7QaYI5DhAnWUg0BEk9S9XQJ4il5HA4HTjFazn2fQTQ="

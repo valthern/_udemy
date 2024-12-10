@@ -21,6 +21,19 @@
           "buildMultiTargeting/CurrieTechnologies.Razor.SweetAlert2.props": {}
         }
       },
+      "Markdig/0.38.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Markdig.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Markdig.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "MathNet.Numerics/5.0.0": {
         "type": "package",
         "compile": {
@@ -556,6 +569,19 @@
         },
         "buildMultiTargeting": {
           "buildMultiTargeting/CurrieTechnologies.Razor.SweetAlert2.props": {}
+        }
+      },
+      "Markdig/0.38.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Markdig.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Markdig.dll": {
+            "related": ".xml"
+          }
         }
       },
       "MathNet.Numerics/5.0.0": {
@@ -1124,6 +1150,29 @@
         "staticwebassets/wordpressAdminTheme.js",
         "staticwebassets/wordpressAdminTheme.min.css",
         "staticwebassets/wordpressAdminTheme.min.js"
+      ]
+    },
+    "Markdig/0.38.0": {
+      "sha512": "zKy3JFjQvr1wbuMtbfcZVjNNCIqHxSCjGMq/CBcyNsY/MPsxqcS3o8M7CZ2kcMGGIw5LI2ZZd8rFUaFeV6SvrQ==",
+      "type": "package",
+      "path": "markdig/0.38.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net462/Markdig.dll",
+        "lib/net462/Markdig.xml",
+        "lib/net6.0/Markdig.dll",
+        "lib/net6.0/Markdig.xml",
+        "lib/net8.0/Markdig.dll",
+        "lib/net8.0/Markdig.xml",
+        "lib/netstandard2.0/Markdig.dll",
+        "lib/netstandard2.0/Markdig.xml",
+        "lib/netstandard2.1/Markdig.dll",
+        "lib/netstandard2.1/Markdig.xml",
+        "markdig.0.38.0.nupkg.sha512",
+        "markdig.nuspec",
+        "markdig.png",
+        "readme.md"
       ]
     },
     "MathNet.Numerics/5.0.0": {
@@ -2091,6 +2140,7 @@
     "net7.0": [
       "BlazorPeliculas.Shared >= 1.0.0",
       "CurrieTechnologies.Razor.SweetAlert2 >= 5.6.0",
+      "Markdig >= 0.38.0",
       "MathNet.Numerics >= 5.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 7.0.19",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 7.0.19",
@@ -2159,6 +2209,10 @@
           "CurrieTechnologies.Razor.SweetAlert2": {
             "target": "Package",
             "version": "[5.6.0, )"
+          },
+          "Markdig": {
+            "target": "Package",
+            "version": "[0.38.0, )"
           },
           "MathNet.Numerics": {
             "target": "Package",
