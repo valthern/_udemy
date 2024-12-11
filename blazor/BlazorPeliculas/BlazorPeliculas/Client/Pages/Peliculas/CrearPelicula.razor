@@ -3,11 +3,25 @@
 
 <h3>Crear Película</h3>
 
-<FormularioPelicula Pelicula="pelicula" OnValidSubmit="Crear"></FormularioPelicula>
+<FormularioPeliculas Pelicula="pelicula" OnValidSubmit="Crear" GenerosNoSeleccionados="GenerosNoSeleccionados">
+
+</FormularioPeliculas>
 
 
 @code {
     private Pelicula pelicula = new Pelicula();
+    private List<Genero> GenerosNoSeleccionados = new List<Genero>();
+
+    protected override void OnInitialized()
+    {
+        GenerosNoSeleccionados = new()
+        {
+            new() { Id = 1, Nombre = "Comedia" },
+            new() { Id = 2, Nombre = "Drama" },
+            new() { Id = 3, Nombre = "Acción" },
+            new() { Id = 4, Nombre = "Sci-Fi" }
+        };
+    }
 
     void Crear()
     {

@@ -6,7 +6,7 @@
         }
     </ul>
     <div class="selector-multiple-botones">
-        <button type="button" @onclick="SeleccionarTodo">>></button>
+        <button type="button" @onclick="SeleccionarTodo">@añadirTodoTexto</button>
         <button type="button" @onclick="DeseleccionarTodo">@removerTodoTexto</button>
     </div>
     <ul class="selectable-ul">
@@ -16,6 +16,8 @@
         }
     </ul>
 </div>
+
+
 
 @code {
     private string removerTodoTexto = "<<";

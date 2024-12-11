@@ -2,13 +2,32 @@
 
 <h3>Editar Película</h3>
 
-<FormularioPelicula Pelicula="pelicula" OnValidSubmit="Editar"></FormularioPelicula>
+<FormularioPeliculas Pelicula="pelicula" OnValidSubmit="Editar" GenerosNoSeleccionados="GenerosNoSeleccionados" GenerosSeleccionados="GenerosSeleccionados">
+
+</FormularioPeliculas>
 
 @code {
     [Parameter] public int PeliculaId { get; set; }
     Pelicula pelicula = new Pelicula();
+    private List<Genero> GenerosNoSeleccionados = new List<Genero>();
+    private List<Genero> GenerosSeleccionados = new List<Genero>();
 
-    protected override void OnInitialized() => pelicula = new Pelicula { Id = PeliculaId, Titulo = "Mi Película" };
+    protected override void OnInitialized()
+    {
+        pelicula = new Pelicula { Id = PeliculaId, Titulo = "Mi Película" };
+
+        GenerosNoSeleccionados = new()
+        {
+            new() { Id = 1, Nombre = "Comedia" },
+            new() { Id = 3, Nombre = "Acción" },
+            new() { Id = 4, Nombre = "Sci-Fi" }
+        };
+
+        GenerosSeleccionados = new()
+        {
+            new() { Id = 2, Nombre = "Drama" }
+        };
+    }
 
     private void Editar() => Console.WriteLine("Editando Película");
 }
