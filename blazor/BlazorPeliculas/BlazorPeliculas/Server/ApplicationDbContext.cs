@@ -13,12 +13,14 @@ namespace BlazorPeliculas.Server
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<GeneroPelicula>().HasKey(x => new {x.GeneroId,x.PeliculaId});
+            modelBuilder.Entity<GeneroPelicula>().HasKey(x => new { x.GeneroId, x.PeliculaId });
+            modelBuilder.Entity<PeliculaActor>().HasKey(x => new { x.PeliculaId, x.ActorId });
         }
 
         public DbSet<Genero> Generos => Set<Genero>();
         public DbSet<Actor> Actores => Set<Actor>();
         public DbSet<Pelicula> Peliculas => Set<Pelicula>();
         public DbSet<GeneroPelicula> GenerosPeliculas => Set<GeneroPelicula>();
+        public DbSet<PeliculaActor> PeliculasActores => Set<PeliculaActor>();
     }
 }

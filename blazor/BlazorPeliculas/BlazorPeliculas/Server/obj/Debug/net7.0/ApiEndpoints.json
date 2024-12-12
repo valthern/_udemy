@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "BlazorPeliculas.Server.Controllers.GenerosController",
+    "Method": "Post",
+    "RelativePath": "api/Generos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "genero",
+        "Type": "BlazorPeliculas.Shared.Entidades.Genero",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "BlazorPeliculas.Server.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",
