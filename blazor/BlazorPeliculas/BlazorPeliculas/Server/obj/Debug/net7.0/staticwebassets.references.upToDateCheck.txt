@@ -155,3 +155,7 @@ C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Cli
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net7.0\staticwebassets.build.json
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net7.0\staticwebassets.build.json
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Client\obj\Debug\net7.0\staticwebassets.build.json
