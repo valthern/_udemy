@@ -1,4 +1,4 @@
-﻿<EditForm Model="Pelicula" OnValidSubmit="OnValidSubmit">
+﻿<EditForm Model="Pelicula" OnValidSubmit="OnDataAnnotationsValidated">
     <DataAnnotationsValidator />
 
     <div class="mb-3">
@@ -47,7 +47,7 @@
         <div>
             <SelectorMultipleTypeahead Context="Actor" SearchMethod="BuscarActores" ElementosSeleccionados="ActoresSeleccionados">
                 <MyListTemplate>
-                    @Actor.Nombre
+                    @Actor.Nombre / <input type="text" placeholder="Personaje" @bind="Actor.Personaje" />
                 </MyListTemplate>
                 <MyResultTemplate>
                     <img style="width: 50px" src="@Actor.Foto" />
@@ -108,10 +108,22 @@
 
     private async Task<IEnumerable<Actor>> BuscarActores(string searchText)
     {
-        return new List<Actor>{
+        return new(){
             new(){Id=1,Nombre="Tom Holland",Foto="https://th.bing.com/th/id/R.37648213a98aeeee6fcf0db59503a1c0?rik=VHWqysasmXI6cg&riu=http%3a%2f%2fbr.web.img3.acsta.net%2fpictures%2f19%2f07%2f01%2f23%2f18%2f1152169.jpg&ehk=jbfX0Isvt8Xnrn43PSFslwcSFk5bB2UnmRm9TUdbNs4%3d&risl=&pid=ImgRaw&r=0"},
-            new(){Id=2,Nombre="Tom Hanks",Foto="https://th.bing.com/th/id/R.0639b45a3f9e380ac1fb0b687a8fde3a?rik=PHMalMsAyN%2f2gw&pid=ImgRaw&r=0"},
-            new(){Id=1,Nombre="Tom Holland",Foto=""},
+            new(){Id=2,Nombre="Tom Hanks",Foto="https://th.bing.com/th/id/R.0639b45a3f9e380ac1fb0b687a8fde3a?rik=PHMalMsAyN%2f2gw&pid=ImgRaw&r=0"}
         };
+    }
+
+    private async Task OnDataAnnotationsValidated()
+    {
+        Pelicula.GenerosPelicula = Seleccionados
+            .Select(x => new GeneroPelicula { GeneroId = int.Parse(x.Llave) })
+            .ToList();
+
+        Pelicula.PeliculasActor = ActoresSeleccionados
+            .Select(x => new PeliculaActor { ActorId = x.Id, Personaje = x.Personaje })
+            .ToList();
+
+        await OnValidSubmit.InvokeAsync();
     }
 }

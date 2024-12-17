@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BDBLvyUoIsI/7DsQGKSTh+VjPOonxkdOT417oJQbQ80=",
+  "Hash": "UgyQaVBsRUJMAKMSxR2eN2qgLcX8VdjlkJFZ5ZPF3fM=",
   "Source": "BlazorPeliculas.Server",
   "BasePath": "_content/BlazorPeliculas.Server",
   "Mode": "Default",
@@ -24,6 +24,13 @@
       "Source": "BlazorPeliculas.Client",
       "ContentRoot": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\BlazorPeliculas\\Client\\wwwroot\\",
       "BasePath": "/",
+      "Pattern": "**"
+    },
+    {
+      "Name": "BlazorPeliculas.Server\\wwwroot",
+      "Source": "BlazorPeliculas.Server",
+      "ContentRoot": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\BlazorPeliculas\\Server\\wwwroot\\",
+      "BasePath": "_content/BlazorPeliculas.Server",
       "Pattern": "**"
     }
   ],
@@ -9897,6 +9904,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\BlazorPeliculas\\Client\\wwwroot\\js\\Utilidades.js"
+    },
+    {
+      "Identity": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\BlazorPeliculas\\Server\\wwwroot\\personas\\c194f257-47af-47e0-ab56-de9b21d83f31.jpg",
+      "SourceId": "BlazorPeliculas.Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\BlazorPeliculas\\Server\\wwwroot\\",
+      "BasePath": "_content/BlazorPeliculas.Server",
+      "RelativePath": "personas/c194f257-47af-47e0-ab56-de9b21d83f31#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hdjo7zn8xk",
+      "Integrity": "60RZzBCI/rv0+FLU4+ogMawySe2ToXcC4PQpharpwVY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\personas\\c194f257-47af-47e0-ab56-de9b21d83f31.jpg"
     }
   ],
   "Endpoints": [
@@ -41201,6 +41229,88 @@
         {
           "Name": "label",
           "Value": "js/Utilidades.js"
+        }
+      ]
+    },
+    {
+      "Route": "personas/c194f257-47af-47e0-ab56-de9b21d83f31.hdjo7zn8xk.jpg",
+      "AssetFile": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\BlazorPeliculas\\Server\\wwwroot\\personas\\c194f257-47af-47e0-ab56-de9b21d83f31.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "177911"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"60RZzBCI/rv0+FLU4+ogMawySe2ToXcC4PQpharpwVY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Dec 2024 19:16:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hdjo7zn8xk"
+        },
+        {
+          "Name": "label",
+          "Value": "personas/c194f257-47af-47e0-ab56-de9b21d83f31.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-60RZzBCI/rv0+FLU4+ogMawySe2ToXcC4PQpharpwVY="
+        }
+      ]
+    },
+    {
+      "Route": "personas/c194f257-47af-47e0-ab56-de9b21d83f31.jpg",
+      "AssetFile": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\BlazorPeliculas\\Server\\wwwroot\\personas\\c194f257-47af-47e0-ab56-de9b21d83f31.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "177911"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"60RZzBCI/rv0+FLU4+ogMawySe2ToXcC4PQpharpwVY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Dec 2024 19:16:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-60RZzBCI/rv0+FLU4+ogMawySe2ToXcC4PQpharpwVY="
         }
       ]
     }
