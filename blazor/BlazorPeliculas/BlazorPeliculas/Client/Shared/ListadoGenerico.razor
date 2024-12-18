@@ -24,9 +24,16 @@ else if (Listado.Count == 0)
 }
 else
 {
-    @foreach (var elmento in Listado)
+    if (HayRegistros is not null)
     {
-        @HayRegistros(elmento)
+        @foreach (var elmento in Listado)
+        {
+            @HayRegistros(elmento)
+        }
+    }
+    else
+    {
+        @HayRegistrosCompleto
     }
 }
 
@@ -39,6 +46,9 @@ else
 
     [Parameter]
     public RenderFragment<TItem> HayRegistros { get; set; } = null!;
+
+    [Parameter]
+    public RenderFragment HayRegistrosCompleto { get; set; } = null!;
 
     [Parameter]
     [EditorRequired]

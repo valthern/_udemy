@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\BlazorPeliculas\\Server\\wwwroot\\peliculas\\d14c5464-71b9-4787-9347-70c6abb46316.jpg",
+      "PackagePath": "staticwebassets\\peliculas\\d14c5464-71b9-4787-9347-70c6abb46316.jpg"
+    },
+    {
       "Id": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\BlazorPeliculas\\Server\\wwwroot\\personas\\c194f257-47af-47e0-ab56-de9b21d83f31.jpg",
       "PackagePath": "staticwebassets\\personas\\c194f257-47af-47e0-ab56-de9b21d83f31.jpg"
     },
