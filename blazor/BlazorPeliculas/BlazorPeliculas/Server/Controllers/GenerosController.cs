@@ -10,15 +10,12 @@ namespace BlazorPeliculas.Server.Controllers
     {
         private readonly ApplicationDbContext context;
 
-        public GenerosController(ApplicationDbContext context)
-        {
+        public GenerosController(ApplicationDbContext context) => 
             this.context = context;
-        }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Genero>>> Get() =>
             await context.Generos.ToListAsync();
-
 
         [HttpPost]
         public async Task<ActionResult<int>> Post(Genero genero)

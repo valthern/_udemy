@@ -1,4 +1,6 @@
-﻿<EditForm Model="Pelicula" OnValidSubmit="OnDataAnnotationsValidated">
+﻿@inject IRepositorio repositorio
+
+<EditForm Model="Pelicula" OnValidSubmit="OnDataAnnotationsValidated">
     <DataAnnotationsValidator />
 
     <div class="mb-3">
@@ -116,10 +118,12 @@
 
     private async Task<IEnumerable<Actor>> BuscarActores(string searchText)
     {
-        return new List<Actor>(){
-            new(){Id=1,Nombre="Tom Holland",Foto="https://th.bing.com/th/id/R.37648213a98aeeee6fcf0db59503a1c0?rik=VHWqysasmXI6cg&riu=http%3a%2f%2fbr.web.img3.acsta.net%2fpictures%2f19%2f07%2f01%2f23%2f18%2f1152169.jpg&ehk=jbfX0Isvt8Xnrn43PSFslwcSFk5bB2UnmRm9TUdbNs4%3d&risl=&pid=ImgRaw&r=0"},
-            new(){Id=2,Nombre="Tom Hanks",Foto="https://th.bing.com/th/id/R.0639b45a3f9e380ac1fb0b687a8fde3a?rik=PHMalMsAyN%2f2gw&pid=ImgRaw&r=0"}
-        };
+        // return new List<Actor>(){
+        //     new(){Id=1,Nombre="Tom Holland",Foto="https://th.bing.com/th/id/R.37648213a98aeeee6fcf0db59503a1c0?rik=VHWqysasmXI6cg&riu=http%3a%2f%2fbr.web.img3.acsta.net%2fpictures%2f19%2f07%2f01%2f23%2f18%2f1152169.jpg&ehk=jbfX0Isvt8Xnrn43PSFslwcSFk5bB2UnmRm9TUdbNs4%3d&risl=&pid=ImgRaw&r=0"},
+        //     new(){Id=2,Nombre="Tom Hanks",Foto="https://th.bing.com/th/id/R.0639b45a3f9e380ac1fb0b687a8fde3a?rik=PHMalMsAyN%2f2gw&pid=ImgRaw&r=0"}
+        // };
+        var respuestaHTTP = await repositorio.Get<List<Actor>>($"api/actores/buscar/{searchText}");
+        return respuestaHTTP.Response!;
     }
 
     private async Task OnDataAnnotationsValidated()

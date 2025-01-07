@@ -8,12 +8,10 @@ namespace BlazorPeliculas.Client.Repositorios
     {
         private readonly HttpClient httpClient;
 
-        public Repositorio(HttpClient httpClient)
-        {
+        public Repositorio(HttpClient httpClient) => 
             this.httpClient = httpClient;
-        }
 
-        private JsonSerializerOptions OpcionesPorDefectoJSON => new JsonSerializerOptions
+        private JsonSerializerOptions OpcionesPorDefectoJSON => new()
         {
             PropertyNameCaseInsensitive = true
         };
@@ -47,8 +45,8 @@ namespace BlazorPeliculas.Client.Repositorios
 
             if (responseHttp.IsSuccessStatusCode)
             {
-                var response = await DeserializarRespuesta<TResponse>(responseHttp, OpcionesPorDefectoJSON);
-                return new HttpResponseWrapper<TResponse>(response, error: false, responseHttp);
+                var respuesta = await DeserializarRespuesta<TResponse>(responseHttp, OpcionesPorDefectoJSON);
+                return new HttpResponseWrapper<TResponse>(respuesta, error: false, responseHttp);
             }
 
             return new HttpResponseWrapper<TResponse>(default, !responseHttp.IsSuccessStatusCode, responseHttp);
@@ -57,7 +55,7 @@ namespace BlazorPeliculas.Client.Repositorios
         private async Task<T> DeserializarRespuesta<T>(HttpResponseMessage httpResponse, JsonSerializerOptions jsonSerializerOptions)
         {
             var respuestaString = await httpResponse.Content.ReadAsStringAsync();
-            return JsonSerializer.Deserialize<T>(respuestaString, jsonSerializerOptions);
+            return JsonSerializer.Deserialize<T>(respuestaString, jsonSerializerOptions)!;
         }
 
         public List<Pelicula> ObtenerPeliculas() => new()

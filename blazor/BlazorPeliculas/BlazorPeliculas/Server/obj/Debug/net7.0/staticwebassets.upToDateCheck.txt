@@ -1,2 +1,3 @@
+wwwroot\peliculas\888c643c-0431-40ac-a589-1b74e41c3675.jpg
 wwwroot\peliculas\d14c5464-71b9-4787-9347-70c6abb46316.jpg
-wwwroot\personas\c194f257-47af-47e0-ab56-de9b21d83f31.jpg
+wwwroot\personas\34ac9902-4cb1-40c0-b085-bd294f109637.jpg

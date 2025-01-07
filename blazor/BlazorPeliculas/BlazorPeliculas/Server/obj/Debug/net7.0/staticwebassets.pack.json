@@ -1,12 +1,16 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\BlazorPeliculas\\Server\\wwwroot\\peliculas\\888c643c-0431-40ac-a589-1b74e41c3675.jpg",
+      "PackagePath": "staticwebassets\\peliculas\\888c643c-0431-40ac-a589-1b74e41c3675.jpg"
+    },
+    {
       "Id": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\BlazorPeliculas\\Server\\wwwroot\\peliculas\\d14c5464-71b9-4787-9347-70c6abb46316.jpg",
       "PackagePath": "staticwebassets\\peliculas\\d14c5464-71b9-4787-9347-70c6abb46316.jpg"
     },
     {
-      "Id": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\BlazorPeliculas\\Server\\wwwroot\\personas\\c194f257-47af-47e0-ab56-de9b21d83f31.jpg",
-      "PackagePath": "staticwebassets\\personas\\c194f257-47af-47e0-ab56-de9b21d83f31.jpg"
+      "Id": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\BlazorPeliculas\\Server\\wwwroot\\personas\\34ac9902-4cb1-40c0-b085-bd294f109637.jpg",
+      "PackagePath": "staticwebassets\\personas\\34ac9902-4cb1-40c0-b085-bd294f109637.jpg"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BlazorPeliculas.Server.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

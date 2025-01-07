@@ -13,27 +13,22 @@ namespace BlazorPeliculas.Client.Repositorios
 
         public bool Error { get; set; }
         public T? Response { get; set; }
-        public HttpResponseMessage? HttpResponseMessage { get; set; }
+        public HttpResponseMessage HttpResponseMessage { get; set; }
 
         public async Task<string?> ObtenerMensajeError()
         {
             if (!Error) return null;
 
-            var codigoEstatus = HttpResponseMessage!.StatusCode;
+            var codigoEstatus = HttpResponseMessage.StatusCode;
 
-            switch (codigoEstatus)
+            return codigoEstatus switch
             {
-                case HttpStatusCode.NotFound:
-                    return "Recurso no encontrado";
-                case HttpStatusCode.BadRequest:
-                    return await HttpResponseMessage.Content.ReadAsStringAsync();
-                case HttpStatusCode.Unauthorized:
-                    return "Tienes que logearte para hacer esto";
-                case HttpStatusCode.Forbidden:
-                    return "No tienes permisos para hacer esto";
-                default:
-                    return "Ha ocurrido un error inesperado";
-            }
+                HttpStatusCode.NotFound => "Recurso no encontrado",
+                HttpStatusCode.BadRequest => await HttpResponseMessage.Content.ReadAsStringAsync(),
+                HttpStatusCode.Unauthorized => "Tienes que logearte para hacer esto",
+                HttpStatusCode.Forbidden => "No tienes permisos para hacer esto",
+                _ => $"Ha ocurrido un error inesperado (Código de status: {(int)codigoEstatus} {codigoEstatus})",
+            };
         }
     }
 }

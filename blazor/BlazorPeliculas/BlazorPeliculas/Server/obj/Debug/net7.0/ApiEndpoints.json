@@ -2,7 +2,7 @@
   {
     "ContainingType": "BlazorPeliculas.Server.Controllers.ActoresController",
     "Method": "Get",
-    "RelativePath": "api/actores",
+    "RelativePath": "api/Actores",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -22,7 +22,7 @@
   {
     "ContainingType": "BlazorPeliculas.Server.Controllers.ActoresController",
     "Method": "Post",
-    "RelativePath": "api/actores",
+    "RelativePath": "api/Actores",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -36,6 +36,32 @@
     "ReturnTypes": [
       {
         "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BlazorPeliculas.Server.Controllers.ActoresController",
+    "Method": "Get",
+    "RelativePath": "api/Actores/buscar/{textoBusqueda}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "textoBusqueda",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BlazorPeliculas.Shared.Entidades.Actor, BlazorPeliculas.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -93,8 +119,28 @@
   },
   {
     "ContainingType": "BlazorPeliculas.Server.Controllers.PeliculasController",
+    "Method": "Get",
+    "RelativePath": "api/Peliculas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "BlazorPeliculas.Shared.DTOs.HomePageDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BlazorPeliculas.Server.Controllers.PeliculasController",
     "Method": "Post",
-    "RelativePath": "api/peliculas",
+    "RelativePath": "api/Peliculas",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

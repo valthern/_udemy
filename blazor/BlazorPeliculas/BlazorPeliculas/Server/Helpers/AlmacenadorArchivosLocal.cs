@@ -14,10 +14,10 @@ namespace BlazorPeliculas.Server.Helpers
 
         public Task EliminarArchivo(string ruta, string nombreContenedor)
         {
-            var nombreArchivo=Path.GetFileName(ruta);
-            var directorioArchivo=Path.Combine(env.WebRootPath, nombreContenedor,nombreArchivo);
+            var nombreArchivo = Path.GetFileName(ruta);
+            var directorioArchivo = Path.Combine(env.WebRootPath, nombreContenedor, nombreArchivo);
 
-            if(File.Exists(directorioArchivo))
+            if (File.Exists(directorioArchivo))
                 File.Delete(directorioArchivo);
 
             return Task.CompletedTask;

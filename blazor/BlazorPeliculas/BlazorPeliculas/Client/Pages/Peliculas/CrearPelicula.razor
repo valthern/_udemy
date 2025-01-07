@@ -5,24 +5,27 @@
 
 <h3>Crear Película</h3>
 
-<FormularioPeliculas Pelicula="pelicula" OnValidSubmit="Crear" GenerosNoSeleccionados="GenerosNoSeleccionados">
+@if (MostrarFormulario)
+{
+    <FormularioPeliculas Pelicula="pelicula" OnValidSubmit="Crear" GenerosNoSeleccionados="GenerosNoSeleccionados">
 
-</FormularioPeliculas>
-
+    </FormularioPeliculas>
+}
+else
+{
+    <p>Cargando...</p>
+}
 
 @code {
     private Pelicula pelicula = new Pelicula();
     private List<Genero> GenerosNoSeleccionados = new List<Genero>();
+    public bool MostrarFormulario { get; set; } = false;
 
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
-        GenerosNoSeleccionados = new()
-        {
-            new() { Id = 1, Nombre = "Comedia" },
-            new() { Id = 2, Nombre = "Drama" },
-            new() { Id = 3, Nombre = "Acción" },
-            new() { Id = 4, Nombre = "Sci-Fi" }
-        };
+        var respuestaHTTP = await repositorio.Get<List<Genero>>("api/generos");
+        GenerosNoSeleccionados = respuestaHTTP.Response!;
+        MostrarFormulario = true;
     }
 
     async Task Crear()
