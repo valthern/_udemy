@@ -164,6 +164,32 @@
     ]
   },
   {
+    "ContainingType": "BlazorPeliculas.Server.Controllers.PeliculasController",
+    "Method": "Get",
+    "RelativePath": "api/Peliculas/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BlazorPeliculas.Shared.DTOs.PeliculaVisualizarDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "BlazorPeliculas.Server.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

@@ -22,7 +22,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        var respuestaHTTP = await repositorio.Get<HomePageDTO>("api/películas");
+        var respuestaHTTP = await repositorio.Get<HomePageDTO>("api/peliculas");
         FuturosEstrenos = respuestaHTTP.Response!.ProximosEstrenos;
         EnCartelera = respuestaHTTP.Response!.PeliculasEnCartelera;
     }
