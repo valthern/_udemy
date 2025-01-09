@@ -21,13 +21,37 @@ else
           | Tu voto: @modelo.VotoUsuario.ToString()
     </span>
 
-    <div class="d-flex">
+    <div class="d-flex mt-2">
         <span style="display: inline-block;" class="me-2">
-            <img src="@modelo.Pelicula.Poster" style="width: 225px; height: 315px" />
+            <img src="@(modelo.Pelicula.Poster)" alt="poster" style="width: 225px; height: 315px" />
         </span>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/@(modelo.Pelicula.Trailer)?si=Y42BRxpPof8IaTUv&amp;start=5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/@modelo.Pelicula.Trailer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        @* ?si=Y42BRxpPof8IaTUv&amp *@
+    </div>
+
+    <div class="mt-2">
+        <h3>Resumen</h3>
+        <div>
+            <MostrarMarkdown ContenidoMarkdown="@modelo.Pelicula.Resumen"></MostrarMarkdown>
+        </div>
+    </div>
+
+    <div class="mt-2">
+        <h3>Actores</h3>
+        <div class="d-flex flex-column">
+            @foreach (var actor in modelo.Actores)
+            {
+                <div class="mb-2">
+                    <img style="width: 50px;" src="@actor.Foto" />
+                    <span style="display: inline-block; width: 200px">@actor.Nombre</span>
+                    <span style="display: inline-block; width: 45px">...</span>
+                </div>
+            }
+        </div>
     </div>
 }
+
+
 
 @code {
     [Parameter] public int PeliculaId { get; set; }

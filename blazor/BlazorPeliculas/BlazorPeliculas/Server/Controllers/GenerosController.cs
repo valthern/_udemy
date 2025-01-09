@@ -10,12 +10,22 @@ namespace BlazorPeliculas.Server.Controllers
     {
         private readonly ApplicationDbContext context;
 
-        public GenerosController(ApplicationDbContext context) => 
+        public GenerosController(ApplicationDbContext context) =>
             this.context = context;
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Genero>>> Get() =>
             await context.Generos.ToListAsync();
+
+        [HttpGet("{id:int}")]
+        public async Task<ActionResult<Genero>> Get(int id)
+        {
+            var genero = await context.Generos.FirstOrDefaultAsync(g => g.Id == id);
+
+            if(genero is null) return NotFound();
+
+            return genero;
+        }
 
         [HttpPost]
         public async Task<ActionResult<int>> Post(Genero genero)
@@ -23,6 +33,14 @@ namespace BlazorPeliculas.Server.Controllers
             context.Add(genero);
             await context.SaveChangesAsync();
             return genero.Id;
+        }
+
+        [HttpPut]
+        public async Task<ActionResult> Put(Genero genero)
+        {
+            context.Update(genero);
+            await context.SaveChangesAsync();
+            return NoContent();
         }
     }
 }

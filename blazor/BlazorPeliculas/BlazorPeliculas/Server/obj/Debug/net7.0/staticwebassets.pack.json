@@ -5,8 +5,16 @@
       "PackagePath": "staticwebassets\\peliculas\\888c643c-0431-40ac-a589-1b74e41c3675.jpg"
     },
     {
+      "Id": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\BlazorPeliculas\\Server\\wwwroot\\peliculas\\bb9c872b-0c81-422c-a3b7-9a21985ed791.jpg",
+      "PackagePath": "staticwebassets\\peliculas\\bb9c872b-0c81-422c-a3b7-9a21985ed791.jpg"
+    },
+    {
       "Id": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\BlazorPeliculas\\Server\\wwwroot\\peliculas\\d14c5464-71b9-4787-9347-70c6abb46316.jpg",
       "PackagePath": "staticwebassets\\peliculas\\d14c5464-71b9-4787-9347-70c6abb46316.jpg"
+    },
+    {
+      "Id": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\BlazorPeliculas\\Server\\wwwroot\\peliculas\\inception.jpg",
+      "PackagePath": "staticwebassets\\peliculas\\inception.jpg"
     },
     {
       "Id": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\BlazorPeliculas\\Server\\wwwroot\\personas\\34ac9902-4cb1-40c0-b085-bd294f109637.jpg",

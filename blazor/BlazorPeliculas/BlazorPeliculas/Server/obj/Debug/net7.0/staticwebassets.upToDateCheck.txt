@@ -1,4 +1,6 @@
 wwwroot\peliculas\888c643c-0431-40ac-a589-1b74e41c3675.jpg
+wwwroot\peliculas\bb9c872b-0c81-422c-a3b7-9a21985ed791.jpg
 wwwroot\peliculas\d14c5464-71b9-4787-9347-70c6abb46316.jpg
+wwwroot\peliculas\inception.jpg
 wwwroot\personas\34ac9902-4cb1-40c0-b085-bd294f109637.jpg
 wwwroot\personas\5164cb46-94e9-474b-9644-1cbb83aaa850.jpg
