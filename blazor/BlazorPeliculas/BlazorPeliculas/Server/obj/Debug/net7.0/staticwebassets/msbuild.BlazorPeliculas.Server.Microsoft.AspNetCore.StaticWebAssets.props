@@ -90,12 +90,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\personas\34ac9902-4cb1-40c0-b085-bd294f109637.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\personas\5164cb46-94e9-474b-9644-1cbb83aaa850.jpg'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\personas\51d284aa-d1f1-472f-a983-4e11e37586f1.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>BlazorPeliculas.Server</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/BlazorPeliculas.Server</BasePath>
-      <RelativePath>personas/5164cb46-94e9-474b-9644-1cbb83aaa850.jpg</RelativePath>
+      <RelativePath>personas/51d284aa-d1f1-472f-a983-4e11e37586f1.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -106,7 +106,25 @@
       <Integrity>QFsc/1FgbTbMH//N3V+rDZULZHcTtLqua17WdcQQ+9A=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\personas\5164cb46-94e9-474b-9644-1cbb83aaa850.jpg'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\personas\51d284aa-d1f1-472f-a983-4e11e37586f1.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\personas\8511ab8c-3b44-4795-8437-dc63a326d0d2.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>BlazorPeliculas.Server</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/BlazorPeliculas.Server</BasePath>
+      <RelativePath>personas/8511ab8c-3b44-4795-8437-dc63a326d0d2.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>28x2x2zzbw</Fingerprint>
+      <Integrity>TvJ9IUdZVHjbBs1/y97DOljSO4boEL15lPFEmZzgzYo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\personas\8511ab8c-3b44-4795-8437-dc63a326d0d2.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

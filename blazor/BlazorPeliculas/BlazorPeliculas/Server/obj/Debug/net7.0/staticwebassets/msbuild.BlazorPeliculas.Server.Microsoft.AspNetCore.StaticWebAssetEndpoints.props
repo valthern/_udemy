@@ -60,17 +60,29 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-NZd31l1C//eqoQSYxgmLoHAUTJ\u002BcksxJK\u002B01Ego\u002BfJc="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"188198"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022NZd31l1C//eqoQSYxgmLoHAUTJ\u002BcksxJK\u002B01Ego\u002BfJc=\u0022"},{"Name":"Last-Modified","Value":"Tue, 31 Dec 2024 18:39:07 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/BlazorPeliculas.Server/personas/5164cb46-94e9-474b-9644-1cbb83aaa850.0kzb8xr5xk.jpg">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\personas\5164cb46-94e9-474b-9644-1cbb83aaa850.jpg'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/BlazorPeliculas.Server/personas/51d284aa-d1f1-472f-a983-4e11e37586f1.0kzb8xr5xk.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\personas\51d284aa-d1f1-472f-a983-4e11e37586f1.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"0kzb8xr5xk"},{"Name":"integrity","Value":"sha256-QFsc/1FgbTbMH//N3V\u002BrDZULZHcTtLqua17WdcQQ\u002B9A="},{"Name":"label","Value":"_content/BlazorPeliculas.Server/personas/5164cb46-94e9-474b-9644-1cbb83aaa850.jpg"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"37456"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022QFsc/1FgbTbMH//N3V\u002BrDZULZHcTtLqua17WdcQQ\u002B9A=\u0022"},{"Name":"Last-Modified","Value":"Tue, 07 Jan 2025 00:19:28 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"0kzb8xr5xk"},{"Name":"integrity","Value":"sha256-QFsc/1FgbTbMH//N3V\u002BrDZULZHcTtLqua17WdcQQ\u002B9A="},{"Name":"label","Value":"_content/BlazorPeliculas.Server/personas/51d284aa-d1f1-472f-a983-4e11e37586f1.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"37456"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022QFsc/1FgbTbMH//N3V\u002BrDZULZHcTtLqua17WdcQQ\u002B9A=\u0022"},{"Name":"Last-Modified","Value":"Thu, 09 Jan 2025 17:30:05 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/BlazorPeliculas.Server/personas/5164cb46-94e9-474b-9644-1cbb83aaa850.jpg">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\personas\5164cb46-94e9-474b-9644-1cbb83aaa850.jpg'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/BlazorPeliculas.Server/personas/51d284aa-d1f1-472f-a983-4e11e37586f1.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\personas\51d284aa-d1f1-472f-a983-4e11e37586f1.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-QFsc/1FgbTbMH//N3V\u002BrDZULZHcTtLqua17WdcQQ\u002B9A="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"37456"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022QFsc/1FgbTbMH//N3V\u002BrDZULZHcTtLqua17WdcQQ\u002B9A=\u0022"},{"Name":"Last-Modified","Value":"Tue, 07 Jan 2025 00:19:28 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"37456"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022QFsc/1FgbTbMH//N3V\u002BrDZULZHcTtLqua17WdcQQ\u002B9A=\u0022"},{"Name":"Last-Modified","Value":"Thu, 09 Jan 2025 17:30:05 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BlazorPeliculas.Server/personas/8511ab8c-3b44-4795-8437-dc63a326d0d2.28x2x2zzbw.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\personas\8511ab8c-3b44-4795-8437-dc63a326d0d2.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"28x2x2zzbw"},{"Name":"integrity","Value":"sha256-TvJ9IUdZVHjbBs1/y97DOljSO4boEL15lPFEmZzgzYo="},{"Name":"label","Value":"_content/BlazorPeliculas.Server/personas/8511ab8c-3b44-4795-8437-dc63a326d0d2.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"305159"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022TvJ9IUdZVHjbBs1/y97DOljSO4boEL15lPFEmZzgzYo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 09 Jan 2025 17:28:53 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BlazorPeliculas.Server/personas/8511ab8c-3b44-4795-8437-dc63a326d0d2.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\personas\8511ab8c-3b44-4795-8437-dc63a326d0d2.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-TvJ9IUdZVHjbBs1/y97DOljSO4boEL15lPFEmZzgzYo="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"305159"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022TvJ9IUdZVHjbBs1/y97DOljSO4boEL15lPFEmZzgzYo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 09 Jan 2025 17:28:53 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>

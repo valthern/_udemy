@@ -17,6 +17,7 @@ C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Ser
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\BlazorPeliculas.Server.runtimeconfig.json
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\BlazorPeliculas.Server.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\BlazorPeliculas.Server.pdb
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\AutoMapper.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Azure.Core.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Azure.Identity.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Azure.Storage.Blobs.dll
