@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BlazorPeliculas.Server.Helpers;
+using BlazorPeliculas.Shared.DTOs;
 using BlazorPeliculas.Shared.Entidades;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -23,8 +24,10 @@ namespace BlazorPeliculas.Server.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Actor>>> Get() =>
-            await context.Actores.ToListAsync();
+        public async Task<ActionResult<IEnumerable<Actor>>> Get([FromQuery] PaginacionDTO paginacion)
+        {
+            return await context.Actores.ToListAsync();
+        }
 
         [HttpGet("{id:int}")]
         public async Task<ActionResult<Actor>> Get(int id)
@@ -81,6 +84,21 @@ namespace BlazorPeliculas.Server.Controllers
             }
 
             await context.SaveChangesAsync();
+            return NoContent();
+        }
+
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult> Delete(int id)
+        {
+            var actor=await context.Actores
+                .FirstOrDefaultAsync (a => a.Id == id);
+
+            if(actor is null) return NotFound();
+
+            context.Remove(actor);
+            await context.SaveChangesAsync();
+            await almacenadorArchivos.EliminarArchivo(actor.Foto!, contenedor);
+
             return NoContent();
         }
     }

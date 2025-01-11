@@ -1,4 +1,5 @@
-﻿using BlazorPeliculas.Shared.Entidades;
+﻿using BlazorPeliculas.Client.Repositorios;
+using BlazorPeliculas.Shared.Entidades;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -22,7 +23,7 @@ namespace BlazorPeliculas.Server.Controllers
         {
             var genero = await context.Generos.FirstOrDefaultAsync(g => g.Id == id);
 
-            if(genero is null) return NotFound();
+            if (genero is null) return NotFound();
 
             return genero;
         }
@@ -40,6 +41,18 @@ namespace BlazorPeliculas.Server.Controllers
         {
             context.Update(genero);
             await context.SaveChangesAsync();
+            return NoContent();
+        }
+
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult> Delete(int id)
+        {
+            var filasAfectadas = await context.Generos
+                .Where(g => g.Id == id)
+                .ExecuteDeleteAsync();
+
+            if (filasAfectadas == 0) return NotFound();
+
             return NoContent();
         }
     }

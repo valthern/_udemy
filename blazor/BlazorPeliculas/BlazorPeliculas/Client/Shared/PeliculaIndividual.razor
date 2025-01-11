@@ -23,8 +23,5 @@
     public EventCallback<Pelicula> EliminarPelicula { get; set; }
     private string urlPelicula = string.Empty;
 
-    protected override void OnInitialized()
-    {
-        urlPelicula = $"pelicula/{Pelicula.Id}/{Pelicula.Titulo.Replace(" ", "-")}";
-    }
+    protected override void OnInitialized() => urlPelicula = $"pelicula/{Pelicula.Id}/{Pelicula.Titulo.Replace(" ", "-")}";
 }

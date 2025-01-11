@@ -115,15 +115,20 @@ namespace BlazorPeliculas.Server.Controllers
                 pelicula.Poster = await almacenadorArchivos.GuardarArchivo(posterPelicula, ".jpg", contenedor);
             }
 
+            EscribirOrdenActores(pelicula);
+
+            context.Add(pelicula);
+            await context.SaveChangesAsync();
+            return pelicula.Id;
+        }
+
+        private static void EscribirOrdenActores(Pelicula pelicula)
+        {
             if (pelicula.PeliculasActor is not null)
             {
                 for (int i = 0; i < pelicula.PeliculasActor.Count; i++)
                     pelicula.PeliculasActor[i].Orden = i + 1;
             }
-
-            context.Add(pelicula);
-            await context.SaveChangesAsync();
-            return pelicula.Id;
         }
 
         [HttpPut]
@@ -143,6 +148,26 @@ namespace BlazorPeliculas.Server.Controllers
                 var posterImagen = Convert.FromBase64String(pelicula.Poster);
                 peliculaDB.Poster = await almacenadorArchivos.EditarArchivo(posterImagen, ".jpg", contenedor, peliculaDB.Poster!);
             }
+
+            EscribirOrdenActores(peliculaDB);
+
+            await context.SaveChangesAsync();   
+            return NoContent();
+        }
+
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult> Delete(int id)
+        {
+            var pelicula = await context.Peliculas
+                .FirstOrDefaultAsync(p => p.Id == id);
+
+            if (pelicula is null) return NotFound();
+
+            context.Remove(pelicula);
+            await context.SaveChangesAsync();
+            await almacenadorArchivos.EliminarArchivo(pelicula.Poster!, contenedor);
+
+            return NoContent();
         }
     }
 }

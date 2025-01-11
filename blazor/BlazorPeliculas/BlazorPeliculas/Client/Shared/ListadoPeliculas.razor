@@ -1,4 +1,8 @@
 ﻿@inject IJSRuntime js
+@* @using System.Net *@
+@inject IRepositorio repositorio
+@* @inject NavigationManager navigationManager *@
+@inject SweetAlertService swal
 
 <div style="display: flex; flex-wrap:wrap; align-items:center;">
     <ListadoGenerico Listado="Peliculas">
@@ -21,8 +25,15 @@
 
         if (confirmado)
         {
-            Console.WriteLine("Eliminando una película");
-            Peliculas!.Remove(pelicula);
+            var responseHTTP = await repositorio.Delete($"api/peliculas/{pelicula.Id}");
+
+            if (responseHTTP.Error)
+            {
+                var mensajeError = await responseHTTP.ObtenerMensajeError();
+                await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
+            }
+            else
+                Peliculas!.Remove(pelicula);
         }
     }
 }
