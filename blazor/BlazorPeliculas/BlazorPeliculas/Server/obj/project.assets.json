@@ -148,15 +148,15 @@
           }
         }
       },
-      "Markdig/0.38.0": {
+      "Markdig/0.40.0": {
         "type": "package",
         "compile": {
-          "lib/net6.0/Markdig.dll": {
+          "lib/netstandard2.1/Markdig.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/Markdig.dll": {
+          "lib/netstandard2.1/Markdig.dll": {
             "related": ".xml"
           }
         }
@@ -174,10 +174,10 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Authorization/7.0.19": {
+      "Microsoft.AspNetCore.Authorization/7.0.20": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Metadata": "7.0.19",
+          "Microsoft.AspNetCore.Metadata": "7.0.20",
           "Microsoft.Extensions.Logging.Abstractions": "7.0.1",
           "Microsoft.Extensions.Options": "7.0.1"
         },
@@ -192,11 +192,11 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components/7.0.19": {
+      "Microsoft.AspNetCore.Components/7.0.20": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Authorization": "7.0.19",
-          "Microsoft.AspNetCore.Components.Analyzers": "7.0.19"
+          "Microsoft.AspNetCore.Authorization": "7.0.20",
+          "Microsoft.AspNetCore.Components.Analyzers": "7.0.20"
         },
         "compile": {
           "lib/net7.0/Microsoft.AspNetCore.Components.dll": {
@@ -209,16 +209,33 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components.Analyzers/7.0.19": {
+      "Microsoft.AspNetCore.Components.Analyzers/7.0.20": {
         "type": "package",
         "build": {
           "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets": {}
         }
       },
-      "Microsoft.AspNetCore.Components.Forms/7.0.19": {
+      "Microsoft.AspNetCore.Components.Authorization/7.0.20": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Components": "7.0.19"
+          "Microsoft.AspNetCore.Authorization": "7.0.20",
+          "Microsoft.AspNetCore.Components": "7.0.20"
+        },
+        "compile": {
+          "lib/net7.0/Microsoft.AspNetCore.Components.Authorization.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.AspNetCore.Components.Authorization.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Components.Forms/7.0.20": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "7.0.20"
         },
         "compile": {
           "lib/net7.0/Microsoft.AspNetCore.Components.Forms.dll": {
@@ -231,13 +248,13 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components.Web/7.0.19": {
+      "Microsoft.AspNetCore.Components.Web/7.0.20": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Components": "7.0.19",
-          "Microsoft.AspNetCore.Components.Forms": "7.0.19",
+          "Microsoft.AspNetCore.Components": "7.0.20",
+          "Microsoft.AspNetCore.Components.Forms": "7.0.20",
           "Microsoft.Extensions.DependencyInjection": "7.0.0",
-          "Microsoft.JSInterop": "7.0.19",
+          "Microsoft.JSInterop": "7.0.20",
           "System.IO.Pipelines": "7.0.0"
         },
         "compile": {
@@ -251,14 +268,14 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components.WebAssembly/7.0.19": {
+      "Microsoft.AspNetCore.Components.WebAssembly/7.0.20": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Components.Web": "7.0.19",
+          "Microsoft.AspNetCore.Components.Web": "7.0.20",
           "Microsoft.Extensions.Configuration.Binder": "7.0.4",
           "Microsoft.Extensions.Configuration.Json": "7.0.0",
           "Microsoft.Extensions.Logging": "7.0.0",
-          "Microsoft.JSInterop.WebAssembly": "7.0.19"
+          "Microsoft.JSInterop.WebAssembly": "7.0.20"
         },
         "compile": {
           "lib/net7.0/Microsoft.AspNetCore.Components.WebAssembly.dll": {
@@ -272,6 +289,29 @@
         },
         "build": {
           "build/net7.0/_._": {}
+        }
+      },
+      "Microsoft.AspNetCore.Components.WebAssembly.Authentication/7.0.20": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Authorization": "7.0.20",
+          "Microsoft.AspNetCore.Components.Web": "7.0.20"
+        },
+        "compile": {
+          "lib/net7.0/Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Microsoft.AspNetCore.Components.WebAssembly.Authentication.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Microsoft.AspNetCore.Components.WebAssembly.Authentication.props": {}
         }
       },
       "Microsoft.AspNetCore.Components.WebAssembly.Server/7.0.19": {
@@ -293,7 +333,7 @@
           "build/Microsoft.AspNetCore.Components.WebAssembly.Server.targets": {}
         }
       },
-      "Microsoft.AspNetCore.Metadata/7.0.19": {
+      "Microsoft.AspNetCore.Metadata/7.0.20": {
         "type": "package",
         "compile": {
           "lib/net7.0/Microsoft.AspNetCore.Metadata.dll": {
@@ -965,7 +1005,7 @@
           }
         }
       },
-      "Microsoft.JSInterop/7.0.19": {
+      "Microsoft.JSInterop/7.0.20": {
         "type": "package",
         "compile": {
           "lib/net7.0/Microsoft.JSInterop.dll": {
@@ -978,10 +1018,10 @@
           }
         }
       },
-      "Microsoft.JSInterop.WebAssembly/7.0.19": {
+      "Microsoft.JSInterop.WebAssembly/7.0.20": {
         "type": "package",
         "dependencies": {
-          "Microsoft.JSInterop": "7.0.19"
+          "Microsoft.JSInterop": "7.0.20"
         },
         "compile": {
           "lib/net7.0/Microsoft.JSInterop.WebAssembly.dll": {
@@ -1556,9 +1596,10 @@
           "BlazorPeliculas.Shared": "1.0.0",
           "Blazored.Typeahead": "4.7.0",
           "CurrieTechnologies.Razor.SweetAlert2": "5.6.0",
-          "Markdig": "0.38.0",
+          "Markdig": "0.40.0",
           "MathNet.Numerics": "5.0.0",
-          "Microsoft.AspNetCore.Components.WebAssembly": "7.0.19"
+          "Microsoft.AspNetCore.Components.WebAssembly": "7.0.20",
+          "Microsoft.AspNetCore.Components.WebAssembly.Authentication": "7.0.20"
         },
         "compile": {
           "bin/placeholder/BlazorPeliculas.Client.dll": {}
@@ -1763,24 +1804,24 @@
         "logo.png"
       ]
     },
-    "Markdig/0.38.0": {
-      "sha512": "zKy3JFjQvr1wbuMtbfcZVjNNCIqHxSCjGMq/CBcyNsY/MPsxqcS3o8M7CZ2kcMGGIw5LI2ZZd8rFUaFeV6SvrQ==",
+    "Markdig/0.40.0": {
+      "sha512": "4ve14zs+gt1irldTQE3y5FLAHuzmhW7T99lAAvVipe/q2LWT/nUCO0iICb9TXGvMX6n7Z1OZroFXkdSy91rO8w==",
       "type": "package",
-      "path": "markdig/0.38.0",
+      "path": "markdig/0.40.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net462/Markdig.dll",
         "lib/net462/Markdig.xml",
-        "lib/net6.0/Markdig.dll",
-        "lib/net6.0/Markdig.xml",
         "lib/net8.0/Markdig.dll",
         "lib/net8.0/Markdig.xml",
+        "lib/net9.0/Markdig.dll",
+        "lib/net9.0/Markdig.xml",
         "lib/netstandard2.0/Markdig.dll",
         "lib/netstandard2.0/Markdig.xml",
         "lib/netstandard2.1/Markdig.dll",
         "lib/netstandard2.1/Markdig.xml",
-        "markdig.0.38.0.nupkg.sha512",
+        "markdig.0.40.0.nupkg.sha512",
         "markdig.nuspec",
         "markdig.png",
         "readme.md"
@@ -1808,10 +1849,10 @@
         "mathnet.numerics.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Authorization/7.0.19": {
-      "sha512": "w36g/GKu4rAXPMEPcG05pfEuHmEUdZhRXT5sfqJZMjnVFDbbhogOTvcs/+JHCd5VWG9yEdVOl0xyaRiC8gTQIw==",
+    "Microsoft.AspNetCore.Authorization/7.0.20": {
+      "sha512": "hxQI2suog1C8i+AuWXJmoZ4cwj+Nnhbe6pcsrSL6xv/WBa/mxoPZDdF4g8WDt0UbetUTDLGPtMZFlCAMC9kWig==",
       "type": "package",
-      "path": "microsoft.aspnetcore.authorization/7.0.19",
+      "path": "microsoft.aspnetcore.authorization/7.0.20",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1823,14 +1864,14 @@
         "lib/net7.0/Microsoft.AspNetCore.Authorization.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.xml",
-        "microsoft.aspnetcore.authorization.7.0.19.nupkg.sha512",
+        "microsoft.aspnetcore.authorization.7.0.20.nupkg.sha512",
         "microsoft.aspnetcore.authorization.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components/7.0.19": {
-      "sha512": "N9pyPUm3smUMZJW5IpHNlkCOMbPvKaVWDATJmQ3f0y1VlYrjhJ7Ujp7vCmP4pSnR4+oGQrKz8hS9K7a4z2/ENA==",
+    "Microsoft.AspNetCore.Components/7.0.20": {
+      "sha512": "Ii2QWs022tm7kAerxLpkNeSKUx/TPZP4T/+5c+u5TaNtiYFyn4bJKWP/KQRmGkahradngifYpqn2ACZlm4l47A==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components/7.0.19",
+      "path": "microsoft.aspnetcore.components/7.0.20",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1838,14 +1879,14 @@
         "THIRD-PARTY-NOTICES.txt",
         "lib/net7.0/Microsoft.AspNetCore.Components.dll",
         "lib/net7.0/Microsoft.AspNetCore.Components.xml",
-        "microsoft.aspnetcore.components.7.0.19.nupkg.sha512",
+        "microsoft.aspnetcore.components.7.0.20.nupkg.sha512",
         "microsoft.aspnetcore.components.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components.Analyzers/7.0.19": {
-      "sha512": "YbS40kZdmu59GJ07VihFr38z0jvC19KJrVENcp5Wd0WFh6IfjUC8gQ1DAblrqJCiCf7ei7+fKaxG177sN0bvTA==",
+    "Microsoft.AspNetCore.Components.Analyzers/7.0.20": {
+      "sha512": "C1x0/pPILayW1t/pG6Phq5Yf1TtCqxI+6mVqCV3I+iDPQ2POsQdNx2Cd0PvjlJMDyVoS3XR2f05B6XmiFJ7WDg==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.analyzers/7.0.19",
+      "path": "microsoft.aspnetcore.components.analyzers/7.0.20",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1854,14 +1895,29 @@
         "analyzers/dotnet/cs/Microsoft.AspNetCore.Components.Analyzers.dll",
         "build/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets",
         "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets",
-        "microsoft.aspnetcore.components.analyzers.7.0.19.nupkg.sha512",
+        "microsoft.aspnetcore.components.analyzers.7.0.20.nupkg.sha512",
         "microsoft.aspnetcore.components.analyzers.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components.Forms/7.0.19": {
-      "sha512": "NvL80NAzrtmc1f7O7XhKYiQGLZh1iLDKcVQ0k1rQW4+TQ0aY3iDyIU/oYRgJHBdnzlr0F9Pt3/qY2LO2ITQ6dA==",
+    "Microsoft.AspNetCore.Components.Authorization/7.0.20": {
+      "sha512": "iycZQbCA3msAfCN8nDNwBcELSzwULDVikkLNnaQ/dJlet/6m58zrwg6ZpV+GVonQr9GJKa/FxjEo8BF12dLpyQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.forms/7.0.19",
+      "path": "microsoft.aspnetcore.components.authorization/7.0.20",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/net7.0/Microsoft.AspNetCore.Components.Authorization.dll",
+        "lib/net7.0/Microsoft.AspNetCore.Components.Authorization.xml",
+        "microsoft.aspnetcore.components.authorization.7.0.20.nupkg.sha512",
+        "microsoft.aspnetcore.components.authorization.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Components.Forms/7.0.20": {
+      "sha512": "abw2o9MnZW3IfHcyv1FUQCBzvg7qP3TEL7nKWDBwWwU5041LTzU15F6oktSOBE8HEvSx1OgR6XQqhKyHuKekjQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.components.forms/7.0.20",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1869,14 +1925,14 @@
         "THIRD-PARTY-NOTICES.txt",
         "lib/net7.0/Microsoft.AspNetCore.Components.Forms.dll",
         "lib/net7.0/Microsoft.AspNetCore.Components.Forms.xml",
-        "microsoft.aspnetcore.components.forms.7.0.19.nupkg.sha512",
+        "microsoft.aspnetcore.components.forms.7.0.20.nupkg.sha512",
         "microsoft.aspnetcore.components.forms.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components.Web/7.0.19": {
-      "sha512": "qQ/3lUGD8fBZhkEhcngU9cgQs0sSLLPkHMJwrLnH13slnD6133Q8JX6STeBA5pD99Is4WKxGEEFBuETumbwi9A==",
+    "Microsoft.AspNetCore.Components.Web/7.0.20": {
+      "sha512": "KwpwYfghK2oURoWmjOmIKGRVnaNWBge9f8kTF0zw9ldH9iJWG24VC5bhFKz5+ZpwuP0ZaN+rN8SAAYei/Fldeg==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.web/7.0.19",
+      "path": "microsoft.aspnetcore.components.web/7.0.20",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1884,14 +1940,14 @@
         "THIRD-PARTY-NOTICES.txt",
         "lib/net7.0/Microsoft.AspNetCore.Components.Web.dll",
         "lib/net7.0/Microsoft.AspNetCore.Components.Web.xml",
-        "microsoft.aspnetcore.components.web.7.0.19.nupkg.sha512",
+        "microsoft.aspnetcore.components.web.7.0.20.nupkg.sha512",
         "microsoft.aspnetcore.components.web.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components.WebAssembly/7.0.19": {
-      "sha512": "3hE7jFW0a0dmexi/CTPPpWaVJM6mQJ46OkvXhiKIbXiMUSZ9sjnNptZR8R4CLmoEB2K/u7HWFJPZQ4VnUXC+2A==",
+    "Microsoft.AspNetCore.Components.WebAssembly/7.0.20": {
+      "sha512": "97QImkSvYQcUPu6vxysFvRqaX/t2/esckzjmnP6EgES+CrhDZZO8ufsfGebGUVz7GLTJJ1/LbOhLM5zPV9kkxg==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.webassembly/7.0.19",
+      "path": "microsoft.aspnetcore.components.webassembly/7.0.20",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1901,8 +1957,28 @@
         "build/net7.0/blazor.webassembly.js",
         "lib/net7.0/Microsoft.AspNetCore.Components.WebAssembly.dll",
         "lib/net7.0/Microsoft.AspNetCore.Components.WebAssembly.xml",
-        "microsoft.aspnetcore.components.webassembly.7.0.19.nupkg.sha512",
+        "microsoft.aspnetcore.components.webassembly.7.0.20.nupkg.sha512",
         "microsoft.aspnetcore.components.webassembly.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Components.WebAssembly.Authentication/7.0.20": {
+      "sha512": "GlGOTutUn4+Aun0PsVpjTwnTaGlHaXHyB67Pd4eBsT9nkKVGQvQnyNwlnpzJaLlMMoZf8oTIg+6wwa8QQFWSXg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.components.webassembly.authentication/7.0.20",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/Microsoft.AspNetCore.Components.WebAssembly.Authentication.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/Microsoft.AspNetCore.Components.WebAssembly.Authentication.props",
+        "buildTransitive/Microsoft.AspNetCore.Components.WebAssembly.Authentication.props",
+        "lib/net7.0/Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll",
+        "lib/net7.0/Microsoft.AspNetCore.Components.WebAssembly.Authentication.xml",
+        "microsoft.aspnetcore.components.webassembly.authentication.7.0.20.nupkg.sha512",
+        "microsoft.aspnetcore.components.webassembly.authentication.nuspec",
+        "staticwebassets/AuthenticationService.js"
       ]
     },
     "Microsoft.AspNetCore.Components.WebAssembly.Server/7.0.19": {
@@ -1930,10 +2006,10 @@
         "tools/BlazorDebugProxy/Newtonsoft.Json.dll"
       ]
     },
-    "Microsoft.AspNetCore.Metadata/7.0.19": {
-      "sha512": "E6rskM317dwtmP1LC+oubCbY5YLO51fmybdHol0cD3OMYf5zqRWDWYEGRUkuii3UpxAohuGaoGKdNVA1kxmdbQ==",
+    "Microsoft.AspNetCore.Metadata/7.0.20": {
+      "sha512": "c+dDosAEkOI1K48ImIy0pxxvOgXR/pbqodOqQ43k/hY8cGI8jbhRopDP/xbqqW+mkWmxbVIRaCJqDALeG8VKYA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.metadata/7.0.19",
+      "path": "microsoft.aspnetcore.metadata/7.0.20",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1945,7 +2021,7 @@
         "lib/net7.0/Microsoft.AspNetCore.Metadata.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.xml",
-        "microsoft.aspnetcore.metadata.7.0.19.nupkg.sha512",
+        "microsoft.aspnetcore.metadata.7.0.20.nupkg.sha512",
         "microsoft.aspnetcore.metadata.nuspec"
       ]
     },
@@ -2926,10 +3002,10 @@
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
-    "Microsoft.JSInterop/7.0.19": {
-      "sha512": "PDony3DGRiU+HzIba6YEgxbobXGBAd2sbWWLtZiCngaa3USV9pyH9xcirjo+W4TvlnD+/0Deiv94Ot0KqgCnwA==",
+    "Microsoft.JSInterop/7.0.20": {
+      "sha512": "ug47NElJo58cnA8+YcZx5+mDScrtnkd+Fgi/pLio76O0WYvAc9qGT4cXEVEqX1YcqwHmLgP1NBol6uzYyUqbAw==",
       "type": "package",
-      "path": "microsoft.jsinterop/7.0.19",
+      "path": "microsoft.jsinterop/7.0.20",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2937,14 +3013,14 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net7.0/Microsoft.JSInterop.dll",
         "lib/net7.0/Microsoft.JSInterop.xml",
-        "microsoft.jsinterop.7.0.19.nupkg.sha512",
+        "microsoft.jsinterop.7.0.20.nupkg.sha512",
         "microsoft.jsinterop.nuspec"
       ]
     },
-    "Microsoft.JSInterop.WebAssembly/7.0.19": {
-      "sha512": "dVlT+DO+2E8IqyGNc8fVG5+44euHZUg80MWXc30YOTdY0yJesaHxeMUAk+nvffeZIOEbsm2JjfGbNodXxISG1g==",
+    "Microsoft.JSInterop.WebAssembly/7.0.20": {
+      "sha512": "UrMnY34n6NOqy/SDsbrira7GpIMNSRL/VYteB4cTNYRjiewbez7IS63HDvpimCjFzUf2id3m4tJF6SFD3NOgQg==",
       "type": "package",
-      "path": "microsoft.jsinterop.webassembly/7.0.19",
+      "path": "microsoft.jsinterop.webassembly/7.0.20",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2952,7 +3028,7 @@
         "THIRD-PARTY-NOTICES.txt",
         "lib/net7.0/Microsoft.JSInterop.WebAssembly.dll",
         "lib/net7.0/Microsoft.JSInterop.WebAssembly.xml",
-        "microsoft.jsinterop.webassembly.7.0.19.nupkg.sha512",
+        "microsoft.jsinterop.webassembly.7.0.20.nupkg.sha512",
         "microsoft.jsinterop.webassembly.nuspec"
       ]
     },
@@ -4177,7 +4253,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

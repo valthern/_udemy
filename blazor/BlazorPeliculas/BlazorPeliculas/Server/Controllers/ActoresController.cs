@@ -26,7 +26,9 @@ namespace BlazorPeliculas.Server.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Actor>>> Get([FromQuery] PaginacionDTO paginacion)
         {
-            return await context.Actores.ToListAsync();
+            var queryable = context.Actores.AsQueryable();
+            await HttpContext.InsertarParametrosPaginacionEnRespuesta(queryable, paginacion.CantidadRegistros);
+            return await queryable.OrderBy(x => x.Nombre).Paginar(paginacion).ToListAsync();
         }
 
         [HttpGet("{id:int}")]
@@ -90,10 +92,10 @@ namespace BlazorPeliculas.Server.Controllers
         [HttpDelete("{id:int}")]
         public async Task<ActionResult> Delete(int id)
         {
-            var actor=await context.Actores
-                .FirstOrDefaultAsync (a => a.Id == id);
+            var actor = await context.Actores
+                .FirstOrDefaultAsync(a => a.Id == id);
 
-            if(actor is null) return NotFound();
+            if (actor is null) return NotFound();
 
             context.Remove(actor);
             await context.SaveChangesAsync();

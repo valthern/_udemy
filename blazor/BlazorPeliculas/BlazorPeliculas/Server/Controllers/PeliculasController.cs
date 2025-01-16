@@ -85,6 +85,38 @@ namespace BlazorPeliculas.Server.Controllers
             return modelo;
         }
 
+        [HttpGet("filtrar")]
+        public async Task<ActionResult<List<Pelicula>>> Get([FromQuery] ParametrosBusquedaPeliculasDTO modelo)
+        {
+            var peliculasQueryable=context.Peliculas.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(modelo.Titulo))
+                peliculasQueryable = peliculasQueryable
+                    .Where(p => p.Titulo.Contains(modelo.Titulo));
+
+            if (modelo.EnCartelera)
+                peliculasQueryable = peliculasQueryable
+                    .Where(p => p.EnCartelera);
+
+            if(modelo.Estrenos)
+            {
+                var hoy = DateTime.Today;
+                peliculasQueryable = peliculasQueryable
+                    .Where(p => p.Lanzamiento >= hoy);
+            }
+
+            if (modelo.GeneroId != 0)
+                peliculasQueryable = peliculasQueryable
+                    .Where(p => p.GenerosPelicula
+                        .Select(gp => gp.GeneroId)
+                        .Contains(modelo.GeneroId));
+
+            // TODO: Implementar votación
+            await HttpContext.InsertarParametrosPaginacionEnRespuesta(peliculasQueryable, modelo.CantidadRegistros);
+            var peliculas = await peliculasQueryable.Paginar(modelo.PaginacionDTO).ToListAsync();
+            return peliculas;
+        }
+
         [HttpGet("actualizar/{id:int}")]
         public async Task<ActionResult<PeliculaActualizacionDTO>> PutGet(int id)
         {
