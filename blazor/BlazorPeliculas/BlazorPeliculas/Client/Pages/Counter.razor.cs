@@ -1,6 +1,7 @@
 ﻿using BlazorPeliculas.Client.Helpers;
 using MathNet.Numerics.Statistics;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.JSInterop;
 
 namespace BlazorPeliculas.Client.Pages
@@ -8,7 +9,10 @@ namespace BlazorPeliculas.Client.Pages
     public partial class Counter
     {
         private int currentCount = 0;
-        [Inject] public IJSRuntime js { get; set; } = null!;
+        [Inject] 
+        public IJSRuntime js { get; set; } = null!;
+        [CascadingParameter]
+        private Task<AuthenticationState> AuthenticationStateTask { get; set; } = null!;
 
         public async Task IncrementCount()
         {
@@ -16,9 +20,15 @@ namespace BlazorPeliculas.Client.Pages
             var max = arreglo.Maximum();
             var min = arreglo.Minimum();
 
-            await js.InvokeVoidAsync("alert", $"El max es {max} y el min es {min}");
+            //await js.InvokeVoidAsync("alert", $"El max es {max} y el min es {min}");
 
-            currentCount++;
+            var authenticationState = await AuthenticationStateTask;
+            var usuarioEstaAutenticado = authenticationState.User.Identity!.IsAuthenticated;
+
+            if (usuarioEstaAutenticado)
+                currentCount++;
+            else
+                currentCount--;
         }
     }
 }

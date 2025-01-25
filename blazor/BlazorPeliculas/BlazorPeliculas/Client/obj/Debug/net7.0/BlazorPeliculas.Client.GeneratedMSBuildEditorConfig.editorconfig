@@ -44,6 +44,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWN0b3Jlc1xJbmRpY2VBY3RvcmVzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculas/BlazorPeliculas/Client/Pages/Auth/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxMb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculas/BlazorPeliculas/Client/Pages/Auth/Logout.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxMb2dvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculas/BlazorPeliculas/Client/Pages/Auth/Registro.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxSZWdpc3Ryby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculas/BlazorPeliculas/Client/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -106,6 +118,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculas/BlazorPeliculas/Client/Shared/EjemploTexbox.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEVqZW1wbG9UZXhib3gucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculas/BlazorPeliculas/Client/Shared/EnlacesAuth.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEVubGFjZXNBdXRoLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculas/BlazorPeliculas/Client/Shared/InputImg.razor]

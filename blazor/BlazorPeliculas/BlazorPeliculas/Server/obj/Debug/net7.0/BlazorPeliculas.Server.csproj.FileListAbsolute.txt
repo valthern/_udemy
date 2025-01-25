@@ -27,12 +27,18 @@ C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Ser
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Humanizer.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Markdig.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\MathNet.Numerics.dll
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.dll
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Authorization.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Forms.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Web.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.WebAssembly.dll
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.WebAssembly.Server.dll
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Metadata.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
@@ -43,6 +49,8 @@ C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Ser
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Binder.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.Identity.Client.dll
@@ -111,5 +119,3 @@ C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Ser
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.pdb
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.genruntimeconfig.cache
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\obj\Debug\net7.0\ref\BlazorPeliculas.Server.dll
-C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Authorization.dll
-C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll

@@ -17,7 +17,7 @@ namespace BlazorPeliculas.Client.Auth
                     //new(ClaimTypes.Role,"admin")
                 },
                 authenticationType: "prueba");
-            return await Task.FromResult(new AuthenticationState(new ClaimsPrincipal(usuarioJelipe)));
+            return await Task.FromResult(new AuthenticationState(new ClaimsPrincipal(anonimo)));
         }
     }
 }

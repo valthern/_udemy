@@ -2,6 +2,8 @@
 using BlazorPeliculas.Server.Helpers;
 using BlazorPeliculas.Shared.DTOs;
 using BlazorPeliculas.Shared.Entidades;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -25,6 +27,7 @@ namespace BlazorPeliculas.Server.Controllers
         }
 
         [HttpGet]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<HomePageDTO>> Get()
         {
             var limite = 6;
@@ -88,7 +91,7 @@ namespace BlazorPeliculas.Server.Controllers
         [HttpGet("filtrar")]
         public async Task<ActionResult<List<Pelicula>>> Get([FromQuery] ParametrosBusquedaPeliculasDTO modelo)
         {
-            var peliculasQueryable=context.Peliculas.AsQueryable();
+            var peliculasQueryable = context.Peliculas.AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(modelo.Titulo))
                 peliculasQueryable = peliculasQueryable
@@ -98,7 +101,7 @@ namespace BlazorPeliculas.Server.Controllers
                 peliculasQueryable = peliculasQueryable
                     .Where(p => p.EnCartelera);
 
-            if(modelo.Estrenos)
+            if (modelo.Estrenos)
             {
                 var hoy = DateTime.Today;
                 peliculasQueryable = peliculasQueryable
@@ -183,7 +186,7 @@ namespace BlazorPeliculas.Server.Controllers
 
             EscribirOrdenActores(peliculaDB);
 
-            await context.SaveChangesAsync();   
+            await context.SaveChangesAsync();
             return NoContent();
         }
 
