@@ -1,0 +1,24 @@
+﻿@page "/"
+
+<div>
+    <h3>Película</h3>
+    <ListadoPeliculas Peliculas="ObtenerPeliculas()" />
+</div>
+
+<div>
+    <h2>Crear nueva película</h2>
+
+    <EjemploTextbox placeholder="Nombre Película" />
+</div>
+
+@code {
+    List<Pelicula> ObtenerPeliculas()
+    {
+        return new List<Pelicula>
+        {
+            new Pelicula { Titulo = "Wakanda Forever", FechaLanzamiento = new DateTime(2025, 03, 31) },
+            new Pelicula { Titulo = "Moana", FechaLanzamiento = new DateTime(2016,11,23) },
+            new Pelicula { Titulo = "Inception", FechaLanzamiento = new DateTime(2010, 07, 16) }
+        };
+    }
+}

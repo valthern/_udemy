@@ -1,0 +1,22 @@
+﻿@if (Peliculas is null)
+{
+    @* <p>Cargando las películas...</p> *@
+    <img alt="Cargando..." src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" />
+}
+else if (Peliculas.Count == 0)
+{
+    <p>No hay películas para mostrar.</p>
+}
+else
+{
+    @foreach (var pelicula in Peliculas)
+    {
+        <PeliculaIndividual Pelicula="pelicula" />
+    }
+}
+
+@code {
+    [Parameter]
+    [EditorRequired]
+    public List<Pelicula>? Peliculas { get; set; }
+}
