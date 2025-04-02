@@ -837,8 +837,8 @@ C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\ne
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\Blazorpeliculas.Client.pdb
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\ref\Blazorpeliculas.Client.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\staticwebassets.upToDateCheck.txt
-C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\lyh5xse129-looja3x5ay.gz
-C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\glge9ak5jh-a9go8n4ada.gz
-C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\z3fwp8ms75-eavzad4ehu.gz
-C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\v5tpqm5nfn-eieenhif9e.gz
-C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\d1gwkdzr9n-v3cveqoouo.gz
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\lyh5xse129-0py9zrzate.gz
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\glge9ak5jh-6u4ro3lqh5.gz
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\z3fwp8ms75-hb601zmog9.gz
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\v5tpqm5nfn-sykse60jdr.gz
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\d1gwkdzr9n-kq11nngxwl.gz

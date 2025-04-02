@@ -1,6 +1,6 @@
 ﻿@page "/"
 
-<div>
+@* <div>
     <h3>Película</h3>
     <ListadoPeliculas Peliculas="ObtenerPeliculas()" />
 </div>
@@ -8,10 +8,18 @@
 <div>
     <h2>Crear nueva película</h2>
 
-    <EjemploTextbox placeholder="Nombre Película" />
-</div>
+    <EjemploTextbox placeholder="placeholder index" />
+</div> *@
+
+<BindGetSetDemo />
 
 @code {
+    private Dictionary<string, object> EjemploTextboxParametros = new Dictionary<string, object>()
+        {
+            { "placeholder", "Nuevo placeholder" },
+            { "disabled", "true"}
+        };
+
     List<Pelicula> ObtenerPeliculas()
     {
         return new List<Pelicula>
