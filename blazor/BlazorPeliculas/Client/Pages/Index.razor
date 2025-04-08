@@ -1,32 +1,40 @@
 ﻿@page "/"
+@inject ServicioSingleton singleton
+@inject ServicioScoped scoped
+@inject ServicioTransient transient
+@inject IRepositorio repositorio
 
-@* <div>
-    <h3>Película</h3>
-    <ListadoPeliculas Peliculas="ObtenerPeliculas()" />
-</div>
+<HeadContent>
+    <meta name="description" content="Página para visualizar películas" />
+</HeadContent>
+
+<PageTitle>Blazor Películas</PageTitle>
+
+<p>Valor del Singleton: @singleton.Valor</p>
+<p>Valor del Scoped: @scoped.Valor</p>
+<p>Valor del Transient: @transient.Valor</p>
 
 <div>
-    <h2>Crear nueva película</h2>
+    <h3>Película</h3>
+    <ListadoPeliculas Peliculas="Peliculas" />
+    @* <img src="https://i.pinimg.com/originals/77/97/81/779781883952778b25974baa3cf7679c.gif" alt="Cargando..." /> *@
+</div>
 
-    <EjemploTextbox placeholder="placeholder index" />
-</div> *@
+<br />
 
-<BindGetSetDemo />
+<button @onclick="AgregarPelicula">Agregar Película</button>
 
 @code {
-    private Dictionary<string, object> EjemploTextboxParametros = new Dictionary<string, object>()
-        {
-            { "placeholder", "Nuevo placeholder" },
-            { "disabled", "true"}
-        };
+    public List<Pelicula>? Peliculas { get; set; }
 
-    List<Pelicula> ObtenerPeliculas()
+    override protected void OnInitialized()
     {
-        return new List<Pelicula>
-        {
-            new Pelicula { Titulo = "Wakanda Forever", FechaLanzamiento = new DateTime(2025, 03, 31) },
-            new Pelicula { Titulo = "Moana", FechaLanzamiento = new DateTime(2016,11,23) },
-            new Pelicula { Titulo = "Inception", FechaLanzamiento = new DateTime(2010, 07, 16) }
-        };
+        Peliculas = repositorio.ObtenerPeliculas();
+    }
+
+    private void AgregarPelicula()
+    {
+        Console.WriteLine("Agregando una película");
+        Peliculas!.Add(new Pelicula { Titulo = "Nueva Película", FechaLanzamiento = DateTime.Today });
     }
 }

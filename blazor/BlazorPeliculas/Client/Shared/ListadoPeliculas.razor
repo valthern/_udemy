@@ -1,26 +1,49 @@
-﻿@if (Peliculas is null)
-{
-    @* <p>Cargando las películas...</p> *@
-    <img alt="Cargando..." src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" />
-}
-else if (Peliculas.Count == 0)
-{
-    <p>No hay películas para mostrar.</p>
-}
-else
-{
-    <input type="checkbox" @bind="MostrarBotones" />
-    <span> Mostrar botones</span>
+﻿@inject IJSRuntime js
 
-    @foreach (var pelicula in Peliculas)
-    {
-        <PeliculaIndividual Pelicula="pelicula" MostrarBotones="MostrarBotones" />
-    }
-}
+<input type="checkbox" @bind="MostrarBotones" />
+<span> Mostrar botones</span>
+
+<ListadoGenerico Listado="Peliculas">
+    <HayRegistros Context="pelicula">
+        <PeliculaIndividual Pelicula="pelicula" MostrarBotones="MostrarBotones" EliminarPelicula="EliminarPelicula" />
+    </HayRegistros>
+</ListadoGenerico>
 
 @code {
     [Parameter]
     [EditorRequired]
     public List<Pelicula>? Peliculas { get; set; }
     bool MostrarBotones = true;
+
+    protected override void OnInitialized()
+    {
+        Console.WriteLine($"OnInitialized - Cantidad Películas: {Peliculas!.Count}");
+    }
+
+    protected override void OnParametersSet()
+    {
+        Console.WriteLine($"OnParametersSet - Cantidad Películas: {Peliculas!.Count}");
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        Console.WriteLine($"OnAfterRender. {nameof(firstRender)}: {firstRender}");
+    }
+
+    protected override bool ShouldRender()
+    {
+        Console.WriteLine("ShouldRender");
+        return true;
+    }
+
+    private async Task EliminarPelicula(Pelicula pelicula)
+    {
+        var confirmado = await js.Confirm($"¿Está seguro que desea eliminar la película {pelicula.Titulo}?");
+        
+        if (confirmado)
+        {
+            Console.WriteLine("Eliminando una película");
+            Peliculas!.Remove(pelicula);
+        }
+    }
 }
