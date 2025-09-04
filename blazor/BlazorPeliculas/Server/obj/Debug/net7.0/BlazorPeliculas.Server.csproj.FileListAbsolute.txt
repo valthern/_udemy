@@ -57,3 +57,4 @@ C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\obj\Debug\net7.0
 C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.pdb
 C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\obj\Debug\net7.0\BlazorPeliculas.Server.genruntimeconfig.cache
 C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\obj\Debug\net7.0\ref\BlazorPeliculas.Server.dll
+C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\obj\Debug\net7.0\staticwebassets.upToDateCheck.txt

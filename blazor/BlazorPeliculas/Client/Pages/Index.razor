@@ -1,9 +1,15 @@
 ﻿@page "/"
 
-<PageTitle>Index</PageTitle>
+<p>¡Hola, @Transformar(nombre)!</p>
 
-<h1>Hello, world!</h1>
+<p>Vamos a sumar 2 + 2 = @(2 + 2)</p>
 
-Welcome to your new app.
+<button @onclick=@ManejarClickBoton>Presióname</button>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+@code {
+    string nombre = "Xavier";
+
+    string Transformar(string valor) => valor.ToUpper();
+
+    void ManejarClickBoton() => Console.WriteLine("¡Que me lo han ClickeaO, joder, desde una funCión, Y olÉ pajeros!");
+}
