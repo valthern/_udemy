@@ -835,9 +835,9 @@ C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0
 C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\refint\BlazorPeliculas.Client.dll
 C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\BlazorPeliculas.Client.pdb
 C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\ref\BlazorPeliculas.Client.dll
-C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\hdwh5jms1z-xo1ej2tz52.gz
-C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\7p8x1v19z6-b6zjz5d4b8.gz
 C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\staticwebassets.upToDateCheck.txt
-C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\zhgh98znp4-ylxejrituv.gz
-C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\5c5js4y383-ey0hnz4ivu.gz
-C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\6cesjtjddn-zq2l8wdvjp.gz
+C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\hdwh5jms1z-mh5ksorx3z.gz
+C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\7p8x1v19z6-tp4pgga4lh.gz
+C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\zhgh98znp4-oupyz0ctbp.gz
+C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\5c5js4y383-55g8x5cfa5.gz
+C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\6cesjtjddn-r5s1t1fxlq.gz
