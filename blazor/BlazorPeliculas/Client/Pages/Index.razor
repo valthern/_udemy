@@ -2,74 +2,17 @@
 
 <div>
     <h3>Películas</h3>
-    <h4>Ejemplo foreach</h4>
-
-    @if (Peliculas is null)
-    {
-        <img alt="cargando" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" />
-    }
-    else if (Peliculas.Count == 0)
-    {
-        <p>No hay películas para mostrar</p>
-    }
-    else
-    {
-        @foreach (var pelicula in Peliculas)
-        {
-            <div>
-                <p>
-                    Titulo: @((MarkupString)pelicula.Titulo)
-                    @if (DateTime.Today.Subtract(pelicula.FechaLanzamiento).Days <= 14)
-                    {
-                        <span style="color:red">(¡Nuevo!)</span>
-                    }
-                </p>
-                <p>Fecha lanzamiento: <b>@pelicula.FechaLanzamiento.ToString("dd MMM yyyy")</b></p>
-            </div>
-        }
-    }
-
-    @*     <h4>Ejemplo for</h4>
-    @for (int i = 0; i < Peliculas.Count; i++)
-    {
-        <div>
-            <p>@(i + 1)) Titulo: <b>@Peliculas[i].Titulo</b></p>
-            <p>Fecha lanzamiento: <b>@Peliculas[i].FechaLanzamiento.ToString("dd MMM yyyy")</b></p>
-        </div>
-    } *@
+    <ListadoPeliculas Peliculas="ObtenerPeliculas()"/>
 </div>
 
 @code {
-    string nombre = "Eustaquio";
-
-    Pelicula WakandaForever { get => ObtenerPelicula(); }
-    List<Pelicula>? Peliculas { get; set; }
-
-    protected override async Task OnInitializedAsync()
-    {
-        await Task.Delay(3000);
-        Peliculas = ObtenerPeliculas();
-        // Peliculas = new List<Pelicula>();
-    }
-
-    Pelicula ObtenerPelicula()
-    {
-        return new Pelicula
-        {
-            Titulo = "Wakanda Forever",
-            FechaLanzamiento = new DateTime(2022, 11, 11)
-        };
-    }
-
     List<Pelicula> ObtenerPeliculas()
     {
         return new List<Pelicula>()
         {
-            new Pelicula{Titulo="<b>Wakanda Forever</b>", FechaLanzamiento=new DateTime(2025,09,05)},
-            new Pelicula{Titulo="<i>Moana</i>", FechaLanzamiento=new DateTime(2016,11,23)},
+            new Pelicula{Titulo="Wakanda Forever", FechaLanzamiento=new DateTime(2025,09,05)},
+            new Pelicula{Titulo="Moana", FechaLanzamiento=new DateTime(2016,11,23)},
             new Pelicula{Titulo="Inception", FechaLanzamiento=new DateTime(2010,7,16)},
         };
     }
-
-    void ManejarClickBoton() => Console.WriteLine("¡Que me lo han ClickeaO, joder, desde una funCión, Y olÉ pajeros!");
 }
