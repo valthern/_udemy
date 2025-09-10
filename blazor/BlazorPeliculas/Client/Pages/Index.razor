@@ -2,10 +2,21 @@
 
 <div>
     <h3>Películas</h3>
-    <ListadoPeliculas Peliculas="ObtenerPeliculas()"/>
+    <ListadoPeliculas Peliculas="ObtenerPeliculas()" />
+</div>
+
+<div>
+    <h2>Crear nueva película</h2>
+    <EjemploTextbox placeholder="placeholder index"/>
 </div>
 
 @code {
+    private Dictionary<string, object> EjemploTextboxParametros = new Dictionary<string, object>
+{
+    {"placeholder", "nuevo pseudoletrero"},
+    {"disabled","true"}
+};
+
     List<Pelicula> ObtenerPeliculas()
     {
         return new List<Pelicula>()
