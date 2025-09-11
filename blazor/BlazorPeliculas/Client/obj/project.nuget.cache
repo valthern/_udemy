@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ougudrge3tI=",
+  "dgSpecHash": "CR/tdvaGX6c=",
   "success": true,
   "projectFilePath": "C:\\Users\\Omar\\source\\repos\\_udemy\\blazor\\BlazorPeliculas\\Client\\BlazorPeliculas.Client.csproj",
   "expectedPackageFiles": [
@@ -30,7 +30,7 @@
     "C:\\Users\\Omar\\.nuget\\packages\\microsoft.jsinterop.webassembly\\7.0.20\\microsoft.jsinterop.webassembly.7.0.20.nupkg.sha512",
     "C:\\Users\\Omar\\.nuget\\packages\\microsoft.net.illink.analyzers\\7.0.100-1.23211.1\\microsoft.net.illink.analyzers.7.0.100-1.23211.1.nupkg.sha512",
     "C:\\Users\\Omar\\.nuget\\packages\\microsoft.net.illink.tasks\\7.0.100-1.23211.1\\microsoft.net.illink.tasks.7.0.100-1.23211.1.nupkg.sha512",
-    "C:\\Users\\Omar\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\9.0.8\\microsoft.net.sdk.webassembly.pack.9.0.8.nupkg.sha512",
+    "C:\\Users\\Omar\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\9.0.9\\microsoft.net.sdk.webassembly.pack.9.0.9.nupkg.sha512",
     "C:\\Users\\Omar\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
     "C:\\Users\\Omar\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\Omar\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
