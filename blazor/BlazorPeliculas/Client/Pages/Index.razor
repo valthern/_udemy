@@ -5,19 +5,12 @@
     <ListadoPeliculas Peliculas="ObtenerPeliculas()" />
 </div>
 
- <BindEvento />
-
-<div>
-    <h2>Crear nueva película</h2>
-    <EjemploTextbox placeholder="placeholder index"/>
-</div>
-
 @code {
     private Dictionary<string, object> EjemploTextboxParametros = new Dictionary<string, object>
-{
-    {"placeholder", "nuevo pseudoletrero"},
-    {"disabled","true"}
-};
+    {
+        {"placeholder", "nuevo pseudoletrero"},
+        {"disabled","true"}
+    };
 
     List<Pelicula> ObtenerPeliculas()
     {
