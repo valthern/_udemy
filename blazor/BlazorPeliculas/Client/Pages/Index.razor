@@ -2,7 +2,14 @@
 
 <div>
     <h3>Películas</h3>
-    <ListadoPeliculas Peliculas="ObtenerPeliculas()" />
+    <ListadoPeliculas Peliculas="ObtenerPeliculas()">
+        <Cargando>
+            <p>CARGANDO...</p>
+        </Cargando>
+        <NoHayRegistros>
+            <p>¡NO HAY PELÍS!</p>
+        </NoHayRegistros>
+    </ListadoPeliculas>
 </div>
 
 @code {

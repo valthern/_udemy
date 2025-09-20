@@ -1,10 +1,24 @@
 ﻿@if (Peliculas is null)
 {
-    <img alt="cargando" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" />
+    @if (Cargando is null)
+    {
+        <img alt="cargando" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" />
+    }
+    else
+    {
+        @Cargando
+    }
 }
 else if (Peliculas.Count == 0)
 {
-    <p>No hay películas para mostrar</p>
+    @if (NoHayRegistros is null)
+    {
+        <p>No hay películas para mostrar.</p>
+    }
+    else
+    {
+        @NoHayRegistros
+    }
 }
 else
 {
@@ -20,6 +34,10 @@ else
     [Parameter]
     [EditorRequired]
     public List<Pelicula>? Peliculas{ get; set; }
+    [Parameter]
+    public RenderFragment Cargando { get; set; } = null!;
+    [Parameter]
+    public RenderFragment NoHayRegistros { get; set; } = null!;
     bool mostrarBotones = false;
 
     private void EliminarPelicula(Pelicula pelicula)
