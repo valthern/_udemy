@@ -9,7 +9,8 @@
     <p>Fecha lanzamiento: <b>@Pelicula.FechaLanzamiento.ToString("dd MMM yyyy")</b></p>
     @if (MostrarBotones)
     {
-        <div><button @onclick="Eliminar">Borrar</button></div>
+        <div><button @onclick="@(() => EliminarPelicula.InvokeAsync(Pelicula))">Borrar</button></div>
+        <div>&nbsp;</div>
     }
 </div>
 
@@ -20,9 +21,6 @@
     public Pelicula Pelicula { get; set; } = null!;
     [Parameter]
     public bool MostrarBotones { get; set; } = false;
-
-    void Eliminar()
-    {
-        Console.WriteLine($"Eliminando la película {Pelicula.Titulo}");
-    }
+    [Parameter]
+    public EventCallback<Pelicula> EliminarPelicula { get; set; }
 }
