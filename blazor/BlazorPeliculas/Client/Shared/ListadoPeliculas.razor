@@ -1,44 +1,36 @@
-﻿@if (Peliculas is null)
-{
-    @if (Cargando is null)
-    {
-        <img alt="cargando" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" />
-    }
-    else
-    {
-        @Cargando
-    }
-}
-else if (Peliculas.Count == 0)
-{
-    @if (NoHayRegistros is null)
-    {
-        <p>No hay películas para mostrar.</p>
-    }
-    else
-    {
-        @NoHayRegistros
-    }
-}
-else
-{
-    <input type="checkbox" @bind="mostrarBotones" /><span>Mostrar Botones</span>
-
-    @foreach (var pelicula in Peliculas)
-    {
+﻿<input type="checkbox" @bind="mostrarBotones" /><span>Mostrar Botones</span>
+<ListadoGenerico Listado="Peliculas">
+    <HayRegistros Context="pelicula">
         <PeliculaIndividual Pelicula="pelicula" MostrarBotones="mostrarBotones" EliminarPelicula="EliminarPelicula"/>
-    }
-}
+    </HayRegistros>
+</ListadoGenerico>
 
 @code {
     [Parameter]
     [EditorRequired]
     public List<Pelicula>? Peliculas{ get; set; }
-    [Parameter]
-    public RenderFragment Cargando { get; set; } = null!;
-    [Parameter]
-    public RenderFragment NoHayRegistros { get; set; } = null!;
     bool mostrarBotones = false;
+
+    protected override void OnInitialized()
+    {
+        Console.WriteLine($"OnInitialized - Cantidad Películas {Peliculas!.Count}");
+    }
+
+    protected override void OnParametersSet()
+    {
+        Console.WriteLine($"OnParametersSet - Cantidad Películas {Peliculas!.Count}");
+    }
+
+    protected override void OnAfterRender(bool primeraRenderizacion)
+    {
+        Console.WriteLine("OnAfterRender: Primera vez: "+primeraRenderizacion);
+    }
+
+    protected override bool ShouldRender()
+    {
+        Console.WriteLine("ShouldRender");
+        return true;
+    }
 
     private void EliminarPelicula(Pelicula pelicula)
     {

@@ -2,22 +2,24 @@
 
 <div>
     <h3>Películas</h3>
-    <ListadoPeliculas Peliculas="ObtenerPeliculas()">
-        <Cargando>
-            <p>CARGANDO...</p>
-        </Cargando>
-        <NoHayRegistros>
-            <p>¡NO HAY PELÍS!</p>
-        </NoHayRegistros>
-    </ListadoPeliculas>
+    <ListadoPeliculas Peliculas="Peliculas" />
 </div>
 
+<button @onclick="AgregarPelicula">Agregar Película</button>
+
 @code {
-    private Dictionary<string, object> EjemploTextboxParametros = new Dictionary<string, object>
+    public List<Pelicula>? Peliculas { get; set; }
+
+    protected override void OnInitialized()
     {
-        {"placeholder", "nuevo pseudoletrero"},
-        {"disabled","true"}
-    };
+        Peliculas = ObtenerPeliculas();
+    }
+
+    // private Dictionary<string, object> EjemploTextboxParametros = new Dictionary<string, object>
+    // {
+    //     {"placeholder", "nuevo pseudoletrero"},
+    //     {"disabled","true"}
+    // };
 
     List<Pelicula> ObtenerPeliculas()
     {
@@ -27,5 +29,10 @@
             new Pelicula{Titulo="Moana", FechaLanzamiento=new DateTime(2016,11,23)},
             new Pelicula{Titulo="Inception", FechaLanzamiento=new DateTime(2010,7,16)},
         };
+    }
+
+    private void AgregarPelicula()
+    {
+        Peliculas.Add(new Pelicula { Titulo = "Nueva Película", FechaLanzamiento = DateTime.Today });
     }
 }
