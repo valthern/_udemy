@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Omar\\source\\repos\\_udemy\\blazor\\BlazorPeliculas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{236AC7CD-30E1-4098-A164-8949F318C86E}|Client\\BlazorPeliculas.Client.csproj|c:\\users\\omar\\source\\repos\\_udemy\\blazor\\blazorpeliculas\\client\\shared\\listadopeliculas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{236AC7CD-30E1-4098-A164-8949F318C86E}|Client\\BlazorPeliculas.Client.csproj|solutionrelative:client\\shared\\listadopeliculas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{236AC7CD-30E1-4098-A164-8949F318C86E}|Client\\BlazorPeliculas.Client.csproj|c:\\users\\omar\\source\\repos\\_udemy\\blazor\\blazorpeliculas\\client\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{236AC7CD-30E1-4098-A164-8949F318C86E}|Client\\BlazorPeliculas.Client.csproj|solutionrelative:client\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{236AC7CD-30E1-4098-A164-8949F318C86E}|Client\\BlazorPeliculas.Client.csproj|c:\\users\\omar\\source\\repos\\_udemy\\blazor\\blazorpeliculas\\client\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -18,21 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ListadoPeliculas.razor",
-              "DocumentMoniker": "C:\\Users\\Omar\\source\\repos\\_udemy\\blazor\\BlazorPeliculas\\Client\\Shared\\ListadoPeliculas.razor",
-              "RelativeDocumentMoniker": "Client\\Shared\\ListadoPeliculas.razor",
-              "ToolTip": "C:\\Users\\Omar\\source\\repos\\_udemy\\blazor\\BlazorPeliculas\\Client\\Shared\\ListadoPeliculas.razor",
-              "RelativeToolTip": "Client\\Shared\\ListadoPeliculas.razor",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB8AAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-23T04:24:50.491Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -41,9 +28,22 @@
               "RelativeDocumentMoniker": "Client\\Pages\\Index.razor",
               "ToolTip": "C:\\Users\\Omar\\source\\repos\\_udemy\\blazor\\BlazorPeliculas\\Client\\Pages\\Index.razor",
               "RelativeToolTip": "Client\\Pages\\Index.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-23T04:24:45.648Z",
+              "WhenOpened": "2025-09-30T05:07:13.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Counter.razor",
+              "DocumentMoniker": "C:\\Users\\Omar\\source\\repos\\_udemy\\blazor\\BlazorPeliculas\\Client\\Pages\\Counter.razor",
+              "RelativeDocumentMoniker": "Client\\Pages\\Counter.razor",
+              "ToolTip": "C:\\Users\\Omar\\source\\repos\\_udemy\\blazor\\BlazorPeliculas\\Client\\Pages\\Counter.razor",
+              "RelativeToolTip": "Client\\Pages\\Counter.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-30T03:55:19.858Z",
               "EditorCaption": ""
             }
           ]

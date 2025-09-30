@@ -1,15 +1,15 @@
 ﻿<input type="checkbox" @bind="mostrarBotones" /><span>Mostrar Botones</span>
 <ListadoGenerico Listado="Peliculas">
     <HayRegistros Context="pelicula">
-        <PeliculaIndividual Pelicula="pelicula" MostrarBotones="mostrarBotones" EliminarPelicula="EliminarPelicula"/>
+        <PeliculaIndividual Pelicula="pelicula" MostrarBotones="mostrarBotones" EliminarPelicula="EliminarPelicula" />
     </HayRegistros>
 </ListadoGenerico>
 
 @code {
     [Parameter]
     [EditorRequired]
-    public List<Pelicula>? Peliculas{ get; set; }
-    bool mostrarBotones = false;
+    public List<Pelicula>? Peliculas { get; set; }
+    bool mostrarBotones = true;
 
     protected override void OnInitialized()
     {
@@ -23,7 +23,7 @@
 
     protected override void OnAfterRender(bool primeraRenderizacion)
     {
-        Console.WriteLine("OnAfterRender: Primera vez: "+primeraRenderizacion);
+        Console.WriteLine("OnAfterRender: Primera vez: " + primeraRenderizacion);
     }
 
     protected override bool ShouldRender()

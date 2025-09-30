@@ -1,4 +1,14 @@
 ﻿@page "/"
+@inject ServicioSingleton singleton
+@inject IRepositorio repositorio
+
+<PageTitle>Blazor Películas</PageTitle>
+
+<HeadContent>
+    <meta name="description" content="Página de Blazor para visualizar películas" />
+</HeadContent>
+
+<p>Valor del singleton: @singleton.Valor</p>
 
 <div>
     <h3>Películas</h3>
@@ -12,27 +22,11 @@
 
     protected override void OnInitialized()
     {
-        Peliculas = ObtenerPeliculas();
-    }
-
-    // private Dictionary<string, object> EjemploTextboxParametros = new Dictionary<string, object>
-    // {
-    //     {"placeholder", "nuevo pseudoletrero"},
-    //     {"disabled","true"}
-    // };
-
-    List<Pelicula> ObtenerPeliculas()
-    {
-        return new List<Pelicula>()
-        {
-            new Pelicula{Titulo="Wakanda Forever", FechaLanzamiento=new DateTime(2025,09,05)},
-            new Pelicula{Titulo="Moana", FechaLanzamiento=new DateTime(2016,11,23)},
-            new Pelicula{Titulo="Inception", FechaLanzamiento=new DateTime(2010,7,16)},
-        };
+        Peliculas = repositorio.ObtenerPeliculas();
     }
 
     private void AgregarPelicula()
     {
-        Peliculas.Add(new Pelicula { Titulo = "Nueva Película", FechaLanzamiento = DateTime.Today });
+        Peliculas!.Add(new Pelicula { Titulo = "Nueva Película", FechaLanzamiento = DateTime.Today });
     }
 }
