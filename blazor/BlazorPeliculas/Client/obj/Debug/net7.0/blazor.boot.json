@@ -1,7 +1,7 @@
 {
   "entryAssembly": "BlazorPeliculas.Client",
   "resources": {
-    "hash": "sha256-CUtsar/Zw2dp8qw5pt3JleM7YNmiJ09mesrgiPEQ6ks=",
+    "hash": "sha256-aBxoq/HtN3AG2uRQntuvSv7ei6wlejY99wGInTAUSic=",
     "runtime": {
       "dotnet.js": "sha256-eaJTmow4t8eE7FZMZR5Ja41JMOefGCbIYDTdpclGsac=",
       "dotnet.timezones.blat": "sha256-gbATD5HDsHYtW8vdPYh9iSBY4O5CjvMeCSF5xXWF1xo=",
@@ -204,11 +204,11 @@
       "netstandard.dll": "sha256-N5CcC3sLzGBesbmeJAp5bwxABN9u7SwkIO5qfFjzoik=",
       "System.Private.CoreLib.dll": "sha256-bJS1DJmhjP7PvegYG+Z8O9EDtRY78HKinA3LUMVLlSQ=",
       "BlazorPeliculas.Shared.dll": "sha256-VXTUoMj5rRDkKZOfcY8palqDXG1P5PvHxDFskIYI5Ik=",
-      "BlazorPeliculas.Client.dll": "sha256-t6xkPGPeMkNzr72QAUUhen7646RaGG+YVyQxBDLj51s="
+      "BlazorPeliculas.Client.dll": "sha256-G2Wq6BJcVE722zgo9NaInKhquftOulqHNg7Vr6KiUcg="
     },
     "pdb": {
       "BlazorPeliculas.Shared.pdb": "sha256-xUnxmpEa9xxwXs9mhiXwu+GjfajIuAhK0vQjpiZCl/E=",
-      "BlazorPeliculas.Client.pdb": "sha256-dxOkG8BCgnTufeKWYyjVyayCfLzQdIf9jetBRzUObEs="
+      "BlazorPeliculas.Client.pdb": "sha256-MAev5fkgSiRMIbNb2+suXIAQ/0ZFXbxiPqODIYzYo6I="
     },
     "runtimeAssets": {
       "dotnet.wasm": {
