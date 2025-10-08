@@ -13,4 +13,5 @@ wwwroot\css\open-iconic\README.md
 wwwroot\favicon.png
 wwwroot\icon-192.png
 wwwroot\index.html
+wwwroot\js\Counter.js
 wwwroot\js\Utilidades.js

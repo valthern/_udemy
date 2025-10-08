@@ -9,12 +9,17 @@ namespace BlazorPeliculas.Client.Pages
         [Inject] ServicioTransient transient { get; set; } = null!;
         [Inject] IJSRuntime js { get; set; } = null!;
 
+        IJSObjectReference? modulo;
+
         private int currentCount = 0;
         private static int currentCountStatic = 0;
 
         [JSInvokable]
         public async Task IncrementCount()
         {
+            modulo = await js.InvokeAsync<IJSObjectReference>("import", "./js/Counter.js");
+            await modulo.InvokeVoidAsync("mostrarAlerta", "¡Hola In-mundo!");
+
             currentCount++;
             currentCountStatic= currentCount;
             singleton.Valor = currentCount;
