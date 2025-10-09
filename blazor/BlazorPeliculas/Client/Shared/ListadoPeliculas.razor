@@ -13,6 +13,14 @@
     public List<Pelicula>? Peliculas { get; set; }
     bool mostrarBotones = true;
 
+    public void LimpiarPeliculas()
+    {
+        if (Peliculas is not null)
+        {
+            Peliculas.Clear();
+        }
+    }
+
     protected override void OnInitialized()
     {
         Console.WriteLine($"OnInitialized - Cantidad Películas {Peliculas!.Count}");

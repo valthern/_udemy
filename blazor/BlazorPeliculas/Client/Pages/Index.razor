@@ -8,25 +8,24 @@
     <meta name="description" content="Página de Blazor para visualizar películas" />
 </HeadContent>
 
+<button @onclick="LimpiarPeliculas">Limpiar Peliculas</button>
+
 <p>Valor del singleton: @singleton.Valor</p>
 
 <div>
     <h3>Películas</h3>
-    <ListadoPeliculas Peliculas="Peliculas" />
+    <ListadoPeliculas @ref="listadoPeliculas" Peliculas="Peliculas" />
 </div>
 
 <button @onclick="AgregarPelicula">Agregar Película</button>
 
 @code {
     public List<Pelicula>? Peliculas { get; set; }
+    public ListadoPeliculas? listadoPeliculas;
 
-    protected override void OnInitialized()
-    {
-        Peliculas = repositorio.ObtenerPeliculas();
-    }
+    protected override void OnInitialized() => Peliculas = repositorio.ObtenerPeliculas();
 
-    private void AgregarPelicula()
-    {
-        Peliculas!.Add(new Pelicula { Titulo = "Nueva Película", FechaLanzamiento = DateTime.Today });
-    }
+    private void LimpiarPeliculas() => listadoPeliculas!.LimpiarPeliculas();
+
+    private void AgregarPelicula() => Peliculas!.Add(new Pelicula { Titulo = "Nueva Película", FechaLanzamiento = DateTime.Today });
 }
