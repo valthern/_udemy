@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using BlazorPeliculas.Client.Helpers;
+using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 
 namespace BlazorPeliculas.Client.Pages
@@ -8,6 +9,9 @@ namespace BlazorPeliculas.Client.Pages
         [Inject] ServicioSingleton singleton { get; set; } = null!;
         [Inject] ServicioTransient transient { get; set; } = null!;
         [Inject] IJSRuntime js { get; set; } = null!;
+        //[CascadingParameter(Name = "Color")] protected string Color { get; set; } = null!;
+        //[CascadingParameter(Name = "Size")] protected string Size { get; set; } = null!;
+        [CascadingParameter] protected AppState appState { get; set; } = null!;
 
         IJSObjectReference? modulo;
 
@@ -21,7 +25,7 @@ namespace BlazorPeliculas.Client.Pages
             await modulo.InvokeVoidAsync("mostrarAlerta", "¡Hola In-mundo!");
 
             currentCount++;
-            currentCountStatic= currentCount;
+            currentCountStatic = currentCount;
             singleton.Valor = currentCount;
             transient.Valor = currentCount;
             await js.InvokeVoidAsync("pruebaPuntoNetStatic");
