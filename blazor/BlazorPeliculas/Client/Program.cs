@@ -13,7 +13,5 @@ await builder.Build().RunAsync();
 void ConfigureServices(IServiceCollection services)
 {
     services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-    services.AddSingleton<ServicioSingleton>();
-    services.AddTransient<ServicioTransient>();
     services.AddSingleton<IRepositorio, Repositorio>();
 }

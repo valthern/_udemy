@@ -11,17 +11,7 @@
         </div>
 
         <article class="content px-4">
-            <CascadingValue Value="@appState">
-                @* <CascadingValue Value="@appState.Size" Name="Size"> *@
-                @Body
-                @* </CascadingValue> *@
-            </CascadingValue>
+            @Body
         </article>
     </main>
 </div>
-
-@code {
-    // public string Color = "blue";
-    // public string Size = "12px";
-    AppState appState = new AppState();
-}
