@@ -28,12 +28,40 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Actores/CrearActor.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWN0b3Jlc1xDcmVhckFjdG9yLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Actores/EditarActor.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWN0b3Jlc1xFZGl0YXJBY3Rvci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Generos/CrearGenero.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VuZXJvc1xDcmVhckdlbmVyby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Generos/EditarGenero.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VuZXJvc1xFZGl0YXJHZW5lcm8ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Películas/CrearPelicula.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVsw61jdWxhc1xDcmVhclBlbGljdWxhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Películas/EditarPelicula.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVsw61jdWxhc1xFZGl0YXJQZWxpY3VsYS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Películas/VisualizarPelicula.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVsw61jdWxhc1xWaXN1YWxpemFyUGVsaWN1bGEucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/BindAfterDemo.razor]
@@ -46,6 +74,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/BindGetSetDemo.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEJpbmRHZXRTZXREZW1vLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/CustomNotFound.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEN1c3RvbU5vdEZvdW5kLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/EjemploTextbox.razor]

@@ -1,10 +1,12 @@
 ﻿@inject IJSRuntime js
 
-<ListadoGenerico Listado="Peliculas">
-    <HayRegistros Context="pelicula">
-        <PeliculaIndividual Pelicula="pelicula" EliminarPelicula="EliminarPelicula" />
-    </HayRegistros>
-</ListadoGenerico>
+<div style="display: flex; flex-wrap: wrap; align-items: center;">
+    <ListadoGenerico Listado="Peliculas">
+        <HayRegistros Context="pelicula">
+            <PeliculaIndividual Pelicula="pelicula" EliminarPelicula="EliminarPelicula" />
+        </HayRegistros>
+    </ListadoGenerico>
+</div>
 
 @code {
     [Parameter]
