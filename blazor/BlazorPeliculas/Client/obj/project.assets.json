@@ -431,7 +431,7 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
-      "Microsoft.NET.Sdk.WebAssembly.Pack/9.0.9": {
+      "Microsoft.NET.Sdk.WebAssembly.Pack/9.0.10": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.Sdk.WebAssembly.Pack.props": {},
@@ -936,7 +936,7 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
-      "Microsoft.NET.Sdk.WebAssembly.Pack/9.0.9": {
+      "Microsoft.NET.Sdk.WebAssembly.Pack/9.0.10": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.Sdk.WebAssembly.Pack.props": {},
@@ -1769,10 +1769,10 @@
         "tools/net7.0/illink.runtimeconfig.json"
       ]
     },
-    "Microsoft.NET.Sdk.WebAssembly.Pack/9.0.9": {
-      "sha512": "Nx4yF/l8YyzwHM+xBRFOSGv77mjBZP0XkImzLMdrSBGYPB32nEZNXTSwhH9viDhxMhGij+fVUjJj5iAtUdMBww==",
+    "Microsoft.NET.Sdk.WebAssembly.Pack/9.0.10": {
+      "sha512": "Ye7Zr/1d5cMeXyqv2uaEYrZjgRAcZKTXE/dJByxhicD7jLQSQcwmuBZzIXi+SY5sZbvKeH7nSTcVa7fOrJArfw==",
       "type": "package",
-      "path": "microsoft.net.sdk.webassembly.pack/9.0.9",
+      "path": "microsoft.net.sdk.webassembly.pack/9.0.10",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -1803,7 +1803,7 @@
         "build/Microsoft.NET.Sdk.WebAssembly.Pack.targets",
         "build/Wasm.web.config",
         "build/browser.runtimeconfig.template.json",
-        "microsoft.net.sdk.webassembly.pack.9.0.9.nupkg.sha512",
+        "microsoft.net.sdk.webassembly.pack.9.0.10.nupkg.sha512",
         "microsoft.net.sdk.webassembly.pack.nuspec",
         "tools/net472/Microsoft.NET.Sdk.WebAssembly.Pack.Tasks.dll",
         "tools/net472/Microsoft.NET.WebAssembly.Webcil.dll",
@@ -1953,7 +1953,7 @@
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 7.0.20",
       "Microsoft.NET.ILLink.Analyzers >= 7.0.100-1.23211.1",
       "Microsoft.NET.ILLink.Tasks >= 7.0.100-1.23211.1",
-      "Microsoft.NET.Sdk.WebAssembly.Pack >= 9.0.9"
+      "Microsoft.NET.Sdk.WebAssembly.Pack >= 9.0.10"
     ]
   },
   "packageFolders": {
@@ -2037,7 +2037,7 @@
           "Microsoft.NET.Sdk.WebAssembly.Pack": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[9.0.9, )",
+            "version": "[9.0.10, )",
             "autoReferenced": true
           }
         },
@@ -2057,7 +2057,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
