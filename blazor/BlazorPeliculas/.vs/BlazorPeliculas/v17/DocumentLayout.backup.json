@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Omar\\source\\repos\\_udemy\\blazor\\BlazorPeliculas\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{236AC7CD-30E1-4098-A164-8949F318C86E}|Client\\BlazorPeliculas.Client.csproj|c:\\users\\omar\\source\\repos\\_udemy\\blazor\\blazorpeliculas\\client\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{236AC7CD-30E1-4098-A164-8949F318C86E}|Client\\BlazorPeliculas.Client.csproj|solutionrelative:client\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{236AC7CD-30E1-4098-A164-8949F318C86E}|Client\\BlazorPeliculas.Client.csproj|c:\\users\\omar\\source\\repos\\_udemy\\blazor\\blazorpeliculas\\client\\pages\\pel\u00EDculas\\editarpelicula.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{236AC7CD-30E1-4098-A164-8949F318C86E}|Client\\BlazorPeliculas.Client.csproj|solutionrelative:client\\pages\\pel\u00EDculas\\editarpelicula.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236AC7CD-30E1-4098-A164-8949F318C86E}|Client\\BlazorPeliculas.Client.csproj|c:\\users\\omar\\source\\repos\\_udemy\\blazor\\blazorpeliculas\\client\\pages\\actores\\editaractor.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{236AC7CD-30E1-4098-A164-8949F318C86E}|Client\\BlazorPeliculas.Client.csproj|solutionrelative:client\\pages\\actores\\editaractor.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{236AC7CD-30E1-4098-A164-8949F318C86E}|Client\\BlazorPeliculas.Client.csproj|c:\\users\\omar\\source\\repos\\_udemy\\blazor\\blazorpeliculas\\client\\pages\\generos\\editargenero.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -17,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{236AC7CD-30E1-4098-A164-8949F318C86E}|Client\\BlazorPeliculas.Client.csproj|c:\\users\\omar\\source\\repos\\_udemy\\blazor\\blazorpeliculas\\client\\pages\\pel\u00EDculas\\visualizarpelicula.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{236AC7CD-30E1-4098-A164-8949F318C86E}|Client\\BlazorPeliculas.Client.csproj|solutionrelative:client\\pages\\pel\u00EDculas\\visualizarpelicula.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{236AC7CD-30E1-4098-A164-8949F318C86E}|Client\\BlazorPeliculas.Client.csproj|c:\\users\\omar\\source\\repos\\_udemy\\blazor\\blazorpeliculas\\client\\pages\\actores\\editaractor.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{236AC7CD-30E1-4098-A164-8949F318C86E}|Client\\BlazorPeliculas.Client.csproj|solutionrelative:client\\pages\\actores\\editaractor.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,32 +39,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\Omar\\source\\repos\\_udemy\\blazor\\BlazorPeliculas\\Client\\Shared\\NavMenu.razor",
+              "RelativeDocumentMoniker": "Client\\Shared\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\Omar\\source\\repos\\_udemy\\blazor\\BlazorPeliculas\\Client\\Shared\\NavMenu.razor",
+              "RelativeToolTip": "Client\\Shared\\NavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-17T05:27:22.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "EditarPelicula.razor",
               "DocumentMoniker": "C:\\Users\\Omar\\source\\repos\\_udemy\\blazor\\BlazorPeliculas\\Client\\Pages\\Pel\u00EDculas\\EditarPelicula.razor",
               "RelativeDocumentMoniker": "Client\\Pages\\Pel\u00EDculas\\EditarPelicula.razor",
               "ToolTip": "C:\\Users\\Omar\\source\\repos\\_udemy\\blazor\\BlazorPeliculas\\Client\\Pages\\Pel\u00EDculas\\EditarPelicula.razor",
               "RelativeToolTip": "Client\\Pages\\Pel\u00EDculas\\EditarPelicula.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-10-16T05:24:24.317Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EditarGenero.razor",
-              "DocumentMoniker": "C:\\Users\\Omar\\source\\repos\\_udemy\\blazor\\BlazorPeliculas\\Client\\Pages\\Generos\\EditarGenero.razor",
-              "RelativeDocumentMoniker": "Client\\Pages\\Generos\\EditarGenero.razor",
-              "ToolTip": "C:\\Users\\Omar\\source\\repos\\_udemy\\blazor\\BlazorPeliculas\\Client\\Pages\\Generos\\EditarGenero.razor",
-              "RelativeToolTip": "Client\\Pages\\Generos\\EditarGenero.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-16T05:23:45.886Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "EditarActor.razor",
               "DocumentMoniker": "C:\\Users\\Omar\\source\\repos\\_udemy\\blazor\\BlazorPeliculas\\Client\\Pages\\Actores\\EditarActor.razor",
               "RelativeDocumentMoniker": "Client\\Pages\\Actores\\EditarActor.razor",
@@ -74,6 +78,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "EditarGenero.razor",
+              "DocumentMoniker": "C:\\Users\\Omar\\source\\repos\\_udemy\\blazor\\BlazorPeliculas\\Client\\Pages\\Generos\\EditarGenero.razor",
+              "RelativeDocumentMoniker": "Client\\Pages\\Generos\\EditarGenero.razor",
+              "ToolTip": "C:\\Users\\Omar\\source\\repos\\_udemy\\blazor\\BlazorPeliculas\\Client\\Pages\\Generos\\EditarGenero.razor",
+              "RelativeToolTip": "Client\\Pages\\Generos\\EditarGenero.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-16T05:23:45.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "VisualizarPelicula.razor",
               "DocumentMoniker": "C:\\Users\\Omar\\source\\repos\\_udemy\\blazor\\BlazorPeliculas\\Client\\Pages\\Pel\u00EDculas\\VisualizarPelicula.razor",
               "RelativeDocumentMoniker": "Client\\Pages\\Pel\u00EDculas\\VisualizarPelicula.razor",
@@ -81,12 +98,11 @@
               "RelativeToolTip": "Client\\Pages\\Pel\u00EDculas\\VisualizarPelicula.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-16T04:57:03.702Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T04:57:03.702Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "CrearPelicula.razor",
               "DocumentMoniker": "C:\\Users\\Omar\\source\\repos\\_udemy\\blazor\\BlazorPeliculas\\Client\\Pages\\Pel\u00EDculas\\CrearPelicula.razor",
               "RelativeDocumentMoniker": "Client\\Pages\\Pel\u00EDculas\\CrearPelicula.razor",
@@ -94,8 +110,7 @@
               "RelativeToolTip": "Client\\Pages\\Pel\u00EDculas\\CrearPelicula.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-16T04:35:28.056Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T04:35:28.056Z"
             }
           ]
         }
