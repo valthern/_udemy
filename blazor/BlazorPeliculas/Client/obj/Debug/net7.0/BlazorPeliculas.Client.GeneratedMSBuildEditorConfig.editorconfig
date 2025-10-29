@@ -52,6 +52,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VuZXJvc1xFZGl0YXJHZW5lcm8ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Generos/FormularioGenero.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VuZXJvc1xGb3JtdWxhcmlvR2VuZXJvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Generos/IndiceGeneros.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VuZXJvc1xJbmRpY2VHZW5lcm9zLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
