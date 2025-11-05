@@ -1,0 +1,23 @@
+﻿@page "/peliculas/buscar"
+@inject IRepositorio repositorio
+
+<h3>Filtro Películas</h3>
+
+<div class="row g-3 align-items-center mb-3">
+    <div class="col-sm-3">
+        <input type="text" class="form-control" id="titulo" placeholder="Título Película" @bind-value="titulo" @bind-value:event="oninput" @onkeypress="@((KeyboardEventArgs e) => TituloKeyPress(e))" />
+    </div>
+</div>
+
+@code {
+    private string titulo = "";
+
+    private void TituloKeyPress(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter")
+        {
+            var url = $"/peliculas/{titulo}";
+            NavigationManager.NavigateTo(url);
+        }
+    }
+}

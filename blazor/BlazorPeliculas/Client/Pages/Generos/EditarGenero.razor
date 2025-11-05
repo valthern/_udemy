@@ -1,13 +1,15 @@
 ﻿@page "/generos/editar/{GeneroId:int}"
+@inject NavigationManager navigationManager
 
 <h3>Editar Género</h3>
 
-<FormularioGenero Genero="Genero" OnValidSubmit="Editar" />
+<FormularioGenero @ref="formularioGenero" Genero="Genero" OnValidSubmit="Editar" />
 
 @code {
     [Parameter]
     public int GeneroId { get; set; }
     private Genero? Genero;
+    private FormularioGenero? formularioGenero;
 
     override protected void OnInitialized()
     {
@@ -19,8 +21,10 @@
     {
         if (Genero is not null)
         {
+            formularioGenero!.FormularioPosteadoConExito = true;
             Console.WriteLine("Editando Género de Película");
             Console.WriteLine($"ID: {Genero.Id}, Nombre: {Genero.Nombre}");
+            navigationManager.NavigateTo("generos");
         }
     }
 }
