@@ -1,23 +1,45 @@
 ﻿@page "/peliculas/buscar"
 @inject IRepositorio repositorio
 
+
 <h3>Filtro Películas</h3>
 
 <div class="row g-3 align-items-center mb-3">
     <div class="col-sm-3">
         <input type="text" class="form-control" id="titulo" placeholder="Título Película" @bind-value="titulo" @bind-value:event="oninput" @onkeypress="@((KeyboardEventArgs e) => TituloKeyPress(e))" />
     </div>
+    <div class="col-sm-3">
+        <select class="form-select" @bind="generoSeleccionado">
+            <option value="0">--- Seleccione un género ---</option>
+            @foreach (var genero in generos)
+            {
+                <option value="@genero.Id">@genero.Nombre</option>
+            }
+        </select>
+    </div>
+    <div class="col-sm-6" style="display: flex;">
+        <div class="form-check me-2">
+            <input type="checkbox" class="form-check-input" id="estrenos" @bind="futurosEstrenos" />
+            <label class="form-check-label" for="estrenos">Futuros estrenos</label>
+        </div>
+        <div class="form-check me-2">
+            <input type="checkbox" class="form-check-input" id="cartelera" @bind="enCartelera" />
+            <label class="form-check-label" for="cartelera">En Cartelera</label>
+        </div>
+    </div>
 </div>
 
 @code {
     private string titulo = "";
+    private string generoSeleccionado = "0";
+    private List<Genero> generos = new List<Genero>();
+    private bool futurosEstrenos = false;
 
     private void TituloKeyPress(KeyboardEventArgs e)
     {
         if (e.Key == "Enter")
         {
-            var url = $"/peliculas/{titulo}";
-            NavigationManager.NavigateTo(url);
+            
         }
     }
 }
