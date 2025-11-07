@@ -1695,6 +1695,6 @@ C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\bin\Debug\net7.0
 C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\bin\Debug\net7.0\wwwroot\_framework\CurrieTechnologies.Razor.SweetAlert2.dll.gz
 C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\bin\Debug\net7.0\CurrieTechnologies.Razor.SweetAlert2.dll
 C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\9xxcqj6up5-zx9cxf3t0f.gz
-C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\zhgh98znp4-1z3eg7cra5.gz
-C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\5c5js4y383-24yvkla6ba.gz
-C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\6cesjtjddn-v4iy5m7wez.gz
+C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\zhgh98znp4-e1zn0ps4fr.gz
+C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\5c5js4y383-flvqi2wt6q.gz
+C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\6cesjtjddn-kj3i15pync.gz
