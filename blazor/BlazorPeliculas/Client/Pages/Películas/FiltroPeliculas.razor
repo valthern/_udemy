@@ -22,7 +22,7 @@
     <div class="col-sm-6" style="display: flex;">
         <div class="form-check me-2">
             <input type="checkbox" class="form-check-input" id="estrenos" @bind="futurosEstrenos" />
-            <label class="form-check-label" for="estrenos">Futuros estrenos</label>
+            <label class="form-check-label" for="estrenos">Futuros Estrenos</label>
         </div>
         <div class="form-check me-2">
             <input type="checkbox" class="form-check-input" id="cartelera" @bind="enCartelera" />
@@ -34,7 +34,7 @@
         </div>
     </div>
 
-    <div>
+    <div class="col-12">
         <button type="button" class="btn btn-primary" @onclick="CargarNuevasPeliculas">Filtrar</button>
         <button type="button" class="btn btn-danger" @onclick="LimpiarOnClick">Limpiar</button>
     </div>
@@ -67,7 +67,8 @@
     private void CargarNuevasPeliculas()
     {
         Peliculas = repositorio.ObtenerPeliculas()
-            .Where(x => x.Titulo.ToLower().Contains(titulo.ToLower())).ToList();
+            .Where(x => x.Titulo.ToLower().Contains(titulo.ToLower()))
+            .ToList();
 
         Console.WriteLine($"titulo: {titulo}");
         Console.WriteLine($"generoSeleccionado: {generoSeleccionado}");
