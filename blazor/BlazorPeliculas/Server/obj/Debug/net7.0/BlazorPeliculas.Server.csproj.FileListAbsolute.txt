@@ -121,3 +121,4 @@ C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Server\obj\Debug\ne
 C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\MathNet.Numerics.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\MathNet.Numerics.dll
 C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\CurrieTechnologies.Razor.SweetAlert2.dll
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\CurrieTechnologies.Razor.SweetAlert2.dll
