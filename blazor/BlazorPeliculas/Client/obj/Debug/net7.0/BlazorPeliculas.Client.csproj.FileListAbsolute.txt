@@ -1697,8 +1697,12 @@ C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\bin\Debug\ne
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\bin\Debug\net7.0\wwwroot\_framework\CurrieTechnologies.Razor.SweetAlert2.dll.gz
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\bin\Debug\net7.0\CurrieTechnologies.Razor.SweetAlert2.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\9xxcqj6up5-zx9cxf3t0f.gz
-C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\hdwh5jms1z-lhn8idsdw8.gz
-C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\7p8x1v19z6-2kp6ifwcxu.gz
-C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\zhgh98znp4-8hdluzky2w.gz
-C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\5c5js4y383-li3i51b5au.gz
-C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\6cesjtjddn-sfptf8f9uf.gz
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\bin\Debug\net7.0\wwwroot\_framework\Markdig.dll
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\bin\Debug\net7.0\wwwroot\_framework\Markdig.dll.gz
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\bin\Debug\net7.0\Markdig.dll
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\ycrzlrmhqu-7v4pjsmtou.gz
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\hdwh5jms1z-zjvmi1b37v.gz
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\7p8x1v19z6-baqzycac4s.gz
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\zhgh98znp4-eyub4uw5k8.gz
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\5c5js4y383-7zazy921gx.gz
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\6cesjtjddn-lgi3u19nid.gz

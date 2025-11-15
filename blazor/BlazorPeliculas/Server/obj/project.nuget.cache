@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "gW0/KLlKZ5k=",
+  "dgSpecHash": "GIUcAhkcUdw=",
   "success": true,
   "projectFilePath": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\Server\\BlazorPeliculas.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\magno\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.6.0\\currietechnologies.razor.sweetalert2.5.6.0.nupkg.sha512",
+    "C:\\Users\\magno\\.nuget\\packages\\markdig\\0.43.0\\markdig.0.43.0.nupkg.sha512",
     "C:\\Users\\magno\\.nuget\\packages\\mathnet.numerics\\5.0.0\\mathnet.numerics.5.0.0.nupkg.sha512",
     "C:\\Users\\magno\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.20\\microsoft.aspnetcore.authorization.7.0.20.nupkg.sha512",
     "C:\\Users\\magno\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.20\\microsoft.aspnetcore.components.7.0.20.nupkg.sha512",

@@ -5,7 +5,7 @@
 <div>
     <label>@Label</label>
     <div>
-        <InputTextArea @bind-Value="CurrentValue" />
+        <InputTextArea @bind-Value="CurrentValue" id="biografia" />
         <ValidationMessage For="For" />
     </div>
 </div>
@@ -13,7 +13,9 @@
 <div>
     <label>@Label (preview)</label>
     <div class="markdown-container" style="overflow: auto;">
+        <MostrarMarkdown ContenidoMarkdown="@CurrentValue">
 
+        </MostrarMarkdown>
     </div>
 </div>
 

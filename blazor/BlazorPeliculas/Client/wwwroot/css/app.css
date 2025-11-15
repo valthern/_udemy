@@ -103,3 +103,20 @@ a, .btn-link {
     .loading-progress-text:after {
         content: var(--blazor-load-percentage-text, "Loading");
     }
+
+.form-markdown {
+    display: flex;
+}
+
+    .form-markdown div textarea {
+        /*border: 1px solid red;*/
+        width: 500px;
+        height: 500px;
+        margin-right: 15px;
+    }
+
+    .form-markdown div .markdown-container {
+        border: 1px dashed black;
+        width: 500px;
+        height: 500px;
+    }
