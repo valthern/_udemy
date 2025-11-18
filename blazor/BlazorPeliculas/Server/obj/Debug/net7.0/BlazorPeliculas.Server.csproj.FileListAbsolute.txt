@@ -17,17 +17,8 @@ C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0
 C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\BlazorPeliculas.Server.runtimeconfig.json
 C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\BlazorPeliculas.Server.dll
 C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\BlazorPeliculas.Server.pdb
-C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.dll
-C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.dll
-C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Forms.dll
-C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Web.dll
 C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.WebAssembly.dll
 C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Components.WebAssembly.Server.dll
-C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Metadata.dll
-C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Binder.dll
-C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
-C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.JSInterop.dll
 C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.JSInterop.WebAssembly.dll
 C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\BlazorPeliculas.Client.dll
 C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\BlazorPeliculas.Shared.dll
@@ -123,3 +114,5 @@ C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\ne
 C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\CurrieTechnologies.Razor.SweetAlert2.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\CurrieTechnologies.Razor.SweetAlert2.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\Markdig.dll
+C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\Markdig.dll
+C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\obj\Debug\net7.0\swae.build.ex.cache

@@ -15,7 +15,7 @@ namespace BlazorPeliculas.Shared.Entidades
         public string? Resumen { get; set; }
         public bool EnCartelera { get; set; }
         public string? Trailer { get; set; }
-        public DateTime Lanzamiento { get; set; }
+        public DateTime? Lanzamiento { get; set; }
         public string? Poster { get; set; }
         public string? TituloCortado
         {
