@@ -17,6 +17,7 @@ namespace BlazorPeliculas.Shared.Entidades
         public string? Trailer { get; set; }
         public DateTime? Lanzamiento { get; set; }
         public string? Poster { get; set; }
+        public List<GeneroPelicula> GenerosPelicula { get; set; } = new List<GeneroPelicula>();
         public string? TituloCortado
         {
             get
@@ -25,9 +26,9 @@ namespace BlazorPeliculas.Shared.Entidades
                 {
                     return null;
                 }
-                if (Titulo.Length>60)
+                if (Titulo.Length > 60)
                 {
-                    return Titulo.Substring(0, 60)+ "...";
+                    return Titulo.Substring(0, 60) + "...";
                 }
                 else
                 {

@@ -1969,25 +1969,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Omar\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\omar\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Omar\\source\\repos\\_udemy\\blazor\\BlazorPeliculas\\Client\\BlazorPeliculas.Client.csproj",
+      "projectUniqueName": "C:\\Users\\omar\\source\\repos\\_udemy\\blazor\\BlazorPeliculas\\Client\\BlazorPeliculas.Client.csproj",
       "projectName": "BlazorPeliculas.Client",
-      "projectPath": "C:\\Users\\Omar\\source\\repos\\_udemy\\blazor\\BlazorPeliculas\\Client\\BlazorPeliculas.Client.csproj",
-      "packagesPath": "C:\\Users\\Omar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Omar\\source\\repos\\_udemy\\blazor\\BlazorPeliculas\\Client\\obj\\",
+      "projectPath": "C:\\Users\\omar\\source\\repos\\_udemy\\blazor\\BlazorPeliculas\\Client\\BlazorPeliculas.Client.csproj",
+      "packagesPath": "C:\\Users\\omar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\omar\\source\\repos\\_udemy\\blazor\\BlazorPeliculas\\Client\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Omar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\omar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2003,8 +2001,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Omar\\source\\repos\\_udemy\\blazor\\BlazorPeliculas\\Shared\\BlazorPeliculas.Shared.csproj": {
-              "projectPath": "C:\\Users\\Omar\\source\\repos\\_udemy\\blazor\\BlazorPeliculas\\Shared\\BlazorPeliculas.Shared.csproj"
+            "C:\\Users\\omar\\source\\repos\\_udemy\\blazor\\BlazorPeliculas\\Shared\\BlazorPeliculas.Shared.csproj": {
+              "projectPath": "C:\\Users\\omar\\source\\repos\\_udemy\\blazor\\BlazorPeliculas\\Shared\\BlazorPeliculas.Shared.csproj"
             }
           }
         }

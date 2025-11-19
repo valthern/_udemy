@@ -15,141 +15,145 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = BlazorPeliculas.Client
 build_property.RootNamespace = BlazorPeliculas.Client
-build_property.ProjectDir = C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\
+build_property.ProjectDir = C:\Users\omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client
+build_property.MSBuildProjectDirectory = C:\Users\omar\source\repos\_udemy\blazor\BlazorPeliculas\Client
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 7.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/App.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Actores/CrearActor.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Actores/CrearActor.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWN0b3Jlc1xDcmVhckFjdG9yLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Actores/EditarActor.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Actores/EditarActor.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWN0b3Jlc1xFZGl0YXJBY3Rvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Actores/FormularioActores.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Actores/FormularioActores.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWN0b3Jlc1xGb3JtdWxhcmlvQWN0b3Jlcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Actores/IndiceActores.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Actores/IndiceActores.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWN0b3Jlc1xJbmRpY2VBY3RvcmVzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/FetchData.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Generos/CrearGenero.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Generos/CrearGenero.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VuZXJvc1xDcmVhckdlbmVyby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Generos/EditarGenero.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Generos/EditarGenero.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VuZXJvc1xFZGl0YXJHZW5lcm8ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Generos/FormularioGenero.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Generos/FormularioGenero.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VuZXJvc1xGb3JtdWxhcmlvR2VuZXJvLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Generos/IndiceGeneros.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Generos/IndiceGeneros.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VuZXJvc1xJbmRpY2VHZW5lcm9zLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Index.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Películas/CrearPelicula.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Películas/CrearPelicula.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVsw61jdWxhc1xDcmVhclBlbGljdWxhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Películas/EditarPelicula.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Películas/EditarPelicula.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVsw61jdWxhc1xFZGl0YXJQZWxpY3VsYS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Películas/FiltroPeliculas.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Películas/FiltroPeliculas.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVsw61jdWxhc1xGaWx0cm9QZWxpY3VsYXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Películas/FormularioPeliculas.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Películas/FormularioPeliculas.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVsw61jdWxhc1xGb3JtdWxhcmlvUGVsaWN1bGFzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Películas/VisualizarPelicula.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Películas/VisualizarPelicula.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVsw61jdWxhc1xWaXN1YWxpemFyUGVsaWN1bGEucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/BindAfterDemo.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/BindAfterDemo.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEJpbmRBZnRlckRlbW8ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/BindEvento.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/BindEvento.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEJpbmRFdmVudG8ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/BindGetSetDemo.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/BindGetSetDemo.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEJpbmRHZXRTZXREZW1vLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/CustomNotFound.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/CustomNotFound.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEN1c3RvbU5vdEZvdW5kLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/EjemploTextbox.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/EjemploTextbox.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEVqZW1wbG9UZXh0Ym94LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/InputImg.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/InputImg.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXElucHV0SW1nLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/InputMarkdown.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/InputMarkdown.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXElucHV0TWFya2Rvd24ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/ListadoGenerico.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/ListadoGenerico.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExpc3RhZG9HZW5lcmljby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/ListadoPeliculas.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/ListadoPeliculas.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExpc3RhZG9QZWxpY3VsYXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/MostrarMarkdown.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1vc3RyYXJNYXJrZG93bi5yYXpvcg==
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/Mostrarmarkdown.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1vc3RyYXJtYXJrZG93bi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/PeliculaIndividual.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/PeliculaIndividual.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBlbGljdWxhSW5kaXZpZHVhbC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/SurveyPrompt.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/SelectorMultiple.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFNlbGVjdG9yTXVsdGlwbGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/_Imports.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Counter.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-a2z283tr5e
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/MainLayout.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-r03re2dpic
 
-[C:/Users/Omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/NavMenu.razor]
+[C:/Users/omar/source/repos/_udemy/blazor/BlazorPeliculas/Client/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-bghibg8178
