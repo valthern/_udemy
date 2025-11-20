@@ -33,6 +33,14 @@
         <InputMarkdown @bind-Value="Pelicula.Resumen" For=@(() => Pelicula.Resumen) Label="Resumen" />
     </div>
 
+    <div class="mb-3">
+        <label>Géneros</label>
+        <div>
+            <SelectorMultiple NoSeleccionados="NoSeleccionados" Seleccionados="Seleccionados">
+            </SelectorMultiple>
+        </div>
+    </div>
+
     <button class="btn btn-success">Guardar Cambios</button>
 </EditForm>
 
@@ -47,6 +55,16 @@
     [EditorRequired]
     public EventCallback OnValidSubmit { get; set; }
 
+    [Parameter]
+    public List<Genero> GenerosSeleccionados { get; set; } = new List<Genero>();
+
+    [Parameter]
+    [EditorRequired]
+    public List<Genero> GenerosNoSeleccionados { get; set; } = new List<Genero>();
+
+    public List<SelectorMultipleModel> Seleccionados { get; set; } = new List<SelectorMultipleModel>();
+    public List<SelectorMultipleModel> NoSeleccionados { get; set; } = new List<SelectorMultipleModel>();
+
     protected override void OnInitialized()
     {
         if (!string.IsNullOrEmpty(Pelicula.Poster))
@@ -54,6 +72,9 @@
             imagenURL = Pelicula.Poster;
             Pelicula.Poster = null;
         }
+
+        Seleccionados = GenerosSeleccionados.Select(g => new SelectorMultipleModel(g.Id.ToString(), g.Nombre)).ToList();
+        NoSeleccionados = GenerosNoSeleccionados.Select(g => new SelectorMultipleModel(g.Id.ToString(), g.Nombre)).ToList();
     }
 
     private void ImagenSeleccionada(string imagenBase64)
