@@ -1706,8 +1706,12 @@ C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0
 C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\7s1upqpeo2-{0}-lfu7j35m59-lfu7j35m59.gz
 C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\fled2qoztj-{0}-7cxe8oq9xu-7cxe8oq9xu.gz
 C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\swae.build.ex.cache
-C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\hdwh5jms1z-{0}-7ibitt0r7n-7ibitt0r7n.gz
-C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\7p8x1v19z6-{0}-w1ovy59dtu-w1ovy59dtu.gz
-C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\zhgh98znp4-{0}-04og0p4ogf-04og0p4ogf.gz
-C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\5c5js4y383-{0}-x2bn0kn4om-x2bn0kn4om.gz
-C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\6cesjtjddn-{0}-tazjvpq0vv-tazjvpq0vv.gz
+C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\bin\Debug\net7.0\wwwroot\_framework\Blazored.Typeahead.dll
+C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\bin\Debug\net7.0\wwwroot\_framework\Blazored.Typeahead.dll.gz
+C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\bin\Debug\net7.0\Blazored.Typeahead.dll
+C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\ioljf3fmvt-{0}-p2b7ngq5jg-p2b7ngq5jg.gz
+C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\hdwh5jms1z-{0}-b5ycchapeu-b5ycchapeu.gz
+C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\7p8x1v19z6-{0}-dhhxav7g7a-dhhxav7g7a.gz
+C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\zhgh98znp4-{0}-93b9210ced-93b9210ced.gz
+C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\5c5js4y383-{0}-gt1sl0618v-gt1sl0618v.gz
+C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Client\obj\Debug\net7.0\compressed\6cesjtjddn-{0}-weaziwhmj7-weaziwhmj7.gz

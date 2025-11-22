@@ -16,6 +16,18 @@
           "BlazorPeliculas.Server.dll": {}
         }
       },
+      "Blazored.Typeahead/4.7.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "7.0.20",
+          "Microsoft.AspNetCore.Components.Web": "7.0.20"
+        },
+        "runtime": {
+          "lib/net6.0/Blazored.Typeahead.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "CurrieTechnologies.Razor.SweetAlert2/5.6.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Components": "7.0.20",
@@ -167,6 +179,7 @@
       "BlazorPeliculas.Client/1.0.0": {
         "dependencies": {
           "BlazorPeliculas.Shared": "1.0.0",
+          "Blazored.Typeahead": "4.7.0",
           "CurrieTechnologies.Razor.SweetAlert2": "5.6.0",
           "Markdig": "0.43.0",
           "MathNet.Numerics": "5.0.0",
@@ -194,6 +207,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Blazored.Typeahead/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fTN4Bt9rwEE/d33FXFd+h/DBjVtsFJLRf9B8mu0zJWMWG5Mk2tU2il3aK0+laUxNgBNBgEL0jW/831I+oapd6A==",
+      "path": "blazored.typeahead/4.7.0",
+      "hashPath": "blazored.typeahead.4.7.0.nupkg.sha512"
     },
     "CurrieTechnologies.Razor.SweetAlert2/5.6.0": {
       "type": "package",

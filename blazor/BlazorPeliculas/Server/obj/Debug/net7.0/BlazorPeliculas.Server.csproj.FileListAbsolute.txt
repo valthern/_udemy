@@ -125,3 +125,4 @@ C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0
 C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
 C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.JSInterop.dll
+C:\Users\Omar\source\repos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\Blazored.Typeahead.dll
