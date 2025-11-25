@@ -15,5 +15,5 @@ void ConfigureServices(IServiceCollection services)
 {
     services.AddSweetAlert2();
     services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-    services.AddSingleton<IRepositorio, Repositorio>();
+    services.AddScoped<IRepositorio, Repositorio>();
 }
