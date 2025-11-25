@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using BlazorPeliculas.Shared.Entidades;
+using Microsoft.EntityFrameworkCore;
 
 namespace BlazorPeliculas.Server
 {
@@ -7,5 +8,22 @@ namespace BlazorPeliculas.Server
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<GeneroPelicula>()
+                .HasKey(gp => new { gp.GeneroId, gp.PeliculaId });
+
+            modelBuilder.Entity<PeliculaActor>()
+                .HasKey(pa => new { pa.ActorId, pa.PeliculaId });
+        }
+
+        public DbSet<Genero> Generos => Set<Genero>();
+        public DbSet<Actor> Actores => Set<Actor>();
+        public DbSet<Pelicula> Peliculas => Set<Pelicula>();
+        public DbSet<GeneroPelicula> GenerosPeliculas => Set<GeneroPelicula>();
+        public DbSet<PeliculaActor> PeliculasActores => Set<PeliculaActor>();
     }
 }
