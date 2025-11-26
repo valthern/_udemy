@@ -18,22 +18,22 @@ namespace BlazorPeliculas.Client.Repositorios
         public async Task<string?> ObtenerMensajeError()
         {
             if (!Error) return null;
-            
+
             var codigoEstatus = HttpResponseMessage.StatusCode;
 
             switch (codigoEstatus)
             {
                 case HttpStatusCode.NotFound:
-                    return "Recurso no encontrado.";
-                    //break;
+                    return "Recurso no encontrado. Error " + HttpStatusCode.NotFound.ToString();
+                //break;
                 case HttpStatusCode.BadRequest:
-                    return await HttpResponseMessage.Content.ReadAsStringAsync();
+                    return "Error "+ HttpStatusCode.BadRequest.ToString() + ". " + await HttpResponseMessage.Content.ReadAsStringAsync();
                 case HttpStatusCode.Unauthorized:
-                    return "Tienes que loguearte pra hacer esto.";
-                    case HttpStatusCode.Forbidden:
-                    return "No tienes permisos para hacer esto.";
-                    default:
-                    return "Ha ocurrido un error desconocido.";
+                    return "Tienes que loguearte pra hacer esto. Error " + HttpStatusCode.Unauthorized.ToString();
+                case HttpStatusCode.Forbidden:
+                    return "No tienes permisos para hacer esto. Error " + HttpStatusCode.Forbidden.ToString();
+                default:
+                    return "Ha ocurrido un error inesperado. Error " + codigoEstatus.ToString();
             }
         }
     }
