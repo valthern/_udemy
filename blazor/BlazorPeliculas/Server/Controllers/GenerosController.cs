@@ -17,7 +17,6 @@ namespace BlazorPeliculas.Server.Controllers
         [HttpPost]
         public async Task<ActionResult<int>> Post(Genero genero)
         {
-            throw new NotImplementedException();
             context.Add(genero);
             await context.SaveChangesAsync();
             return genero.Id;

@@ -9,7 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
-builder.Services.AddDbContext<ApplicationDbContext>(opciones => opciones.UseSqlServer("name=DefaultConnection"));
+builder.Services.AddDbContext<ApplicationDbContext>(opciones => opciones.UseSqlServer("name=NecroConnection"));
+//builder.Services.AddDbContext<ApplicationDbContext>(opciones => opciones.UseSqlServer("name=TicDesarrolloConnection"));
 
 var app = builder.Build();
 
