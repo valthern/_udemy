@@ -1,4 +1,4 @@
-﻿<EditForm Model="Pelicula" OnValidSubmit="OnValidSubmit">
+﻿<EditForm Model="Pelicula" OnValidSubmit="OnDataAnnotationsValidated">
     <DataAnnotationsValidator />
 
     <div class="mb-3">
@@ -46,7 +46,7 @@
         <div>
             <SelectorMultipleTypeahead Context="Actor" SearchMethod="BuscarActores" ElementosSeleccionados="ActoresSeleccionados">
                 <MyListTemplate>
-                    @Actor.Nombre
+                    @Actor.Nombre / <input type="text" placeholder="Personaje" @bind="Actor.Personaje" />
                 </MyListTemplate>
                 <MyResultTemplate>
                     <img style="width: 50px;" src="@Actor.Foto" />
@@ -108,5 +108,16 @@
             new Actor{ Id=1, Nombre="Tom Holland", Foto = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Tom_Holland_by_Gage_Skidmore.jpg/340px-Tom_Holland_by_Gage_Skidmore.jpg"},
             new Actor{ Id=2, Nombre="Tom Hanks", Foto = "https://tse1.mm.bing.net/th/id/OIP.wq1bAkibjsCCy84sEWc8UwHaJu?rs=1&pid=ImgDetMain&o=7&rm=3"}
         };
+    }
+
+    private async Task OnDataAnnotationsValidated()
+    {
+        Pelicula.GenerosPelicula = Seleccionados
+            .Select(x => new GeneroPelicula { GeneroId = int.Parse(x.Llave) }).ToList();
+
+        Pelicula.PeliculasActor = ActoresSeleccionados
+            .Select(x => new PeliculaActor { ActorId = x.Id, Personaje = x.Personaje }).ToList();
+    
+        await OnValidSubmit.InvokeAsync();
     }
 }

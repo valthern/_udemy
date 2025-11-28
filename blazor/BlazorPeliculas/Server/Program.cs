@@ -1,4 +1,5 @@
 using BlazorPeliculas.Server;
+using BlazorPeliculas.Server.Helpers;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,8 +10,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
-builder.Services.AddDbContext<ApplicationDbContext>(opciones => opciones.UseSqlServer("name=NecroConnection"));
-//builder.Services.AddDbContext<ApplicationDbContext>(opciones => opciones.UseSqlServer("name=TicDesarrolloConnection"));
+// BEGIN ##### Configure DbContext with SQL Server
+//builder.Services.AddDbContext<ApplicationDbContext>(opciones => opciones.UseSqlServer("name=NecroConnection"));
+builder.Services.AddDbContext<ApplicationDbContext>(opciones => opciones.UseSqlServer("name=TicDesarrolloConnection"));
+// END   ##### Configure DbContext with Sql Server
+
+builder.Services.AddTransient<IAlmacenadorArchivos, AlmacenadorArchivosLocal>();
+builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 
@@ -32,7 +38,6 @@ app.UseBlazorFrameworkFiles();
 app.UseStaticFiles();
 
 app.UseRouting();
-
 
 app.MapRazorPages();
 app.MapControllers();
