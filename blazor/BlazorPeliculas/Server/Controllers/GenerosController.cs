@@ -1,5 +1,6 @@
 ﻿using BlazorPeliculas.Shared.Entidades;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace BlazorPeliculas.Server.Controllers
 {
@@ -12,6 +13,12 @@ namespace BlazorPeliculas.Server.Controllers
         public GenerosController(ApplicationDbContext context)
         {
             this.context = context;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Genero>>> Get()
+        {
+            return await context.Generos.ToListAsync();
         }
 
         [HttpPost]

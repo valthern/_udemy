@@ -1,1 +1,2 @@
 wwwroot\personas\33ecba26-175c-42eb-8f19-684586358eeb.jpg
+wwwroot\peliculas\dc403e62-2ef6-48c2-8268-6322eefcfcd1.jpg

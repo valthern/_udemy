@@ -18,6 +18,14 @@
     </div>
 
     <div class="mb-3">
+        <label>Trailer:</label>
+        <div>
+            <InputText class="form-control" @bind-Value="Pelicula.Trailer" />
+            <ValidationMessage For="@(() => Pelicula.Trailer)" />
+        </div>
+    </div>
+
+    <div class="mb-3">
         <label>Fecha de Lanzamiento:</label>
         <div>
             <InputDate class="form-control" @bind-Value="Pelicula.Lanzamiento" />
@@ -113,11 +121,13 @@
     private async Task OnDataAnnotationsValidated()
     {
         Pelicula.GenerosPelicula = Seleccionados
-            .Select(x => new GeneroPelicula { GeneroId = int.Parse(x.Llave) }).ToList();
+            .Select(x => new GeneroPelicula { GeneroId = int.Parse(x.Llave) })
+            .ToList();
 
         Pelicula.PeliculasActor = ActoresSeleccionados
-            .Select(x => new PeliculaActor { ActorId = x.Id, Personaje = x.Personaje }).ToList();
-    
+            .Select(x => new PeliculaActor { ActorId = x.Id, Personaje = x.Personaje })
+            .ToList();
+
         await OnValidSubmit.InvokeAsync();
     }
 }

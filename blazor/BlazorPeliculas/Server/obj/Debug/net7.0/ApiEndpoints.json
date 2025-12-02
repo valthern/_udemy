@@ -27,6 +27,26 @@
   },
   {
     "ContainingType": "BlazorPeliculas.Server.Controllers.GenerosController",
+    "Method": "Get",
+    "RelativePath": "api/Generos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BlazorPeliculas.Shared.Entidades.Genero, BlazorPeliculas.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BlazorPeliculas.Server.Controllers.GenerosController",
     "Method": "Post",
     "RelativePath": "api/Generos",
     "HttpMethod": "POST",
@@ -36,6 +56,32 @@
       {
         "Name": "genero",
         "Type": "BlazorPeliculas.Shared.Entidades.Genero",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BlazorPeliculas.Server.Controllers.PeliculasController",
+    "Method": "Post",
+    "RelativePath": "api/peliculas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pelicula",
+        "Type": "BlazorPeliculas.Shared.Entidades.Pelicula",
         "IsRequired": true
       }
     ],

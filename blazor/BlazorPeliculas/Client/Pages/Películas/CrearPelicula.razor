@@ -25,16 +25,17 @@
 
     async Task Crear()
     {
-        var httpResponse = await repositorio.Post("api/peliculas", Pelicula);
+        var httpResponse = await repositorio.Post<Pelicula, int>("api/peliculas", Pelicula);
 
-        if(httpResponse.Error)
+        if (httpResponse.Error)
         {
             var mensajeError = await httpResponse.ObtenerMensajeError();
             await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
         }
         else
         {
-            
+            var peliculaId = httpResponse.Response;
+            navigationManager.NavigateTo($"/pelicula/{peliculaId}/{Pelicula.Titulo.Replace(" ", "-")}");
         }
     }
 }
