@@ -1,12 +1,13 @@
 ﻿using BlazorPeliculas.Server.Helpers;
 using BlazorPeliculas.Shared.Entidades;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace BlazorPeliculas.Server.Controllers
 {
-    [ApiController]
     [Route("api/[controller]")]
-    public class ActoresController: ControllerBase
+    [ApiController]
+    public class ActoresController : ControllerBase
     {
         private readonly ApplicationDbContext context;
         private readonly IAlmacenadorArchivos almacenadorArchivos;
@@ -18,12 +19,18 @@ namespace BlazorPeliculas.Server.Controllers
             this.almacenadorArchivos = almacenadorArchivos;
         }
 
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Actor>>> Get()
+        {
+            return await context.Actores.ToListAsync();
+        }
+
         [HttpPost]
         public async Task<ActionResult<int>> Post(Actor actor)
         {
-            if(!string.IsNullOrWhiteSpace(actor.Foto))
+            if (!string.IsNullOrWhiteSpace(actor.Foto))
             {
-                var fotoActor= Convert.FromBase64String(actor.Foto);
+                var fotoActor = Convert.FromBase64String(actor.Foto);
                 actor.Foto = await almacenadorArchivos.GuardarArchivo(fotoActor, ".jpg", contenedor);
             }
 
