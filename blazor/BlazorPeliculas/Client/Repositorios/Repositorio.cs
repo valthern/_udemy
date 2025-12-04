@@ -29,9 +29,7 @@ namespace BlazorPeliculas.Client.Repositorios
                 return new HttpResponseWrapper<T>(respuesta, error: false, respuestaHTTP);
             }
             else
-            {
                 return new HttpResponseWrapper<T>(default, error: true, respuestaHTTP);
-            }
         }
 
         public async Task<HttpResponseWrapper<object>> Post<T>(string url, T enviar)

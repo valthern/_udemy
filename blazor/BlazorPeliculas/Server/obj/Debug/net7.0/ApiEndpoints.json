@@ -46,6 +46,32 @@
     ]
   },
   {
+    "ContainingType": "BlazorPeliculas.Server.Controllers.ActoresController",
+    "Method": "Get",
+    "RelativePath": "api/Actores/buscar/{textoBusqueda}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "textoBusqueda",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BlazorPeliculas.Shared.Entidades.Actor, BlazorPeliculas.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "BlazorPeliculas.Server.Controllers.GenerosController",
     "Method": "Get",
     "RelativePath": "api/Generos",
@@ -82,6 +108,26 @@
     "ReturnTypes": [
       {
         "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BlazorPeliculas.Server.Controllers.PeliculasController",
+    "Method": "Get",
+    "RelativePath": "api/peliculas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "BlazorPeliculas.Shared.DTOs.HomePageDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
