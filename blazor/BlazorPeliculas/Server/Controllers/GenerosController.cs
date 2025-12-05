@@ -21,12 +21,31 @@ namespace BlazorPeliculas.Server.Controllers
             return await context.Generos.ToListAsync();
         }
 
+        [HttpGet("{id:int}")]
+        public async Task<ActionResult<Genero>> Get(int id)
+        {
+            var genero = await context.Generos
+                .FirstOrDefaultAsync(genero => genero.Id == id);
+
+            if (genero is null) return NotFound();
+
+            return genero;
+        }
+
         [HttpPost]
         public async Task<ActionResult<int>> Post(Genero genero)
         {
             context.Add(genero);
             await context.SaveChangesAsync();
             return genero.Id;
+        }
+
+        [HttpPut]
+        public async Task<ActionResult> Put(Genero genero)
+        {
+            context.Update(genero);
+            await context.SaveChangesAsync();
+            return NoContent();
         }
     }
 }

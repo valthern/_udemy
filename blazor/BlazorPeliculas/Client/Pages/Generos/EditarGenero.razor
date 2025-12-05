@@ -1,9 +1,19 @@
 ﻿@page "/generos/editar/{GeneroId:int}"
+@using System.Net
 @inject NavigationManager navigationManager
+@inject IRepositorio repositorio
+@inject SweetAlertService swal
 
 <h3>Editar Género</h3>
 
-<FormularioGenero @ref="formularioGenero" Genero="Genero" OnValidSubmit="Editar" />
+@if (Genero is null)
+{
+    <p>Cargando...</p>
+}
+else
+{
+    <FormularioGenero @ref="formularioGenero" Genero="Genero" OnValidSubmit="Editar" />
+}
 
 @code {
     [Parameter]
@@ -11,20 +21,44 @@
     private Genero? Genero;
     private FormularioGenero? formularioGenero;
 
-    override protected void OnInitialized()
+    override protected async Task OnInitializedAsync()
     {
-        // Simulación de obtención del género desde una fuente de datos
-        Genero = new Genero { Id = GeneroId, Nombre = "Comedia" };
+        var respuestaHttp = await repositorio.Get<Genero>($"api/generos/{GeneroId}");
+
+        if (respuestaHttp.Error)
+        {
+            if (respuestaHttp.HttpResponseMessage.StatusCode == HttpStatusCode.NotFound)
+            {
+                navigationManager.NavigateTo("generos");
+            }
+            else
+            {
+                var mensajeError = await respuestaHttp.ObtenerMensajeError();
+                await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
+            }
+        }
+        else
+        {
+            Genero = respuestaHttp.Response!;
+        }
     }
 
-    private void Editar()
+    private async Task Editar()
     {
-        if (Genero is not null)
+        var respuestaHttp = await repositorio.Put("api/generos", Genero);
+
+        if (respuestaHttp.Error)
         {
+            var mensajeError = await respuestaHttp.ObtenerMensajeError();
+            await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
+        }
+        else
+        {
+        // if (Genero is not null)
+        // {
             formularioGenero!.FormularioPosteadoConExito = true;
-            Console.WriteLine("Editando Género de Película");
-            Console.WriteLine($"ID: {Genero.Id}, Nombre: {Genero.Nombre}");
             navigationManager.NavigateTo("generos");
+        // }
         }
     }
 }

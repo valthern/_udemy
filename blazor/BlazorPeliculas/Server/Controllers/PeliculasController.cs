@@ -29,13 +29,13 @@ namespace BlazorPeliculas.Server.Controllers
             {
                 PeliculasEnCartelera = await context.Peliculas
                     .Where(pelicula => pelicula.EnCartelera)
-                    .Take(limite)
                     .OrderByDescending(pelicula => pelicula.Lanzamiento)
+                    .Take(limite)
                     .ToListAsync(),
                 ProximosEstrenos = await context.Peliculas
                     .Where(pelicula => pelicula.Lanzamiento > DateTime.Today)
-                    .Take(limite)
                     .OrderBy(pelicula => pelicula.Lanzamiento)
+                    .Take(limite)
                     .ToListAsync()
             };
         }
@@ -57,8 +57,22 @@ namespace BlazorPeliculas.Server.Controllers
             var promedioVoto = 4;
             var votoUsuario = 5;
 
-            var modelo = new PeliculaVisualizarDTO();
-
+            return new PeliculaVisualizarDTO
+            {
+                Pelicula = pelicula,
+                Generos = pelicula.GenerosPelicula
+                    .Select(gp => gp.Genero!).ToList(),
+                Actores = pelicula.PeliculasActor
+                    .Select(pa => new Actor
+                    {
+                        Id = pa.Actor!.Id,
+                        Nombre = pa.Actor.Nombre,
+                        Foto = pa.Actor.Foto,
+                        Personaje = pa.Personaje
+                    }).ToList(),
+                PromedioVotos = promedioVoto,
+                VotoUsuario = votoUsuario
+            };
         }
 
         [HttpPost]
@@ -71,10 +85,8 @@ namespace BlazorPeliculas.Server.Controllers
             }
 
             if (pelicula.PeliculasActor is not null)
-            {
                 for (int i = 0; i < pelicula.PeliculasActor.Count; i++)
                     pelicula.PeliculasActor[i].Orden = i + 1;
-            }
 
             context.Add(pelicula);
             await context.SaveChangesAsync();

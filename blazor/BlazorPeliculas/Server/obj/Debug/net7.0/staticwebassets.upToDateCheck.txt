@@ -1,3 +1,4 @@
 wwwroot\peliculas\dc403e62-2ef6-48c2-8268-6322eefcfcd1.jpg
 wwwroot\personas\33ecba26-175c-42eb-8f19-684586358eeb.jpg
 wwwroot\personas\50354236-8269-4401-9e4e-346dbb5819e1.jpg
+wwwroot\peliculas\70a22813-f45e-4387-89e2-1a64cd1825e0.jpg
