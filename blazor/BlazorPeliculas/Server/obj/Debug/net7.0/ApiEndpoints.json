@@ -47,6 +47,48 @@
   },
   {
     "ContainingType": "BlazorPeliculas.Server.Controllers.ActoresController",
+    "Method": "Put",
+    "RelativePath": "api/Actores",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "actor",
+        "Type": "BlazorPeliculas.Shared.Entidades.Actor",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BlazorPeliculas.Server.Controllers.ActoresController",
+    "Method": "Get",
+    "RelativePath": "api/Actores/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BlazorPeliculas.Shared.Entidades.Actor",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BlazorPeliculas.Server.Controllers.ActoresController",
     "Method": "Get",
     "RelativePath": "api/Actores/buscar/{textoBusqueda}",
     "HttpMethod": "GET",
@@ -207,6 +249,22 @@
   },
   {
     "ContainingType": "BlazorPeliculas.Server.Controllers.PeliculasController",
+    "Method": "Put",
+    "RelativePath": "api/peliculas",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pelicula",
+        "Type": "BlazorPeliculas.Shared.Entidades.Pelicula",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BlazorPeliculas.Server.Controllers.PeliculasController",
     "Method": "Get",
     "RelativePath": "api/peliculas/{id}",
     "HttpMethod": "GET",
@@ -222,6 +280,32 @@
     "ReturnTypes": [
       {
         "Type": "BlazorPeliculas.Shared.DTOs.PeliculaVisualizarDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BlazorPeliculas.Server.Controllers.PeliculasController",
+    "Method": "PutGet",
+    "RelativePath": "api/peliculas/actualizar/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BlazorPeliculas.Shared.DTOs.PeliculaActualizacionDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",

@@ -1,36 +1,67 @@
 ﻿@page "/peliculas/editar/{PeliculaId:int}"
+@using System.Net
+@inject IRepositorio repositorio
+@inject NavigationManager navigationManager
+@inject SweetAlertService swal
 
 <h3>Editar Película</h3>
 
-<FormularioPeliculas Pelicula="Pelicula" OnValidSubmit="Editar" GenerosNoSeleccionados="GenerosNoSeleccionados" GenerosSeleccionados="GenerosSeleccionados">
-</FormularioPeliculas>
+@if (Pelicula is null)
+{
+    <p><em>Cargando...</em></p>
+}
+else
+{
+    <FormularioPeliculas Pelicula="Pelicula" OnValidSubmit="Editar" GenerosNoSeleccionados="GenerosNoSeleccionados" GenerosSeleccionados="GenerosSeleccionados" ActoresSeleccionados="ActoresSeleccionados">
+    </FormularioPeliculas>
+}
 
 @code {
     [Parameter]
     public int PeliculaId { get; set; }
-    Pelicula Pelicula = new Pelicula();
+    Pelicula? Pelicula;
     private List<Genero> GenerosNoSeleccionados = new List<Genero>();
     private List<Genero> GenerosSeleccionados = new List<Genero>();
+    private List<Actor> ActoresSeleccionados = new List<Actor>();
 
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
-        Pelicula = new Pelicula { Id = PeliculaId, Titulo = "Mi Película" };
+        var httpResponse = await repositorio.Get<PeliculaActualizacionDTO>($"api/peliculas/actualizar/{PeliculaId}");
 
-        GenerosNoSeleccionados = new List<Genero>
+        if (httpResponse.Error)
         {
-            new Genero { Id = 1, Nombre = "Comedia" },
-            new Genero { Id = 3, Nombre = "Acción" },
-            new Genero { Id = 4, Nombre = "Sci-Fi" }
-        };
-
-        GenerosSeleccionados=new List<Genero>
+            if (httpResponse.HttpResponseMessage.StatusCode == HttpStatusCode.NotFound)
+            {
+                navigationManager.NavigateTo("/");
+            }
+            else
+            {
+                var mensajeError = await httpResponse.ObtenerMensajeError();
+                await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
+            }
+        }
+        else
         {
-            new Genero { Id = 2, Nombre = "Drama" }
-        };
+            var modelo = httpResponse.Response!;
+            ActoresSeleccionados = modelo.Actores;
+            GenerosSeleccionados = modelo.GenerosSeleccionados;
+            GenerosNoSeleccionados = modelo.GenerosNoSeleccionados;
+            Pelicula = modelo.Pelicula;
+        }
     }
 
-    private void Editar()
+    private async Task Editar()
     {
-        Console.WriteLine("Editando pelóquila...(BuaaaAAAHHH!!!!)");
+        var respuestaHttp = await repositorio.Put("api/peliculas", Pelicula);
+
+        if (respuestaHttp.Error)
+        {
+            var mensajeError = await respuestaHttp.ObtenerMensajeError();
+            await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
+        }
+        else
+        {
+            navigationManager.NavigateTo($"pelicula/{PeliculaId}");
+        }
     }
 }

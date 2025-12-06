@@ -1,4 +1,5 @@
-﻿using BlazorPeliculas.Server.Helpers;
+﻿using AutoMapper;
+using BlazorPeliculas.Server.Helpers;
 using BlazorPeliculas.Shared.Entidades;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -11,16 +12,29 @@ namespace BlazorPeliculas.Server.Controllers
     {
         private readonly ApplicationDbContext context;
         private readonly IAlmacenadorArchivos almacenadorArchivos;
+        private readonly IMapper mapper;
         private readonly string contenedor = "personas";
 
-        public ActoresController(ApplicationDbContext context, IAlmacenadorArchivos almacenadorArchivos)
+        public ActoresController(ApplicationDbContext context, IAlmacenadorArchivos almacenadorArchivos, IMapper mapper)
         {
             this.context = context;
             this.almacenadorArchivos = almacenadorArchivos;
+            this.mapper = mapper;
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Actor>>> Get() => await context.Actores.ToListAsync();
+
+        [HttpGet("{id:int}")]
+        public async Task<ActionResult<Actor>> Get(int id)
+        {
+            var actor = await context.Actores
+                .FirstOrDefaultAsync(actor => actor.Id == id);
+
+            if (actor is null) return NotFound();
+
+            return actor;
+        }
 
         [HttpGet("buscar/{textoBusqueda}")]
         public async Task<ActionResult<List<Actor>>> Get(string textoBusqueda)
@@ -47,6 +61,25 @@ namespace BlazorPeliculas.Server.Controllers
             context.Add(actor);
             await context.SaveChangesAsync();
             return actor.Id;
+        }
+
+        [HttpPut]
+        public async Task<ActionResult> Put(Actor actor)
+        {
+            var actorDB = await context.Actores.FirstOrDefaultAsync(a => a.Id == actor.Id);
+
+            if (actorDB is null) return NotFound();
+
+            actorDB = mapper.Map(actor, actorDB);
+
+            if(!string.IsNullOrWhiteSpace(actor.Foto))
+            {
+                var fotoActor = Convert.FromBase64String(actor.Foto);
+                actorDB.Foto = await almacenadorArchivos.EditarArchivo(fotoActor, ".jpg", contenedor, actorDB.Foto!);
+            }
+
+            await context.SaveChangesAsync();
+            return NoContent();
         }
     }
 }

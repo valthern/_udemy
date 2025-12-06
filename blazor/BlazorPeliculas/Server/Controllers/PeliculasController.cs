@@ -1,4 +1,5 @@
-﻿using BlazorPeliculas.Server.Helpers;
+﻿using AutoMapper;
+using BlazorPeliculas.Server.Helpers;
 using BlazorPeliculas.Shared.DTOs;
 using BlazorPeliculas.Shared.Entidades;
 using Microsoft.AspNetCore.Mvc;
@@ -12,12 +13,14 @@ namespace BlazorPeliculas.Server.Controllers
     {
         private readonly ApplicationDbContext context;
         private readonly IAlmacenadorArchivos almacenadorArchivos;
+        private readonly IMapper mapper;
         private readonly string contenedor = "peliculas";
 
-        public PeliculasController(ApplicationDbContext context, IAlmacenadorArchivos almacenadorArchivos)
+        public PeliculasController(ApplicationDbContext context, IAlmacenadorArchivos almacenadorArchivos, IMapper mapper)
         {
             this.context = context;
             this.almacenadorArchivos = almacenadorArchivos;
+            this.mapper = mapper;
         }
 
         [HttpGet]
@@ -75,6 +78,27 @@ namespace BlazorPeliculas.Server.Controllers
             };
         }
 
+        [HttpGet("actualizar/{id:int}")]
+        public async Task<ActionResult<PeliculaActualizacionDTO>> PutGet(int id)
+        {
+            var peliculaActionResult = await Get(id);
+            if (peliculaActionResult.Result is NotFoundResult) return NotFound();
+
+            var peliculaVisualizarDTO = peliculaActionResult.Value;
+            var generosSeleccionadosIds = peliculaVisualizarDTO!.Generos.Select(g => g.Id).ToList();
+            var generosNoSeleccionados = await context.Generos
+                .Where(g => !generosSeleccionadosIds.Contains(g.Id))
+                .ToListAsync();
+
+            return new PeliculaActualizacionDTO
+            {
+                Pelicula = peliculaVisualizarDTO.Pelicula,
+                Actores = peliculaVisualizarDTO.Actores,
+                GenerosSeleccionados = peliculaVisualizarDTO.Generos,
+                GenerosNoSeleccionados = generosNoSeleccionados
+            };
+        }
+
         [HttpPost]
         public async Task<ActionResult<int>> Post(Pelicula pelicula)
         {
@@ -84,13 +108,42 @@ namespace BlazorPeliculas.Server.Controllers
                 pelicula.Poster = await almacenadorArchivos.GuardarArchivo(poster, ".jpg", contenedor);
             }
 
-            if (pelicula.PeliculasActor is not null)
-                for (int i = 0; i < pelicula.PeliculasActor.Count; i++)
-                    pelicula.PeliculasActor[i].Orden = i + 1;
+            EscribirOrdenActores(pelicula);
 
             context.Add(pelicula);
             await context.SaveChangesAsync();
             return pelicula.Id;
+        }
+
+        private static void EscribirOrdenActores(Pelicula pelicula)
+        {
+            if (pelicula.PeliculasActor is not null)
+                for (int i = 0; i < pelicula.PeliculasActor.Count; i++)
+                    pelicula.PeliculasActor[i].Orden = i + 1;
+        }
+
+        [HttpPut]
+        public async Task<ActionResult> Put(Pelicula pelicula)
+        {
+            var peliculaDB = await context.Peliculas
+                .Include(p => p.GenerosPelicula)
+                .Include(p => p.PeliculasActor)
+                .FirstOrDefaultAsync(p => p.Id == pelicula.Id);
+
+            if (peliculaDB is null) return NotFound();
+
+            peliculaDB = mapper.Map(pelicula, peliculaDB);
+
+            if (!string.IsNullOrWhiteSpace(pelicula.Poster))
+            {
+                var poster = Convert.FromBase64String(pelicula.Poster);
+                peliculaDB.Poster = await almacenadorArchivos.EditarArchivo(poster, ".jpg", contenedor, peliculaDB.Poster!);
+            }
+
+            EscribirOrdenActores(peliculaDB);
+
+            await context.SaveChangesAsync();
+            return NoContent();
         }
     }
 }

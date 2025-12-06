@@ -22,7 +22,7 @@
                     <tr>
                         <td>
                             <a href="/generos/editar/@item.Id" class="btn btn-success">Editar</a>
-                            <button class="btn btn-danger">Borrar</button>
+                            <button class="btn btn-danger" @onclick=@(() => Borrar(item))>Borrar</button>
                         </td>
                         <td>
                             @item.Nombre
@@ -41,5 +41,10 @@
     {
         var respuestaHTTP = await repositorio.Get<List<Genero>>("api/generos");
         Generos = respuestaHTTP.Response!;
+    }
+
+    private async Task Borrar(Genero genero)
+    {
+
     }
 }

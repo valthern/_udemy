@@ -3,7 +3,7 @@ using BlazorPeliculas.Server.Helpers;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
-
+ 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -20,6 +20,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(opciones => opciones.UseSqlS
 
 builder.Services.AddTransient<IAlmacenadorArchivos, AlmacenadorArchivosLocal>();
 builder.Services.AddHttpContextAccessor();
+
+builder.Services.AddAutoMapper(typeof(Program));
 
 var app = builder.Build();
 
