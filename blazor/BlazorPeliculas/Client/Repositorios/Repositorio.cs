@@ -23,7 +23,7 @@ namespace BlazorPeliculas.Client.Repositorios
         {
             var respuestaHTTP = await httpClient.GetAsync(url);
 
-            if(respuestaHTTP.IsSuccessStatusCode)
+            if (respuestaHTTP.IsSuccessStatusCode)
             {
                 var respuesta = await DeserializarRespuesta<T>(respuestaHTTP, OpcionesPorDefectoJSON);
                 return new HttpResponseWrapper<T>(respuesta, error: false, respuestaHTTP);
@@ -50,18 +50,19 @@ namespace BlazorPeliculas.Client.Repositorios
 
         public async Task<HttpResponseWrapper<object>> Delete(string url)
         {
-            throw new NotImplementedException();
+            var responseHttp = await httpClient.DeleteAsync(url);
+            return new HttpResponseWrapper<object>(null, !responseHttp.IsSuccessStatusCode, responseHttp);
         }
 
-        public async Task<HttpResponseWrapper<TResponse>> Post<T,TResponse>(string url, T enviar)
+        public async Task<HttpResponseWrapper<TResponse>> Post<T, TResponse>(string url, T enviar)
         {
             var enviarJSON = JsonSerializer.Serialize(enviar);
             var enviarContent = new StringContent(enviarJSON, Encoding.UTF8, "application/json");
             var responseHttp = await httpClient.PostAsync(url, enviarContent);
 
-            if(responseHttp.IsSuccessStatusCode)
+            if (responseHttp.IsSuccessStatusCode)
             {
-                var response =await DeserializarRespuesta<TResponse>(responseHttp, OpcionesPorDefectoJSON);
+                var response = await DeserializarRespuesta<TResponse>(responseHttp, OpcionesPorDefectoJSON);
                 return new HttpResponseWrapper<TResponse>(response, error: false, responseHttp);
             }
 

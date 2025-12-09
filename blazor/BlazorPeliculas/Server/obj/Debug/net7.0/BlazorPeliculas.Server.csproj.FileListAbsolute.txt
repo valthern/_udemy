@@ -216,3 +216,6 @@ C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Server\obj\Debug\ne
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Server\obj\Debug\net7.0\ref\BlazorPeliculas.Server.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\AutoMapper.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\System.Text.Encodings.Web.dll
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\runtimes\browser\lib\net7.0\System.Text.Encodings.Web.dll

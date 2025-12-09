@@ -1,5 +1,8 @@
 ﻿@page "/generos"
+@using System.Net
 @inject IRepositorio repositorio
+@inject NavigationManager navigationManager
+@inject SweetAlertService swal
 
 <h3>Índice Géneros</h3>
 
@@ -39,12 +42,33 @@
 
     protected async override Task OnInitializedAsync()
     {
+        await Cargar();
+    }
+
+    private async Task Cargar()
+    {
         var respuestaHTTP = await repositorio.Get<List<Genero>>("api/generos");
-        Generos = respuestaHTTP.Response!;
+        Generos = respuestaHTTP.Response!;        
     }
 
     private async Task Borrar(Genero genero)
     {
+        var responseHttp = await repositorio.Delete($"api/generos/{genero.Id}");
 
+        if (responseHttp.Error)
+        {
+            if (responseHttp.HttpResponseMessage.StatusCode == HttpStatusCode.NotFound)
+            
+                navigationManager.NavigateTo("/");
+            else
+            {
+                var mensajeError = await responseHttp.ObtenerMensajeError();
+                await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
+            }
+        }
+        else
+        {
+            await Cargar();
+        }
     }
 }
