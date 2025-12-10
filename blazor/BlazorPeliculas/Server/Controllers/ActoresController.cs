@@ -26,7 +26,12 @@ namespace BlazorPeliculas.Server.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Actor>>> Get([FromQuery] PaginacionDTO paginacion)
         {
-            return await context.Actores.ToListAsync();
+            var queryable = context.Actores.AsQueryable();
+            await HttpContext.InsertarParametrosPaginacionEnRespuesta(queryable, paginacion.CantidadRegistros);
+            return await queryable
+                .OrderBy(a => a.Nombre)
+                .Paginar(paginacion)
+                .ToListAsync();
         }
 
         [HttpGet("{id:int}")]
@@ -43,7 +48,7 @@ namespace BlazorPeliculas.Server.Controllers
         [HttpGet("buscar/{textoBusqueda}")]
         public async Task<ActionResult<List<Actor>>> Get(string textoBusqueda)
         {
-            if(string.IsNullOrWhiteSpace(textoBusqueda)) return new List<Actor>();
+            if (string.IsNullOrWhiteSpace(textoBusqueda)) return new List<Actor>();
 
             textoBusqueda = textoBusqueda.ToLower();
 
@@ -76,7 +81,7 @@ namespace BlazorPeliculas.Server.Controllers
 
             actorDB = mapper.Map(actor, actorDB);
 
-            if(!string.IsNullOrWhiteSpace(actor.Foto))
+            if (!string.IsNullOrWhiteSpace(actor.Foto))
             {
                 var fotoActor = Convert.FromBase64String(actor.Foto);
                 actorDB.Foto = await almacenadorArchivos.EditarArchivo(fotoActor, ".jpg", contenedor, actorDB.Foto!);
@@ -89,7 +94,7 @@ namespace BlazorPeliculas.Server.Controllers
         [HttpDelete("{id:int}")]
         public async Task<ActionResult> Delete(int id)
         {
-            var actor=await context.Actores.FirstOrDefaultAsync(a => a.Id == id);
+            var actor = await context.Actores.FirstOrDefaultAsync(a => a.Id == id);
 
             if (actor is null) return NotFound();
 
