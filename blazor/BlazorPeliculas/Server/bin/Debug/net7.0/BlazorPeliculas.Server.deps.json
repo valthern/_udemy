@@ -98,11 +98,11 @@
           }
         }
       },
-      "Markdig/0.43.0": {
+      "Markdig/0.44.0": {
         "runtime": {
           "lib/netstandard2.1/Markdig.dll": {
-            "assemblyVersion": "0.43.0.0",
-            "fileVersion": "0.43.0.0"
+            "assemblyVersion": "0.44.0.0",
+            "fileVersion": "0.44.0.0"
           }
         }
       },
@@ -133,6 +133,18 @@
         },
         "runtime": {
           "lib/net7.0/Microsoft.AspNetCore.Components.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.2024.26907"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Components.Authorization/7.0.20": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authorization": "7.0.20",
+          "Microsoft.AspNetCore.Components": "7.0.20"
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.AspNetCore.Components.Authorization.dll": {
             "assemblyVersion": "7.0.0.0",
             "fileVersion": "7.0.2024.26907"
           }
@@ -170,6 +182,18 @@
         },
         "runtime": {
           "lib/net7.0/Microsoft.AspNetCore.Components.WebAssembly.dll": {
+            "assemblyVersion": "7.0.20.0",
+            "fileVersion": "7.0.2024.26907"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Components.WebAssembly.Authentication/7.0.20": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Authorization": "7.0.20",
+          "Microsoft.AspNetCore.Components.Web": "7.0.20"
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll": {
             "assemblyVersion": "7.0.20.0",
             "fileVersion": "7.0.2024.26907"
           }
@@ -660,9 +684,10 @@
           "BlazorPeliculas.Shared": "1.0.0",
           "Blazored.Typeahead": "4.7.0",
           "CurrieTechnologies.Razor.SweetAlert2": "5.6.0",
-          "Markdig": "0.43.0",
+          "Markdig": "0.44.0",
           "MathNet.Numerics": "5.0.0",
-          "Microsoft.AspNetCore.Components.WebAssembly": "7.0.20"
+          "Microsoft.AspNetCore.Components.WebAssembly": "7.0.20",
+          "Microsoft.AspNetCore.Components.WebAssembly.Authentication": "7.0.20"
         },
         "runtime": {
           "BlazorPeliculas.Client.dll": {
@@ -736,12 +761,12 @@
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
     },
-    "Markdig/0.43.0": {
+    "Markdig/0.44.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-tbP3Y/GYC5pIUWXw6Iqf+R5CwBGA4VJswnlgS2x3TgcHoH4IlnGVmL7hfA1sXkZoCPm/4mhzS8cJUkWhQthaPg==",
-      "path": "markdig/0.43.0",
-      "hashPath": "markdig.0.43.0.nupkg.sha512"
+      "sha512": "sha512-X+CYMjcUnh/yO24wOSQxVFLiGqWrrtXJ5M7toHiM1Zk4Fg9UMLN5fkaq6FSOWH+mIprsHHgDMlq3MJhmrXalhg==",
+      "path": "markdig/0.44.0",
+      "hashPath": "markdig.0.44.0.nupkg.sha512"
     },
     "MathNet.Numerics/5.0.0": {
       "type": "package",
@@ -764,6 +789,13 @@
       "path": "microsoft.aspnetcore.components/7.0.20",
       "hashPath": "microsoft.aspnetcore.components.7.0.20.nupkg.sha512"
     },
+    "Microsoft.AspNetCore.Components.Authorization/7.0.20": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iycZQbCA3msAfCN8nDNwBcELSzwULDVikkLNnaQ/dJlet/6m58zrwg6ZpV+GVonQr9GJKa/FxjEo8BF12dLpyQ==",
+      "path": "microsoft.aspnetcore.components.authorization/7.0.20",
+      "hashPath": "microsoft.aspnetcore.components.authorization.7.0.20.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Components.Forms/7.0.20": {
       "type": "package",
       "serviceable": true,
@@ -784,6 +816,13 @@
       "sha512": "sha512-97QImkSvYQcUPu6vxysFvRqaX/t2/esckzjmnP6EgES+CrhDZZO8ufsfGebGUVz7GLTJJ1/LbOhLM5zPV9kkxg==",
       "path": "microsoft.aspnetcore.components.webassembly/7.0.20",
       "hashPath": "microsoft.aspnetcore.components.webassembly.7.0.20.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Components.WebAssembly.Authentication/7.0.20": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GlGOTutUn4+Aun0PsVpjTwnTaGlHaXHyB67Pd4eBsT9nkKVGQvQnyNwlnpzJaLlMMoZf8oTIg+6wwa8QQFWSXg==",
+      "path": "microsoft.aspnetcore.components.webassembly.authentication/7.0.20",
+      "hashPath": "microsoft.aspnetcore.components.webassembly.authentication.7.0.20.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Components.WebAssembly.Server/7.0.20": {
       "type": "package",
