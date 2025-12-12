@@ -1,23 +1,11 @@
 ﻿<nav>
     <ul class="pagination justify-content-center">
-        @foreach(var enlace in Enlaces)
+        @foreach (var enlace in Enlaces)
         {
-            <li @onclick=@(() => PaginaSeleccionadaInterno(enlace)) style="cursor: pointer" class="page-item @(enlace.Habilitada?null:"disabled") @(enlace.Activa?"active":null)">
+            <li @onclick=@(() => PaginaSeleccionadaInterno(enlace)) style="cursor: pointer" class="page-item @(enlace.Habilitada ? null : "disabled") @(enlace.Activa ? "active" : null)">
                 <a class="page-link">@enlace.Texto</a>
             </li>
         }
-
-        <li class="page-item disabled">
-            <a class="page-link">Previous</a>
-        </li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item active" aria-current="page">
-            <a class="page-link" href="#">2</a>
-        </li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item">
-            <a class="page-link" href="#">Next</a>
-        </li>
     </ul>
 </nav>
 
@@ -27,6 +15,13 @@
     [Parameter] public int Radio { get; set; } = 3;
     [Parameter] public EventCallback<int> PaginaSeleccionada { get; set; }
     List<PaginasModel> Enlaces = new List<PaginasModel>();
+
+    private async Task PaginaSeleccionadaInterno(PaginasModel paginaModel)
+    {
+        if (paginaModel.Pagina == PaginaActual || !paginaModel.Habilitada) return;
+
+        await PaginaSeleccionada.InvokeAsync(paginaModel.Pagina);
+    }
 
     protected override void OnParametersSet()
     {

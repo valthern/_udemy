@@ -375,6 +375,72 @@
     ]
   },
   {
+    "ContainingType": "BlazorPeliculas.Server.Controllers.PeliculasController",
+    "Method": "Get",
+    "RelativePath": "api/peliculas/filtrar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "CantidadRegistros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PaginacionDTO.Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PaginacionDTO.CantidadRegistros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Titulo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "GeneroId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "EnCartelera",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Estrenos",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "MasVotadas",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BlazorPeliculas.Shared.Entidades.Pelicula, BlazorPeliculas.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "BlazorPeliculas.Server.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

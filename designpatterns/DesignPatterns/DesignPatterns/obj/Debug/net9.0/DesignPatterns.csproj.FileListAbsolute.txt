@@ -1,0 +1,15 @@
+C:\Users\magno\source\ejemplos\_udemy\designpatterns\DesignPatterns\DesignPatterns\bin\Debug\net9.0\DesignPatterns.exe
+C:\Users\magno\source\ejemplos\_udemy\designpatterns\DesignPatterns\DesignPatterns\bin\Debug\net9.0\DesignPatterns.deps.json
+C:\Users\magno\source\ejemplos\_udemy\designpatterns\DesignPatterns\DesignPatterns\bin\Debug\net9.0\DesignPatterns.runtimeconfig.json
+C:\Users\magno\source\ejemplos\_udemy\designpatterns\DesignPatterns\DesignPatterns\bin\Debug\net9.0\DesignPatterns.dll
+C:\Users\magno\source\ejemplos\_udemy\designpatterns\DesignPatterns\DesignPatterns\bin\Debug\net9.0\DesignPatterns.pdb
+C:\Users\magno\source\ejemplos\_udemy\designpatterns\DesignPatterns\DesignPatterns\obj\Debug\net9.0\DesignPatterns.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\magno\source\ejemplos\_udemy\designpatterns\DesignPatterns\DesignPatterns\obj\Debug\net9.0\DesignPatterns.AssemblyInfoInputs.cache
+C:\Users\magno\source\ejemplos\_udemy\designpatterns\DesignPatterns\DesignPatterns\obj\Debug\net9.0\DesignPatterns.AssemblyInfo.cs
+C:\Users\magno\source\ejemplos\_udemy\designpatterns\DesignPatterns\DesignPatterns\obj\Debug\net9.0\DesignPatterns.csproj.CoreCompileInputs.cache
+C:\Users\magno\source\ejemplos\_udemy\designpatterns\DesignPatterns\DesignPatterns\obj\Debug\net9.0\DesignPatterns.sourcelink.json
+C:\Users\magno\source\ejemplos\_udemy\designpatterns\DesignPatterns\DesignPatterns\obj\Debug\net9.0\DesignPatterns.dll
+C:\Users\magno\source\ejemplos\_udemy\designpatterns\DesignPatterns\DesignPatterns\obj\Debug\net9.0\refint\DesignPatterns.dll
+C:\Users\magno\source\ejemplos\_udemy\designpatterns\DesignPatterns\DesignPatterns\obj\Debug\net9.0\DesignPatterns.pdb
+C:\Users\magno\source\ejemplos\_udemy\designpatterns\DesignPatterns\DesignPatterns\obj\Debug\net9.0\DesignPatterns.genruntimeconfig.cache
+C:\Users\magno\source\ejemplos\_udemy\designpatterns\DesignPatterns\DesignPatterns\obj\Debug\net9.0\ref\DesignPatterns.dll
