@@ -25,7 +25,7 @@ namespace BlazorPeliculas.Client.Auth
                     //new(ClaimTypes.Role,"admin")
                 },
                 authenticationType: "prueba");
-            return await Task.FromResult(new AuthenticationState(new ClaimsPrincipal(usuarioOmar)));
+            return await Task.FromResult(new AuthenticationState(new ClaimsPrincipal(anonimo)));
         }
 
         private int CalcularEdad(DateTime nacimiento, DateTime hoy) => hoy.AddYears(-nacimiento.Year) < nacimiento ? hoy.Year - nacimiento.Year - 1 : hoy.Year - nacimiento.Year;

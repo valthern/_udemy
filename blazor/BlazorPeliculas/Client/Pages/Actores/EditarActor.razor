@@ -1,8 +1,10 @@
 ﻿@page "/actores/editar/{ActorId:int}"
 @using System.Net
+@using Microsoft.AspNetCore.Authorization
 @inject NavigationManager navigationManager
 @inject IRepositorio repositorio
 @inject SweetAlertService swal
+@attribute [Authorize(Roles = "admin")]
 
 <h3>Editar Actor</h3>
 
