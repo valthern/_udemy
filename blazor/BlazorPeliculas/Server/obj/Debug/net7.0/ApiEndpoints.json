@@ -150,7 +150,7 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "BlazorPeliculas.Shared.DTOs.UserInfo",
+        "Type": "BlazorPeliculas.Shared.DTOs.UserInfoDTO",
         "IsRequired": true
       }
     ],
@@ -169,14 +169,14 @@
   {
     "ContainingType": "BlazorPeliculas.Server.Controllers.CuentasController",
     "Method": "Login",
-    "RelativePath": "api/cuentas/Login",
+    "RelativePath": "api/cuentas/login",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "model",
-        "Type": "BlazorPeliculas.Shared.DTOs.UserInfo",
+        "Type": "BlazorPeliculas.Shared.DTOs.UserInfoDTO",
         "IsRequired": true
       }
     ],

@@ -227,3 +227,4 @@ C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\ne
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculas\Server\bin\Debug\net7.0\Microsoft.Bcl.TimeProvider.dll

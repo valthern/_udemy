@@ -24,7 +24,7 @@ namespace BlazorPeliculas.Server.Controllers
         }
 
         [HttpPost("crear")]
-        public async Task<ActionResult<UserTokenDTO>> CreateUser([FromBody] UserInfo model)
+        public async Task<ActionResult<UserTokenDTO>> CreateUser([FromBody] UserInfoDTO model)
         {
             var usuario = new IdentityUser { UserName = model.Email, Email = model.Email };
             var resultado = await userManager.CreateAsync(usuario, model.Password);
@@ -35,8 +35,8 @@ namespace BlazorPeliculas.Server.Controllers
                 return BadRequest(resultado.Errors.First());
         }
 
-        [HttpPost("Login")]
-        public async Task<ActionResult<UserTokenDTO>> Login([FromBody] UserInfo model)
+        [HttpPost("login")]
+        public async Task<ActionResult<UserTokenDTO>> Login([FromBody] UserInfoDTO model)
         {
             var resultado = await signInManager.PasswordSignInAsync(model.Email, model.Password, isPersistent: false, lockoutOnFailure: false);
 
@@ -46,9 +46,9 @@ namespace BlazorPeliculas.Server.Controllers
                 return BadRequest("Intento de login fallido");
         }
 
-        private UserTokenDTO BuildToken(UserInfo userInfo)
+        private UserTokenDTO BuildToken(UserInfoDTO userInfo)
         {
-            var claims = new List<Claim>()
+            List<Claim> claims = new()
             {
                 new(ClaimTypes.Name, userInfo.Email),
                 new("miValor","Lo que se me hinche")

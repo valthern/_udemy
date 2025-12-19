@@ -1,0 +1,13 @@
+﻿@page "/Registro"
+
+<h3>Registro</h3>
+
+<EditForm Model="userInfo" OnValidSubmit="CrearUsuario">
+    <DataAnnotationsValidator />
+
+
+</EditForm>
+
+@code {
+    private UserInfoDTO userInfo = new();
+}

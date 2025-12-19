@@ -46,6 +46,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWN0b3Jlc1xJbmRpY2VBY3RvcmVzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculas/Client/Pages/Auth/Registro.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxSZWdpc3Ryby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculas/Client/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -108,6 +112,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculas/Client/Shared/EjemploTextbox.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEVqZW1wbG9UZXh0Ym94LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculas/Client/Shared/EnlacesAuth.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEVubGFjZXNBdXRoLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculas/Client/Shared/InputImg.razor]

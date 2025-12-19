@@ -19,5 +19,9 @@ void ConfigureServices(IServiceCollection services)
     services.AddScoped<IRepositorio, Repositorio>();
     services.AddSweetAlert2();
     services.AddAuthorizationCore();
-    services.AddScoped<AuthenticationStateProvider, ProveedorAutenticacionPrueba>();
+    services.AddScoped<ProveedorAutenticacionJWT>();
+    services.AddScoped<AuthenticationStateProvider, ProveedorAutenticacionJWT>(proveedor =>
+        proveedor.GetRequiredService<ProveedorAutenticacionJWT>());
+    services.AddScoped<ILoginService, ProveedorAutenticacionJWT>(proveedor =>
+        proveedor.GetRequiredService<ProveedorAutenticacionJWT>());
 }

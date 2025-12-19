@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BlazorPeliculas.Shared.DTOs
 {
-    public class UserInfo
+    public class UserInfoDTO
     {
         [EmailAddress]
         public string Email { get; set; } = null!;

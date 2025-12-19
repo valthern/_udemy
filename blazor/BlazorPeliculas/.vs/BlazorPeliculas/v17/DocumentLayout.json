@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{236AC7CD-30E1-4098-A164-8949F318C86E}|Client\\BlazorPeliculas.Client.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\blazor\\blazorpeliculas\\client\\auth\\proveedorautenticacionjwt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{236AC7CD-30E1-4098-A164-8949F318C86E}|Client\\BlazorPeliculas.Client.csproj|solutionrelative:client\\auth\\proveedorautenticacionjwt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{236AC7CD-30E1-4098-A164-8949F318C86E}|Client\\BlazorPeliculas.Client.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\blazor\\blazorpeliculas\\client\\pages\\auth\\registro.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{236AC7CD-30E1-4098-A164-8949F318C86E}|Client\\BlazorPeliculas.Client.csproj|solutionrelative:client\\pages\\auth\\registro.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{236AC7CD-30E1-4098-A164-8949F318C86E}|Client\\BlazorPeliculas.Client.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\blazor\\blazorpeliculas\\client\\auth\\proveedorautenticacionprueba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{236AC7CD-30E1-4098-A164-8949F318C86E}|Client\\BlazorPeliculas.Client.csproj|solutionrelative:client\\auth\\proveedorautenticacionprueba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{236AC7CD-30E1-4098-A164-8949F318C86E}|Client\\BlazorPeliculas.Client.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\blazor\\blazorpeliculas\\client\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{236AC7CD-30E1-4098-A164-8949F318C86E}|Client\\BlazorPeliculas.Client.csproj|solutionrelative:client\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{236AC7CD-30E1-4098-A164-8949F318C86E}|Client\\BlazorPeliculas.Client.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\blazor\\blazorpeliculas\\client\\helpers\\ijsruntimeextensionmethods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{236AC7CD-30E1-4098-A164-8949F318C86E}|Client\\BlazorPeliculas.Client.csproj|solutionrelative:client\\helpers\\ijsruntimeextensionmethods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{236AC7CD-30E1-4098-A164-8949F318C86E}|Client\\BlazorPeliculas.Client.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\blazor\\blazorpeliculas\\client\\shared\\enlacesauth.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{236AC7CD-30E1-4098-A164-8949F318C86E}|Client\\BlazorPeliculas.Client.csproj|solutionrelative:client\\shared\\enlacesauth.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,34 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProveedorAutenticacionPrueba.cs",
-              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\Client\\Auth\\ProveedorAutenticacionPrueba.cs",
-              "RelativeDocumentMoniker": "Client\\Auth\\ProveedorAutenticacionPrueba.cs",
-              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\Client\\Auth\\ProveedorAutenticacionPrueba.cs",
-              "RelativeToolTip": "Client\\Auth\\ProveedorAutenticacionPrueba.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T00:18:11.404Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IJSRuntimeExtensionMethods.cs",
-              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\Client\\Helpers\\IJSRuntimeExtensionMethods.cs",
-              "RelativeDocumentMoniker": "Client\\Helpers\\IJSRuntimeExtensionMethods.cs",
-              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\Client\\Helpers\\IJSRuntimeExtensionMethods.cs",
-              "RelativeToolTip": "Client\\Helpers\\IJSRuntimeExtensionMethods.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T23:48:03.163Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -57,14 +31,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ProveedorAutenticacionJWT.cs",
-              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\Client\\Auth\\ProveedorAutenticacionJWT.cs",
-              "RelativeDocumentMoniker": "Client\\Auth\\ProveedorAutenticacionJWT.cs",
-              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\Client\\Auth\\ProveedorAutenticacionJWT.cs",
-              "RelativeToolTip": "Client\\Auth\\ProveedorAutenticacionJWT.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T23:40:11.964Z",
+              "Title": "Registro.razor",
+              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\Client\\Pages\\Auth\\Registro.razor",
+              "RelativeDocumentMoniker": "Client\\Pages\\Auth\\Registro.razor",
+              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\Client\\Pages\\Auth\\Registro.razor",
+              "RelativeToolTip": "Client\\Pages\\Auth\\Registro.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-19T00:00:57.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\Client\\Shared\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Client\\Shared\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\Client\\Shared\\MainLayout.razor",
+              "RelativeToolTip": "Client\\Shared\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-18T23:55:49.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EnlacesAuth.razor",
+              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\Client\\Shared\\EnlacesAuth.razor",
+              "RelativeDocumentMoniker": "Client\\Shared\\EnlacesAuth.razor",
+              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\Client\\Shared\\EnlacesAuth.razor",
+              "RelativeToolTip": "Client\\Shared\\EnlacesAuth.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-18T23:49:20.215Z",
               "EditorCaption": ""
             }
           ]
