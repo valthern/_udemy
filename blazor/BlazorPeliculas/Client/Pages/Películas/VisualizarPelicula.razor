@@ -16,7 +16,7 @@ else
         <a class="me-2 badge bg-primary rounded-pill text-decoration-none" href="peliculas/buscar?generoid=@genero.Id">@genero.Nombre</a>
     }
 
-    <span>| @modelo.Pelicula.Lanzamiento!.Value.ToString("dd MMM yyyy") | Promedio: @modelo.PromedioVotos.ToString("0.#")/5 | Tu voto: @modelo.VotoUsuario.ToString()</span>
+    <span>| @modelo.Pelicula.Lanzamiento!.Value.ToString("dd MMM yyyy") | Promedio: @modelo.PromedioVotos.ToString("0.#")/5 | Tu voto: <Rating MaximoPuntaje="5" PuntajeSeleccionado="modelo.VotoUsuario" OnRating="OnRating"></Rating></span>
 
     <div class="d-flex mt-2">
         <span style="display: inline-block;" class="me-2">
@@ -66,5 +66,20 @@ else
         }
         else
             modelo = respuestaHttp.Response;
+    }
+
+    private async Task OnRating(int votoSeleccionado)
+    {
+        modelo!.VotoUsuario = votoSeleccionado;
+        var votoPeliculaDTO = new VotoPeliculaDTO() { PeliculaId = PeliculaId, Voto = votoSeleccionado };
+        var respuestaHttp = await repositorio.Post("api/votos", votoPeliculaDTO);
+
+        if (respuestaHttp.Error)
+        {
+            var mensajeError = await respuestaHttp.ObtenerMensajeError();
+            await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
+        }
+        else
+            await swal.FireAsync("Exitoso", "Su voto ha sido recibido");
     }
 }

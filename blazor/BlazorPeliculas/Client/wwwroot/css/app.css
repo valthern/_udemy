@@ -156,3 +156,7 @@ a, .btn-link {
 .selector-multiple-botones button {
         margin: 5px;
 }
+
+.checked {
+    color: orange;
+}
