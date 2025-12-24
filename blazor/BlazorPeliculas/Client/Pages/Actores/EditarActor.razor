@@ -30,9 +30,7 @@ else
         if (respuestaHttp.Error)
         {
             if (respuestaHttp.HttpResponseMessage.StatusCode == HttpStatusCode.NotFound)
-            {
                 navigationManager.NavigateTo("actores");
-            }
             else
             {
                 var mensajeError = await respuestaHttp.ObtenerMensajeError();
@@ -40,9 +38,7 @@ else
             }
         }
         else
-        {
             Actor = respuestaHttp.Response!;
-        }
     }
 
     private async Task Editar()
@@ -55,8 +51,6 @@ else
             await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
         }
         else
-        {
             navigationManager.NavigateTo("actores");
-        }
     }
 }

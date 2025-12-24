@@ -1,5 +1,5 @@
+wwwroot\peliculas\8d074627-f737-493e-b813-fe7331f8d264.jpg
 wwwroot\peliculas\dc403e62-2ef6-48c2-8268-6322eefcfcd1.jpg
 wwwroot\personas\33ecba26-175c-42eb-8f19-684586358eeb.jpg
-wwwroot\personas\ceeba0ec-db0d-4575-9059-69fb9e3ea6cf.jpg
-wwwroot\peliculas\8d074627-f737-493e-b813-fe7331f8d264.jpg
 wwwroot\personas\6bb0fd5e-bbdf-479a-b36c-ee01275f24a4.jpg
+wwwroot\personas\ceeba0ec-db0d-4575-9059-69fb9e3ea6cf.jpg

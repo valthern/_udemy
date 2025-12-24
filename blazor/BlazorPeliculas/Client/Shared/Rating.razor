@@ -7,7 +7,7 @@
 @code {
     [Parameter] public int MaximoPuntaje { get; set; }
     [Parameter] public int PuntajeSeleccionado { get; set; }
-    [Parameter] public EventCallback OnRating { get; set; }
+    [Parameter] public EventCallback<int> OnRating { get; set; }
     private bool votado = false;
 
     private async Task OnClickHandle(int numeroEstrella)

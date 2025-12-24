@@ -75,7 +75,8 @@ namespace BlazorPeliculas.Server.Controllers
 
                 if(HttpContext.User.Identity!.IsAuthenticated)
                 {
-                    var usuario = await userManager.FindByEmailAsync(HttpContext.User.Identity!.Name!);
+                    var usuario = await userManager
+                        .FindByEmailAsync(HttpContext.User.Identity!.Name!);
 
                     if (usuario is null) return BadRequest("Usuario no encontrado");
 

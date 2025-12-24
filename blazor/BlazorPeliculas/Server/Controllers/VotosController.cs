@@ -28,7 +28,8 @@ namespace BlazorPeliculas.Server.Controllers
         [HttpPost]
         public async Task<ActionResult> Votar(VotoPeliculaDTO votoPeliculaDTO)
         {
-            var usuario = await userManager.FindByEmailAsync(HttpContext.User.Identity!.Name!);
+            var usuario = await userManager
+                .FindByEmailAsync(HttpContext.User.Identity!.Name!);
 
             if (usuario is null) return BadRequest("Usuario no encontrado");
 
