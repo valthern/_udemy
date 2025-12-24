@@ -98,6 +98,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVsw61jdWxhc1xWaXN1YWxpemFyUGVsaWN1bGEucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculas/Client/Pages/Usuarios/IndiceUsuarios.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXN1YXJpb3NcSW5kaWNlVXN1YXJpb3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculas/Client/Shared/BindAfterDemo.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEJpbmRBZnRlckRlbW8ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

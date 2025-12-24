@@ -133,7 +133,9 @@ namespace BlazorPeliculas.Server.Controllers
                         .Select(gp => gp.GeneroId)
                         .Contains(modelo.GeneroId));
 
-            // TODO: Sistema de votación
+            if (modelo.MasVotadas)
+                peliculasQueryable = peliculasQueryable
+                    .OrderByDescending(p => p.VotosPeliculas.Average(vp => vp.Voto));
 
             await HttpContext.InsertarParametrosPaginacionEnRespuesta(peliculasQueryable, modelo.CantidadRegistros);
             var peliculas = await peliculasQueryable
