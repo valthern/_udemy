@@ -11,8 +11,9 @@ using Microsoft.EntityFrameworkCore;
 namespace BlazorPeliculas.Server.Controllers
 {
     [ApiController]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-    [Route("api/peliculas")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "admin")]
+    //[Route("api/peliculas")]
+    [Route("api/[controller]")]
     public class PeliculasController : ControllerBase
     {
         private readonly ApplicationDbContext context;
@@ -21,7 +22,7 @@ namespace BlazorPeliculas.Server.Controllers
         private readonly UserManager<IdentityUser> userManager;
         private readonly string contenedor = "peliculas";
 
-        public PeliculasController(ApplicationDbContext context, IAlmacenadorArchivos almacenadorArchivos, IMapper mapper,UserManager<IdentityUser> userManager)
+        public PeliculasController(ApplicationDbContext context, IAlmacenadorArchivos almacenadorArchivos, IMapper mapper, UserManager<IdentityUser> userManager)
         {
             this.context = context;
             this.almacenadorArchivos = almacenadorArchivos;
@@ -73,7 +74,7 @@ namespace BlazorPeliculas.Server.Controllers
                     .Where(vp => vp.PeliculaId == id)
                     .AverageAsync(vp => vp.Voto);
 
-                if(HttpContext.User.Identity!.IsAuthenticated)
+                if (HttpContext.User.Identity!.IsAuthenticated)
                 {
                     var usuario = await userManager
                         .FindByEmailAsync(HttpContext.User.Identity!.Name!);

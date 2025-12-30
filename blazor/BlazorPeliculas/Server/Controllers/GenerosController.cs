@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 namespace BlazorPeliculas.Server.Controllers
 {
     [ApiController]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "admin")]
     [Route("api/[controller]")]
     public class GenerosController : ControllerBase
     {

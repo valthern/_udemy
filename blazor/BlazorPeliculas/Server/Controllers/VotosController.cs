@@ -11,7 +11,8 @@ namespace BlazorPeliculas.Server.Controllers
 {
     [ApiController]
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-    [Route("api/votos")]
+    //[Route("api/votos")]
+    [Route("api/[controller]")]
     public class VotosController : ControllerBase
     {
         private readonly ApplicationDbContext context;

@@ -1,4 +1,6 @@
 ﻿using BlazorPeliculas.Shared.DTOs;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -9,7 +11,8 @@ using System.Text;
 namespace BlazorPeliculas.Server.Controllers
 {
     [ApiController]
-    [Route("api/cuentas")]
+    //[Route("api/cuentas")]
+    [Route("api/[controller]")]
     public class CuentasController : ControllerBase
     {
         private readonly UserManager<IdentityUser> userManager;
@@ -30,7 +33,7 @@ namespace BlazorPeliculas.Server.Controllers
             var resultado = await userManager.CreateAsync(usuario, model.Password);
 
             if (resultado.Succeeded)
-                return BuildToken(model);
+                return await BuildToken(model);
             else
                 return BadRequest(resultado.Errors.First());
         }
@@ -41,22 +44,40 @@ namespace BlazorPeliculas.Server.Controllers
             var resultado = await signInManager.PasswordSignInAsync(model.Email, model.Password, isPersistent: false, lockoutOnFailure: false);
 
             if (resultado.Succeeded)
-                return BuildToken(model);
+                return await BuildToken(model);
             else
                 return BadRequest("Intento de login fallido");
         }
 
-        private UserTokenDTO BuildToken(UserInfoDTO userInfo)
+        [HttpGet("renovarToken")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<ActionResult<UserTokenDTO>> Renovar()
+        {
+            var userInfo = new UserInfoDTO
+            {
+                Email = HttpContext.User.Identity!.Name!
+            };
+
+            return await BuildToken(userInfo);
+        }
+
+        private async Task<UserTokenDTO> BuildToken(UserInfoDTO userInfo)
         {
             List<Claim> claims = new()
             {
                 new(ClaimTypes.Name, userInfo.Email),
-                new("miValor","Lo que se me hinche")
+                new("miValor","Lo que se me hinche la rechiflada gana")
             };
+
+            var usuario = await userManager.FindByEmailAsync(userInfo.Email);
+            var roles = await userManager.GetRolesAsync(usuario!);
+
+            foreach (var rol in roles)
+                claims.Add(new Claim(ClaimTypes.Role, rol));
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["jwtkey"]!));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-            var expiration = DateTime.UtcNow.AddYears(1);
+            var expiration = DateTime.UtcNow.AddMinutes(1);
 
             var token = new JwtSecurityToken(
                 issuer: null,

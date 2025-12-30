@@ -43,7 +43,7 @@
         }
         else
         {
-            await loginService.Login(respuestaHttp.Response!.Token);
+            await loginService.Login(respuestaHttp.Response!);
             navigationManager.NavigateTo("");
         }
     }

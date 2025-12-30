@@ -143,7 +143,7 @@
   {
     "ContainingType": "BlazorPeliculas.Server.Controllers.CuentasController",
     "Method": "CreateUser",
-    "RelativePath": "api/cuentas/crear",
+    "RelativePath": "api/Cuentas/crear",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -169,7 +169,7 @@
   {
     "ContainingType": "BlazorPeliculas.Server.Controllers.CuentasController",
     "Method": "Login",
-    "RelativePath": "api/cuentas/login",
+    "RelativePath": "api/Cuentas/login",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -180,6 +180,26 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": [
+      {
+        "Type": "BlazorPeliculas.Shared.DTOs.UserTokenDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BlazorPeliculas.Server.Controllers.CuentasController",
+    "Method": "Renovar",
+    "RelativePath": "api/Cuentas/renovarToken",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": [
       {
         "Type": "BlazorPeliculas.Shared.DTOs.UserTokenDTO",
@@ -299,7 +319,7 @@
   {
     "ContainingType": "BlazorPeliculas.Server.Controllers.PeliculasController",
     "Method": "Get",
-    "RelativePath": "api/peliculas",
+    "RelativePath": "api/Peliculas",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -319,7 +339,7 @@
   {
     "ContainingType": "BlazorPeliculas.Server.Controllers.PeliculasController",
     "Method": "Post",
-    "RelativePath": "api/peliculas",
+    "RelativePath": "api/Peliculas",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -345,7 +365,7 @@
   {
     "ContainingType": "BlazorPeliculas.Server.Controllers.PeliculasController",
     "Method": "Put",
-    "RelativePath": "api/peliculas",
+    "RelativePath": "api/Peliculas",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -361,7 +381,7 @@
   {
     "ContainingType": "BlazorPeliculas.Server.Controllers.PeliculasController",
     "Method": "Get",
-    "RelativePath": "api/peliculas/{id}",
+    "RelativePath": "api/Peliculas/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -387,7 +407,7 @@
   {
     "ContainingType": "BlazorPeliculas.Server.Controllers.PeliculasController",
     "Method": "Delete",
-    "RelativePath": "api/peliculas/{id}",
+    "RelativePath": "api/Peliculas/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -403,7 +423,7 @@
   {
     "ContainingType": "BlazorPeliculas.Server.Controllers.PeliculasController",
     "Method": "PutGet",
-    "RelativePath": "api/peliculas/actualizar/{id}",
+    "RelativePath": "api/Peliculas/actualizar/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -429,7 +449,7 @@
   {
     "ContainingType": "BlazorPeliculas.Server.Controllers.PeliculasController",
     "Method": "Get",
-    "RelativePath": "api/peliculas/filtrar",
+    "RelativePath": "api/Peliculas/filtrar",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -495,7 +515,7 @@
   {
     "ContainingType": "BlazorPeliculas.Server.Controllers.UsuariosController",
     "Method": "Get",
-    "RelativePath": "api/usuarios",
+    "RelativePath": "api/Usuarios",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -524,9 +544,61 @@
     ]
   },
   {
+    "ContainingType": "BlazorPeliculas.Server.Controllers.UsuariosController",
+    "Method": "AsignarRolUsuario",
+    "RelativePath": "api/Usuarios/asignarRol",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "editarRolDTO",
+        "Type": "BlazorPeliculas.Shared.DTOs.EditarRolDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BlazorPeliculas.Server.Controllers.UsuariosController",
+    "Method": "RemoverRolUsuario",
+    "RelativePath": "api/Usuarios/removerRol",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "editarRolDTO",
+        "Type": "BlazorPeliculas.Shared.DTOs.EditarRolDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BlazorPeliculas.Server.Controllers.UsuariosController",
+    "Method": "Get",
+    "RelativePath": "api/Usuarios/roles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BlazorPeliculas.Shared.DTOs.RolDTO, BlazorPeliculas.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "BlazorPeliculas.Server.Controllers.VotosController",
     "Method": "Votar",
-    "RelativePath": "api/votos",
+    "RelativePath": "api/Votos",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

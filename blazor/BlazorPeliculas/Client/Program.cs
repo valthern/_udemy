@@ -24,4 +24,5 @@ void ConfigureServices(IServiceCollection services)
         proveedor.GetRequiredService<ProveedorAutenticacionJWT>());
     services.AddScoped<ILoginService, ProveedorAutenticacionJWT>(proveedor =>
         proveedor.GetRequiredService<ProveedorAutenticacionJWT>());
+    services.AddScoped<RenovadorToken>();
 }

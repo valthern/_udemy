@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 namespace BlazorPeliculas.Server.Controllers
 {
     [Route("api/[controller]")]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "admin")]
     [ApiController]
     public class ActoresController : ControllerBase
     {
