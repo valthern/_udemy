@@ -53,7 +53,7 @@ namespace BlazorPeliculas.Server.Controllers
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<UserTokenDTO>> Renovar()
         {
-            var userInfo = new UserInfoDTO
+            UserInfoDTO userInfo = new()
             {
                 Email = HttpContext.User.Identity!.Name!
             };

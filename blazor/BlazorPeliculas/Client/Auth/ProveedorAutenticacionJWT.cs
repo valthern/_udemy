@@ -109,7 +109,7 @@ namespace BlazorPeliculas.Client.Auth
         public async Task Login(UserTokenDTO tokenDTO)
         {
             await js.GuardarEnLocalStorge(TOKENKEY, tokenDTO.Token);
-            await js.GuardarEnLocalStorge(TOKENKEY, tokenDTO.Expiration.ToString());
+            await js.GuardarEnLocalStorge(EXPIRATIONTOKENKEY, tokenDTO.Expiration.ToString());
             var authState = ConstruirAuthenticationState(tokenDTO.Token);
             NotifyAuthenticationStateChanged(Task.FromResult(authState));
         }
@@ -117,8 +117,6 @@ namespace BlazorPeliculas.Client.Auth
         public async Task Logout()
         {
             await Limpiar();
-            await js.RemoverDelLocalStorge(TOKENKEY);
-            httpClient.DefaultRequestHeaders.Authorization = null;
             NotifyAuthenticationStateChanged(Task.FromResult(Anonimo));
         }
 
