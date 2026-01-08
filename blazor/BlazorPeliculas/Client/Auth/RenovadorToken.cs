@@ -15,12 +15,15 @@ namespace BlazorPeliculas.Client.Auth
 
         public void Iniciar()
         {
+            var unSegundo = 1000;
+            var segundosEnUnMinuto = 60;
+
             timer = new()
             {
                 // Cuatro minutos
-                Interval = 1000 * 60 * 4
+                Interval = unSegundo * segundosEnUnMinuto * 4
                 // Cinco Segundos
-                //timer.Interval = 1000 * 5;
+                //Interval = unSegundo * 5
             };
             timer.Elapsed += Timer_Elapsed;
             timer.Start();
