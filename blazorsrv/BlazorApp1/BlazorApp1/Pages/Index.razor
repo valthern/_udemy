@@ -1,0 +1,23 @@
+﻿@page "/"
+@inject IJSRuntime js
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<Counter IncrementarPor="7" />
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        await js.InvokeVoidAsync("console.log", "hola mundo");
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await js.InvokeVoidAsync("console.log", firstRender ? "Este es el primer renderizado" : "Este es un renderizado subsecuente");
+    }
+}
+
