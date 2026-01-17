@@ -1,0 +1,109 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculasLadoDelServidor\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{01A229A8-26B6-4486-98EF-A918ADE39E98}|BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\blazor\\blazorpeliculasladodelservidor\\blazorpeliculasladodelservidor\\pages\\usuarios\\indiceusuarios.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01A229A8-26B6-4486-98EF-A918ADE39E98}|BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor.csproj|solutionrelative:blazorpeliculasladodelservidor\\pages\\usuarios\\indiceusuarios.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01A229A8-26B6-4486-98EF-A918ADE39E98}|BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\blazor\\blazorpeliculasladodelservidor\\blazorpeliculasladodelservidor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01A229A8-26B6-4486-98EF-A918ADE39E98}|BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor.csproj|solutionrelative:blazorpeliculasladodelservidor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01A229A8-26B6-4486-98EF-A918ADE39E98}|BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\blazor\\blazorpeliculasladodelservidor\\blazorpeliculasladodelservidor\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01A229A8-26B6-4486-98EF-A918ADE39E98}|BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor.csproj|solutionrelative:blazorpeliculasladodelservidor\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01A229A8-26B6-4486-98EF-A918ADE39E98}|BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\blazor\\blazorpeliculasladodelservidor\\blazorpeliculasladodelservidor\\repositorios\\repositoriousuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01A229A8-26B6-4486-98EF-A918ADE39E98}|BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor.csproj|solutionrelative:blazorpeliculasladodelservidor\\repositorios\\repositoriousuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01A229A8-26B6-4486-98EF-A918ADE39E98}|BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\blazor\\blazorpeliculasladodelservidor\\blazorpeliculasladodelservidor\\blazorpeliculasladodelservidor.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{01A229A8-26B6-4486-98EF-A918ADE39E98}|BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor.csproj|solutionrelative:blazorpeliculasladodelservidor\\blazorpeliculasladodelservidor.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor\\Program.cs",
+              "RelativeDocumentMoniker": "BlazorPeliculasLadoDelServidor\\Program.cs",
+              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor\\Program.cs",
+              "RelativeToolTip": "BlazorPeliculasLadoDelServidor\\Program.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAEIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T18:34:04.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor\\_Imports.razor",
+              "RelativeDocumentMoniker": "BlazorPeliculasLadoDelServidor\\_Imports.razor",
+              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor\\_Imports.razor",
+              "RelativeToolTip": "BlazorPeliculasLadoDelServidor\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-16T18:33:18.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RepositorioUsuarios.cs",
+              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor\\Repositorios\\RepositorioUsuarios.cs",
+              "RelativeDocumentMoniker": "BlazorPeliculasLadoDelServidor\\Repositorios\\RepositorioUsuarios.cs",
+              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor\\Repositorios\\RepositorioUsuarios.cs",
+              "RelativeToolTip": "BlazorPeliculasLadoDelServidor\\Repositorios\\RepositorioUsuarios.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T18:31:48.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BlazorPeliculasLadoDelServidor",
+              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor.csproj",
+              "RelativeDocumentMoniker": "BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor.csproj",
+              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor.csproj",
+              "RelativeToolTip": "BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-16T18:30:05.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IndiceUsuarios.razor",
+              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor\\Pages\\Usuarios\\IndiceUsuarios.razor",
+              "RelativeDocumentMoniker": "BlazorPeliculasLadoDelServidor\\Pages\\Usuarios\\IndiceUsuarios.razor",
+              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor\\Pages\\Usuarios\\IndiceUsuarios.razor",
+              "RelativeToolTip": "BlazorPeliculasLadoDelServidor\\Pages\\Usuarios\\IndiceUsuarios.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-16T18:23:52.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

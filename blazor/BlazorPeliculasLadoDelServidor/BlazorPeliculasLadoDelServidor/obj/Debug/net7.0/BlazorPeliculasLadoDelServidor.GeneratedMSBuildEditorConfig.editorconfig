@@ -1,0 +1,147 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = BlazorPeliculasLadoDelServidor
+build_property.RootNamespace = BlazorPeliculasLadoDelServidor
+build_property.ProjectDir = C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculasLadoDelServidor\BlazorPeliculasLadoDelServidor\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\magno\source\ejemplos\_udemy\blazor\BlazorPeliculasLadoDelServidor\BlazorPeliculasLadoDelServidor
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 7.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Pages/Usuarios/EditarUsuario.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXN1YXJpb3NcRWRpdGFyVXN1YXJpby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Pages/Usuarios/IndiceUsuarios.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXN1YXJpb3NcSW5kaWNlVXN1YXJpb3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Shared/BindAfterDemo.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEJpbmRBZnRlckRlbW8ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Shared/BindEvento.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEJpbmRFdmVudG8ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Shared/BindGetSetDemo.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEJpbmRHZXRTZXREZW1vLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Shared/CustomNotFound.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEN1c3RvbU5vdEZvdW5kLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Shared/EjemploTextbox.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEVqZW1wbG9UZXh0Ym94LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Shared/EnlacesAuth.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEVubGFjZXNBdXRoLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Shared/InputImg.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXElucHV0SW1nLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Shared/InputMarkdown.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXElucHV0TWFya2Rvd24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Shared/ListadoGenerico.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExpc3RhZG9HZW5lcmljby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Shared/ListadoPeliculas.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExpc3RhZG9QZWxpY3VsYXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Shared/LoginDisplay.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ2luRGlzcGxheS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Shared/MostrarMarkdown.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1vc3RyYXJNYXJrZG93bi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Shared/Paginacion.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2luYWNpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Shared/PeliculaIndividual.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBlbGljdWxhSW5kaXZpZHVhbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Shared/Rating.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFJhdGluZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Shared/SelectorMultiple.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFNlbGVjdG9yTXVsdGlwbGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Shared/SelectorMultipleTypeahead.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFNlbGVjdG9yTXVsdGlwbGVUeXBlYWhlYWQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-hi10r2z3xl
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-3nr1wa5n13
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Areas/Identity/Pages/Account/LogOut.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dPdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Areas/Identity/Pages/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
