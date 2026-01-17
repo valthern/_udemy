@@ -1,0 +1,22 @@
+﻿@page "/"
+@inject IJSRuntime js
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<Counter IncremetarPor="7" />
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        // await js.InvokeVoidAsync("console.log", "Página Index cargada");
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await js.InvokeVoidAsync("console.log", firstRender ? "Renderizado inicial completado" : "Renderizado posterior completado");
+    }
+}

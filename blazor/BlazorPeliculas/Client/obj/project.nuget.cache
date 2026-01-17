@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7szVHAT5Wng=",
+  "dgSpecHash": "QUjZFjtgGbg=",
   "success": true,
   "projectFilePath": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculas\\Client\\BlazorPeliculas.Client.csproj",
   "expectedPackageFiles": [
@@ -44,7 +44,7 @@
     "C:\\Users\\magno\\.nuget\\packages\\microsoft.jsinterop.webassembly\\7.0.20\\microsoft.jsinterop.webassembly.7.0.20.nupkg.sha512",
     "C:\\Users\\magno\\.nuget\\packages\\microsoft.net.illink.analyzers\\7.0.100-1.23211.1\\microsoft.net.illink.analyzers.7.0.100-1.23211.1.nupkg.sha512",
     "C:\\Users\\magno\\.nuget\\packages\\microsoft.net.illink.tasks\\7.0.100-1.23211.1\\microsoft.net.illink.tasks.7.0.100-1.23211.1.nupkg.sha512",
-    "C:\\Users\\magno\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\10.0.1\\microsoft.net.sdk.webassembly.pack.10.0.1.nupkg.sha512",
+    "C:\\Users\\magno\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\10.0.2\\microsoft.net.sdk.webassembly.pack.10.0.2.nupkg.sha512",
     "C:\\Users\\magno\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.15.0\\system.identitymodel.tokens.jwt.8.15.0.nupkg.sha512",
     "C:\\Users\\magno\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
     "C:\\Users\\magno\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
