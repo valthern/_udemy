@@ -43,6 +43,7 @@ app.Run();
 
 
 
+// Métodos auxiliares para organizar el código
 void ConfigureServices(IServiceCollection services)
 {
     var csName = "TicDesarrolloConnection";
@@ -57,6 +58,7 @@ void ConfigureServices(IServiceCollection services)
     var optionBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
     optionBuilder.UseSqlServer(connectionString);
     services.AddTransient(_ => new ApplicationDbContext(optionBuilder.Options));
+    // Por defecto AddContext registra el contexto con alcance (scoped):
     //services.AddDbContext<ApplicationDbContext>(options =>
     //    options.UseSqlServer(connectionString));
 
