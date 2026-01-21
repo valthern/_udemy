@@ -45,18 +45,8 @@
 
     private async Task Cargar(int pagina = 1)
     {
-        var respuestaHttp = await repositorio.Get<List<UsuarioDTO>>($"api/usuarios?pagina={pagina}");
-
-        if (respuestaHttp.Error)
-        {
-            var mensajeError = await respuestaHttp.ObtenerMensajeError();
-            await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
-        }
-        else
-        {
-            paginasTotales = int.Parse(respuestaHttp.HttpResponseMessage.Headers
-            .GetValues("totalPaginas").FirstOrDefault()!);
-            Usuarios = respuestaHttp.Response;
-        }
+        var respuestaPaginada = await repositorio.Get(new DTOs.PaginacionDTO { Pagina = pagina });
+        paginasTotales = respuestaPaginada.TotalPaginas;
+        Usuarios = respuestaPaginada.Registros;
     }
 }

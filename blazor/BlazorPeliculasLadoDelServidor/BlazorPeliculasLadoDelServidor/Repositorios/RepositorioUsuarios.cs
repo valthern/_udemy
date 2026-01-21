@@ -1,6 +1,10 @@
 ﻿using BlazorPeliculasLadoDelServidor.Data;
+using BlazorPeliculasLadoDelServidor.DTOs;
+using BlazorPeliculasLadoDelServidor.Helpers;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace BlazorPeliculasLadoDelServidor.Repositorios
 {
@@ -15,17 +19,16 @@ namespace BlazorPeliculasLadoDelServidor.Repositorios
             this.userManager = userManager;
         }
 
-        public async Task<List<UsuarioDTO>> Get(PaginacionDTO paginacion)
+        public async Task<RespuestaPaginadaDTO<UsuarioDTO>> Get(PaginacionDTO paginacion)
         {
             var queryable = context.Users.AsQueryable();
-
-            await HttpContext
-                .InsertarParametrosPaginacionEnRespuesta(queryable, paginacion.CantidadRegistros);
-
-            return await queryable
+            var respuesta = new RespuestaPaginadaDTO<UsuarioDTO>();
+            respuesta.TotalPaginas = await queryable.CalcularTotalPaginas(paginacion.CantidadRegistros);
+            respuesta.Registros = await queryable
                 .Paginar(paginacion)
                 .Select(u => new UsuarioDTO { Id = u.Id, Email = u.Email! })
                 .ToListAsync();
+            return respuesta;
         }
 
         public async Task<List<RolDTO>> GetRoles() => await context.Roles.Select(r => new RolDTO { Nombre = r.Name! }).ToListAsync();
@@ -33,21 +36,15 @@ namespace BlazorPeliculasLadoDelServidor.Repositorios
         public async Task AsignarRolUsuario(EditarRolDTO editarRolDTO)
         {
             var usuario = await userManager.FindByIdAsync(editarRolDTO.UsuarioId);
-
-            if (usuario is null) return BadRequest("Usuario no existe");
-
+            await userManager.AddClaimAsync(usuario, new Claim(ClaimTypes.Role, editarRolDTO.Rol));
             await userManager.AddToRoleAsync(usuario, editarRolDTO.Rol);
-            return NoContent();
         }
 
         public async Task RemoverRolUsuario(EditarRolDTO editarRolDTO)
         {
             var usuario = await userManager.FindByIdAsync(editarRolDTO.UsuarioId);
-
-            if (usuario is null) return BadRequest("Usuario no existe");
-
+            await userManager.RemoveClaimAsync(usuario, new Claim(ClaimTypes.Role, editarRolDTO.Rol));
             await userManager.RemoveFromRoleAsync(usuario, editarRolDTO.Rol);
-            return NoContent();
         }
     }
 }

@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorDelLadoDelServidor\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{F268E781-35A8-4B0D-8B60-B21960996D32}|BlazorDelLadoDelServidor\\BlazorDelLadoDelServidor.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\blazor\\blazordelladodelservidor\\blazordelladodelservidor\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F268E781-35A8-4B0D-8B60-B21960996D32}|BlazorDelLadoDelServidor\\BlazorDelLadoDelServidor.csproj|solutionrelative:blazordelladodelservidor\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F268E781-35A8-4B0D-8B60-B21960996D32}|BlazorDelLadoDelServidor\\BlazorDelLadoDelServidor.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\blazor\\blazordelladodelservidor\\blazordelladodelservidor\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F268E781-35A8-4B0D-8B60-B21960996D32}|BlazorDelLadoDelServidor\\BlazorDelLadoDelServidor.csproj|solutionrelative:blazordelladodelservidor\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,34 +9,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Counter.razor",
-              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorDelLadoDelServidor\\BlazorDelLadoDelServidor\\Pages\\Counter.razor",
-              "RelativeDocumentMoniker": "BlazorDelLadoDelServidor\\Pages\\Counter.razor",
-              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorDelLadoDelServidor\\BlazorDelLadoDelServidor\\Pages\\Counter.razor",
-              "RelativeToolTip": "BlazorDelLadoDelServidor\\Pages\\Counter.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-09T17:29:05.959Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.razor",
-              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorDelLadoDelServidor\\BlazorDelLadoDelServidor\\Pages\\Index.razor",
-              "RelativeDocumentMoniker": "BlazorDelLadoDelServidor\\Pages\\Index.razor",
-              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorDelLadoDelServidor\\BlazorDelLadoDelServidor\\Pages\\Index.razor",
-              "RelativeToolTip": "BlazorDelLadoDelServidor\\Pages\\Index.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-09T17:34:16.657Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"

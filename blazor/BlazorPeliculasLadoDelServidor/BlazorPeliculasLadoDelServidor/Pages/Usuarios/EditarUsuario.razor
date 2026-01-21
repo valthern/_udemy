@@ -1,10 +1,10 @@
 ﻿@page "/usuarios/editar/{UsuarioId}"
-@inject IRepositorio repositorio
+@inject RepositorioUsuarios repositorio
 @inject SweetAlertService swal
 
 <h3>Editar Usuario</h3>
 
-@if(roles is null)
+@if (roles is null)
 {
     <p>Cargando...</p>
 }
@@ -13,7 +13,7 @@ else
     <div class="form-inline">
         <select class="form-select mb-2" @bind="rolSeleccionado">
             <option value="0">---Seleccione un rol---</option>
-            @foreach(var rol in roles)
+            @foreach (var rol in roles)
             {
                 <option value="@rol.Nombre">@rol.Nombre</option>
             }
@@ -47,13 +47,20 @@ else
 
     private async Task RemoverRol() => await EditarRol("api/usuarios/removerRol");
 
-    private async Task EditarRol(string url)
+    private async Task<bool> ValidarEditarRol()
     {
-        if(rolSeleccionado=="0")
+        if (rolSeleccionado == "0")
         {
             await swal.FireAsync("Error", "Debe seleccionar un rol", SweetAlertIcon.Error);
-            return;
+            return false;
         }
+
+        return true;
+    }
+
+    private async Task EditarRol(string url)
+    {
+
 
         var rolDTO = new EditarRolDTO { Rol = rolSeleccionado, UsuarioId = UsuarioId };
         var httpResponse = await repositorio.Post<EditarRolDTO>(url, rolDTO);

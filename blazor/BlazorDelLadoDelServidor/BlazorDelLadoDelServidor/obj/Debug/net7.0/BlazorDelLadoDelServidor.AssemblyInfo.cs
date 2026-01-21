@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BlazorDelLadoDelServidor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+160708bdc256a3133cb37d4c36c93cd32bbb63a1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+85ca6f7ddda73c8138422c3fbc17eb5e283c2537")]
 [assembly: System.Reflection.AssemblyProductAttribute("BlazorDelLadoDelServidor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BlazorDelLadoDelServidor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
