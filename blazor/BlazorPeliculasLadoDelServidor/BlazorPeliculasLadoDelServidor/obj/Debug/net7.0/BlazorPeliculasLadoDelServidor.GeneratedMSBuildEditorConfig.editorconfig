@@ -34,6 +34,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Pages/Generos/CrearGenero.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VuZXJvc1xDcmVhckdlbmVyby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Pages/Generos/EditarGenero.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VuZXJvc1xFZGl0YXJHZW5lcm8ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Pages/Generos/FormularioGenero.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VuZXJvc1xGb3JtdWxhcmlvR2VuZXJvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Pages/Generos/IndiceGeneros.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VuZXJvc1xJbmRpY2VHZW5lcm9zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

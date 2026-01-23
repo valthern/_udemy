@@ -1,0 +1,54 @@
+﻿@page "/generos"
+@using System.Net
+@using Microsoft.AspNetCore.Authorization
+@inject RepositorioGeneros repositorio
+@inject NavigationManager navigationManager
+@inject SweetAlertService swal
+@attribute [Authorize(Roles = "admin")]
+
+<h3>Índice Géneros</h3>
+
+<div>
+    <a class="btn btn-info" href="generos/crear">Agregar Género</a>
+</div>
+
+<ListadoGenerico Listado="Generos">
+    <HayRegistrosCompleto>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Nombre</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Generos!)
+                {
+                    <tr>
+                        <td>
+                            <a href="/generos/editar/@item.Id" class="btn btn-success">Editar</a>
+                            <button class="btn btn-danger" @onclick=@(() => Borrar(item))>Borrar</button>
+                        </td>
+                        <td>
+                            @item.Nombre
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </HayRegistrosCompleto>
+</ListadoGenerico>
+
+@code {
+    public List<Genero>? Generos { get; set; }
+
+    protected async override Task OnInitializedAsync() => await Cargar();
+
+    private async Task Cargar() => Generos = await repositorio.Get();
+
+    private async Task Borrar(Genero genero)
+    {
+        await repositorio.Delete(genero.Id);
+        await Cargar();
+    }
+}

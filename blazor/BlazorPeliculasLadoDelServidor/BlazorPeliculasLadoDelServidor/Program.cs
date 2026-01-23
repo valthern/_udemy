@@ -1,6 +1,7 @@
 using BlazorPeliculasLadoDelServidor.Areas.Identity;
 using BlazorPeliculasLadoDelServidor.Data;
 using BlazorPeliculasLadoDelServidor.Repositorios;
+using CurrieTechnologies.Razor.SweetAlert2;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Web;
@@ -67,10 +68,12 @@ void ConfigureServices(IServiceCollection services)
         //.AddDefaultIdentity<IdentityUser>(options => 
         //    options.SignIn.RequireConfirmedAccount = true)
         .AddDefaultIdentity<IdentityUser>()
+        .AddRoles<IdentityRole>()
         .AddEntityFrameworkStores<ApplicationDbContext>();
     services.AddRazorPages();
     services.AddServerSideBlazor();
     services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
+    services.AddSweetAlert2();
     services.AddSingleton<WeatherForecastService>();
     services.AddTransient<RepositorioUsuarios>();
 }

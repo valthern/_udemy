@@ -30,22 +30,25 @@ else
     private List<RolDTO>? roles;
     private string rolSeleccionado = "0";
 
-    protected override async Task OnInitializedAsync()
-    {
-        var respuestaHttp = await repositorio.Get<List<RolDTO>>("api/usuarios/roles");
+    protected override async Task OnInitializedAsync() => roles = await repositorio.GetRoles();
 
-        if (respuestaHttp.Error)
-        {
-            var mensajeError = await respuestaHttp.ObtenerMensajeError();
-            await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
-        }
-        else
-            roles = respuestaHttp.Response!;
+    private async Task AsignarRol() {
+        var esValido = await ValidarEditarRol();
+        if (!esValido) return;
+
+        var rolDTO = new EditarRolDTO { Rol = rolSeleccionado, UsuarioId = UsuarioId };
+        await repositorio.AsignarRolUsuario(rolDTO);
+        await swal.FireAsync("Exitoso", "Operación realizada con éxito", SweetAlertIcon.Success);
     }
 
-    private async Task AsignarRol() => await EditarRol("api/usuarios/asignarRol");
+    private async Task RemoverRol() {
+        var esValido = await ValidarEditarRol();
+        if (!esValido) return;
 
-    private async Task RemoverRol() => await EditarRol("api/usuarios/removerRol");
+        var rolDTO = new EditarRolDTO { Rol = rolSeleccionado, UsuarioId = UsuarioId };
+        await repositorio.RemoverRolUsuario(rolDTO);
+        await swal.FireAsync("Exitoso", "Operación realizada con éxito", SweetAlertIcon.Success);
+    }
 
     private async Task<bool> ValidarEditarRol()
     {
@@ -58,19 +61,19 @@ else
         return true;
     }
 
-    private async Task EditarRol(string url)
-    {
+    // private async Task EditarRol(string url)
+    // {
 
 
-        var rolDTO = new EditarRolDTO { Rol = rolSeleccionado, UsuarioId = UsuarioId };
-        var httpResponse = await repositorio.Post<EditarRolDTO>(url, rolDTO);
+    //     var rolDTO = new EditarRolDTO { Rol = rolSeleccionado, UsuarioId = UsuarioId };
+    //     var httpResponse = await repositorio.Post<EditarRolDTO>(url, rolDTO);
 
-        if (httpResponse.Error)
-        {
-            var mensajeError = await httpResponse.ObtenerMensajeError();
-            await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
-        }
-        else
-            await swal.FireAsync("Exitoso", "Operación realizada con éxito", SweetAlertIcon.Success);
-    }
+    //     if (httpResponse.Error)
+    //     {
+    //         var mensajeError = await httpResponse.ObtenerMensajeError();
+    //         await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
+    //     }
+    //     else
+    //         await swal.FireAsync("Exitoso", "Operación realizada con éxito", SweetAlertIcon.Success);
+    // }
 }
