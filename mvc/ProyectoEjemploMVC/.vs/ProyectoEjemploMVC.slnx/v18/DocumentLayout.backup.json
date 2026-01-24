@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\mvc\\ProyectoEjemploMVC\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B5CAC652-988D-A649-97BC-937A6210D76D}|ProyectoEjemploMVC\\ProyectoEjemploMVC.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\mvc\\proyectoejemplomvc\\proyectoejemplomvc\\controllers\\pruebitacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5CAC652-988D-A649-97BC-937A6210D76D}|ProyectoEjemploMVC\\ProyectoEjemploMVC.csproj|solutionrelative:proyectoejemplomvc\\controllers\\pruebitacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B5CAC652-988D-A649-97BC-937A6210D76D}|ProyectoEjemploMVC\\ProyectoEjemploMVC.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\mvc\\proyectoejemplomvc\\proyectoejemplomvc\\controllers\\ejemplocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5CAC652-988D-A649-97BC-937A6210D76D}|ProyectoEjemploMVC\\ProyectoEjemploMVC.csproj|solutionrelative:proyectoejemplomvc\\controllers\\ejemplocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -19,12 +23,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PruebitaController.cs",
+              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\mvc\\ProyectoEjemploMVC\\ProyectoEjemploMVC\\Controllers\\PruebitaController.cs",
+              "RelativeDocumentMoniker": "ProyectoEjemploMVC\\Controllers\\PruebitaController.cs",
+              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\mvc\\ProyectoEjemploMVC\\ProyectoEjemploMVC\\Controllers\\PruebitaController.cs",
+              "RelativeToolTip": "ProyectoEjemploMVC\\Controllers\\PruebitaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T22:41:52.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "EjemploController.cs",
               "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\mvc\\ProyectoEjemploMVC\\ProyectoEjemploMVC\\Controllers\\EjemploController.cs",
               "RelativeDocumentMoniker": "ProyectoEjemploMVC\\Controllers\\EjemploController.cs",
               "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\mvc\\ProyectoEjemploMVC\\ProyectoEjemploMVC\\Controllers\\EjemploController.cs",
               "RelativeToolTip": "ProyectoEjemploMVC\\Controllers\\EjemploController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-22T22:40:21.801Z",
               "EditorCaption": ""

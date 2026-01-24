@@ -1,7 +1,7 @@
 ﻿@page "/generos/crear"
 @using Microsoft.AspNetCore.Authorization
+@inject RepositorioGeneros repositorio
 @inject NavigationManager navigationManager
-@inject IRepositorio repositorio
 @inject SweetAlertService swal
 @attribute [Authorize(Roles = "admin")]
 
@@ -15,17 +15,15 @@
 
     private async Task Crear()
     {
-        var httpResponse = await repositorio.Post("api/generos", Genero);
+        try
+        {
+            await repositorio.Post(Genero);
+        }
+        catch
+        {
+            // hacer algo...
+        }
 
-        if (httpResponse.Error)
-        {
-            var mensajeError = await httpResponse.ObtenerMensajeError();
-            await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
-        }
-        else
-        {
-            formularioGenero!.FormularioPosteadoConExito = true;
-            navigationManager.NavigateTo("generos");
-        }
+        navigationManager.NavigateTo("generos");
     }
 }

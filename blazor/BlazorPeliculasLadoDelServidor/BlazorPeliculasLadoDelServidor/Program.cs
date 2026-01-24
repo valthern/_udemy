@@ -73,7 +73,8 @@ void ConfigureServices(IServiceCollection services)
     services.AddRazorPages();
     services.AddServerSideBlazor();
     services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
-    services.AddSweetAlert2();
     services.AddSingleton<WeatherForecastService>();
     services.AddTransient<RepositorioUsuarios>();
+    services.AddTransient<RepositorioGeneros>();
+    services.AddSweetAlert2();
 }

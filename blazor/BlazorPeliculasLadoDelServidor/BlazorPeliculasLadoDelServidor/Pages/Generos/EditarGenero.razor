@@ -2,7 +2,7 @@
 @using System.Net
 @using Microsoft.AspNetCore.Authorization
 @inject NavigationManager navigationManager
-@inject IRepositorio repositorio
+@inject RepositorioGeneros repositorio
 @inject SweetAlertService swal
 @attribute [Authorize(Roles = "admin")]
 
@@ -25,39 +25,15 @@ else
 
     override protected async Task OnInitializedAsync()
     {
-        var respuestaHttp = await repositorio.Get<Genero>($"api/generos/{GeneroId}");
+        Genero = await repositorio.Get(GeneroId);
 
-        if (respuestaHttp.Error)
-        {
-            if (respuestaHttp.HttpResponseMessage.StatusCode == HttpStatusCode.NotFound)
-            {
-                navigationManager.NavigateTo("generos");
-            }
-            else
-            {
-                var mensajeError = await respuestaHttp.ObtenerMensajeError();
-                await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
-            }
-        }
-        else
-        {
-            Genero = respuestaHttp.Response!;
-        }
+        if(Genero is null)        
+            navigationManager.NavigateTo("generos");
     }
 
     private async Task Editar()
     {
-        var respuestaHttp = await repositorio.Put("api/generos", Genero);
-
-        if (respuestaHttp.Error)
-        {
-            var mensajeError = await respuestaHttp.ObtenerMensajeError();
-            await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
-        }
-        else
-        {
-            formularioGenero!.FormularioPosteadoConExito = true;
-            navigationManager.NavigateTo("generos");
-        }
+        await repositorio.Put(Genero!);
+        navigationManager.NavigateTo("generos");
     }
 }

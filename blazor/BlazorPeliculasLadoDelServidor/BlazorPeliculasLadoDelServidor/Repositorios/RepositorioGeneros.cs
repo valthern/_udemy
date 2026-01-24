@@ -16,9 +16,11 @@ namespace BlazorPeliculasLadoDelServidor.Repositorios
         }
 
         public async Task<List<Genero>> Get() => await context.Generos
+            .AsNoTracking()
             .ToListAsync();
 
         public async Task<Genero?> Get(int id) => await context.Generos
+            .AsNoTracking()
             .FirstOrDefaultAsync(genero => genero.Id == id);
 
         public async Task<int> Post(Genero genero)
