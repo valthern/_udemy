@@ -1,5 +1,4 @@
-﻿
-namespace BlazorPeliculas.Server.Helpers
+﻿namespace BlazorPeliculas.Server.Helpers
 {
     public class AlmacenadorArchivosLocal : IAlmacenadorArchivos
     {

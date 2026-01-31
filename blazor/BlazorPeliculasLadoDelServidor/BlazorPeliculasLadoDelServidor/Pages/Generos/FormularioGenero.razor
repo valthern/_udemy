@@ -1,8 +1,9 @@
-﻿@inject SweetAlertService swal
+﻿@* @inject SweetAlertService swal
 
 <NavigationLock OnBeforeInternalNavigation="OnBeforeInternalNavigation"></NavigationLock>
-
-<EditForm EditContext="editContext" OnValidSubmit="OnValidSubmit">
+ *@
+@* <EditForm EditContext="editContext" OnValidSubmit="OnValidSubmit"> *@
+<EditForm Model="Genero" OnValidSubmit="OnValidSubmit">
     <DataAnnotationsValidator />
     <div class="mb-3">
         <label>Nombre:</label>
@@ -16,7 +17,7 @@
 </EditForm>
 
 @code {
-    private EditContext editContext = null!;
+    // private EditContext editContext = null!;
 
     [EditorRequired]
     [Parameter]
@@ -26,33 +27,30 @@
     [Parameter]
     public EventCallback OnValidSubmit { get; set; }
 
-    protected override void OnInitialized()
-    {
-        editContext = new(Genero);
-    }
+    // protected override void OnInitialized() => editContext = new(Genero);
 
-    public bool FormularioPosteadoConExito { get; set; } = false;
+    // public bool FormularioPosteadoConExito { get; set; } = false;
 
-    private async Task OnBeforeInternalNavigation(LocationChangingContext context)
-    {
-        var formularioFueEditado = editContext.IsModified();
+    // private async Task OnBeforeInternalNavigation(LocationChangingContext context)
+    // {
+    //     var formularioFueEditado = editContext.IsModified();
 
-        if (!formularioFueEditado) return;
+    //     if (!formularioFueEditado) return;
 
-        if (FormularioPosteadoConExito) return;
+    //     if (FormularioPosteadoConExito) return;
 
-        var resultado = await swal.FireAsync(new SweetAlertOptions
-            {
-                Title = "Confirmación",
-                Text = "¿Deseas abandonar la página y perder los cambios?",
-                Icon = SweetAlertIcon.Warning,
-                ShowCancelButton = true
-            });
+    //     var resultado = await swal.FireAsync(new SweetAlertOptions
+    //         {
+    //             Title = "Confirmación",
+    //             Text = "¿Deseas abandonar la página y perder los cambios?",
+    //             Icon = SweetAlertIcon.Warning,
+    //             ShowCancelButton = true
+    //         });
 
-        var confirmado = !string.IsNullOrEmpty(resultado.Value);
+    //     var confirmado = !string.IsNullOrEmpty(resultado.Value);
 
-        if (confirmado) return;
+    //     if (confirmado) return;
 
-        context.PreventNavigation();
-    }
+    //     context.PreventNavigation();
+    // }
 }

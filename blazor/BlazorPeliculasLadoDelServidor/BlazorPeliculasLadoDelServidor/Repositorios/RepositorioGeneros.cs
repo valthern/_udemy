@@ -32,15 +32,23 @@ namespace BlazorPeliculasLadoDelServidor.Repositorios
 
         public async Task Put(Genero genero)
         {
-            context.Update(genero);
+            //context.Update(genero);
+            //await context.SaveChangesAsync();
+            context.Attach(genero).State = EntityState.Modified;
             await context.SaveChangesAsync();
         }
 
         public async Task Delete(int id)
         {
-            var filasAfectadas = await context.Generos
-                .Where(g => g.Id == id)
-                .ExecuteDeleteAsync();
+            //var filasAfectadas = await context.Generos
+            //    .Where(g => g.Id == id)
+            //    .ExecuteDeleteAsync();
+            var existe =await context.Generos
+                .AnyAsync(g => g.Id == id);
+            if (!existe)
+                throw new ApplicationException($"El género con Id {id} no existe.");
+            context.Remove(new Genero { Id = id });
+            await context.SaveChangesAsync();
         }
     }
 }

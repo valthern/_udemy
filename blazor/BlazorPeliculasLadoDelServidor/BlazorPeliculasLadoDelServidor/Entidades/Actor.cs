@@ -19,6 +19,7 @@ namespace BlazorPeliculasLadoDelServidor.Entidades
         [NotMapped]
         public string? Personaje { get; set; }
         public List<PeliculaActor> PeliculasActor { get; set; } = new List<PeliculaActor>();
+        
         public override bool Equals(object? obj)
         {
             if (obj is Actor a2) return Id == a2.Id;

@@ -1,0 +1,47 @@
+﻿@page "/actores/editar/{ActorId:int}"
+@using System.Net
+@using Microsoft.AspNetCore.Authorization
+@inject NavigationManager navigationManager
+@inject RepositorioActores repositorio
+@inject SweetAlertService swal
+@attribute [Authorize(Roles = "admin")]
+
+<h3>Editar Actor</h3>
+
+@if (Actor is null)
+{
+    <p>Cargando...</p>
+}
+else
+{
+    <FormularioActores Actor="Actor" OnValidSubmit="Editar" />
+}
+
+@code {
+    [Parameter]
+    public int ActorId { get; set; }
+    // FormularioActores? formularioActores;
+    Actor? Actor;
+
+    // protected override async Task OnInitializedAsync()
+    // {
+    //     Actor = await repositorio.Get(ActorId);
+
+    //     if (Actor is null)
+    //         navigationManager.NavigateTo("actores");
+    // }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        Actor = await repositorio.Get(ActorId);
+
+        if (Actor is null)
+            navigationManager.NavigateTo("actores");
+    }
+
+    private async Task Editar()
+    {
+        await repositorio.Put(Actor!);
+        navigationManager.NavigateTo("actores");
+    }
+}

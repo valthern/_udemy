@@ -7,23 +7,23 @@
 
 <h3>CrearGenero</h3>
 
-<FormularioGenero @ref="formularioGenero" Genero="Genero" OnValidSubmit="Crear" />
+@* <FormularioGenero @ref="formularioGenero" Genero="Genero" OnValidSubmit="Crear" /> *@
+<FormularioGenero Genero="Genero" OnValidSubmit="Crear" />
 
 @code {
     private Genero Genero = new Genero();
-    private FormularioGenero? formularioGenero;
+    // private FormularioGenero? formularioGenero;
 
     private async Task Crear()
     {
         try
         {
             await repositorio.Post(Genero);
+            navigationManager.NavigateTo("/generos");
         }
         catch
         {
             // hacer algo...
         }
-
-        navigationManager.NavigateTo("generos");
     }
 }

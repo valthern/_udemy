@@ -1,5 +1,5 @@
 ﻿@page "/generos/editar/{GeneroId:int}"
-@using System.Net
+@* @using System.Net *@
 @using Microsoft.AspNetCore.Authorization
 @inject NavigationManager navigationManager
 @inject RepositorioGeneros repositorio
@@ -14,14 +14,15 @@
 }
 else
 {
-    <FormularioGenero @ref="formularioGenero" Genero="Genero" OnValidSubmit="Editar" />
+    @* <FormularioGenero @ref="formularioGenero" Genero="Genero" OnValidSubmit="Editar" /> *@
+    <FormularioGenero Genero="Genero" OnValidSubmit="Editar" />
 }
 
 @code {
     [Parameter]
     public int GeneroId { get; set; }
     private Genero? Genero;
-    private FormularioGenero? formularioGenero;
+    // private FormularioGenero? formularioGenero;
 
     override protected async Task OnInitializedAsync()
     {
