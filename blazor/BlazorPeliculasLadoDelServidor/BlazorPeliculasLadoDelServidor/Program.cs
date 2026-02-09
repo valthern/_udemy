@@ -49,6 +49,7 @@ app.Run();
 // Métodos auxiliares para organizar el código
 void ConfigureServices(IServiceCollection services)
 {
+    #region ConfiguracionDB
     var csName = "TicDesarrolloConnection";
     //var csName = "NecroConnection";
 
@@ -64,6 +65,7 @@ void ConfigureServices(IServiceCollection services)
     // Por defecto AddContext registra el contexto con alcance (scoped):
     //services.AddDbContext<ApplicationDbContext>(options =>
     //    options.UseSqlServer(connectionString));
+    #endregion
 
     services.AddDatabaseDeveloperPageExceptionFilter();
     services
@@ -81,6 +83,8 @@ void ConfigureServices(IServiceCollection services)
     services.AddTransient<RepositorioActores>();
     services.AddSweetAlert2();
     services.AddScoped<IAlmacenadorArchivos, AlmacenadorArchivosLocal>();
+    //services.AddTransient<IAlmacenadorArchivos,AlmacenadorArchivosLocal>();
+    services.AddHttpContextAccessor();
     services.AddAutoMapper(typeof(Program));
     services.AddFileReaderService(options => options.InitializeOnFirstCall = true);
     // Asegúrate de que el paquete NuGet "BlazorInputFile" o "Blazor.FileReader" esté instalado en tu proyecto.

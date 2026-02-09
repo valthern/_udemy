@@ -10,10 +10,7 @@ namespace BlazorPeliculasLadoDelServidor.Repositorios
     {
         private readonly ApplicationDbContext context;
 
-        public RepositorioGeneros(ApplicationDbContext context)
-        {
-            this.context = context;
-        }
+        public RepositorioGeneros(ApplicationDbContext context) => this.context = context;
 
         public async Task<List<Genero>> Get() => await context.Generos
             .AsNoTracking()

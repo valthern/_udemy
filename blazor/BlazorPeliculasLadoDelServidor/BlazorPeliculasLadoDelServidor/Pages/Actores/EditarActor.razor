@@ -23,21 +23,21 @@ else
     // FormularioActores? formularioActores;
     Actor? Actor;
 
-    // protected override async Task OnInitializedAsync()
-    // {
-    //     Actor = await repositorio.Get(ActorId);
-
-    //     if (Actor is null)
-    //         navigationManager.NavigateTo("actores");
-    // }
-
-    protected override async Task OnAfterRenderAsync(bool firstRender)
+    protected override async Task OnInitializedAsync()
     {
         Actor = await repositorio.Get(ActorId);
 
         if (Actor is null)
             navigationManager.NavigateTo("actores");
     }
+
+    // protected override async Task OnAfterRenderAsync(bool firstRender)
+    // {
+    //     Actor = await repositorio.Get(ActorId);
+
+    //     if (Actor is null)
+    //         navigationManager.NavigateTo("actores");
+    // }
 
     private async Task Editar()
     {

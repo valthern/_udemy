@@ -31,7 +31,7 @@
 </ListadoGenerico>
 
 @code {
-    List<UsuarioDTO>? Usuarios;
+    List<UsuarioDTO> Usuarios;
     private int paginaActual = 1;
     private int paginasTotales;
 
@@ -45,7 +45,7 @@
 
     private async Task Cargar(int pagina = 1)
     {
-        var respuestaPaginada = await repositorio.Get(new DTOs.PaginacionDTO { Pagina = pagina });
+        var respuestaPaginada = await repositorio.Get(new PaginacionDTO { Pagina = pagina });
         paginasTotales = respuestaPaginada.TotalPaginas;
         Usuarios = respuestaPaginada.Registros;
     }

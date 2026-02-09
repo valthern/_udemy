@@ -22,16 +22,20 @@ namespace BlazorPeliculasLadoDelServidor.Repositorios
         public async Task<RespuestaPaginadaDTO<UsuarioDTO>> Get(PaginacionDTO paginacion)
         {
             var queryable = context.Users.AsQueryable();
-            var respuesta = new RespuestaPaginadaDTO<UsuarioDTO>();
-            respuesta.TotalPaginas = await queryable.CalcularTotalPaginas(paginacion.CantidadRegistros);
-            respuesta.Registros = await queryable
-                .Paginar(paginacion)
-                .Select(u => new UsuarioDTO { Id = u.Id, Email = u.Email! })
-                .ToListAsync();
+            var respuesta = new RespuestaPaginadaDTO<UsuarioDTO>
+            {
+                TotalPaginas = await queryable.CalcularTotalPaginas(paginacion.CantidadRegistros),
+                Registros = await queryable
+                    .Paginar(paginacion)
+                    .Select(u => new UsuarioDTO { Id = u.Id, Email = u.Email! })
+                    .ToListAsync()
+            };
             return respuesta;
         }
 
-        public async Task<List<RolDTO>> GetRoles() => await context.Roles.Select(r => new RolDTO { Nombre = r.Name! }).ToListAsync();
+        public async Task<List<RolDTO>> GetRoles() => await context.Roles
+            .Select(r => new RolDTO { Nombre = r.Name! })
+            .ToListAsync();
 
         public async Task AsignarRolUsuario(EditarRolDTO editarRolDTO)
         {
