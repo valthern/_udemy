@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
+using Microsoft.AspNetCore.Mvc.ViewComponents;
 using Microsoft.EntityFrameworkCore;
 using Tewr.Blazor.FileReader;
 
@@ -86,6 +87,7 @@ void ConfigureServices(IServiceCollection services)
     //services.AddTransient<IAlmacenadorArchivos,AlmacenadorArchivosLocal>();
     services.AddHttpContextAccessor();
     services.AddAutoMapper(typeof(Program));
+    services.AddTransient<AuthenticationStateService>();
     services.AddFileReaderService(options => options.InitializeOnFirstCall = true);
     // Asegúrate de que el paquete NuGet "BlazorInputFile" o "Blazor.FileReader" esté instalado en tu proyecto.
     // Si no está instalado, abre la consola del Administrador de paquetes y ejecuta:

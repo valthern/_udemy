@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BlazorPeliculasLadoDelServidor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+283a24aafd4fe275fa5d7d87e1d2642cdb7a8f22")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9a99f9c685975b4465ea98368e6315c9279c232")]
 [assembly: System.Reflection.AssemblyProductAttribute("BlazorPeliculasLadoDelServidor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BlazorPeliculasLadoDelServidor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

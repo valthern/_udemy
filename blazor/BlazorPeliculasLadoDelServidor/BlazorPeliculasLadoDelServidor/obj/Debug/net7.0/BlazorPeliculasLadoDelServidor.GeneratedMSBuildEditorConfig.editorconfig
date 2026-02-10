@@ -70,6 +70,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Pages/Películas/CrearPelicula.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVsw61jdWxhc1xDcmVhclBlbGljdWxhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Pages/Películas/EditarPelicula.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVsw61jdWxhc1xFZGl0YXJQZWxpY3VsYS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Pages/Películas/FiltroPeliculas.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVsw61jdWxhc1xGaWx0cm9QZWxpY3VsYXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Pages/Películas/FormularioPeliculas.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVsw61jdWxhc1xGb3JtdWxhcmlvUGVsaWN1bGFzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Pages/Películas/VisualizarPelicula.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVsw61jdWxhc1xWaXN1YWxpemFyUGVsaWN1bGEucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/magno/source/ejemplos/_udemy/blazor/BlazorPeliculasLadoDelServidor/BlazorPeliculasLadoDelServidor/Pages/Usuarios/EditarUsuario.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXN1YXJpb3NcRWRpdGFyVXN1YXJpby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

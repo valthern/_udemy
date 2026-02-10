@@ -1,0 +1,69 @@
+﻿@page "/peliculas/editar/{PeliculaId:int}"
+@using System.Net
+@using Microsoft.AspNetCore.Authorization
+@inject IRepositorio repositorio
+@inject NavigationManager navigationManager
+@inject SweetAlertService swal
+@attribute [Authorize(Roles = "admin")]
+
+<h3>Editar Película</h3>
+
+@if (Pelicula is null)
+{
+    <p><em>Cargando...</em></p>
+}
+else
+{
+    <FormularioPeliculas Pelicula="Pelicula" OnValidSubmit="Editar" GenerosNoSeleccionados="GenerosNoSeleccionados" GenerosSeleccionados="GenerosSeleccionados" ActoresSeleccionados="ActoresSeleccionados">
+    </FormularioPeliculas>
+}
+
+@code {
+    [Parameter]
+    public int PeliculaId { get; set; }
+    Pelicula? Pelicula;
+    private List<Genero> GenerosNoSeleccionados = new List<Genero>();
+    private List<Genero> GenerosSeleccionados = new List<Genero>();
+    private List<Actor> ActoresSeleccionados = new List<Actor>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var httpResponse = await repositorio.Get<PeliculaActualizacionDTO>($"api/peliculas/actualizar/{PeliculaId}");
+
+        if (httpResponse.Error)
+        {
+            if (httpResponse.HttpResponseMessage.StatusCode == HttpStatusCode.NotFound)
+            {
+                navigationManager.NavigateTo("/");
+            }
+            else
+            {
+                var mensajeError = await httpResponse.ObtenerMensajeError();
+                await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
+            }
+        }
+        else
+        {
+            var modelo = httpResponse.Response!;
+            ActoresSeleccionados = modelo.Actores;
+            GenerosSeleccionados = modelo.GenerosSeleccionados;
+            GenerosNoSeleccionados = modelo.GenerosNoSeleccionados;
+            Pelicula = modelo.Pelicula;
+        }
+    }
+
+    private async Task Editar()
+    {
+        var respuestaHttp = await repositorio.Put("api/peliculas", Pelicula);
+
+        if (respuestaHttp.Error)
+        {
+            var mensajeError = await respuestaHttp.ObtenerMensajeError();
+            await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
+        }
+        else
+        {
+            navigationManager.NavigateTo($"pelicula/{PeliculaId}");
+        }
+    }
+}

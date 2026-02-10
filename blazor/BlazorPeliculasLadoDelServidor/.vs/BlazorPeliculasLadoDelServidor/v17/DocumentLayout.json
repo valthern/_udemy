@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculasLadoDelServidor\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{01A229A8-26B6-4486-98EF-A918ADE39E98}|BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\blazor\\blazorpeliculasladodelservidor\\blazorpeliculasladodelservidor\\repositorios\\repositoriopeliculas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01A229A8-26B6-4486-98EF-A918ADE39E98}|BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor.csproj|solutionrelative:blazorpeliculasladodelservidor\\repositorios\\repositoriopeliculas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01A229A8-26B6-4486-98EF-A918ADE39E98}|BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\blazor\\blazorpeliculasladodelservidor\\blazorpeliculasladodelservidor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01A229A8-26B6-4486-98EF-A918ADE39E98}|BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor.csproj|solutionrelative:blazorpeliculasladodelservidor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01A229A8-26B6-4486-98EF-A918ADE39E98}|BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\blazor\\blazorpeliculasladodelservidor\\blazorpeliculasladodelservidor\\helpers\\authenticationstateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01A229A8-26B6-4486-98EF-A918ADE39E98}|BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor.csproj|solutionrelative:blazorpeliculasladodelservidor\\helpers\\authenticationstateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +22,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor\\Program.cs",
+              "RelativeDocumentMoniker": "BlazorPeliculasLadoDelServidor\\Program.cs",
+              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor\\Program.cs",
+              "RelativeToolTip": "BlazorPeliculasLadoDelServidor\\Program.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAAAGAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-09T19:52:02.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthenticationStateService.cs",
+              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor\\Helpers\\AuthenticationStateService.cs",
+              "RelativeDocumentMoniker": "BlazorPeliculasLadoDelServidor\\Helpers\\AuthenticationStateService.cs",
+              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor\\Helpers\\AuthenticationStateService.cs",
+              "RelativeToolTip": "BlazorPeliculasLadoDelServidor\\Helpers\\AuthenticationStateService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-09T19:15:35.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RepositorioPeliculas.cs",
+              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor\\Repositorios\\RepositorioPeliculas.cs",
+              "RelativeDocumentMoniker": "BlazorPeliculasLadoDelServidor\\Repositorios\\RepositorioPeliculas.cs",
+              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\blazor\\BlazorPeliculasLadoDelServidor\\BlazorPeliculasLadoDelServidor\\Repositorios\\RepositorioPeliculas.cs",
+              "RelativeToolTip": "BlazorPeliculasLadoDelServidor\\Repositorios\\RepositorioPeliculas.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAAJEAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-09T18:18:37.08Z",
+              "EditorCaption": ""
             }
           ]
         }
