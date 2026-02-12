@@ -1,4 +1,4 @@
-﻿@inject IRepositorio repositorio
+﻿@inject RepositorioActores repositorioActores
 
 <EditForm Model="Pelicula" OnValidSubmit="OnDataAnnotationsValidated">
     <DataAnnotationsValidator />
@@ -111,16 +111,7 @@
         imagenURL = null;
     }
 
-    private async Task<IEnumerable<Actor>> BuscarActores(string searchText)
-    {
-        var respuestaHttp = await repositorio.Get<List<Actor>>($"api/actores/buscar/{searchText}");
-        return respuestaHttp.Response!;
-        // return new List<Actor>
-        // {
-        //     new Actor{ Id=1, Nombre="Tom Holland", Foto = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Tom_Holland_by_Gage_Skidmore.jpg/340px-Tom_Holland_by_Gage_Skidmore.jpg"},
-        //     new Actor{ Id=2, Nombre="Tom Hanks", Foto = "https://tse1.mm.bing.net/th/id/OIP.wq1bAkibjsCCy84sEWc8UwHaJu?rs=1&pid=ImgDetMain&o=7&rm=3"}
-        // };
-    }
+    private async Task<IEnumerable<Actor>> BuscarActores(string searchText) => await repositorioActores.Get(searchText);
 
     private async Task OnDataAnnotationsValidated()
     {

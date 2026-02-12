@@ -1,6 +1,6 @@
 ﻿@page "/pelicula/{PeliculaId:int}"
 @page "/pelicula/{PeliculaId:int}/{NombrePelicula}"
-@inject IRepositorio repositorio
+@inject RepositorioPeliculas repositorioPeliculas
 @inject SweetAlertService swal
 
 @if (modelo is null)
@@ -58,31 +58,20 @@ else
     public string NombrePelicula { get; set; } = null!;
     private PeliculaVisualizarDTO? modelo;
 
-    protected override async Task OnInitializedAsync()
-    {
-        var respuestaHttp = await repositorio.Get<PeliculaVisualizarDTO>($"api/peliculas/{PeliculaId}");
-
-        if (respuestaHttp.Error)
-        {
-            var mensajeError = await respuestaHttp.ObtenerMensajeError();
-            await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
-        }
-        else
-            modelo = respuestaHttp.Response;
-    }
+    protected override async Task OnInitializedAsync() => modelo = await repositorioPeliculas.Get(PeliculaId);
 
     private async Task OnRating(int votoSeleccionado)
     {
-        modelo!.VotoUsuario = votoSeleccionado;
-        var votoPeliculaDTO = new VotoPeliculaDTO { PeliculaId = PeliculaId, Voto = votoSeleccionado };
-        var respuestaHttp = await repositorio.Post("api/votos", votoPeliculaDTO);
+        // modelo!.VotoUsuario = votoSeleccionado;
+        // var votoPeliculaDTO = new VotoPeliculaDTO { PeliculaId = PeliculaId, Voto = votoSeleccionado };
+        // var respuestaHttp = await repositorioPeliculas.Post("api/votos", votoPeliculaDTO);
 
-        if (respuestaHttp.Error)
-        {
-            var mensajeError = await respuestaHttp.ObtenerMensajeError();
-            await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
-        }
-        else
-            await swal.FireAsync("Exitoso", "Su voto ha sido recibido", SweetAlertIcon.Success);
+        // if (respuestaHttp.Error)
+        // {
+        //     var mensajeError = await respuestaHttp.ObtenerMensajeError();
+        //     await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
+        // }
+        // else
+        //     await swal.FireAsync("Exitoso", "Su voto ha sido recibido", SweetAlertIcon.Success);
     }
 }

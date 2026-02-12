@@ -82,6 +82,7 @@ void ConfigureServices(IServiceCollection services)
     services.AddTransient<RepositorioUsuarios>();
     services.AddTransient<RepositorioGeneros>();
     services.AddTransient<RepositorioActores>();
+    services.AddTransient<RepositorioPeliculas>();
     services.AddSweetAlert2();
     services.AddScoped<IAlmacenadorArchivos, AlmacenadorArchivosLocal>();
     //services.AddTransient<IAlmacenadorArchivos,AlmacenadorArchivosLocal>();

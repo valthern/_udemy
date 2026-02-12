@@ -35,11 +35,13 @@ namespace BlazorPeliculasLadoDelServidor.Repositorios
             return new HomePageDTO
             {
                 PeliculasEnCartelera = await context.Peliculas
+                    .AsNoTracking()
                     .Where(pelicula => pelicula.EnCartelera)
                     .OrderByDescending(pelicula => pelicula.Lanzamiento)
                     .Take(limite)
                     .ToListAsync(),
                 ProximosEstrenos = await context.Peliculas
+                    .AsNoTracking()
                     .Where(pelicula => pelicula.Lanzamiento > DateTime.Today)
                     .OrderBy(pelicula => pelicula.Lanzamiento)
                     .Take(limite)
@@ -50,6 +52,7 @@ namespace BlazorPeliculasLadoDelServidor.Repositorios
         public async Task<PeliculaVisualizarDTO> Get(int id)
         {
             var pelicula = await context.Peliculas
+                .AsNoTracking()
                 .Where(p => p.Id == id)
                 .Include(p => p.GenerosPelicula)
                     .ThenInclude(gp => gp.Genero)
@@ -58,6 +61,8 @@ namespace BlazorPeliculasLadoDelServidor.Repositorios
                 .FirstOrDefaultAsync();
 
             if (pelicula is null) return null;
+
+            // todo: sistema de votación
 
             var promedioVoto = 0.0;
             var votoUsuario = 0;
@@ -72,13 +77,6 @@ namespace BlazorPeliculasLadoDelServidor.Repositorios
 
                 if (userId is not null)
                 {
-                    //var usuario = await userManager
-                    //    .FindByEmailAsync(HttpContext.User.Identity!.Name!);
-
-                    //if (usuario is null) return BadRequest("Usuario no encontrado");
-
-                    //var usuarioId = usuario.Id;
-
                     var votoUsuarioDB = await context.VotosPeliculas
                         .FirstOrDefaultAsync(vp => vp.PeliculaId == id && vp.UsuarioId == userId);
 
@@ -91,7 +89,8 @@ namespace BlazorPeliculasLadoDelServidor.Repositorios
             {
                 Pelicula = pelicula,
                 Generos = pelicula.GenerosPelicula
-                    .Select(gp => gp.Genero!).ToList(),
+                    .Select(gp => gp.Genero!)
+                    .ToList(),
                 Actores = pelicula.PeliculasActor
                     .Select(pa => new Actor
                     {
@@ -99,7 +98,8 @@ namespace BlazorPeliculasLadoDelServidor.Repositorios
                         Nombre = pa.Actor.Nombre,
                         Foto = pa.Actor.Foto,
                         Personaje = pa.Personaje
-                    }).ToList(),
+                    })
+                    .ToList(),
                 PromedioVotos = promedioVoto,
                 VotoUsuario = votoUsuario
             };
@@ -107,7 +107,8 @@ namespace BlazorPeliculasLadoDelServidor.Repositorios
 
         public async Task<RespuestaPaginadaDTO<Pelicula>> Get(ParametrosBusquedaPeliculasDTO modelo)
         {
-            var peliculasQueryable = context.Peliculas.AsQueryable();
+            var peliculasQueryable = context.Peliculas
+                .AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(modelo.Titulo))
                 peliculasQueryable = peliculasQueryable
@@ -125,11 +126,16 @@ namespace BlazorPeliculasLadoDelServidor.Repositorios
                 peliculasQueryable = peliculasQueryable
                     .Where(p => p.GenerosPelicula!
                         .Select(gp => gp.GeneroId)
-                        .Contains(modelo.GeneroId));
+                        .Contains(modelo.GeneroId)
+                    );
+
+            // TODO: sistema de votación
 
             if (modelo.MasVotadas)
                 peliculasQueryable = peliculasQueryable
-                    .OrderByDescending(p => p.VotosPeliculas.Average(vp => vp.Voto));
+                    .OrderByDescending(p => p.VotosPeliculas
+                        .Average(vp => vp.Voto)
+                    );
 
             return new RespuestaPaginadaDTO<Pelicula>
             {
@@ -147,8 +153,11 @@ namespace BlazorPeliculasLadoDelServidor.Repositorios
             if (peliculaActionResult is null) return null;
 
             var peliculaVisualizarDTO = peliculaActionResult;
-            var generosSeleccionadosIds = peliculaVisualizarDTO!.Generos.Select(g => g.Id).ToList();
+            var generosSeleccionadosIds = peliculaVisualizarDTO!.Generos
+                .Select(g => g.Id)
+                .ToList();
             var generosNoSeleccionados = await context.Generos
+                .AsNoTracking()
                 .Where(g => !generosSeleccionadosIds.Contains(g.Id))
                 .ToListAsync();
 
@@ -161,7 +170,7 @@ namespace BlazorPeliculasLadoDelServidor.Repositorios
             };
         }
 
-        public async Task<ActionResult<int>> Post(Pelicula pelicula)
+        public async Task<int> Post(Pelicula pelicula)
         {
             if (!string.IsNullOrWhiteSpace(pelicula.Poster))
             {
@@ -183,15 +192,13 @@ namespace BlazorPeliculasLadoDelServidor.Repositorios
                     pelicula.PeliculasActor[i].Orden = i + 1;
         }
 
-        public async Task<ActionResult> Put(Pelicula pelicula)
+        public async Task Put(Pelicula pelicula)
         {
             var peliculaDB = await context.Peliculas
                 .Include(p => p.GenerosPelicula)
                 .Include(p => p.PeliculasActor)
-                .FirstOrDefaultAsync(p => p.Id == pelicula.Id);
-
-            if (peliculaDB is null) return NotFound();
-
+                .FirstOrDefaultAsync(p => p.Id == pelicula.Id) ?? throw new ApplicationException($"La película con ID {pelicula.Id} no fue encontrada");
+            
             peliculaDB = mapper.Map(pelicula, peliculaDB);
 
             if (!string.IsNullOrWhiteSpace(pelicula.Poster))
@@ -202,21 +209,20 @@ namespace BlazorPeliculasLadoDelServidor.Repositorios
 
             EscribirOrdenActores(peliculaDB);
 
+            peliculaDB.PeliculasActor = pelicula.PeliculasActor;
+            peliculaDB.GenerosPelicula = pelicula.GenerosPelicula;
+
             await context.SaveChangesAsync();
-            return NoContent();
         }
 
-        public async Task<ActionResult> Delete(int id)
+        public async Task Delete(int id)
         {
-            var pelicula = await context.Peliculas.FirstOrDefaultAsync(a => a.Id == id);
-
-            if (pelicula is null) return NotFound();
+            var pelicula = await context.Peliculas
+                .FirstOrDefaultAsync(a => a.Id == id) ?? throw new ApplicationException($"La película con ID {id} no fue encontrada");
 
             context.Remove(pelicula);
             await context.SaveChangesAsync();
             await almacenadorArchivos.EliminarArchivo(pelicula.Poster!, contenedor);
-
-            return NoContent();
         }
     }
 }

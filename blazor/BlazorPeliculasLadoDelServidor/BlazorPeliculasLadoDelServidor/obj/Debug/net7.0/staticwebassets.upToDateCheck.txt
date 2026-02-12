@@ -12,3 +12,5 @@ wwwroot\css\open-iconic\ICON-LICENSE
 wwwroot\css\open-iconic\README.md
 wwwroot\css\site.css
 wwwroot\favicon.png
+wwwroot\peliculas\8d074627-f737-493e-b813-fe7331f8d264.jpg
+wwwroot\peliculas\dc403e62-2ef6-48c2-8268-6322eefcfcd1.jpg

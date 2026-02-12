@@ -1,6 +1,7 @@
 ﻿@page "/peliculas/buscar"
 @using System.Web
-@inject IRepositorio repositorio
+@inject RepositorioPeliculas repositorioPerliculas
+@inject RepositorioGeneros repositorioGeneros
 @inject NavigationManager navigationManager
 
 <h3>Filtro Películas</h3>
@@ -69,13 +70,14 @@
     public int PaginaActual { get; set; } = 1;
     private int paginasTotales;
 
+    // Listo
     protected override async Task OnInitializedAsync()
     {
         if(PaginaActual == 0)
             PaginaActual = 1;
 
         await ObtenerGeneros();
-        await RealizarBusqueda(GenerarQuerystrings());
+        await RealizarBusqueda();
     }
 
     private async Task PaginaSeleccionada(int pagina)
@@ -84,15 +86,12 @@
         await CargarNuevasPeliculas();
     }
 
-    private async Task ObtenerGeneros()
-    {
-        var respuestaHttp = await repositorio.Get<List<Genero>>("api/generos");
-        generos = respuestaHttp.Response!;
-    }
+    // Listo
+    private async Task ObtenerGeneros() => generos = await repositorioGeneros.Get();
 
     private async Task TituloKeyPress(KeyboardEventArgs e)
     {
-        if (e.Key == "Enter")
+        if (e.Key == "Enter") 
             await CargarNuevasPeliculas();
     }
 
@@ -100,15 +99,28 @@
     {
         var queryStrings = GenerarQuerystrings();
         navigationManager.NavigateTo($"/peliculas/buscar?{queryStrings}");
-        await RealizarBusqueda(queryStrings);
+        await RealizarBusqueda();
     }
 
-    private async Task RealizarBusqueda(string queryStrings = "")
+    // Listo
+    private async Task RealizarBusqueda()
     {
-        var respuestaHttp = await repositorio.Get<List<Pelicula>>($"api/peliculas/filtrar?{queryStrings}");
-        paginasTotales = int.Parse(respuestaHttp.HttpResponseMessage.Headers.GetValues("totalPaginas").FirstOrDefault()!);
-        Peliculas = respuestaHttp.Response!;
+        var parametrosBusqueda = GenerarParametrosBusqueda();
+        var respuestaPaginada = await repositorioPerliculas.Get(parametrosBusqueda);
+        paginasTotales = respuestaPaginada.TotalPaginas;
+        Peliculas = respuestaPaginada.Registros;
     }
+
+    // Listo
+    private ParametrosBusquedaPeliculasDTO GenerarParametrosBusqueda() => new ParametrosBusquedaPeliculasDTO
+        {
+            Titulo = Titulo,
+            GeneroId = GeneroSeleccionado,
+            EnCartelera = EnCartelera,
+            Estrenos = FuturosEstrenos,
+            MasVotadas = MasVotadas,
+            Pagina = PaginaActual
+        };
 
     private string GenerarQuerystrings()
     {

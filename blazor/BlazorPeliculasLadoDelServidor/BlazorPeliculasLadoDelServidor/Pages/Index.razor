@@ -1,9 +1,24 @@
 ﻿@page "/"
+@inject RepositorioPeliculas repositorioPeliculas
 
-<PageTitle>Index</PageTitle>
+<div>
+    <h3>En cartelera</h3>
+    <ListadoPeliculas Peliculas="EnCartelera" />
+</div>
 
-<h1>Hello, world!</h1>
+<div>
+    <h3>Próximos Estrenos</h3>
+    <ListadoPeliculas Peliculas="FuturosEstrenos" />
+</div>
 
-Welcome to your new app.
+@code {
+    private List<Pelicula> FuturosEstrenos;
+    private List<Pelicula> EnCartelera;
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+    protected override async Task OnInitializedAsync()
+    {
+        var homePageDTO = await repositorioPeliculas.Get();
+        FuturosEstrenos = homePageDTO.ProximosEstrenos!;
+        EnCartelera = homePageDTO.PeliculasEnCartelera!;
+    }
+}

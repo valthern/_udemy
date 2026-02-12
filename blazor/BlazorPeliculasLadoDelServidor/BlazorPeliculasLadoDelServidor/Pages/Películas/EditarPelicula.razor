@@ -1,7 +1,7 @@
 ﻿@page "/peliculas/editar/{PeliculaId:int}"
 @using System.Net
 @using Microsoft.AspNetCore.Authorization
-@inject IRepositorio repositorio
+@inject RepositorioPeliculas repositorio
 @inject NavigationManager navigationManager
 @inject SweetAlertService swal
 @attribute [Authorize(Roles = "admin")]
@@ -28,42 +28,17 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        var httpResponse = await repositorio.Get<PeliculaActualizacionDTO>($"api/peliculas/actualizar/{PeliculaId}");
+        var model = await repositorio.PutGet(PeliculaId);
 
-        if (httpResponse.Error)
-        {
-            if (httpResponse.HttpResponseMessage.StatusCode == HttpStatusCode.NotFound)
-            {
-                navigationManager.NavigateTo("/");
-            }
-            else
-            {
-                var mensajeError = await httpResponse.ObtenerMensajeError();
-                await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
-            }
-        }
-        else
-        {
-            var modelo = httpResponse.Response!;
-            ActoresSeleccionados = modelo.Actores;
-            GenerosSeleccionados = modelo.GenerosSeleccionados;
-            GenerosNoSeleccionados = modelo.GenerosNoSeleccionados;
-            Pelicula = modelo.Pelicula;
-        }
+        ActoresSeleccionados = model.Actores;
+        GenerosSeleccionados = model.GenerosSeleccionados;
+        GenerosNoSeleccionados = model.GenerosNoSeleccionados;
+        Pelicula = model.Pelicula;
     }
 
     private async Task Editar()
     {
-        var respuestaHttp = await repositorio.Put("api/peliculas", Pelicula);
-
-        if (respuestaHttp.Error)
-        {
-            var mensajeError = await respuestaHttp.ObtenerMensajeError();
-            await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
-        }
-        else
-        {
-            navigationManager.NavigateTo($"pelicula/{PeliculaId}");
-        }
+        await repositorio.Put(Pelicula!);
+        navigationManager.NavigateTo($"pelicula/{PeliculaId}");
     }
 }
