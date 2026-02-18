@@ -1,7 +1,7 @@
 ﻿@page "/peliculas/editar/{PeliculaId:int}"
 @using System.Net
 @using Microsoft.AspNetCore.Authorization
-@inject RepositorioPeliculas repositorio
+@inject RepositorioPeliculas repositorioPeliculas
 @inject NavigationManager navigationManager
 @inject SweetAlertService swal
 @attribute [Authorize(Roles = "admin")]
@@ -28,7 +28,7 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        var model = await repositorio.PutGet(PeliculaId);
+        var model = await repositorioPeliculas.PutGet(PeliculaId);
 
         ActoresSeleccionados = model.Actores;
         GenerosSeleccionados = model.GenerosSeleccionados;
@@ -38,7 +38,7 @@ else
 
     private async Task Editar()
     {
-        await repositorio.Put(Pelicula!);
+        await repositorioPeliculas.Put(Pelicula!);
         navigationManager.NavigateTo($"pelicula/{PeliculaId}");
     }
 }

@@ -1,7 +1,13 @@
+using CrudContactosMVC.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
-//Leer cadena de conexion desde appsettings.json
+// Leer cadena de conexion desde appsettings.json
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+// Registrar DbContext
+builder.Services
+    .AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

@@ -22,10 +22,7 @@ namespace BlazorPeliculasLadoDelServidor.Helpers
 
             var claimWithUserId = claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
 
-            if (claimWithUserId is null) 
-                throw new ApplicationException("No es posible encontrar el ID del usuario");
-        
-            return claimWithUserId.Value;
+            return claimWithUserId is null ? throw new ApplicationException("No es posible encontrar el ID del usuario") : claimWithUserId.Value;
         }
     }
 }
