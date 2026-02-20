@@ -1,6 +1,7 @@
 ﻿@page "/pelicula/{PeliculaId:int}"
 @page "/pelicula/{PeliculaId:int}/{NombrePelicula}"
 @inject RepositorioPeliculas repositorioPeliculas
+@inject RepositorioVotos repositorioVotos
 @inject SweetAlertService swal
 
 @if (modelo is null)
@@ -62,16 +63,9 @@ else
 
     private async Task OnRating(int votoSeleccionado)
     {
-        // modelo!.VotoUsuario = votoSeleccionado;
-        // var votoPeliculaDTO = new VotoPeliculaDTO { PeliculaId = PeliculaId, Voto = votoSeleccionado };
-        // var respuestaHttp = await repositorioPeliculas.Post("api/votos", votoPeliculaDTO);
-
-        // if (respuestaHttp.Error)
-        // {
-        //     var mensajeError = await respuestaHttp.ObtenerMensajeError();
-        //     await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
-        // }
-        // else
-        //     await swal.FireAsync("Exitoso", "Su voto ha sido recibido", SweetAlertIcon.Success);
+        modelo!.VotoUsuario = votoSeleccionado;
+        var votoPelicula = new VotoPeliculaDTO { PeliculaId = PeliculaId, Voto = votoSeleccionado };
+        await repositorioVotos.Votar(votoPelicula);
+        await swal.FireAsync("Exitoso", "Su voto ha sido recibido", SweetAlertIcon.Success);
     }
 }

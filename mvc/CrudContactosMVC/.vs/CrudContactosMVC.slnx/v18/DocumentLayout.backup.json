@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\mvc\\CrudContactosMVC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0589A46F-C489-44FE-E029-78BDF4A56177}|CrudContactosMVC\\CrudContactosMVC.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\mvc\\crudcontactosmvc\\crudcontactosmvc\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0589A46F-C489-44FE-E029-78BDF4A56177}|CrudContactosMVC\\CrudContactosMVC.csproj|solutionrelative:crudcontactosmvc\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0589A46F-C489-44FE-E029-78BDF4A56177}|CrudContactosMVC\\CrudContactosMVC.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\mvc\\crudcontactosmvc\\crudcontactosmvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0589A46F-C489-44FE-E029-78BDF4A56177}|CrudContactosMVC\\CrudContactosMVC.csproj|solutionrelative:crudcontactosmvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0589A46F-C489-44FE-E029-78BDF4A56177}|CrudContactosMVC\\CrudContactosMVC.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\mvc\\crudcontactosmvc\\crudcontactosmvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0589A46F-C489-44FE-E029-78BDF4A56177}|CrudContactosMVC\\CrudContactosMVC.csproj|solutionrelative:crudcontactosmvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0589A46F-C489-44FE-E029-78BDF4A56177}|CrudContactosMVC\\CrudContactosMVC.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\mvc\\crudcontactosmvc\\crudcontactosmvc\\views\\contactos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0589A46F-C489-44FE-E029-78BDF4A56177}|CrudContactosMVC\\CrudContactosMVC.csproj|solutionrelative:crudcontactosmvc\\views\\contactos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0589A46F-C489-44FE-E029-78BDF4A56177}|CrudContactosMVC\\CrudContactosMVC.csproj|c:\\users\\magno\\source\\ejemplos\\_udemy\\mvc\\crudcontactosmvc\\crudcontactosmvc\\controllers\\contactoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0589A46F-C489-44FE-E029-78BDF4A56177}|CrudContactosMVC\\CrudContactosMVC.csproj|solutionrelative:crudcontactosmvc\\controllers\\contactoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\mvc\\CrudContactosMVC\\CrudContactosMVC\\Program.cs",
-              "RelativeDocumentMoniker": "CrudContactosMVC\\Program.cs",
-              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\mvc\\CrudContactosMVC\\CrudContactosMVC\\Program.cs",
-              "RelativeToolTip": "CrudContactosMVC\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-12T23:45:23.425Z",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\mvc\\CrudContactosMVC\\CrudContactosMVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "CrudContactosMVC\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\mvc\\CrudContactosMVC\\CrudContactosMVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "CrudContactosMVC\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-19T23:45:51.102Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\mvc\\CrudContactosMVC\\CrudContactosMVC\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "CrudContactosMVC\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\mvc\\CrudContactosMVC\\CrudContactosMVC\\Data\\ApplicationDbContext.cs*",
-              "RelativeToolTip": "CrudContactosMVC\\Data\\ApplicationDbContext.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\mvc\\CrudContactosMVC\\CrudContactosMVC\\Views\\Contactos\\Index.cshtml",
+              "RelativeDocumentMoniker": "CrudContactosMVC\\Views\\Contactos\\Index.cshtml",
+              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\mvc\\CrudContactosMVC\\CrudContactosMVC\\Views\\Contactos\\Index.cshtml",
+              "RelativeToolTip": "CrudContactosMVC\\Views\\Contactos\\Index.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAUwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-19T20:18:01.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ContactosController.cs",
+              "DocumentMoniker": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\mvc\\CrudContactosMVC\\CrudContactosMVC\\Controllers\\ContactosController.cs",
+              "RelativeDocumentMoniker": "CrudContactosMVC\\Controllers\\ContactosController.cs",
+              "ToolTip": "C:\\Users\\magno\\source\\ejemplos\\_udemy\\mvc\\CrudContactosMVC\\CrudContactosMVC\\Controllers\\ContactosController.cs",
+              "RelativeToolTip": "CrudContactosMVC\\Controllers\\ContactosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-12T23:04:47.871Z",
+              "WhenOpened": "2026-02-19T20:04:44.286Z",
               "EditorCaption": ""
             }
           ]

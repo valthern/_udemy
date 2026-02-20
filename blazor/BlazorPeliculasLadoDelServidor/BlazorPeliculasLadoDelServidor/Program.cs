@@ -50,6 +50,11 @@ app.Run();
 // Métodos auxiliares para organizar el código
 void ConfigureServices(IServiceCollection services)
 {
+    #region Configuración de SignalR
+    // Para que esto funcione hay qué instalar el paquete NuGet "Microsoft.Azure.SignalR" y configurar la conexión a Azure SignalR en appsettings.json.
+    //services.AddSignalRCore().AddAzureSignalR(builder.Configuration.GetConnectionString("SignalRConnection"));
+    #endregion
+
     #region ConfiguracionDB
     var csName = "TicDesarrolloConnection";
     //var csName = "NecroConnection";
@@ -83,6 +88,7 @@ void ConfigureServices(IServiceCollection services)
     services.AddTransient<RepositorioGeneros>();
     services.AddTransient<RepositorioActores>();
     services.AddTransient<RepositorioPeliculas>();
+    services.AddTransient<RepositorioVotos>();
     services.AddSweetAlert2();
     services.AddScoped<IAlmacenadorArchivos, AlmacenadorArchivosLocal>();
     //services.AddTransient<IAlmacenadorArchivos,AlmacenadorArchivosLocal>();

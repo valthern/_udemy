@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CrudContactosMVC.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260213003004_Inicial")]
+    [Migration("20260219191924_Inicial")]
     partial class Inicial
     {
         /// <inheritdoc />
