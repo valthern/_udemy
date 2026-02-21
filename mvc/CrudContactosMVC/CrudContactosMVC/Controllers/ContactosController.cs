@@ -1,4 +1,5 @@
 ﻿using CrudContactosMVC.Data;
+using CrudContactosMVC.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,6 +19,33 @@ namespace CrudContactosMVC.Controllers
         {
             var contactos = await context.Contactos.ToListAsync();
             return View(contactos);
+        }
+
+        [HttpGet]
+        public IActionResult Create() => View();
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(Contacto contacto)
+        {
+            if (ModelState.IsValid)
+            {
+                context.Add(contacto);
+                await context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(contacto);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Editar(int? id)
+        {
+            if (id is null) return NotFound();
+            var contacto = await context.Contactos.FindAsync(id);
+            if (contacto is null) return NotFound();
+
+            return View(id);
         }
     }
 }
