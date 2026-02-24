@@ -26,7 +26,7 @@ namespace CrudContactosMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Contacto contacto)
+        public async Task<IActionResult> Crear(Contacto contacto)
         {
             if (ModelState.IsValid)
             {
@@ -45,7 +45,31 @@ namespace CrudContactosMVC.Controllers
             var contacto = await context.Contactos.FindAsync(id);
             if (contacto is null) return NotFound();
 
-            return View(id);
+            return View(contacto);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Editar(int id, Contacto contacto)
+        {
+            if(id != contacto.Id) return NotFound();
+
+            try
+            {
+                context.Update(contacto);
+                await context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!ContactoExists(contacto.Id))
+                    return NotFound();
+                else
+                    throw;
+            }
+        }
+
+        private bool ContactoExists(int id) => 
+            context.Contactos.Any(c => c.Id == id);
     }
 }

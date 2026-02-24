@@ -1,0 +1,10 @@
+C:\Users\magno\source\ejemplos\_udemy\concurrencia\WinForms\WinForms\bin\Debug\WinForms.exe.config
+C:\Users\magno\source\ejemplos\_udemy\concurrencia\WinForms\WinForms\bin\Debug\WinForms.exe
+C:\Users\magno\source\ejemplos\_udemy\concurrencia\WinForms\WinForms\bin\Debug\WinForms.pdb
+C:\Users\magno\source\ejemplos\_udemy\concurrencia\WinForms\WinForms\obj\Debug\WinForms.csproj.AssemblyReference.cache
+C:\Users\magno\source\ejemplos\_udemy\concurrencia\WinForms\WinForms\obj\Debug\WinForms.Form1.resources
+C:\Users\magno\source\ejemplos\_udemy\concurrencia\WinForms\WinForms\obj\Debug\WinForms.Properties.Resources.resources
+C:\Users\magno\source\ejemplos\_udemy\concurrencia\WinForms\WinForms\obj\Debug\WinForms.csproj.GenerateResource.cache
+C:\Users\magno\source\ejemplos\_udemy\concurrencia\WinForms\WinForms\obj\Debug\WinForms.csproj.CoreCompileInputs.cache
+C:\Users\magno\source\ejemplos\_udemy\concurrencia\WinForms\WinForms\obj\Debug\WinForms.exe
+C:\Users\magno\source\ejemplos\_udemy\concurrencia\WinForms\WinForms\obj\Debug\WinForms.pdb
