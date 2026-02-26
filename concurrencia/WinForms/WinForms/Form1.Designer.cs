@@ -31,10 +31,10 @@ namespace WinForms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnIniciar = new System.Windows.Forms.Button();
-            this.loagingGif = new System.Windows.Forms.PictureBox();
+            this.loadingGif = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtInput = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.loagingGif)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loadingGif)).BeginInit();
             this.SuspendLayout();
             // 
             // btnIniciar
@@ -47,16 +47,16 @@ namespace WinForms
             this.btnIniciar.UseVisualStyleBackColor = true;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
-            // loagingGif
+            // loadingGif
             // 
-            this.loagingGif.Image = ((System.Drawing.Image)(resources.GetObject("loagingGif.Image")));
-            this.loagingGif.Location = new System.Drawing.Point(15, 67);
-            this.loagingGif.Name = "loagingGif";
-            this.loagingGif.Size = new System.Drawing.Size(280, 280);
-            this.loagingGif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.loagingGif.TabIndex = 1;
-            this.loagingGif.TabStop = false;
-            this.loagingGif.Visible = false;
+            this.loadingGif.Image = ((System.Drawing.Image)(resources.GetObject("loadingGif.Image")));
+            this.loadingGif.Location = new System.Drawing.Point(15, 67);
+            this.loadingGif.Name = "loadingGif";
+            this.loadingGif.Size = new System.Drawing.Size(280, 280);
+            this.loadingGif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.loadingGif.TabIndex = 1;
+            this.loadingGif.TabStop = false;
+            this.loadingGif.Visible = false;
             // 
             // label1
             // 
@@ -82,11 +82,11 @@ namespace WinForms
             this.ClientSize = new System.Drawing.Size(306, 361);
             this.Controls.Add(this.txtInput);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.loagingGif);
+            this.Controls.Add(this.loadingGif);
             this.Controls.Add(this.btnIniciar);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.loagingGif)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loadingGif)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -95,7 +95,7 @@ namespace WinForms
         #endregion
 
         private System.Windows.Forms.Button btnIniciar;
-        private System.Windows.Forms.PictureBox loagingGif;
+        private System.Windows.Forms.PictureBox loadingGif;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtInput;
     }

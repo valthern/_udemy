@@ -28,15 +28,18 @@ namespace WinForms
 
         private async void btnIniciar_Click(object sender, EventArgs e)
         {
-            loagingGif.Visible = true;
+            loadingGif.Visible = true;
+            #region Número de las Tarjetas para procesar
+            var numeroDeTarjetas = 50_000;
+            #endregion
 
-            var tarjetas = ObtenerTarjetasDeCredito(5);
+            var tarjetas = await ObtenerTarjetasDeCredito(numeroDeTarjetas);
             var stopwatch = new Stopwatch();
             stopwatch.Start();
 
             try
             {
-
+                await ProcesarTarjetas(tarjetas);
             }
             catch (HttpRequestException ex)
             {
@@ -44,30 +47,47 @@ namespace WinForms
             }
 
             MessageBox.Show($"Operación finalizada en {stopwatch.ElapsedMilliseconds / 1000.0} segundos");
-
-            loagingGif.Visible = false;
+            loadingGif.Visible = false;
         }
 
         private async Task ProcesarTarjetas(List<string> tarjetas)
         {
-            var tareas = new List<Task>();
+            #region Tarjetas para procesar simultaneamente
+            var tarjetasEnProceso = 5000;
+            #endregion
+            using var semaforo = new SemaphoreSlim(tarjetasEnProceso);
 
-            foreach (var tarjeta in tarjetas)
-            {
-                var json = JsonConvert.SerializeObject(tarjeta);
-                var content = new StringContent(json, Encoding.UTF8, "application/json");
-                var respuestaTask = httpClient.PostAsync($"{apiURL}/tarjetas", content);
-            }
+            var tareas = new List<Task<HttpResponseMessage>>();
+
+            tareas = tarjetas.Select(async tarjeta =>
+             {
+                 var json = JsonConvert.SerializeObject(tarjeta);
+                 var content = new StringContent(json, Encoding.UTF8, "application/json");
+                 await semaforo.WaitAsync();
+                 try
+                 {
+                     return await httpClient.PostAsync($"{apiURL}/tarjetas", content);
+                 }
+                 finally
+                 {
+                     semaforo.Release();
+                 }
+             }).ToList();
+
+            await Task.WhenAll(tareas);
         }
 
-        private List<string> ObtenerTarjetasDeCredito(int cantidadDeTarjetas)
+        private async Task<List<string>> ObtenerTarjetasDeCredito(int cantidadDeTarjetas)
         {
-            var tarjetas = new List<string>();
+            return await Task.Run(() =>
+            {
+                var tarjetas = new List<string>();
 
-            for (int i = 0; i < cantidadDeTarjetas; i++)
-                tarjetas.Add(i.ToString().PadLeft(16, '0'));
+                for (int i = 0; i < cantidadDeTarjetas; i++)
+                    tarjetas.Add(i.ToString().PadLeft(16, '0'));
 
-            return tarjetas;
+                return tarjetas;
+            });
         }
 
         private async Task Esperar() => await Task.Delay(TimeSpan.FromSeconds(0));
