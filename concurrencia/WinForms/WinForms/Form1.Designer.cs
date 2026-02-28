@@ -34,6 +34,7 @@ namespace WinForms
             this.loadingGif = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtInput = new System.Windows.Forms.TextBox();
+            this.pgProcesamiento = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.loadingGif)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,12 +75,20 @@ namespace WinForms
             this.txtInput.Size = new System.Drawing.Size(230, 20);
             this.txtInput.TabIndex = 3;
             // 
+            // pgProcesamiento
+            // 
+            this.pgProcesamiento.Location = new System.Drawing.Point(15, 353);
+            this.pgProcesamiento.Name = "pgProcesamiento";
+            this.pgProcesamiento.Size = new System.Drawing.Size(280, 23);
+            this.pgProcesamiento.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.ClientSize = new System.Drawing.Size(306, 361);
+            this.ClientSize = new System.Drawing.Size(306, 384);
+            this.Controls.Add(this.pgProcesamiento);
             this.Controls.Add(this.txtInput);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.loadingGif);
@@ -98,6 +107,7 @@ namespace WinForms
         private System.Windows.Forms.PictureBox loadingGif;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtInput;
+        private System.Windows.Forms.ProgressBar pgProcesamiento;
     }
 }
 
