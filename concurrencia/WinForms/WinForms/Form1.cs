@@ -90,10 +90,8 @@ namespace WinForms
                 }
             }).ToList();
 
-            //var respuestas = await Task.WhenAll(tareas);            
-            var respuestas = Task.WhenAll(tareas);
-
-            //if()
+            var respuestas = await Task.WhenAll(tareas);
+            //var respuestas = Task.WhenAll(tareas);
 
             var tarjetasRechazadas = new List<string>();
 
