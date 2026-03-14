@@ -29,9 +29,10 @@ namespace WinForms
         private async void btnIniciar_Click(object sender, EventArgs e)
         {
             loadingGif.Visible = true;
+            pgProcesamiento.Visible = true;
             var reportarProgreso = new Progress<int>(ReportarProgresoTarjetas);
             #region Tarjetas totales para procesar
-            var numeroDeTarjetasParaProcesar = 2500;
+            var numeroDeTarjetasParaProcesar = 20;
             #endregion
             var tarjetas = await ObtenerTarjetasDeCredito(numeroDeTarjetasParaProcesar);
             var stopwatch = new Stopwatch();
@@ -39,7 +40,7 @@ namespace WinForms
 
             try
             {
-                await ProcesarTarjetas(tarjetas);
+                await ProcesarTarjetas(tarjetas, reportarProgreso);
             }
             catch (HttpRequestException ex)
             {
@@ -48,6 +49,7 @@ namespace WinForms
 
             MessageBox.Show($"Operación finalizada en {stopwatch.ElapsedMilliseconds / 1000.0} segundos");
             loadingGif.Visible = false;
+            pgProcesamiento.Visible = false;
         }
 
         private void ReportarProgresoTarjetas(int porcentaje) =>
@@ -56,34 +58,43 @@ namespace WinForms
         private async Task ProcesarTarjetas(List<string> tarjetas, IProgress<int> progress = null)
         {
             #region Tarjetas para procesar simultaneamente
-            var numeroDeTarjetasEnProceso = 1000;
+            var numeroDeTarjetasEnProceso = 2;
             #endregion
             using var semaforo = new SemaphoreSlim(numeroDeTarjetasEnProceso);
             var tareas = new List<Task<HttpResponseMessage>>();
+            var indice = 0;
 
             tareas = tarjetas.Select(async tarjeta =>
             {
-                 var json = JsonConvert.SerializeObject(tarjeta);
-                 var content = new StringContent(json, Encoding.UTF8, "application/json");
-                 await semaforo.WaitAsync();
-                 try
-                 {
-                     var tareaInterna = await httpClient.PostAsync($"{apiURL}/tarjetas", content);
+                var json = JsonConvert.SerializeObject(tarjeta);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                await semaforo.WaitAsync();
+                try
+                {
+                    var tareaInterna = await httpClient.PostAsync($"{apiURL}/tarjetas", content);
 
-                     if(progress !=null)
-                     {
-                         indice++;
-                     }
+                    //if (progress != null)
+                    //{
+                    //    indice++;
+                    //    var porcentaje = (double)indice / tarjetas.Count;
+                    //    porcentaje *= 100;
+                    //    var porcentajeInt = (int)Math.Round(porcentaje, 0);
+                    //    progress.Report(porcentajeInt);
+                    //}
 
-                     return tareaInterna;
-                 }
-                 finally
-                 {
-                     semaforo.Release();
-                 }
+                    return tareaInterna;
+                }
+                finally
+                {
+                    semaforo.Release();
+                }
             }).ToList();
 
-            var respuestas = await Task.WhenAll(tareas);
+            //var respuestas = await Task.WhenAll(tareas);            
+            var respuestas = Task.WhenAll(tareas);
+
+            //if()
+
             var tarjetasRechazadas = new List<string>();
 
             foreach (var respuesta in respuestas)

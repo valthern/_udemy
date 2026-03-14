@@ -81,6 +81,7 @@ namespace WinForms
             this.pgProcesamiento.Name = "pgProcesamiento";
             this.pgProcesamiento.Size = new System.Drawing.Size(280, 23);
             this.pgProcesamiento.TabIndex = 4;
+            this.pgProcesamiento.Visible = false;
             // 
             // Form1
             // 
