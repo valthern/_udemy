@@ -1,19 +1,15 @@
 ﻿@model CrudContactosMVC.Models.Contacto
 
 @{
-    // ViewData["Title"] = "Editar Contacto";
-    ViewBag.Title = "Editar Contacto";
+    ViewData["Title"] = "Nuevo Contacto";
 }
 
-@* <h1 class="text-center">@ViewData["Title"]</h1> *@
-<h1 class="text-center">ViewBag.Title</h1>
+<h1 class="text-center">@ViewData["Title"]</h1>
 
 <hr />
 
-<form asp-action="Editar" method="post">
+<form asp-action="Crear" method="post">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
-    <input type="hidden" asp-for="Id" />
 
     <div class="mb-3">
         <label asp-for="Nombre" class="form-label"></label>
@@ -39,6 +35,6 @@
         <span asp-validation-for="Direccion" class="text-danger"></span>
     </div>
 
-    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+    <button type="submit" class="btn btn-primary">Guardar</button>
     <a asp-action="Index" class="btn btn-secondary">Volver</a>
 </form>

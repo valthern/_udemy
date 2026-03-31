@@ -14,6 +14,7 @@ namespace CrudContactosMVC.Controllers
             this.context = context;
         }
 
+        // GET: Contactos
         [HttpGet]
         public async Task<IActionResult> Index()
         {
@@ -22,15 +23,15 @@ namespace CrudContactosMVC.Controllers
         }
 
         [HttpGet]
-        public IActionResult Create() => View();
+        public IActionResult Crear() => View();
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Crear(Contacto contacto)
-        {
-            if (ModelState.IsValid)
+        { 
+            if(ModelState.IsValid)
             {
-                context.Add(contacto);
+                context.Contactos.Add(contacto);
                 await context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -42,34 +43,12 @@ namespace CrudContactosMVC.Controllers
         public async Task<IActionResult> Editar(int? id)
         {
             if (id is null) return NotFound();
+
             var contacto = await context.Contactos.FindAsync(id);
+
             if (contacto is null) return NotFound();
 
             return View(contacto);
         }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Editar(int id, Contacto contacto)
-        {
-            if(id != contacto.Id) return NotFound();
-
-            try
-            {
-                context.Update(contacto);
-                await context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ContactoExists(contacto.Id))
-                    return NotFound();
-                else
-                    throw;
-            }
-        }
-
-        private bool ContactoExists(int id) => 
-            context.Contactos.Any(c => c.Id == id);
     }
 }

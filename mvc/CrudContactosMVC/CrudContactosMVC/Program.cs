@@ -3,42 +3,37 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-#region Configuración de la conexión a la Base de Datos
-// 1.- Leer cadena de conexion desde appsettings.json
+// Leemos la cadena de conexión.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-// 2.- Registrar DbContext
+
+// Registramos DbContext con la cadena de conexión.
 builder.Services
     .AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
-#endregion
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-ConfigurationApp(app);
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Home/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
+app.UseRouting();
+
+app.UseAuthorization();
+
+app.MapStaticAssets();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}")
+    .WithStaticAssets();
+
 
 app.Run();
-
-static void ConfigurationApp(WebApplication app)
-{
-    // Configure the HTTP request pipeline.
-    if (!app.Environment.IsDevelopment())
-    {
-        app.UseExceptionHandler("/Home/Error");
-        // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-        app.UseHsts();
-    }
-
-    app.UseHttpsRedirection();
-    app.UseRouting();
-
-    app.UseAuthorization();
-
-    app.MapStaticAssets();
-
-    app.MapControllerRoute(
-        name: "default",
-        pattern: "{controller=Home}/{action=Index}/{id?}")
-        .WithStaticAssets();
-}

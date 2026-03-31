@@ -5,12 +5,9 @@ namespace CrudContactosMVC.Data
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
-        {
-            
-        }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
-        // Aquí se agregan los DbSet para cada entidad del modelo
+        // Aquí se agregan los DbSet más adelante.
         public DbSet<Contacto> Contactos { get; set; }
     }
 }
