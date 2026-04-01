@@ -77,6 +77,46 @@ namespace CrudContactosMVC.Controllers
             return View(contacto);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Detalle(int? id)
+        {
+            if (id is null) return NotFound();
+
+            var contacto = await context.Contactos.FirstOrDefaultAsync(c => c.Id == id);
+
+            if (contacto is null) return NotFound();
+
+            return View(contacto);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Borrar(int? id)
+        {
+            if (id is null) return NotFound();
+
+            var contacto = await context.Contactos.FirstOrDefaultAsync(c => c.Id == id);
+
+            if (contacto is null) return NotFound();
+
+            return View(contacto);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Borrar(int id)
+        {
+            var contacto = await context.Contactos.FindAsync(id);
+
+            if(contacto is not null)
+            {
+                context.Contactos.Remove(contacto);
+                await context.SaveChangesAsync();
+                //return RedirectToAction(nameof(Index));
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+
         private bool ContactoExists(int id) => context.Contactos.Any(c => c.Id == id);
     }
 }

@@ -1,0 +1,28 @@
+﻿@model CrudContactosMVC.Models.Contacto
+
+@{
+    ViewBag.Title = "Eliminar Contacto";
+}
+
+<h1 class="text-center">@ViewBag.Title</h1>
+<h1 class="text-center">¿Realmente desea eliminar el contacto?</h1>
+
+<hr />
+
+<dl class="row">
+    <dt class="col-sm-3">Nombre</dt>
+    <dd class="col-sm-9">@Model.Nombre</dd>
+    <dt class="col-sm-3">Correo</dt>
+    <dd class="col-sm-9">@Model.Correo</dd>
+    <dt class="col-sm-3">Teléfono</dt>
+    <dd class="col-sm-9">@Model.Telefono</dd>
+    <dt class="col-sm-3">Dirección</dt>
+    <dd class="col-sm-9">@Model.Direccion</dd>
+
+    <form asp-action="Borrar" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+        <a asp-action="Index" class="btn btn-secondary btn-sm">Volver</a>
+    </form>
+
+</dl>
