@@ -1,12 +1,54 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{73275B3E-1CB3-6EA9-B990-34C0B6A0A9F5}|BlogCoreSolution.AccesoDatos\\BlogCoreSolution.AccesoDatos.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\mvc\\blogcoresolution\\blogcoresolution.accesodatos\\data\\repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73275B3E-1CB3-6EA9-B990-34C0B6A0A9F5}|BlogCoreSolution.AccesoDatos\\BlogCoreSolution.AccesoDatos.csproj|solutionrelative:blogcoresolution.accesodatos\\data\\repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73275B3E-1CB3-6EA9-B990-34C0B6A0A9F5}|BlogCoreSolution.AccesoDatos\\BlogCoreSolution.AccesoDatos.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\mvc\\blogcoresolution\\blogcoresolution.accesodatos\\data\\repository\\irepository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73275B3E-1CB3-6EA9-B990-34C0B6A0A9F5}|BlogCoreSolution.AccesoDatos\\BlogCoreSolution.AccesoDatos.csproj|solutionrelative:blogcoresolution.accesodatos\\data\\repository\\irepository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.AccesoDatos\\Data\\Repository\\Repository.cs",
+              "RelativeDocumentMoniker": "BlogCoreSolution.AccesoDatos\\Data\\Repository\\Repository.cs",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.AccesoDatos\\Data\\Repository\\Repository.cs",
+              "RelativeToolTip": "BlogCoreSolution.AccesoDatos\\Data\\Repository\\Repository.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAIwEgAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T18:30:05.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.AccesoDatos\\Data\\Repository\\IRepository\\IRepository.cs",
+              "RelativeDocumentMoniker": "BlogCoreSolution.AccesoDatos\\Data\\Repository\\IRepository\\IRepository.cs",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.AccesoDatos\\Data\\Repository\\IRepository\\IRepository.cs",
+              "RelativeToolTip": "BlogCoreSolution.AccesoDatos\\Data\\Repository\\IRepository\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T17:18:23.638Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

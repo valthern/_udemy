@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.AccesoDatos\\Migrations\\20260408201150_CrearTablaCategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BlogCoreSolution.AccesoDatos\\Migrations\\20260408201150_CrearTablaCategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{73275B3E-1CB3-6EA9-B990-34C0B6A0A9F5}|BlogCoreSolution.AccesoDatos\\BlogCoreSolution.AccesoDatos.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\mvc\\blogcoresolution\\blogcoresolution.accesodatos\\data\\repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73275B3E-1CB3-6EA9-B990-34C0B6A0A9F5}|BlogCoreSolution.AccesoDatos\\BlogCoreSolution.AccesoDatos.csproj|solutionrelative:blogcoresolution.accesodatos\\data\\repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73275B3E-1CB3-6EA9-B990-34C0B6A0A9F5}|BlogCoreSolution.AccesoDatos\\BlogCoreSolution.AccesoDatos.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\mvc\\blogcoresolution\\blogcoresolution.accesodatos\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73275B3E-1CB3-6EA9-B990-34C0B6A0A9F5}|BlogCoreSolution.AccesoDatos\\BlogCoreSolution.AccesoDatos.csproj|solutionrelative:blogcoresolution.accesodatos\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2032C09B-3B04-121E-A4CC-8B42EDC39D70}|BlogCoreSolution.Models\\BlogCoreSolution.Models.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\mvc\\blogcoresolution\\blogcoresolution.models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2032C09B-3B04-121E-A4CC-8B42EDC39D70}|BlogCoreSolution.Models\\BlogCoreSolution.Models.csproj|solutionrelative:blogcoresolution.models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{73275B3E-1CB3-6EA9-B990-34C0B6A0A9F5}|BlogCoreSolution.AccesoDatos\\BlogCoreSolution.AccesoDatos.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\mvc\\blogcoresolution\\blogcoresolution.accesodatos\\data\\repository\\irepository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73275B3E-1CB3-6EA9-B990-34C0B6A0A9F5}|BlogCoreSolution.AccesoDatos\\BlogCoreSolution.AccesoDatos.csproj|solutionrelative:blogcoresolution.accesodatos\\data\\repository\\irepository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "20260408201150_CrearTablaCategoria.cs",
-              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.AccesoDatos\\Migrations\\20260408201150_CrearTablaCategoria.cs",
-              "RelativeDocumentMoniker": "BlogCoreSolution.AccesoDatos\\Migrations\\20260408201150_CrearTablaCategoria.cs",
-              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.AccesoDatos\\Migrations\\20260408201150_CrearTablaCategoria.cs",
-              "RelativeToolTip": "BlogCoreSolution.AccesoDatos\\Migrations\\20260408201150_CrearTablaCategoria.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.AccesoDatos\\Data\\Repository\\Repository.cs",
+              "RelativeDocumentMoniker": "BlogCoreSolution.AccesoDatos\\Data\\Repository\\Repository.cs",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.AccesoDatos\\Data\\Repository\\Repository.cs",
+              "RelativeToolTip": "BlogCoreSolution.AccesoDatos\\Data\\Repository\\Repository.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAIwEgAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-08T20:11:50.408Z",
+              "WhenOpened": "2026-04-09T18:30:05.32Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.AccesoDatos\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "BlogCoreSolution.AccesoDatos\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.AccesoDatos\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "BlogCoreSolution.AccesoDatos\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA4AAAAAAAAAA==",
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.AccesoDatos\\Data\\Repository\\IRepository\\IRepository.cs",
+              "RelativeDocumentMoniker": "BlogCoreSolution.AccesoDatos\\Data\\Repository\\IRepository\\IRepository.cs",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.AccesoDatos\\Data\\Repository\\IRepository\\IRepository.cs",
+              "RelativeToolTip": "BlogCoreSolution.AccesoDatos\\Data\\Repository\\IRepository\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-08T19:53:05.978Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Categoria.cs",
-              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.Models\\Categoria.cs",
-              "RelativeDocumentMoniker": "BlogCoreSolution.Models\\Categoria.cs",
-              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.Models\\Categoria.cs",
-              "RelativeToolTip": "BlogCoreSolution.Models\\Categoria.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-08T19:31:26.729Z",
+              "WhenOpened": "2026-04-09T17:18:23.638Z",
               "EditorCaption": ""
             }
           ]
