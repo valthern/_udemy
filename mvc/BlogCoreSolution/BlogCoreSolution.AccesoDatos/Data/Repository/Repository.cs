@@ -9,10 +9,11 @@ namespace BlogCoreSolution.AccesoDatos.Data.Repository
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        private readonly DbContext context;
+        //protected readonly ApplicationDbContext context;
+        private readonly ApplicationDbContext context;
         internal DbSet<T> dbSet;
 
-        public Repository(DbContext context)
+        public Repository(ApplicationDbContext context)
         {
             this.context = context;
             dbSet = context.Set<T>();

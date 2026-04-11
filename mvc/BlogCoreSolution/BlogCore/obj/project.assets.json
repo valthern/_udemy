@@ -6397,7 +6397,6 @@
   "projectFileDependencyGroups": {
     "net10.0": [
       "BlogCoreSolution.AccesoDatos >= 1.0.0",
-      "BlogCoreSolution.Models >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 10.0.5",
       "Microsoft.AspNetCore.Identity.UI >= 10.0.5",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 10.0.2"
@@ -6438,9 +6437,6 @@
           "projectReferences": {
             "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.AccesoDatos\\BlogCoreSolution.AccesoDatos.csproj": {
               "projectPath": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.AccesoDatos\\BlogCoreSolution.AccesoDatos.csproj"
-            },
-            "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.Models\\BlogCoreSolution.Models.csproj": {
-              "projectPath": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.Models\\BlogCoreSolution.Models.csproj"
             }
           }
         }

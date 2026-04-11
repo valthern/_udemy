@@ -1082,9 +1082,6 @@
             "projectReferences": {
               "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.AccesoDatos\\BlogCoreSolution.AccesoDatos.csproj": {
                 "projectPath": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.AccesoDatos\\BlogCoreSolution.AccesoDatos.csproj"
-              },
-              "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.Models\\BlogCoreSolution.Models.csproj": {
-                "projectPath": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.Models\\BlogCoreSolution.Models.csproj"
               }
             }
           }

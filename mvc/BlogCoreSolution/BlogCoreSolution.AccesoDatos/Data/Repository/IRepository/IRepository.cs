@@ -22,10 +22,10 @@ namespace BlogCoreSolution.AccesoDatos.Data.Repository.IRepository
 
         void Add(T entity);
 
-        //void Update(T entity);
+        void Remove(int id);
 
-        void Delete(int id);
+        void Remove(T entity);
 
-        void Delete(T entity);
+        // Los métodos de actualización se pueden agregar aquí si es necesario, dependiendo de cómo se maneje la actualización en el contexto de datos.
     }
 }
