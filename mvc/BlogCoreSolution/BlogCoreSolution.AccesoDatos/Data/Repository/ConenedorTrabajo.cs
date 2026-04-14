@@ -17,14 +17,8 @@ namespace BlogCoreSolution.AccesoDatos.Data.Repository
             Categoria = new CategoriaRepository(context);
         }
 
-        public void Dispose()
-        {
-            context.Dispose();
-        }
+        public void Dispose() => context.Dispose();
 
-        public void Save()
-        {
-            context.SaveChanges();
-        }
+        public void Save() => context.SaveChanges();
     }
 }

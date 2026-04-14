@@ -1,4 +1,6 @@
 using BlogCoreSolution.AccesoDatos.Data;
+using BlogCoreSolution.AccesoDatos.Data.Repository;
+using BlogCoreSolution.AccesoDatos.Data.Repository.IRepository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,6 +17,9 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
+// Agregar contenedor de trabajo al contenedor IoC (Inversion of Control) de inyección de dependencias
+builder.Services.AddScoped<IContenedorTrabajo, ContenedorTrabajo>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -22,7 +27,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseMigrationsEndPoint();
 }
-else
+else 
 {
     app.UseExceptionHandler("/Home/Error");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.

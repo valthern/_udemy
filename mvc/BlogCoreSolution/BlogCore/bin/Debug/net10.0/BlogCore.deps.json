@@ -9,7 +9,6 @@
       "BlogCore/1.0.0": {
         "dependencies": {
           "BlogCoreSolution.AccesoDatos": "1.0.0",
-          "BlogCoreSolution.Models": "1.0.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "10.0.5",
           "Microsoft.AspNetCore.Identity.UI": "10.0.5",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "10.0.2"

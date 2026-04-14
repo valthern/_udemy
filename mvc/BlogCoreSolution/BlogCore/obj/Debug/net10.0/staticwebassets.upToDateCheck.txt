@@ -38,6 +38,7 @@ C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\wwwroot\lib\b
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\wwwroot\lib\jquery\dist\jquery.slim.min.map
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\wwwroot\js\categorias.js
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\wwwroot\js\site.js
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
@@ -62,6 +63,7 @@ C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\wwwroot\lib\b
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\js\categorias.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\LICENSE
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
