@@ -62,7 +62,7 @@ namespace BlogCore.Areas.Admin.Controllers
         [HttpDelete]
         public IActionResult Delete(int id)
         {
-            var objFromDb=contenedorTrabajo.Categoria.Get(id);
+            var objFromDb = contenedorTrabajo.Categoria.Get(id);
             if ((objFromDb is null))
                 return Json(new { success = false, message = "Error borrando la categoría" });
 

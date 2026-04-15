@@ -1,5 +1,6 @@
 ﻿using BlogCoreSolution.AccesoDatos.Data.Repository.IRepository;
 using BlogCoreSolution.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,16 +10,22 @@ namespace BlogCoreSolution.AccesoDatos.Data.Repository
 {
     public class CategoriaRepository : Repository<Categoria>, ICategoriaRepository
     {
-        private readonly ApplicationDbContext _ctx;
+        private readonly ApplicationDbContext ctx;
 
-        public CategoriaRepository(ApplicationDbContext context) : base(context)
+        public CategoriaRepository(ApplicationDbContext context) : base(context) => ctx = context;
+
+        public IEnumerable<SelectListItem> GetListaCategoria()
         {
-            _ctx = context;
+            return ctx.Categorias.Select(c => new SelectListItem
+            {
+                Text = c.Nombre,
+                Value = c.Id.ToString()
+            }).ToList();
         }
 
         public void Update(Categoria categoria)
         {
-            var objDesdeDb = _ctx.Categorias.FirstOrDefault(c => c.Id == categoria.Id);
+            var objDesdeDb = ctx.Categorias.FirstOrDefault(c => c.Id == categoria.Id);
             //if (objDesdeDb is not null)
             //{
                 objDesdeDb.Nombre = categoria.Nombre;

@@ -410,4 +410,5 @@ C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\obj\Debug\net
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\obj\Debug\net10.0\BlogCore.pdb
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\obj\Debug\net10.0\BlogCore.genruntimeconfig.cache
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\obj\Debug\net10.0\ref\BlogCore.dll
-C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\obj\Debug\net10.0\compressed\ozglsioxio-{0}-ibl683dqzf-ibl683dqzf.gz
+C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\obj\Debug\net10.0\compressed\ozglsioxio-{0}-egfmu93xg6-egfmu93xg6.gz
+C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\obj\Debug\net10.0\compressed\e66u59e841-{0}-i41qgok53i-i41qgok53i.gz

@@ -16,6 +16,7 @@ C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\wwwroot\lib\b
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\wwwroot\js\articulos.js
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\wwwroot\lib\jquery\dist\jquery.min.map
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\wwwroot\lib\jquery\dist\jquery.slim.min.js
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
@@ -63,6 +64,7 @@ C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\wwwroot\lib\b
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\js\articulos.js
 wwwroot\js\categorias.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\LICENSE
