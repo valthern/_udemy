@@ -1,6 +1,7 @@
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCoreSolution.Models\bin\Debug\net10.0\BlogCoreSolution.Models.deps.json
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCoreSolution.Models\bin\Debug\net10.0\BlogCoreSolution.Models.dll
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCoreSolution.Models\bin\Debug\net10.0\BlogCoreSolution.Models.pdb
+C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCoreSolution.Models\obj\Debug\net10.0\BlogCoreSolution.Models.csproj.AssemblyReference.cache
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCoreSolution.Models\obj\Debug\net10.0\BlogCoreSolution.Models.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCoreSolution.Models\obj\Debug\net10.0\BlogCoreSolution.Models.AssemblyInfoInputs.cache
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCoreSolution.Models\obj\Debug\net10.0\BlogCoreSolution.Models.AssemblyInfo.cs

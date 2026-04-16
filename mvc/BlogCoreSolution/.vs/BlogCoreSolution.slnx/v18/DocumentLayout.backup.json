@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{2FFE1F2C-2B47-4356-8B10-A9D9B71ACC68}|BlogCore\\BlogCore.csproj|solutionrelative:blogcore\\areas\\admin\\views\\articulos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FFE1F2C-2B47-4356-8B10-A9D9B71ACC68}|BlogCore\\BlogCore.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\mvc\\blogcoresolution\\blogcore\\areas\\admin\\controllers\\articuloscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FFE1F2C-2B47-4356-8B10-A9D9B71ACC68}|BlogCore\\BlogCore.csproj|solutionrelative:blogcore\\areas\\admin\\controllers\\articuloscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{73275B3E-1CB3-6EA9-B990-34C0B6A0A9F5}|BlogCoreSolution.AccesoDatos\\BlogCoreSolution.AccesoDatos.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\mvc\\blogcoresolution\\blogcoresolution.accesodatos\\data\\repository\\categoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73275B3E-1CB3-6EA9-B990-34C0B6A0A9F5}|BlogCoreSolution.AccesoDatos\\BlogCoreSolution.AccesoDatos.csproj|solutionrelative:blogcoresolution.accesodatos\\data\\repository\\categoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{73275B3E-1CB3-6EA9-B990-34C0B6A0A9F5}|BlogCoreSolution.AccesoDatos\\BlogCoreSolution.AccesoDatos.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\mvc\\blogcoresolution\\blogcoresolution.accesodatos\\data\\repository\\irepository\\icategoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73275B3E-1CB3-6EA9-B990-34C0B6A0A9F5}|BlogCoreSolution.AccesoDatos\\BlogCoreSolution.AccesoDatos.csproj|solutionrelative:blogcoresolution.accesodatos\\data\\repository\\irepository\\icategoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FFE1F2C-2B47-4356-8B10-A9D9B71ACC68}|BlogCore\\BlogCore.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\mvc\\blogcoresolution\\blogcore\\areas\\admin\\controllers\\articuloscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FFE1F2C-2B47-4356-8B10-A9D9B71ACC68}|BlogCore\\BlogCore.csproj|solutionrelative:blogcore\\areas\\admin\\controllers\\articuloscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2FFE1F2C-2B47-4356-8B10-A9D9B71ACC68}|BlogCore\\BlogCore.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\mvc\\blogcoresolution\\blogcore\\areas\\admin\\views\\articulos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -29,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2032C09B-3B04-121E-A4CC-8B42EDC39D70}|BlogCoreSolution.Models\\BlogCoreSolution.Models.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\mvc\\blogcoresolution\\blogcoresolution.models\\viewmodels\\articulovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2032C09B-3B04-121E-A4CC-8B42EDC39D70}|BlogCoreSolution.Models\\BlogCoreSolution.Models.csproj|solutionrelative:blogcoresolution.models\\viewmodels\\articulovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2032C09B-3B04-121E-A4CC-8B42EDC39D70}|BlogCoreSolution.Models\\BlogCoreSolution.Models.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\mvc\\blogcoresolution\\blogcoresolution.models\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2032C09B-3B04-121E-A4CC-8B42EDC39D70}|BlogCoreSolution.Models\\BlogCoreSolution.Models.csproj|solutionrelative:blogcoresolution.models\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,34 +38,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CategoriaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.AccesoDatos\\Data\\Repository\\CategoriaRepository.cs",
-              "RelativeDocumentMoniker": "BlogCoreSolution.AccesoDatos\\Data\\Repository\\CategoriaRepository.cs",
-              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.AccesoDatos\\Data\\Repository\\CategoriaRepository.cs",
-              "RelativeToolTip": "BlogCoreSolution.AccesoDatos\\Data\\Repository\\CategoriaRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T00:21:03.561Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ICategoriaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.AccesoDatos\\Data\\Repository\\IRepository\\ICategoriaRepository.cs",
-              "RelativeDocumentMoniker": "BlogCoreSolution.AccesoDatos\\Data\\Repository\\IRepository\\ICategoriaRepository.cs",
-              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.AccesoDatos\\Data\\Repository\\IRepository\\ICategoriaRepository.cs",
-              "RelativeToolTip": "BlogCoreSolution.AccesoDatos\\Data\\Repository\\IRepository\\ICategoriaRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T00:18:16.221Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -78,10 +48,34 @@
               "RelativeDocumentMoniker": "BlogCore\\Areas\\Admin\\Views\\Articulos\\Create.cshtml",
               "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCore\\Areas\\Admin\\Views\\Articulos\\Create.cshtml",
               "RelativeToolTip": "BlogCore\\Areas\\Admin\\Views\\Articulos\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAkwCQAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-04-14T23:12:46.088Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CategoriaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.AccesoDatos\\Data\\Repository\\CategoriaRepository.cs",
+              "RelativeDocumentMoniker": "BlogCoreSolution.AccesoDatos\\Data\\Repository\\CategoriaRepository.cs",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.AccesoDatos\\Data\\Repository\\CategoriaRepository.cs",
+              "RelativeToolTip": "BlogCoreSolution.AccesoDatos\\Data\\Repository\\CategoriaRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T00:21:03.561Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ICategoriaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.AccesoDatos\\Data\\Repository\\IRepository\\ICategoriaRepository.cs",
+              "RelativeDocumentMoniker": "BlogCoreSolution.AccesoDatos\\Data\\Repository\\IRepository\\ICategoriaRepository.cs",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.AccesoDatos\\Data\\Repository\\IRepository\\ICategoriaRepository.cs",
+              "RelativeToolTip": "BlogCoreSolution.AccesoDatos\\Data\\Repository\\IRepository\\ICategoriaRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T00:18:16.221Z"
             },
             {
               "$type": "Document",
@@ -93,8 +87,7 @@
               "RelativeToolTip": "BlogCoreSolution.Models\\ViewModels\\ArticuloVM.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-14T23:14:22.964Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-14T23:14:22.964Z"
             },
             {
               "$type": "Document",
@@ -106,8 +99,7 @@
               "RelativeToolTip": "BlogCore\\wwwroot\\js\\articulos.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-04-14T19:56:11.194Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-14T19:56:11.194Z"
             },
             {
               "$type": "Document",
@@ -119,34 +111,19 @@
               "RelativeToolTip": "BlogCore\\Areas\\Admin\\Views\\Articulos\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-14T19:38:24.835Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-14T19:38:24.835Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Articulo.cs",
-              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.Models\\Articulo.cs",
-              "RelativeDocumentMoniker": "BlogCoreSolution.Models\\Articulo.cs",
-              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.Models\\Articulo.cs",
-              "RelativeToolTip": "BlogCoreSolution.Models\\Articulo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-14T19:41:06.979Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ArticulosController.cs",
               "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCore\\Areas\\Admin\\Controllers\\ArticulosController.cs",
               "RelativeDocumentMoniker": "BlogCore\\Areas\\Admin\\Controllers\\ArticulosController.cs",
               "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCore\\Areas\\Admin\\Controllers\\ArticulosController.cs",
               "RelativeToolTip": "BlogCore\\Areas\\Admin\\Controllers\\ArticulosController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-14T19:27:56.526Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-14T19:27:56.526Z"
             }
           ]
         }
