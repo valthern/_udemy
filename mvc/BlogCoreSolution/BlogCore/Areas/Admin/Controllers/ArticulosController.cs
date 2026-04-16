@@ -9,8 +9,13 @@ namespace BlogCore.Areas.Admin.Controllers
     public class ArticulosController : Controller
     {
         private readonly IContenedorTrabajo contenedorTrabajo;
+        private readonly IWebHostEnvironment hostingEnvironment;
 
-        public ArticulosController(IContenedorTrabajo contenedorTrabajo) => this.contenedorTrabajo = contenedorTrabajo;
+        public ArticulosController(IContenedorTrabajo contenedorTrabajo, IWebHostEnvironment hostingEnvironment)
+        {
+            this.contenedorTrabajo = contenedorTrabajo;
+            this.hostingEnvironment = hostingEnvironment;
+        }
 
         [HttpGet]
         public IActionResult Index() => View();
@@ -24,6 +29,44 @@ namespace BlogCore.Areas.Admin.Controllers
                 ListaCategorias = contenedorTrabajo.Categoria.GetListaCategoria()
             };
 
+            return View(articuloVM);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(ArticuloVM articuloVM)
+        {
+            if (ModelState.IsValid)
+            {
+                string rutaPrincipal = hostingEnvironment.WebRootPath;
+                var archivos = HttpContext.Request.Form.Files;
+
+                if (articuloVM.Articulo.Id == 0 && archivos.Count > 0)
+                {
+                    var ruta = @"imagenes\articulos";
+                    string nombreArchivo = Guid.NewGuid().ToString();
+                    var subidas = Path.Combine(rutaPrincipal, ruta);
+                    var extension = Path.GetExtension(archivos[0].FileName);
+
+                    using (FileStream fileStreams = new(Path.Combine(subidas, nombreArchivo + extension), FileMode.Create))
+                    {
+                        archivos[0].CopyTo(fileStreams);
+                    }
+
+                    articuloVM.Articulo.UrlImagen = ruta + nombreArchivo + extension;
+
+                    contenedorTrabajo.Articulo.Add(articuloVM.Articulo);
+                    contenedorTrabajo.Save();
+
+                    return RedirectToAction(nameof(Index));
+                }
+                else
+                {
+                    ModelState.AddModelError("Imagen", "Debes seleccionar una imagen");
+                }
+            }
+
+            articuloVM.ListaCategorias = contenedorTrabajo.Categoria.GetListaCategoria();
             return View(articuloVM);
         }
 
