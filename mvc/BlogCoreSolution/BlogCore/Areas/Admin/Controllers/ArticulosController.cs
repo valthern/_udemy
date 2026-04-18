@@ -43,7 +43,8 @@ namespace BlogCore.Areas.Admin.Controllers
 
                 if (articuloVM.Articulo.Id == 0 && archivos.Count > 0)
                 {
-                    var ruta = @"imagenes\articulos";
+                    //var ruta = @"\imagenes\articulos";
+                    var ruta = @"imagenes\articulos\";
                     string nombreArchivo = Guid.NewGuid().ToString();
                     var subidas = Path.Combine(rutaPrincipal, ruta);
                     var extension = Path.GetExtension(archivos[0].FileName);
@@ -67,6 +68,21 @@ namespace BlogCore.Areas.Admin.Controllers
             }
 
             articuloVM.ListaCategorias = contenedorTrabajo.Categoria.GetListaCategoria();
+            return View(articuloVM);
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int? id)
+        {
+            ArticuloVM articuloVM = new()
+            {
+                Articulo = new Articulo(),
+                ListaCategorias = contenedorTrabajo.Categoria.GetListaCategoria()
+            };
+
+            if(id is not null)
+                articuloVM.Articulo = contenedorTrabajo.Articulo.Get(id.GetValueOrDefault());
+
             return View(articuloVM);
         }
 

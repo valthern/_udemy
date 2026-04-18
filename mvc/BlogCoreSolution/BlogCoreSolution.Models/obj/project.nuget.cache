@@ -54,9 +54,9 @@
   ],
   "logs": [
     {
-      "code": "NU1901",
+      "code": "NU1903",
       "level": "Warning",
-      "message": "El paquete \"System.Security.Cryptography.Xml\" 8.0.2 tiene una vulnerabilidad de gravedad baja conocida, https://github.com/advisories/GHSA-37gx-xxp4-5rgx",
+      "message": "El paquete \"System.Security.Cryptography.Xml\" 8.0.2 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-37gx-xxp4-5rgx",
       "projectPath": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.Models\\BlogCoreSolution.Models.csproj",
       "warningLevel": 1,
       "filePath": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.Models\\BlogCoreSolution.Models.csproj",
@@ -66,9 +66,9 @@
       ]
     },
     {
-      "code": "NU1901",
+      "code": "NU1903",
       "level": "Warning",
-      "message": "El paquete \"System.Security.Cryptography.Xml\" 8.0.2 tiene una vulnerabilidad de gravedad baja conocida, https://github.com/advisories/GHSA-w3x6-4m5h-cxqf",
+      "message": "El paquete \"System.Security.Cryptography.Xml\" 8.0.2 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-w3x6-4m5h-cxqf",
       "projectPath": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.Models\\BlogCoreSolution.Models.csproj",
       "warningLevel": 1,
       "filePath": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.Models\\BlogCoreSolution.Models.csproj",

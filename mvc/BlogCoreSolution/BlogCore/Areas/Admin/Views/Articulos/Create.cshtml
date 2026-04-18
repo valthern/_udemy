@@ -28,7 +28,7 @@
                     <label asp-for="Articulo.Descripcion"></label>
                 </div>
                 <div class="col-8">
-                    <input asp-for="Articulo.Descripcion" class="form-control" placeholder="Ingresa la descripción del artículo" />
+                    <textarea asp-for="Articulo.Descripcion" id="Contenido" name="Contenido" class="form-control" style="height: 300px;" placeholder="Ingresa la descripción del artículo"></textarea>
                     <span asp-validation-for="Articulo.Descripcion" class="text-danger"></span>
                 </div>
             </div>
@@ -38,7 +38,7 @@
                     <label for="Categoria">Categoría</label>
                 </div>
                 <div class="col-8">
-                    @Html.DropDownListFor(m => m.Articulo.CategoriaId, Model.ListaCategorias, "-Por favor, seleccione una categoría-", new {@class="form-select"})
+                    @Html.DropDownListFor(m => m.Articulo.CategoriaId, Model.ListaCategorias, "-Por favor, seleccione una categoría-", new { @class = "form-select" })
                     <span asp-validation-for="Articulo.CategoriaId" class="text-danger"></span>
                 </div>
             </div>
@@ -67,4 +67,9 @@
     @{
         <partial name="_ValidationScriptsPartial" />
     }
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplemde@1.11.2/dist/simplemde.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/simplemde@1.11.2/dist/simplemde.min.js"></script>
+    <script>
+        new SimpleMDE({ element: document.getElementById("Contenido") });
+    </script>
 }

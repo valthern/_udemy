@@ -64,6 +64,7 @@ C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\wwwroot\lib\b
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\imagenes\articulos\3685c481-8ef1-4881-9c3a-3c0287dc6fdf.jpg
 wwwroot\imagenes\articulos\a6855e86-f0ee-4e7b-a054-0846f4a5e26d.jpg
 wwwroot\js\articulos.js
 wwwroot\js\categorias.js
