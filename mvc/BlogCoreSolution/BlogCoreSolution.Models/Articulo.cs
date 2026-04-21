@@ -12,21 +12,26 @@ namespace BlogCoreSolution.Models
 
         [Key]
         public int Id { get; set; }
+
         [Required(ErrorMessage = "El nombre es obligatorio")]
         [Display(Name = "Nombre del artículo")]
         public string Nombre { get; set; }
+
         [Required(ErrorMessage = "La descripción es obligatoria")]
         [Display(Name = "Descripción del artículo")]
         public string Descripcion { get; set; }
+
         [Display(Name = "Fecha de creación")]
         public DateTime FechaCreacion { get; set; }
+
         [DataType(DataType.ImageUrl)]
         [Display(Name = "URL de la imagen")]
         public string UrlImagen { get; set; }
 
+
         [Required(ErrorMessage = "La categoría es obligatoria")]
         public int CategoriaId { get; set; }
-        [Display(Name = "Categoría")]
+
         [ForeignKey("CategoriaId")]
         public Categoria Categoria { get; set; }
     }

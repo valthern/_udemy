@@ -32,6 +32,7 @@ function cargarDataTable() {
             },
             {
                 "data": "id", 
+                "width": "30%",
                 "render": function(data) {
                     return `<div class="text-center">
                                 <a href="/Admin/Articulos/Edit/${data}" class="btn btn-success text-white" style="cursor:pointer; width:140px;">
@@ -42,8 +43,7 @@ function cargarDataTable() {
                                     <i class="bi bi-trash"></i> Borrar
                                 </a>
                             </div>`;
-                }, 
-                "width": "25%"
+                }
             }
         ],
         "language": {

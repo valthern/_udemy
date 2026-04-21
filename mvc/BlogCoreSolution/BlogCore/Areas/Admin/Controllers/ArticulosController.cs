@@ -43,10 +43,9 @@ namespace BlogCore.Areas.Admin.Controllers
 
                 if (articuloVM.Articulo.Id == 0 && archivos.Count > 0)
                 {
-                    //var ruta = @"\imagenes\articulos";
-                    var ruta = @"imagenes\articulos\";
+                    var ruta = @"\imagenes\articulos\";
                     string nombreArchivo = Guid.NewGuid().ToString();
-                    var subidas = Path.Combine(rutaPrincipal, ruta);
+                    var subidas = Path.Combine(rutaPrincipal, ruta.Substring(1));
                     var extension = Path.GetExtension(archivos[0].FileName);
 
                     using (FileStream fileStreams = new(Path.Combine(subidas, nombreArchivo + extension), FileMode.Create))
@@ -85,6 +84,49 @@ namespace BlogCore.Areas.Admin.Controllers
 
             return View(articuloVM);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(ArticuloVM articuloVM)
+        {
+            if (ModelState.IsValid)
+            {
+                // Nueva imagen para el artículo
+                string rutaPrincipal = hostingEnvironment.WebRootPath;
+                var archivos = HttpContext.Request.Form.Files;
+
+                if (archivos.Count > 0)
+                {
+                    var ruta = @"\imagenes\articulos\";
+                    string nombreArchivo = Guid.NewGuid().ToString();
+                    var subidas = Path.Combine(rutaPrincipal, ruta[1..]);
+                    var extension = Path.GetExtension(archivos[0].FileName);
+                    var nuevaExtension = Path.GetExtension(archivos[0].FileName);
+
+                    var rutaImagen = Path.Combine(rutaPrincipal)
+
+                    using (FileStream fileStreams = new(Path.Combine(subidas, nombreArchivo + extension), FileMode.Create))
+                    {
+                        archivos[0].CopyTo(fileStreams);
+                    }
+
+                    articuloVM.Articulo.UrlImagen = ruta + nombreArchivo + extension;
+
+                    contenedorTrabajo.Articulo.Add(articuloVM.Articulo);
+                    contenedorTrabajo.Save();
+
+                    return RedirectToAction(nameof(Index));
+                }
+                else
+                {
+                    ModelState.AddModelError("Imagen", "Debes seleccionar una imagen");
+                }
+            }
+
+            articuloVM.ListaCategorias = contenedorTrabajo.Categoria.GetListaCategoria();
+            return View(articuloVM);
+        }
+
 
         #region Llamadas a la API
         public IActionResult GetAll() => Json(new { data = contenedorTrabajo.Articulo.GetAll() });

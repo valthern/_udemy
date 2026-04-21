@@ -66,6 +66,7 @@ wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\imagenes\articulos\3685c481-8ef1-4881-9c3a-3c0287dc6fdf.jpg
 wwwroot\imagenes\articulos\a6855e86-f0ee-4e7b-a054-0846f4a5e26d.jpg
+wwwroot\imagenes\articulos\ff61269d-1859-4c32-8f88-12f332fbe523.png
 wwwroot\js\articulos.js
 wwwroot\js\categorias.js
 wwwroot\js\site.js
