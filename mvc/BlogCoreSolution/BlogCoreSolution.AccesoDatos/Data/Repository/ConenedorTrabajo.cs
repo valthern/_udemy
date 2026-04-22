@@ -11,12 +11,14 @@ namespace BlogCoreSolution.AccesoDatos.Data.Repository
         private readonly ApplicationDbContext context;
         public ICategoriaRepository Categoria { get; private set; }
         public IArticuloRepository Articulo {  get; private set; }
+        public ISliderRepository Slider { get; private set; }
 
         public ContenedorTrabajo(ApplicationDbContext context)
         {
             this.context = context;
             Categoria = new CategoriaRepository(context);
             Articulo = new ArticuloRepository(context);
+            Slider = new SliderRepository(context);
         }
 
         public void Save() => context.SaveChanges();

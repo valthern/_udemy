@@ -12,7 +12,7 @@ namespace BlogCoreSolution.AccesoDatos.Data.Repository
     {
         private readonly ApplicationDbContext ctx;
 
-        public CategoriaRepository(ApplicationDbContext context) : base(context) => ctx = context;
+        public CategoriaRepository(ApplicationDbContext ctx) : base(ctx) => this.ctx = ctx;
 
         public IEnumerable<SelectListItem> GetListaCategoria()
         {
@@ -25,17 +25,15 @@ namespace BlogCoreSolution.AccesoDatos.Data.Repository
 
         public void Update(Categoria categoria)
         {
-            var objDesdeDb = ctx.Categorias.FirstOrDefault(c => c.Id == categoria.Id);
-            //if (objDesdeDb is not null)
-            //{
-            objDesdeDb.Nombre = categoria.Nombre;
-            objDesdeDb.Orden = categoria.Orden;
-            //}
+            ArgumentNullException.ThrowIfNull(categoria);
+            var categoriaDb = ctx.Categorias.Find(categoria.Id) ?? throw new InvalidOperationException("Categoría no encontrada.");
+
+            categoriaDb.Nombre = categoria.Nombre;
+            categoriaDb.Orden = categoria.Orden;
 
             // No es necesario llamar a context.Categorias.Update(objDesdeDb) porque el objeto ya está siendo rastreado por el contexto.
             // El contexto detectará automáticamente los cambios realizados en objDesdeDb y los aplicará cuando se llame a SaveChanges() en la capa de "Unidad de Trabajo".
             //context.SaveChanges();  /* Esto no se pone aquí */
-
         }
     }
 }

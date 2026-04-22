@@ -11,7 +11,7 @@ namespace BlogCoreSolution.AccesoDatos.Data.Repository.IRepository
 
         IEnumerable<T> GetAll(
             Expression<Func<T, bool>>? filter = null,
-            Func<IQueryable<T>, IOrderedQueryable<T>> orderby = null, 
+            Func<IQueryable<T>, IOrderedQueryable<T>> orderby = null,
             /* Func<IQueryable<T>, IOrderedQueryable<T>>? orderby=null, */
             string? includeProperties = null
         );

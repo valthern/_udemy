@@ -23,7 +23,7 @@ namespace BlogCoreSolution.AccesoDatos.Data.Repository.IRepository
      * Post: Título, Contenido, Imagen, Fecha
      * Usuario: "Datos distintos"
      * 
-     * No todas las propiedades se deben actualizar. Algunas se ignoran, otras se claculan, otras son inmutables, etc.
+     * No todas las propiedades se deben actualizar. Algunas se ignoran, otras se calculan, otras son inmutables, etc.
      * Realizar una actualización en cada interfaz correspondiente a cada entidad permite una mayor flexibilidad y control 
      * sobre cómo se manejan las actualizaciones para cada tipo de entidad. Update(entity) genérico puede marcar todo como 
      * modificado, y se corre el riesgo de actualizar propiedades que no se desean actualizar, lo que puede llevar a 

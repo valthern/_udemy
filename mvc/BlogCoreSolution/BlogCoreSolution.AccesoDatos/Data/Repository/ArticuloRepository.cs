@@ -11,21 +11,18 @@ namespace BlogCoreSolution.AccesoDatos.Data.Repository
     {
         private readonly ApplicationDbContext ctx;
 
-        public ArticuloRepository(ApplicationDbContext context) : base(context) => ctx = context;
+        public ArticuloRepository(ApplicationDbContext ctx) : base(ctx) => this.ctx = ctx;
 
         public void Update(Articulo articulo)
         {
-            var objDesdeDb = ctx.Articulos.FirstOrDefault(a => a.Id == articulo.Id);
-            //if (objDesdeDb is not null)
-            //{
+            ArgumentNullException.ThrowIfNull(articulo);
+            var objDesdeDb = ctx.Articulos.Find(articulo.Id) ?? throw new InvalidOperationException("Artículo no encontrado.");
+
             objDesdeDb.Nombre = articulo.Nombre;
             objDesdeDb.Descripcion = articulo.Descripcion;
-            //objDesdeDb.FechaCreacion = articulo.FechaCreacion;
             if (articulo.UrlImagen is not null && objDesdeDb.UrlImagen != articulo.UrlImagen)
                 objDesdeDb.UrlImagen = articulo.UrlImagen;
             objDesdeDb.CategoriaId = articulo.CategoriaId;
-            //}
-            //}            
         }
     }
 }

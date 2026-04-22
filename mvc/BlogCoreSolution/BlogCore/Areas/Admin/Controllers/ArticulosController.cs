@@ -114,11 +114,6 @@ namespace BlogCore.Areas.Admin.Controllers
 
                     articuloVM.Articulo.UrlImagen = ruta + nombreArchivo + extension;
                 }
-                //else
-                //{
-                //    // Aquí se mantiene la imagen actual del artículo
-                //    articuloVM.Articulo.UrlImagen = articuloDb.UrlImagen;
-                //}
 
                 contenedorTrabajo.Articulo.Update(articuloVM.Articulo);
                 contenedorTrabajo.Save();
@@ -130,7 +125,6 @@ namespace BlogCore.Areas.Admin.Controllers
             return View(articuloVM);
         }
 
-
         #region Llamadas a la API
         public IActionResult GetAll() => Json(new { data = contenedorTrabajo.Articulo.GetAll(includeProperties: nameof(Articulo.Categoria)) });
 
@@ -141,7 +135,7 @@ namespace BlogCore.Areas.Admin.Controllers
             string rutaDirectorioPrincipal = hostingEnvironment.WebRootPath;
             var rutaImagen = Path.Combine(rutaDirectorioPrincipal, objFromDb.UrlImagen[1..]);
 
-             if (System.IO.File.Exists(rutaImagen))
+            if (System.IO.File.Exists(rutaImagen))
                 System.IO.File.Delete(rutaImagen);
 
             if ((objFromDb is null))
@@ -151,7 +145,6 @@ namespace BlogCore.Areas.Admin.Controllers
             contenedorTrabajo.Save();
             return Json(new { success = true, message = "Se borró el artículo exitosamente" });
         }
-        #endregion 
-
+        #endregion
     }
 }

@@ -1,12 +1,71 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2FFE1F2C-2B47-4356-8B10-A9D9B71ACC68}|BlogCore\\BlogCore.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\mvc\\blogcoresolution\\blogcore\\areas\\admin\\controllers\\sliderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FFE1F2C-2B47-4356-8B10-A9D9B71ACC68}|BlogCore\\BlogCore.csproj|solutionrelative:blogcore\\areas\\admin\\controllers\\sliderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FFE1F2C-2B47-4356-8B10-A9D9B71ACC68}|BlogCore\\BlogCore.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\mvc\\blogcoresolution\\blogcore\\areas\\admin\\controllers\\articuloscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FFE1F2C-2B47-4356-8B10-A9D9B71ACC68}|BlogCore\\BlogCore.csproj|solutionrelative:blogcore\\areas\\admin\\controllers\\articuloscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FFE1F2C-2B47-4356-8B10-A9D9B71ACC68}|BlogCore\\BlogCore.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\mvc\\blogcoresolution\\blogcore\\areas\\admin\\views\\sliders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FFE1F2C-2B47-4356-8B10-A9D9B71ACC68}|BlogCore\\BlogCore.csproj|solutionrelative:blogcore\\areas\\admin\\views\\sliders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ArticulosController.cs",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCore\\Areas\\Admin\\Controllers\\ArticulosController.cs",
+              "RelativeDocumentMoniker": "BlogCore\\Areas\\Admin\\Controllers\\ArticulosController.cs",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCore\\Areas\\Admin\\Controllers\\ArticulosController.cs",
+              "RelativeToolTip": "BlogCore\\Areas\\Admin\\Controllers\\ArticulosController.cs",
+              "ViewState": "AgIAAFkAAACA2GFM+rMwwIMAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T19:56:17.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCore\\Areas\\Admin\\Views\\Sliders\\Index.cshtml",
+              "RelativeDocumentMoniker": "BlogCore\\Areas\\Admin\\Views\\Sliders\\Index.cshtml",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCore\\Areas\\Admin\\Views\\Sliders\\Index.cshtml",
+              "RelativeToolTip": "BlogCore\\Areas\\Admin\\Views\\Sliders\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-22T20:01:57.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SlidersController.cs",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCore\\Areas\\Admin\\Controllers\\SlidersController.cs",
+              "RelativeDocumentMoniker": "BlogCore\\Areas\\Admin\\Controllers\\SlidersController.cs",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCore\\Areas\\Admin\\Controllers\\SlidersController.cs",
+              "RelativeToolTip": "BlogCore\\Areas\\Admin\\Controllers\\SlidersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T19:55:08.164Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

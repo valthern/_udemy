@@ -34,7 +34,7 @@ namespace BlogCoreSolution.AccesoDatos.Data.Repository
             // Se incluyen las propiedades relacionadas si se proporcionan
             if (includeProperties is not null)
             {
-                foreach (var includeProperty in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                foreach (var includeProperty in includeProperties.Split([','], StringSplitOptions.RemoveEmptyEntries))
                     query = query.Include(includeProperty);
             }
 
