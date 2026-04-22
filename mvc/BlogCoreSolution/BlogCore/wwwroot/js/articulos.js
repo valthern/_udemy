@@ -19,7 +19,7 @@ function cargarDataTable() {
                 "data": "urlImagen", 
                 "width": "20%",
                 "render": function(imagen) {
-                    return `<img src="../${imagen}" width="120"`;
+                    return `<img src="../${imagen}" width="120" />`;
                 }
             },
             { 

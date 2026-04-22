@@ -18,11 +18,12 @@ namespace BlogCoreSolution.AccesoDatos.Data.Repository
             var objDesdeDb = ctx.Articulos.FirstOrDefault(a => a.Id == articulo.Id);
             //if (objDesdeDb is not null)
             //{
-                objDesdeDb.Nombre = articulo.Nombre;
-                objDesdeDb.Descripcion = articulo.Descripcion;
-                //objDesdeDb.FechaCreacion = articulo.FechaCreacion;
+            objDesdeDb.Nombre = articulo.Nombre;
+            objDesdeDb.Descripcion = articulo.Descripcion;
+            //objDesdeDb.FechaCreacion = articulo.FechaCreacion;
+            if (articulo.UrlImagen is not null && objDesdeDb.UrlImagen != articulo.UrlImagen)
                 objDesdeDb.UrlImagen = articulo.UrlImagen;
-                objDesdeDb.Categoria = articulo.Categoria;
+            objDesdeDb.CategoriaId = articulo.CategoriaId;
             //}
             //}            
         }

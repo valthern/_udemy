@@ -79,7 +79,7 @@ namespace BlogCore.Areas.Admin.Controllers
                 ListaCategorias = contenedorTrabajo.Categoria.GetListaCategoria()
             };
 
-            if(id is not null)
+            if (id is not null)
                 articuloVM.Articulo = contenedorTrabajo.Articulo.Get(id.GetValueOrDefault());
 
             return View(articuloVM);
@@ -94,6 +94,7 @@ namespace BlogCore.Areas.Admin.Controllers
                 // Nueva imagen para el artículo
                 string rutaPrincipal = hostingEnvironment.WebRootPath;
                 var archivos = HttpContext.Request.Form.Files;
+                var articuloDb = contenedorTrabajo.Articulo.Get(articuloVM.Articulo.Id);
 
                 if (archivos.Count > 0)
                 {
@@ -103,24 +104,26 @@ namespace BlogCore.Areas.Admin.Controllers
                     var extension = Path.GetExtension(archivos[0].FileName);
                     var nuevaExtension = Path.GetExtension(archivos[0].FileName);
 
-                    var rutaImagen = Path.Combine(rutaPrincipal)
+                    var rutaImagen = Path.Combine(rutaPrincipal, articuloDb.UrlImagen.TrimStart('\\'));
+
+                    if (System.IO.File.Exists(rutaImagen))
+                        System.IO.File.Delete(rutaImagen);
 
                     using (FileStream fileStreams = new(Path.Combine(subidas, nombreArchivo + extension), FileMode.Create))
-                    {
                         archivos[0].CopyTo(fileStreams);
-                    }
 
                     articuloVM.Articulo.UrlImagen = ruta + nombreArchivo + extension;
-
-                    contenedorTrabajo.Articulo.Add(articuloVM.Articulo);
-                    contenedorTrabajo.Save();
-
-                    return RedirectToAction(nameof(Index));
                 }
-                else
-                {
-                    ModelState.AddModelError("Imagen", "Debes seleccionar una imagen");
-                }
+                //else
+                //{
+                //    // Aquí se mantiene la imagen actual del artículo
+                //    articuloVM.Articulo.UrlImagen = articuloDb.UrlImagen;
+                //}
+
+                contenedorTrabajo.Articulo.Update(articuloVM.Articulo);
+                contenedorTrabajo.Save();
+
+                return RedirectToAction(nameof(Index));
             }
 
             articuloVM.ListaCategorias = contenedorTrabajo.Categoria.GetListaCategoria();
@@ -129,12 +132,18 @@ namespace BlogCore.Areas.Admin.Controllers
 
 
         #region Llamadas a la API
-        public IActionResult GetAll() => Json(new { data = contenedorTrabajo.Articulo.GetAll() });
+        public IActionResult GetAll() => Json(new { data = contenedorTrabajo.Articulo.GetAll(includeProperties: nameof(Articulo.Categoria)) });
 
         [HttpDelete]
         public IActionResult Delete(int id)
         {
             var objFromDb = contenedorTrabajo.Articulo.Get(id);
+            string rutaDirectorioPrincipal = hostingEnvironment.WebRootPath;
+            var rutaImagen = Path.Combine(rutaDirectorioPrincipal, objFromDb.UrlImagen[1..]);
+
+             if (System.IO.File.Exists(rutaImagen))
+                System.IO.File.Delete(rutaImagen);
+
             if ((objFromDb is null))
                 return Json(new { success = false, message = "Error borrando el artículo" });
 
