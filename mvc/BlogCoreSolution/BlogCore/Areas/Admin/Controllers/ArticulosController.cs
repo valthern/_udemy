@@ -131,17 +131,17 @@ namespace BlogCore.Areas.Admin.Controllers
         [HttpDelete]
         public IActionResult Delete(int id)
         {
-            var objFromDb = contenedorTrabajo.Articulo.Get(id);
-            string rutaDirectorioPrincipal = hostingEnvironment.WebRootPath;
-            var rutaImagen = Path.Combine(rutaDirectorioPrincipal, objFromDb.UrlImagen[1..]);
+            var articuloDb = contenedorTrabajo.Articulo.Get(id);
+            var rutaDirectorioPrincipal = hostingEnvironment.WebRootPath;
+            var rutaImagen = Path.Combine(rutaDirectorioPrincipal, articuloDb.UrlImagen[1..]);
 
             if (System.IO.File.Exists(rutaImagen))
                 System.IO.File.Delete(rutaImagen);
 
-            if ((objFromDb is null))
+            if (articuloDb is null)
                 return Json(new { success = false, message = "Error borrando el artículo" });
 
-            contenedorTrabajo.Articulo.Remove(objFromDb);
+            contenedorTrabajo.Articulo.Remove(articuloDb);
             contenedorTrabajo.Save();
             return Json(new { success = true, message = "Se borró el artículo exitosamente" });
         }

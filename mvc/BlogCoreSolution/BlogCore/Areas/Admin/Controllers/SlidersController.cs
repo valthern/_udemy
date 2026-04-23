@@ -21,6 +21,24 @@ namespace BlogCore.Areas.Admin.Controllers
 
         #region Llamadas a la API
         public IActionResult GetAll() => Json(new { data = contenedorTrabajo.Slider.GetAll(includeProperties: nameof(Slider)) });
+
+        [HttpDelete]
+        public IActionResult Delete(int id)
+        {
+            var sliderDb = contenedorTrabajo.Slider.Get(id);
+            var rutaDirectorioPrincipal = hostingEnvironment.WebRootPath;
+            var rutaImagen = Path.Combine(rutaDirectorioPrincipal, sliderDb.UrlImagen[1..]);
+
+            if (System.IO.File.Exists(rutaImagen))
+                System.IO.File.Delete(rutaImagen);
+
+            if (sliderDb is null)
+                return Json(new { success = false, message = "Error al eliminar el slider" });
+
+            contenedorTrabajo.Slider.Remove(sliderDb);
+            contenedorTrabajo.Save();
+            return Json(new { success = true, message = "Se borró el slider exitosamente" });
+        }
         #endregion
     }
 }
