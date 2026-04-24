@@ -19,7 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BlogCoreSolution.Models\BlogCoreSolution.Models.csproj" />
-    <ProjectReference Include="..\BlogCoreSolutions.Utilidades\BlogCoreSolutions.Utilidades.csproj" />
+    <ProjectReference Include="..\BlogCoreSolution.Utilidades\BlogCoreSolution.Utilidades.csproj" />
   </ItemGroup>
 
 </Project>

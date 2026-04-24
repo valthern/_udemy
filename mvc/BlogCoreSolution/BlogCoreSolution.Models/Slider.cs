@@ -14,6 +14,7 @@ namespace BlogCoreSolution.Models
         [MaxLength(100)]
         public string Nombre { get; set; }
 
+        [Required(ErrorMessage = "El campo {0} es requerido.")]
         public bool Estado { get; set; }
 
         [DataType(DataType.ImageUrl)]

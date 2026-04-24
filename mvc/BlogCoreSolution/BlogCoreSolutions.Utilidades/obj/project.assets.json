@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolutions.Utilidades\\BlogCoreSolutions.Utilidades.csproj",
-      "projectName": "BlogCoreSolutions.Utilidades",
-      "projectPath": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolutions.Utilidades\\BlogCoreSolutions.Utilidades.csproj",
+      "projectUniqueName": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolutions.Utilidades\\BlogCoreSolution.Utilidades.csproj",
+      "projectName": "BlogCoreSolution.Utilidades",
+      "projectPath": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolutions.Utilidades\\BlogCoreSolution.Utilidades.csproj",
       "packagesPath": "C:\\Users\\omar\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolutions.Utilidades\\obj\\",
       "projectStyle": "PackageReference",

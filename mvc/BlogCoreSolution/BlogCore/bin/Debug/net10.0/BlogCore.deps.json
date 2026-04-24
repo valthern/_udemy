@@ -1894,7 +1894,7 @@
       "BlogCoreSolution.AccesoDatos/1.0.0": {
         "dependencies": {
           "BlogCoreSolution.Models": "1.0.0",
-          "BlogCoreSolutions.Utilidades": "1.0.0",
+          "BlogCoreSolution.Utilidades": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "10.0.7",
           "Microsoft.EntityFrameworkCore": "10.0.7",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.7"
@@ -1914,9 +1914,9 @@
           }
         }
       },
-      "BlogCoreSolutions.Utilidades/1.0.0": {
+      "BlogCoreSolution.Utilidades/1.0.0": {
         "runtime": {
-          "BlogCoreSolutions.Utilidades.dll": {
+          "BlogCoreSolution.Utilidades.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -2801,7 +2801,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "BlogCoreSolutions.Utilidades/1.0.0": {
+    "BlogCoreSolution.Utilidades/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,5 +1,4 @@
 ﻿using BlogCoreSolution.AccesoDatos.Data.Repository.IRepository;
-using BlogCoreSolution.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogCore.Areas.Admin.Controllers
@@ -19,8 +18,11 @@ namespace BlogCore.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult Index() => View();
 
+        [HttpGet]
+        public IActionResult Create() => View();
+
         #region Llamadas a la API
-        public IActionResult GetAll() => Json(new { data = contenedorTrabajo.Slider.GetAll(includeProperties: nameof(Slider)) });
+        public IActionResult GetAll() => Json(new { data = contenedorTrabajo.Slider.GetAll() });
 
         [HttpDelete]
         public IActionResult Delete(int id)

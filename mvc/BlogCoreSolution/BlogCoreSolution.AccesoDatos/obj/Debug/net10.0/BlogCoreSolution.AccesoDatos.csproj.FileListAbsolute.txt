@@ -3,9 +3,9 @@ C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCoreSolution.Acces
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCoreSolution.AccesoDatos\bin\Debug\net10.0\BlogCoreSolution.AccesoDatos.dll
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCoreSolution.AccesoDatos\bin\Debug\net10.0\BlogCoreSolution.AccesoDatos.pdb
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCoreSolution.AccesoDatos\bin\Debug\net10.0\BlogCoreSolution.Models.dll
-C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCoreSolution.AccesoDatos\bin\Debug\net10.0\BlogCoreSolutions.Utilidades.dll
+C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCoreSolution.AccesoDatos\bin\Debug\net10.0\BlogCoreSolution.Utilidades.dll
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCoreSolution.AccesoDatos\bin\Debug\net10.0\BlogCoreSolution.Models.pdb
-C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCoreSolution.AccesoDatos\bin\Debug\net10.0\BlogCoreSolutions.Utilidades.pdb
+C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCoreSolution.AccesoDatos\bin\Debug\net10.0\BlogCoreSolution.Utilidades.pdb
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCoreSolution.AccesoDatos\obj\Debug\net10.0\BlogCoreSolution.AccesoDatos.csproj.AssemblyReference.cache
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCoreSolution.AccesoDatos\obj\Debug\net10.0\BlogCoreSolution.AccesoDatos.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCoreSolution.AccesoDatos\obj\Debug\net10.0\BlogCoreSolution.AccesoDatos.AssemblyInfoInputs.cache

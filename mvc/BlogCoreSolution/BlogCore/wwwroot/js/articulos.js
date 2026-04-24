@@ -32,7 +32,7 @@ function cargarDataTable() {
             },
             {
                 "data": "id", 
-                "width": "30%",
+                "width": "25%",
                 "render": function(data) {
                     return `<div class="text-center">
                                 <a href="/Admin/Articulos/Edit/${data}" class="btn btn-success text-white" style="cursor:pointer; width:140px;">

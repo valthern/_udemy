@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlogCoreSolution.AccesoDatos.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260422235228_CrearTablaSlider")]
+    [Migration("20260423174131_CrearTablaSlider")]
     partial class CrearTablaSlider
     {
         /// <inheritdoc />

@@ -2,5 +2,5 @@
   <Project Path="BlogCore/BlogCore.csproj" />
   <Project Path="BlogCoreSolution.AccesoDatos/BlogCoreSolution.AccesoDatos.csproj" />
   <Project Path="BlogCoreSolution.Models/BlogCoreSolution.Models.csproj" />
-  <Project Path="BlogCoreSolutions.Utilidades/BlogCoreSolutions.Utilidades.csproj" />
+  <Project Path="BlogCoreSolution.Utilidades/BlogCoreSolution.Utilidades.csproj" />
 </Solution>

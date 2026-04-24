@@ -1939,14 +1939,14 @@
           "bin/placeholder/BlogCoreSolution.Models.dll": {}
         }
       },
-      "BlogCoreSolutions.Utilidades/1.0.0": {
+      "BlogCoreSolution.Utilidades/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "compile": {
-          "bin/placeholder/BlogCoreSolutions.Utilidades.dll": {}
+          "bin/placeholder/BlogCoreSolution.Utilidades.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BlogCoreSolutions.Utilidades.dll": {}
+          "bin/placeholder/BlogCoreSolution.Utilidades.dll": {}
         }
       }
     }
@@ -4513,16 +4513,16 @@
       "path": "../BlogCoreSolution.Models/BlogCoreSolution.Models.csproj",
       "msbuildProject": "../BlogCoreSolution.Models/BlogCoreSolution.Models.csproj"
     },
-    "BlogCoreSolutions.Utilidades/1.0.0": {
+    "BlogCoreSolution.Utilidades/1.0.0": {
       "type": "project",
-      "path": "../BlogCoreSolutions.Utilidades/BlogCoreSolutions.Utilidades.csproj",
-      "msbuildProject": "../BlogCoreSolutions.Utilidades/BlogCoreSolutions.Utilidades.csproj"
+      "path": "../BlogCoreSolution.Utilidades/BlogCoreSolution.Utilidades.csproj",
+      "msbuildProject": "../BlogCoreSolution.Utilidades/BlogCoreSolution.Utilidades.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
       "BlogCoreSolution.Models >= 1.0.0",
-      "BlogCoreSolutions.Utilidades >= 1.0.0",
+      "BlogCoreSolution.Utilidades >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 10.0.7",
       "Microsoft.EntityFrameworkCore >= 10.0.7",
       "Microsoft.EntityFrameworkCore.SqlServer >= 10.0.7",
@@ -4567,8 +4567,8 @@
             "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.Models\\BlogCoreSolution.Models.csproj": {
               "projectPath": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.Models\\BlogCoreSolution.Models.csproj"
             },
-            "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolutions.Utilidades\\BlogCoreSolutions.Utilidades.csproj": {
-              "projectPath": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolutions.Utilidades\\BlogCoreSolutions.Utilidades.csproj"
+            "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.Utilidades\\BlogCoreSolution.Utilidades.csproj": {
+              "projectPath": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.Utilidades\\BlogCoreSolution.Utilidades.csproj"
             }
           }
         }
