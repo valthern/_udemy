@@ -340,7 +340,6 @@ C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\obj\Debug\net
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\obj\Debug\net10.0\compressed\e66u59e841-{0}-3n8usd9yhi-3n8usd9yhi.gz
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\obj\Debug\net10.0\compressed\ozglsioxio-{0}-egfmu93xg6-egfmu93xg6.gz
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\obj\Debug\net10.0\compressed\p8252p35r7-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
-C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\obj\Debug\net10.0\compressed\x1hpp2bngl-{0}-uzjinr17hb-uzjinr17hb.gz
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\obj\Debug\net10.0\compressed\8h5lsbxpil-{0}-bqjiyaj88i-bqjiyaj88i.gz
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\obj\Debug\net10.0\compressed\hvwgpwvl57-{0}-c2jlpeoesf-c2jlpeoesf.gz
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\obj\Debug\net10.0\compressed\kn61u6l9jl-{0}-erw9l3u2r3-erw9l3u2r3.gz
@@ -414,3 +413,4 @@ C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\obj\Debug\net
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\obj\Debug\net10.0\BlogCore.pdb
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\obj\Debug\net10.0\BlogCore.genruntimeconfig.cache
 C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\obj\Debug\net10.0\ref\BlogCore.dll
+C:\Users\omar\source\ejemplos\_udemy\mvc\BlogCoreSolution\BlogCore\obj\Debug\net10.0\compressed\x1hpp2bngl-{0}-otpij3kcfd-otpij3kcfd.gz

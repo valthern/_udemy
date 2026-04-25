@@ -17,8 +17,8 @@ function cargarDataTable() {
             {
                 "data": "estado", 
                 "width": "20%",
-                "render": function(estadoActual) {
-                    return estadoActual ? "Activo" : "Inactivo";
+                "render": function(estado) {
+                    return `<input type="checkbox" ${estado ? "checked" : ""} onclick="return false;" />`;
                 }
             },
             { 
