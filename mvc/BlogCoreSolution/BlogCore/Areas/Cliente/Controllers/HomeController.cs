@@ -16,6 +16,7 @@ namespace BlogCore.Areas.Cliente.Controllers
             this.contenedorTrabajo = contenedorTrabajo;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
             HomeVM homeVM = new()
@@ -24,7 +25,15 @@ namespace BlogCore.Areas.Cliente.Controllers
                 Articulos = contenedorTrabajo.Articulo.GetAll()
             };
 
+            ViewBag.IsHome = true;
             return View(homeVM);
+        }
+
+        [HttpGet]
+        public IActionResult Detalle(int id)
+        {
+            var articuloBd = contenedorTrabajo.Articulo.Get(id);
+            return View(articuloBd);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

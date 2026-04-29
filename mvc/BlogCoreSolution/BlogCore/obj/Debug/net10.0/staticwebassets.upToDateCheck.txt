@@ -68,8 +68,10 @@ wwwroot\favicon.ico
 wwwroot\imagenes\articulos\3685c481-8ef1-4881-9c3a-3c0287dc6fdf.jpg
 wwwroot\imagenes\articulos\a6855e86-f0ee-4e7b-a054-0846f4a5e26d.jpg
 wwwroot\imagenes\articulos\b5f2d1db-42db-452a-966b-fb747a32abb4.jpg
-wwwroot\imagenes\sliders\38afbbe7-1f38-4d10-b3bd-a562f5bdda73.jpeg
-wwwroot\imagenes\sliders\f0f1cf78-e21f-42e6-8151-39b6314f4735.jpg
+wwwroot\imagenes\sliders\ae319312-a643-4425-85a3-1c99ef292d3a.jpg
+wwwroot\imagenes\sliders\e2eeaaae-8588-4104-9061-3361d2a466bd.jpg
+wwwroot\imagenes\sliders\f1bd3454-d34c-4e5e-a692-b8598bd6f3d7.jpg
+wwwroot\imagenes\sliders\fbf95189-ea4b-4f6c-867e-2f8350bbef3d.jpg
 wwwroot\js\articulos.js
 wwwroot\js\categorias.js
 wwwroot\js\site.js
