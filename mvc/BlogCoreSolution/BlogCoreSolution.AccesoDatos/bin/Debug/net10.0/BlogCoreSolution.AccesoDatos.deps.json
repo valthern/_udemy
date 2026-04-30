@@ -1368,6 +1368,7 @@
       "BlogCoreSolution.Models/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.3.9",
+          "Microsoft.Extensions.Identity.Stores": "10.0.7",
           "System.Security.Cryptography.Xml": "10.0.7"
         },
         "runtime": {
