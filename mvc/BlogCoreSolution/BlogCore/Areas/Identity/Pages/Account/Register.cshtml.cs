@@ -3,6 +3,7 @@
 #nullable disable
 
 using BlogCoreSolution.Models;
+using BlogCoreSolution.Utilidades;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -27,6 +28,7 @@ namespace BlogCore.Areas.Identity.Pages.Account
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IUserStore<ApplicationUser> _userStore;
+        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IUserEmailStore<ApplicationUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
@@ -34,12 +36,14 @@ namespace BlogCore.Areas.Identity.Pages.Account
         public RegisterModel(
             UserManager<ApplicationUser> userManager,
             IUserStore<ApplicationUser> userStore,
+            RoleManager<IdentityRole> roleManager,
             SignInManager<ApplicationUser> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
             _userManager = userManager;
             _userStore = userStore;
+            _roleManager = roleManager;
             _emailStore = GetEmailStore();
             _signInManager = signInManager;
             _logger = logger;
@@ -141,6 +145,29 @@ namespace BlogCore.Areas.Identity.Pages.Account
 
                 if (result.Succeeded)
                 {
+                    if (!await _roleManager.RoleExistsAsync(CNT.Administrador))
+                        await _roleManager.CreateAsync(new IdentityRole(CNT.Administrador));
+                    if (!await _roleManager.RoleExistsAsync(CNT.Registrado))
+                        await _roleManager.CreateAsync(new IdentityRole(CNT.Registrado));
+                    if (!await _roleManager.RoleExistsAsync(CNT.Cliente))
+                        await _roleManager.CreateAsync(new IdentityRole(CNT.Cliente));
+
+                    // Obtenemos el rol seleccionado
+                    string rol = Request.Form["radUusarioRole"].ToString();
+
+                    switch (rol)
+                    {
+                        case CNT.Administrador:
+                            await _userManager.AddToRoleAsync(user, CNT.Administrador);
+                            break;
+                        case CNT.Registrado:
+                            await _userManager.AddToRoleAsync(user, CNT.Registrado);
+                            break;
+                        default:
+                            await _userManager.AddToRoleAsync(user, CNT.Cliente);
+                            break;
+                    }
+
                     _logger.LogInformation("User created a new account with password.");
 
                     //var userId = await _userManager.GetUserIdAsync(user);
