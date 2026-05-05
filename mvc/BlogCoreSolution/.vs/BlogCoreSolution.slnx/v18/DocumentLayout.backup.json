@@ -25,6 +25,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{73275B3E-1CB3-6EA9-B990-34C0B6A0A9F5}|BlogCoreSolution.AccesoDatos\\BlogCoreSolution.AccesoDatos.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\mvc\\blogcoresolution\\blogcoresolution.accesodatos\\data\\repository\\irepository\\iusuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73275B3E-1CB3-6EA9-B990-34C0B6A0A9F5}|BlogCoreSolution.AccesoDatos\\BlogCoreSolution.AccesoDatos.csproj|solutionrelative:blogcoresolution.accesodatos\\data\\repository\\irepository\\iusuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FFE1F2C-2B47-4356-8B10-A9D9B71ACC68}|BlogCore\\BlogCore.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\mvc\\blogcoresolution\\blogcore\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FFE1F2C-2B47-4356-8B10-A9D9B71ACC68}|BlogCore\\BlogCore.csproj|solutionrelative:blogcore\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FFE1F2C-2B47-4356-8B10-A9D9B71ACC68}|BlogCore\\BlogCore.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\mvc\\blogcoresolution\\blogcore\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FFE1F2C-2B47-4356-8B10-A9D9B71ACC68}|BlogCore\\BlogCore.csproj|solutionrelative:blogcore\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,9 +52,9 @@
               "RelativeDocumentMoniker": "BlogCore\\Areas\\Admin\\Views\\Usuarios\\Index.cshtml",
               "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCore\\Areas\\Admin\\Views\\Usuarios\\Index.cshtml",
               "RelativeToolTip": "BlogCore\\Areas\\Admin\\Views\\Usuarios\\Index.cshtml",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwEIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACsAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-30T23:16:47.545Z",
+              "WhenOpened": "2026-05-04T23:57:39.609Z",
               "EditorCaption": ""
             },
             {
@@ -57,9 +65,9 @@
               "RelativeDocumentMoniker": "BlogCore\\Areas\\Admin\\Controllers\\UsuariosController.cs",
               "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCore\\Areas\\Admin\\Controllers\\UsuariosController.cs",
               "RelativeToolTip": "BlogCore\\Areas\\Admin\\Controllers\\UsuariosController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-30T22:53:44.94Z",
+              "WhenOpened": "2026-05-04T23:27:17.768Z",
               "EditorCaption": ""
             },
             {
@@ -70,9 +78,9 @@
               "RelativeDocumentMoniker": "BlogCoreSolution.AccesoDatos\\Data\\Repository\\ConenedorTrabajo.cs",
               "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.AccesoDatos\\Data\\Repository\\ConenedorTrabajo.cs",
               "RelativeToolTip": "BlogCoreSolution.AccesoDatos\\Data\\Repository\\ConenedorTrabajo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-30T19:53:14.949Z",
+              "WhenOpened": "2026-05-04T23:21:01.831Z",
               "EditorCaption": ""
             },
             {
@@ -83,9 +91,9 @@
               "RelativeDocumentMoniker": "BlogCoreSolution.AccesoDatos\\Data\\Repository\\IRepository\\IContenedorTrabajo.cs",
               "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.AccesoDatos\\Data\\Repository\\IRepository\\IContenedorTrabajo.cs",
               "RelativeToolTip": "BlogCoreSolution.AccesoDatos\\Data\\Repository\\IRepository\\IContenedorTrabajo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-30T19:51:28.977Z",
+              "WhenOpened": "2026-05-04T23:20:20.66Z",
               "EditorCaption": ""
             },
             {
@@ -96,9 +104,9 @@
               "RelativeDocumentMoniker": "BlogCoreSolution.AccesoDatos\\Data\\Repository\\UsuarioRepository.cs",
               "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.AccesoDatos\\Data\\Repository\\UsuarioRepository.cs",
               "RelativeToolTip": "BlogCoreSolution.AccesoDatos\\Data\\Repository\\UsuarioRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-30T18:21:30.96Z",
+              "WhenOpened": "2026-05-04T22:19:39.793Z",
               "EditorCaption": ""
             },
             {
@@ -109,9 +117,35 @@
               "RelativeDocumentMoniker": "BlogCoreSolution.AccesoDatos\\Data\\Repository\\IRepository\\IUsuarioRepository.cs",
               "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCoreSolution.AccesoDatos\\Data\\Repository\\IRepository\\IUsuarioRepository.cs",
               "RelativeToolTip": "BlogCoreSolution.AccesoDatos\\Data\\Repository\\IRepository\\IUsuarioRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-30T18:13:54.369Z",
+              "WhenOpened": "2026-05-04T22:28:23.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCore\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "BlogCore\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCore\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeToolTip": "BlogCore\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAqwJMAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T15:53:32.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCore\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "BlogCore\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\mvc\\BlogCoreSolution\\BlogCore\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "BlogCore\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAADgAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-04T15:19:21.485Z",
               "EditorCaption": ""
             }
           ]

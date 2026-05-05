@@ -20,18 +20,20 @@ namespace BlogCoreSolution.AccesoDatos.Data.Repository
 
         public IEnumerable<ApplicationUser> ObtenerTodos() => ctx.Users.ToList();
 
-        public ApplicationUser ObtenerUsuario(string idUsuario) => ctx.Users.Find(idUsuario);
+        public ApplicationUser ObtenerUsuario(string idUsuario) => ctx.Users.FirstOrDefault(u => u.Id == idUsuario);
 
         public void BloquearUsuario(string idUsuario)
         {
             var usuario = ctx.Users.Find(idUsuario) ?? throw new InvalidOperationException($"Usuario con ID {idUsuario} no encontrado.");
-            usuario.LockoutEnd = DateTime.Now.AddYears(100);
+            usuario.LockoutEnd = DateTime.MaxValue;
+            ctx.SaveChanges();
         }
 
         public void DesbloquearUsuario(string idUsuario)
         {
             var usuario = ctx.Users.Find(idUsuario) ?? throw new InvalidOperationException($"Usuario con ID {idUsuario} no encontrado.");
             usuario.LockoutEnd = DateTime.Now;
+            ctx.SaveChanges();
         }
     }
 }

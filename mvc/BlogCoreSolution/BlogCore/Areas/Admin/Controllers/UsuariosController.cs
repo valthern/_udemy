@@ -8,10 +8,7 @@ namespace BlogCore.Areas.Admin.Controllers
     {
         private readonly IContenedorTrabajo contenedorTrabajo;
 
-        public UsuariosController(IContenedorTrabajo contenedorTrabajo)
-        {
-            this.contenedorTrabajo = contenedorTrabajo;
-        }
+        public UsuariosController(IContenedorTrabajo contenedorTrabajo) => this.contenedorTrabajo = contenedorTrabajo;
 
         [HttpGet]
         public IActionResult Index() => View(contenedorTrabajo.Usuario.ObtenerTodos());

@@ -145,6 +145,7 @@ namespace BlogCore.Areas.Identity.Pages.Account
 
                 if (result.Succeeded)
                 {
+                    // Se validan la existencia de los roles y se crean si no existen
                     if (!await _roleManager.RoleExistsAsync(CNT.Administrador))
                         await _roleManager.CreateAsync(new IdentityRole(CNT.Administrador));
                     if (!await _roleManager.RoleExistsAsync(CNT.Registrado))
@@ -153,7 +154,7 @@ namespace BlogCore.Areas.Identity.Pages.Account
                         await _roleManager.CreateAsync(new IdentityRole(CNT.Cliente));
 
                     // Obtenemos el rol seleccionado
-                    string rol = Request.Form["radUusarioRole"].ToString();
+                    string rol = Request.Form["radUsuarioRol"].ToString();
 
                     switch (rol)
                     {

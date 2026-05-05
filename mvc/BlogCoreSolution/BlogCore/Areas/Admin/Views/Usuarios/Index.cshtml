@@ -11,8 +11,8 @@
         </div>
 
         <div class="col-4 text-right">
-            <a asp-area="Identity" class="btn btn-info">
-                <i class="fa-solid plus"></i> Crear Nuevo Usuario
+            <a asp-area="Identity" asp-page="/Account/Register" class="btn btn-info">
+                <i class="fa-solid fa-plus"></i> Registra un nuevo usuario
             </a>
         </div>
     </div>
@@ -35,9 +35,12 @@
                 @foreach (var item in Model)
                 {
                     <tr>
-                        <td>@Html.DisplayFor(modelItem => item.Id)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Nombre)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                        @* <td>@Html.DisplayFor(modelItem => item.Id)</td> *@
+                        @* <td>@Html.DisplayFor(modelItem => item.Nombre)</td> *@
+                        @* <td>@Html.DisplayFor(modelItem => item.Email)</td> *@
+                        <td>@item.Id</td>
+                        <td>@item.Nombre</td>
+                        <td>@item.Email</td>
                         <td>
                             @if(item.LockoutEnd is null || item.LockoutEnd < DateTime.Now)
                             {
