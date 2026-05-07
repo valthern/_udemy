@@ -18,12 +18,10 @@ namespace BlogCoreSolution.AccesoDatos.Data.Repository
             this.ctx = ctx;
         }
 
-        public IEnumerable<ApplicationUser> ObtenerTodos(string idUsuarioActual)
-        {
-            return ctx.Users
+        public IEnumerable<ApplicationUser> ObtenerTodos(string idUsuarioActual) =>
+            ctx.Users
                 .Where(u => u.Id != idUsuarioActual)
                 .ToList();
-        }
 
         public ApplicationUser ObtenerUsuario(string idUsuario) => ctx.Users.FirstOrDefault(u => u.Id == idUsuario);
 
