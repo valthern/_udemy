@@ -18,14 +18,19 @@ namespace BlogCoreSolution.AccesoDatos.Data.Repository
             this.ctx = ctx;
         }
 
-        public IEnumerable<ApplicationUser> ObtenerTodos() => ctx.Users.ToList();
+        public IEnumerable<ApplicationUser> ObtenerTodos(string idUsuarioActual)
+        {
+            return ctx.Users
+                .Where(u => u.Id != idUsuarioActual)
+                .ToList();
+        }
 
         public ApplicationUser ObtenerUsuario(string idUsuario) => ctx.Users.FirstOrDefault(u => u.Id == idUsuario);
 
         public void BloquearUsuario(string idUsuario)
         {
             var usuario = ctx.Users.Find(idUsuario) ?? throw new InvalidOperationException($"Usuario con ID {idUsuario} no encontrado.");
-            usuario.LockoutEnd = DateTime.MaxValue;
+            usuario.LockoutEnd = DateTime.Now.AddYears(100);
             ctx.SaveChanges();
         }
 

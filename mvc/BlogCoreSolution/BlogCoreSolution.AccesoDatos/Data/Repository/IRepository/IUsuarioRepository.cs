@@ -9,7 +9,7 @@ namespace BlogCoreSolution.AccesoDatos.Data.Repository.IRepository
     public interface IUsuarioRepository
     {
         ApplicationUser ObtenerUsuario(string idUsuario);
-        IEnumerable<ApplicationUser> ObtenerTodos();
+        IEnumerable<ApplicationUser> ObtenerTodos(string idUsuarioActual);
         void BloquearUsuario(string idUsuario);
         void DesbloquearUsuario(string idUsuario);
     }

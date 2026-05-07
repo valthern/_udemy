@@ -35,23 +35,23 @@
                 @foreach (var item in Model)
                 {
                     <tr>
-                        @* <td>@Html.DisplayFor(modelItem => item.Id)</td> *@
-                        @* <td>@Html.DisplayFor(modelItem => item.Nombre)</td> *@
-                        @* <td>@Html.DisplayFor(modelItem => item.Email)</td> *@
-                        <td>@item.Id</td>
-                        <td>@item.Nombre</td>
-                        <td>@item.Email</td>
+                        <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Nombre)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                        @* <td>@item.Id</td> *@
+                        @* <td>@item.Nombre</td> *@
+                        @* <td>@item.Email</td> *@
                         <td>
                             @if(item.LockoutEnd is null || item.LockoutEnd < DateTime.Now)
                             {
                                 <a class="btn btn-success text-white" asp-action="Bloquear" style="width: 150px;" asp-route-id="@item.Id">
-                                    <i class="lock"></i> Bloquear
+                                    <i class="bi bi-lock-fill"></i> Bloquear
                                 </a>
                             }
                             else
                             {
                                 <a class="btn btn-danger text-white" asp-action="Desbloquear" style="width: 150px;" asp-route-id="@item.Id">
-                                    <i class="unlock"></i> Desbloquear
+                                    <i class="bi bi-unlock-fill"></i> Desbloquear
                                 </a>
                             }
                         </td>

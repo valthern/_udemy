@@ -1,5 +1,6 @@
 ﻿using BlogCoreSolution.AccesoDatos.Data.Repository.IRepository;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace BlogCore.Areas.Admin.Controllers
 {
@@ -11,7 +12,13 @@ namespace BlogCore.Areas.Admin.Controllers
         public UsuariosController(IContenedorTrabajo contenedorTrabajo) => this.contenedorTrabajo = contenedorTrabajo;
 
         [HttpGet]
-        public IActionResult Index() => View(contenedorTrabajo.Usuario.ObtenerTodos());
+        public IActionResult Index()
+        {
+            //return View(contenedorTrabajo.Usuario.ObtenerTodos());
+            var claimsIdentity = (User.Identity as ClaimsIdentity);
+            var usuarioActual = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
+            return View(contenedorTrabajo.Usuario.ObtenerTodos(usuarioActual?.Value));
+        }
 
         [HttpGet]
         public IActionResult Bloquear(string id)
