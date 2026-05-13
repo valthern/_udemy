@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using ProyectoIdentity.Datos;
+using ProyectoIdentity.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +11,10 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(cadenaConexionBd));
 
 // Se agrega el soporte para Identity.
-builder.Services.AddIdentity<IdentityUser, IdentityRole>();
+builder.Services
+    .AddIdentity<AppUsuarios, IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultTokenProviders();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -24,6 +28,8 @@ if (!app.Environment.IsDevelopment())
 }
 app.UseRouting();
 
+// Soporte para la autenticación. OBLIGATORIO ponerlo ANTES de UseAuthorization.
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapStaticAssets();
