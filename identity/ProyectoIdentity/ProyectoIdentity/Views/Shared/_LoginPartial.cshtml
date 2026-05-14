@@ -1,0 +1,36 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@inject SignInManager<AppUsuarios> SignInManager
+@inject UserManager<AppUsuarios> UserManager
+
+<ul class="navbar-nav ms-auto">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <!-- Usuario autenticado -->
+        <li class="nav-item">
+            <a class="nav-link" asp-controller="Account" asp-action="Perfil">
+                ¡Hola, @UserManager.GetUserAsync(User).Result.Nombre<text>!</text>
+            </a>
+        </li>
+        <li class="nav-item">
+            <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline">
+                <button type="submit" class="nav-link btn btn-link text-dark">
+                    Cerrar Sesión
+                </button>
+            </form>
+        </li>
+    }
+    else
+    {
+        <!-- Usuario NO autenticado -->
+        <li class="nav-item">
+            <a class="nav-link" asp-controller="Account" asp-action="Registro">
+                Registrarse
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-controller="Account" asp-action="Login">
+                Iniciar Sesión
+            </a>
+        </li>
+    }
+</ul>
