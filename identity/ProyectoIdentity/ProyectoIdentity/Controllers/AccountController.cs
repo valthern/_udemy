@@ -57,11 +57,18 @@ namespace ProyectoIdentity.Controllers
         }
 
         [HttpGet]
-        public IActionResult Login() => View();
+        public IActionResult Login(string? returnUrl = null)
+        {
+            //ViewData["ReturnUrl"] = returnUrl;
+            ViewBag.ReturnUrl = returnUrl;
+            return View();
+        }
 
         [HttpPost]
-        public async Task<IActionResult> Login(LoginViewModel model)
+        public async Task<IActionResult> Login(LoginViewModel model, string? returnUrl = null)
         {
+            ViewBag.ReturnUrl = returnUrl;
+
             if (!ModelState.IsValid) return View(model);
 
             AppUsuarios usuario = new()
@@ -78,23 +85,31 @@ namespace ProyectoIdentity.Controllers
                 );
 
             if (resultado.Succeeded)
+            {
+                // Redirigir sólo si es una URL local válida para evitar ataques de redirección abierta.
+                if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
+                    return Redirect(returnUrl);
+
                 return RedirectToAction("Index", "Home");
+            }
 
             ModelState.AddModelError(string.Empty, "Credenciales de acceso incorrectas.");
             return View(model);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Logout()
+        public async Task<IActionResult> Logout(string? returnUrl = null)
         {
             await signInManager.SignOutAsync();
+
+            // Redirigir sólo si es una URL local válida para evitar ataques de redirección abierta.
+            if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
+                return Redirect(returnUrl);
+
             return RedirectToAction("Login", "Account");
         }
 
         [HttpPost]
-        public IActionResult AccesDenied()
-        {
-            return View();
-        }
+        public IActionResult AccessDenied() => View();
     }
 }

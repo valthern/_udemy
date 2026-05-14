@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using ProyectoIdentity.Datos;
 using ProyectoIdentity.Models;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("csiTiDevConnection")));
 
-// Se agrega el soporte para Identity.
+// Se agrega el soporte para Identity (usuario personalizado + roles + tokens).
 builder.Services
     .AddIdentity<AppUsuarios, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
@@ -31,14 +32,32 @@ builder.Services.ConfigureApplicationCookie(opciones =>
 
     // Parámetro de retorno (ReturnUrl) que se usa para redirigir al usuario a la página que intentaba acceder antes de iniciar sesión.
     opciones.ReturnUrlParameter = "ReturnUrl"; // ? ReturnUrl=/pagina-protegida
+
+    // Propiedaes de la cookie.
+    opciones.Cookie.Name = Assembly.GetExecutingAssembly().GetName().Name;
+    opciones.Cookie.HttpOnly = true;
+    // La cookie solo se enviará en solicitudes del mismo sitio y navegación cross-site (p.ej: enlaces externos). Puedes usar Strict para mayor seguridad, pero puede afectar la experiencia del usuario.
+    opciones.Cookie.SameSite = SameSiteMode.Lax;
+    // Exige que la cookie solo se transmita a través de conexiones seguras (HTTPS). Es recomendable habilitarlo en producción.
+    opciones.Cookie.SecurePolicy = CookieSecurePolicy.Always;
 });
+
+builder.Services.Configure<SecurityStampValidatorOptions>(opciones =>
+{
+    opciones.ValidationInterval = TimeSpan.FromMinutes(30); // Intervalo de validación del sello de seguridad.
+    // Para renovación inmediata en escenarios críticos:
+    opciones.ValidationInterval = TimeSpan.Zero; // Valida el sello de seguridad en cada solicitud.
+});
+
+// Requerir Https para todas las solicitudes (recomendado en producción).
+//builder.Services.AddHttpsRedirection(opciones => opciones.HttpsPort = 443);
 
 builder.Services.Configure<IdentityOptions>(opciones =>
 {
     // Configuración de la contraseña.
     opciones.Password.RequireDigit = true; // Requiere al menos un dígito.
     opciones.Password.RequiredLength = 8; // Longitud mínima de la contraseña.
-    opciones.Password.RequireNonAlphanumeric = false; // No requiere caracteres no alfanuméricos.
+    opciones.Password.RequireNonAlphanumeric = false; // No requiere caracteres no alfanuméricos (p.ej: !@#$%).
     opciones.Password.RequireUppercase = true; // Requiere al menos una letra mayúscula.
     opciones.Password.RequireLowercase = true; // Requiere al menos una letra minúscula.
 
