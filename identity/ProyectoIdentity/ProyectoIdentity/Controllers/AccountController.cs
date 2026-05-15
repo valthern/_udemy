@@ -108,8 +108,32 @@ namespace ProyectoIdentity.Controllers
 
             return RedirectToAction("Login", "Account");
         }
-
-        [HttpPost]
+        // Acceso denegado.
+        [HttpGet]
         public IActionResult AccessDenied() => View();
+
+        // Olvidó contraseña.
+        [HttpGet]
+        public IActionResult OlvidoContrasena() => View();
+
+        // Olvidó contraseña.
+        [HttpPost]
+        public async Task<IActionResult> OlvidoContrasena(OlvidoContrasenaViewModel model)
+        {
+            if (ModelState.IsValid) return View(model);
+
+            var usuario = await userManager.FindByEmailAsync(model.Email);
+
+            if(usuario is null || !await userManager.IsEmailConfirmedAsync(usuario))
+            {
+                // No revelar que el usuario no existe o que el correo electrónico no está confirmado.
+                return RedirectToAction("OlvidoContrasenaConfirmacion");
+            }
+
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult OlvidoContrasenaConfirmacion() => View();
     }
 }

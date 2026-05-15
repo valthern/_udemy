@@ -20,6 +20,7 @@ builder.Services
 
 builder.Services.ConfigureApplicationCookie(opciones =>
 {
+    // Expiración y "RememberMe"
     // Valor por defecto para la duración de la cookie de autenticación (14 días en este caso).
     opciones.ExpireTimeSpan = TimeSpan.FromDays(7);
     // Si el usuario interactúa, se renueva la cookie.
@@ -46,7 +47,7 @@ builder.Services.Configure<SecurityStampValidatorOptions>(opciones =>
 {
     opciones.ValidationInterval = TimeSpan.FromMinutes(30); // Intervalo de validación del sello de seguridad.
     // Para renovación inmediata en escenarios críticos:
-    opciones.ValidationInterval = TimeSpan.Zero; // Valida el sello de seguridad en cada solicitud.
+    //opciones.ValidationInterval = TimeSpan.Zero; // Valida el sello de seguridad en cada solicitud.
 });
 
 // Requerir Https para todas las solicitudes (recomendado en producción).
@@ -56,7 +57,7 @@ builder.Services.Configure<IdentityOptions>(opciones =>
 {
     // Configuración de la contraseña.
     opciones.Password.RequireDigit = true; // Requiere al menos un dígito.
-    opciones.Password.RequiredLength = 8; // Longitud mínima de la contraseña.
+    opciones.Password.RequiredLength = 6; // Longitud mínima de la contraseña.
     opciones.Password.RequireNonAlphanumeric = false; // No requiere caracteres no alfanuméricos (p.ej: !@#$%).
     opciones.Password.RequireUppercase = true; // Requiere al menos una letra mayúscula.
     opciones.Password.RequireLowercase = true; // Requiere al menos una letra minúscula.
