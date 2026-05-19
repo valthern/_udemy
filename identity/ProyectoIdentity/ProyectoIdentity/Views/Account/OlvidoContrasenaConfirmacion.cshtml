@@ -1,4 +1,4 @@
-﻿<h2 class="mb-4 text-center">Revsia tu correo</h2>
+﻿<h2 class="mb-4 text-center">Revisa tu correo</h2>
 
 <div class="container mt-5">
     <div class="row justify-content-center">
@@ -7,10 +7,20 @@
                 <div class="card-body p-4">
 
                     <p class="text-muted mb-4">
-                        Si el correo ingresado existe, encontrarás un enlace para restablecer tu contraseña a tu dirección de correo electrónico.
+                        Si el correo ingresado existe, encontrarás un enlace para restablecer tu contraseña.
                         <br />
                         Revísalo para restaurar el acceso.
                     </p>
+
+                    <!-- Código utilizado únicamente para fines de prueba. NO se debe usar en producción -->
+                    @if (TempData["UrlRecuperacion"] is not null)
+                    {
+                        <div class="alert alert-info mt-4">
+                            <strong>URL generada (modo demostración):</strong>
+                            <br />
+                            @TempData["UrlRecuperacion"]
+                        </div>
+                    }
 
                 </div>
             </div>

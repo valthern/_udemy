@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using ProyectoIdentity.Datos;
 using ProyectoIdentity.Models;
+using ProyectoIdentity.Services;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,6 +18,11 @@ builder.Services
     .AddIdentity<AppUsuarios, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
+
+// Registrar el servicio de envío de emails con Google(inyección de dependencias).
+// Ahora cualquer parte del sistema puede enviar correos utilizando IEmailSender.
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
+builder.Services.AddTransient<IEmailSender, GmailEmailSender>();
 
 builder.Services.ConfigureApplicationCookie(opciones =>
 {
