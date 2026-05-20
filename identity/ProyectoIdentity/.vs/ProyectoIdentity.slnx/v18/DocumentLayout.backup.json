@@ -3,24 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\identity\\proyectoidentity\\proyectoidentity\\services\\iemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|solutionrelative:proyectoidentity\\services\\iemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\identity\\proyectoidentity\\proyectoidentity\\views\\account\\resetpasswordconfirmacion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|solutionrelative:proyectoidentity\\views\\account\\resetpasswordconfirmacion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\identity\\proyectoidentity\\proyectoidentity\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|solutionrelative:proyectoidentity\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\identity\\proyectoidentity\\proyectoidentity\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|solutionrelative:proyectoidentity\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\identity\\proyectoidentity\\proyectoidentity\\views\\account\\olvidocontrasena.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|solutionrelative:proyectoidentity\\views\\account\\olvidocontrasena.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\identity\\proyectoidentity\\proyectoidentity\\models\\resetpasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|solutionrelative:proyectoidentity\\models\\resetpasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\identity\\proyectoidentity\\proyectoidentity\\views\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|solutionrelative:proyectoidentity\\views\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\identity\\proyectoidentity\\proyectoidentity\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|solutionrelative:proyectoidentity\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\identity\\proyectoidentity\\proyectoidentity\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|solutionrelative:proyectoidentity\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\identity\\proyectoidentity\\proyectoidentity\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|solutionrelative:proyectoidentity\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\identity\\proyectoidentity\\proyectoidentity\\services\\gmailemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|solutionrelative:proyectoidentity\\services\\gmailemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\identity\\proyectoidentity\\proyectoidentity\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|solutionrelative:proyectoidentity\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,67 +46,119 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "ProyectoIdentity\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "ProyectoIdentity\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T23:11:06.097Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Program.cs",
-              "RelativeDocumentMoniker": "ProyectoIdentity\\Program.cs",
-              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Program.cs",
-              "RelativeToolTip": "ProyectoIdentity\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T22:48:05.96Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GmailEmailSender.cs",
-              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Services\\GmailEmailSender.cs",
-              "RelativeDocumentMoniker": "ProyectoIdentity\\Services\\GmailEmailSender.cs",
-              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Services\\GmailEmailSender.cs",
-              "RelativeToolTip": "ProyectoIdentity\\Services\\GmailEmailSender.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T20:13:19.845Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "IEmailSender.cs",
-              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Services\\IEmailSender.cs",
-              "RelativeDocumentMoniker": "ProyectoIdentity\\Services\\IEmailSender.cs",
-              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Services\\IEmailSender.cs",
-              "RelativeToolTip": "ProyectoIdentity\\Services\\IEmailSender.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T20:08:11.481Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ResetPasswordConfirmacion.cshtml",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Views\\Account\\ResetPasswordConfirmacion.cshtml",
+              "RelativeDocumentMoniker": "ProyectoIdentity\\Views\\Account\\ResetPasswordConfirmacion.cshtml",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Views\\Account\\ResetPasswordConfirmacion.cshtml",
+              "RelativeToolTip": "ProyectoIdentity\\Views\\Account\\ResetPasswordConfirmacion.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-20T00:22:47.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ResetPassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Views\\Account\\ResetPassword.cshtml",
+              "RelativeDocumentMoniker": "ProyectoIdentity\\Views\\Account\\ResetPassword.cshtml",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Views\\Account\\ResetPassword.cshtml",
+              "RelativeToolTip": "ProyectoIdentity\\Views\\Account\\ResetPassword.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAB1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-19T17:45:14.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "ResetPasswordViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Models\\ResetPasswordViewModel.cs",
+              "RelativeDocumentMoniker": "ProyectoIdentity\\Models\\ResetPasswordViewModel.cs",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Models\\ResetPasswordViewModel.cs",
+              "RelativeToolTip": "ProyectoIdentity\\Models\\ResetPasswordViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T17:19:09.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OlvidoContrasena.cshtml",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Views\\Account\\OlvidoContrasena.cshtml",
+              "RelativeDocumentMoniker": "ProyectoIdentity\\Views\\Account\\OlvidoContrasena.cshtml",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Views\\Account\\OlvidoContrasena.cshtml",
+              "RelativeToolTip": "ProyectoIdentity\\Views\\Account\\OlvidoContrasena.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-19T16:16:20.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "ProyectoIdentity\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "ProyectoIdentity\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAALQAAAAAAAAAAAA6wNoAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T16:06:12.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "ProyectoIdentity\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "ProyectoIdentity\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T23:11:06.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Program.cs",
+              "RelativeDocumentMoniker": "ProyectoIdentity\\Program.cs",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Program.cs",
+              "RelativeToolTip": "ProyectoIdentity\\Program.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAEIAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T22:48:05.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GmailEmailSender.cs",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Services\\GmailEmailSender.cs",
+              "RelativeDocumentMoniker": "ProyectoIdentity\\Services\\GmailEmailSender.cs",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Services\\GmailEmailSender.cs",
+              "RelativeToolTip": "ProyectoIdentity\\Services\\GmailEmailSender.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T20:13:19.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\appsettings.json",
               "RelativeDocumentMoniker": "ProyectoIdentity\\appsettings.json",
@@ -98,8 +166,7 @@
               "RelativeToolTip": "ProyectoIdentity\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-18T19:01:37.344Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T19:01:37.344Z"
             }
           ]
         }

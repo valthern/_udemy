@@ -10,10 +10,7 @@ namespace ProyectoIdentity.Controllers
     {
         private readonly IEmailSender emailSender;
 
-        public HomeController(IEmailSender emailSender)
-        {
-            this.emailSender = emailSender;
-        }
+        public HomeController(IEmailSender emailSender) => this.emailSender = emailSender;
 
         public IActionResult Index() => View();
 
@@ -22,10 +19,11 @@ namespace ProyectoIdentity.Controllers
         [Authorize]
         public IActionResult Privacy() => View();
 
-        public async Task<IActionResult> EnviarPrueba()
-        {
-            await emailSender.EnviarEmailAsync(
-        }
+        //public async Task<IActionResult> EnviarPrueba()
+        //{
+        //    await emailSender.SendEmailAsync("omartinez238@prodigy.net.mx", "Prueba", "<h1>Funciona correctamente</h1>");
+        //    return Content("Correo de prueba enviado");
+        //}
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error() => View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

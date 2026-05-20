@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.IdentityModel.Abstractions;
@@ -11,11 +12,13 @@ namespace ProyectoIdentity.Controllers
     {
         private readonly UserManager<AppUsuarios> userManager;
         private readonly SignInManager<AppUsuarios> signInManager;
+        private readonly IEmailSender emailSender;
 
-        public AccountController(UserManager<AppUsuarios> userManager, SignInManager<AppUsuarios> signInManager)
+        public AccountController(UserManager<AppUsuarios> userManager, SignInManager<AppUsuarios> signInManager, IEmailSender emailSender)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
+            this.emailSender = emailSender;
         }
 
         [HttpGet]
@@ -149,6 +152,20 @@ namespace ProyectoIdentity.Controllers
                 protocol: Request.Scheme
                 );
 
+            // 3.1.- Crear un mensaje HTML:
+            var mensajeHtml = $@"
+                <h2>Recuperación de contraseña</h2>
+                <p>Hola, has solicitado restablecer tu contraseña. Haz clic en el siguiente enlace para crear una nueva contraseña:</p>
+                <a href=""{url}"" target=""_blank"">Restablecer contraseña</a>
+                <br />
+                <p>Si no solicitaste este cambio, puedes ignorar este correo electrónico.</p>
+                <hr />
+                <p>Render2Web® - Seguridad de cuenta</p>
+                ";
+
+            // 3.2.- Envío del correo electrónico:
+            await emailSender.SendEmailAsync(model.Email, "Recuperación de contraseña", mensajeHtml);
+
             // 4.- Guardamos la URL en TempData para mostrarla en la confirmación (solo para demostración, no se recomienda en producción):
             TempData["UrlRecuperacion"] = url;
 
@@ -158,5 +175,48 @@ namespace ProyectoIdentity.Controllers
 
         [HttpGet]
         public IActionResult OlvidoContrasenaConfirmacion() => View();
+
+        // Método que permite cambiar la contraseña. Recibe el email y el token como parámetros en la URL.
+        [HttpGet]
+        public IActionResult ResetPassword(string email, string token)
+        {
+            if(email is null || token is null) 
+                return RedirectToAction("OlvidoContrasenaConfirmacion");
+
+            ResetPasswordViewModel model = new()
+            {
+                Email = email,
+                Token = token
+            };
+
+            return View(model);
+        }
+
+        // Procesamiento olvidó contraseña.
+        [HttpPost]
+        public async Task<IActionResult> ResetPassword(ResetPasswordViewModel model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            var usuario = await userManager.FindByEmailAsync(model.Email);
+
+            if (usuario is null) 
+                return RedirectToAction("ResetPasswordConfirmacion");
+
+            // El Token necesita ser decodificado:
+            var tokenDecodificado=Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(model.Token));
+
+            var resultado=await userManager.ResetPasswordAsync(usuario, tokenDecodificado, model.Password);
+
+            if(!resultado.Succeeded)
+            {
+                foreach (var error in resultado.Errors)
+                    ModelState.AddModelError(string.Empty, error.Description);
+                
+                return View(model);
+            }
+
+            return RedirectToAction("ResetPasswordConfirmacion");
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Options;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.Extensions.Options;
 using ProyectoIdentity.Models;
 using System.Net.Mail;
 
@@ -13,7 +15,7 @@ namespace ProyectoIdentity.Services
             this.settings = settings.Value;
         }
 
-        public async Task EnviarEmailAsync(string emailDestino, string asunto, string mensajeHtml)
+        public async Task SendEmailAsync(string emailDestino, string asunto, string mensajeHtml)
         {
             using var client = new SmtpClient();
             client.Host = settings.Host;
