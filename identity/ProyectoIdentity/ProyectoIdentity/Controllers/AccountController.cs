@@ -95,7 +95,7 @@ namespace ProyectoIdentity.Controllers
         public IActionResult RegistroConfirmacion() => View();
 
         [HttpGet]
-        public IActionResult Login(string? returnUrl = null)
+        public IActionResult Login(string returnUrl = null)
         {
             //ViewData["ReturnUrl"] = returnUrl;
             ViewBag.ReturnUrl = returnUrl;
@@ -103,17 +103,28 @@ namespace ProyectoIdentity.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login(LoginViewModel model, string? returnUrl = null)
+        public async Task<IActionResult> Login(LoginViewModel model, string returnUrl = null)
         {
             ViewBag.ReturnUrl = returnUrl;
 
             if (!ModelState.IsValid) return View(model);
 
-            AppUsuarios usuario = new()
+            // Buscar usuario por correo electrónico
+            var usuario=await userManager.FindByEmailAsync(model.Email);
+
+            // Validar si el usuario existe
+            if(usuario is null)
             {
-                UserName = model.Email,
-                Email = model.Email,
-            };
+                ModelState.AddModelError("UsuarioNoExiste", "Credenciales de acceso incorrectas");
+                return View(model);
+            }
+
+            // Validar si el usuario ha confirmado su correo electrónico
+            if(!await userManager.IsEmailConfirmedAsync(usuario))
+            {
+                ModelState.AddModelError("EmailNoConfirmado", "Debes confirmar tu correo electrónico para iniciar sesión.");
+                return View(model);
+            }
 
             var resultado = await signInManager.PasswordSignInAsync(
                 model.Email,
@@ -136,7 +147,7 @@ namespace ProyectoIdentity.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Logout(string? returnUrl = null)
+        public async Task<IActionResult> Logout(string returnUrl = null)
         {
             await signInManager.SignOutAsync();
 
