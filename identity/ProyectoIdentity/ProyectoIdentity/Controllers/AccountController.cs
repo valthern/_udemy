@@ -50,16 +50,49 @@ namespace ProyectoIdentity.Controllers
             {
                 // Si quieres iniciar sesión automáticamente, habilita esto:
                 // await signInManager.SignInAsync(usuario, false);
-                return RedirectToAction("Login");
+
+                // HAbilitar la confirmación de la cuenta generando el Token de confirmación
+                var token = await userManager.GenerateEmailConfirmationTokenAsync(usuario);
+
+                // Codificamos el Token para incluirlo en la URL
+                var tokenCodificado = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(token));
+
+                // Construímos la URL del enlace de confirmación:
+                var urlConfirmacion = Url.Action(
+                    "ConfirmarEmail",
+                    "Account",
+                    new { userId = usuario.Id, token = tokenCodificado },
+                    protocol: Request.Scheme
+                    );
+
+                // Enviar correo de confirmación:
+                var asunto = "Confirma tu cuenta en Render2Web® Identity";
+
+                var mensajeHtml = $@"
+                    <h2>Hola, {usuario.Nombre}</h2>
+                    <p>¡Gracias por registrarte. Para activar tu cuenta, haz clic en el siguiente enlace:</p>
+                    <a href=""{urlConfirmacion}"" target=""_blank"" style='color: #2563eb; font-weight: bold;'>Confirmar mi cuenta</a>
+                    <br />
+                    <p>Si no solicitaste tu registro, puedes ignorar este mensaje.</p>
+                    <hr />
+                    <p>Render2Web® - Seguridad de cuenta</p>
+                ";
+
+                // Envío del correo electrónico:
+                await emailSender.SendEmailAsync(usuario.Email, asunto, mensajeHtml);
+
+                // Mostrar una vista informando al usuario que revise su email:
+                return RedirectToAction("RegistroConfirmacion");
             }
 
             foreach (var error in resultado.Errors)
-            {
                 ModelState.AddModelError(string.Empty, error.Description);
-            }
 
             return View(model);
         }
+
+        [HttpGet]
+        public IActionResult RegistroConfirmacion() => View();
 
         [HttpGet]
         public IActionResult Login(string? returnUrl = null)
@@ -158,7 +191,7 @@ namespace ProyectoIdentity.Controllers
                 <p>Hola, has solicitado restablecer tu contraseña. Haz clic en el siguiente enlace para crear una nueva contraseña:</p>
                 <a href=""{url}"" target=""_blank"">Restablecer contraseña</a>
                 <br />
-                <p>Si no solicitaste este cambio, puedes ignorar este correo electrónico.</p>
+                <p>Si no solicitaste este cambio, puedes ignorar este mensaje.</p>
                 <hr />
                 <p>Render2Web® - Seguridad de cuenta</p>
                 ";
@@ -167,7 +200,7 @@ namespace ProyectoIdentity.Controllers
             await emailSender.SendEmailAsync(model.Email, "Recuperación de contraseña", mensajeHtml);
 
             // 4.- Guardamos la URL en TempData para mostrarla en la confirmación (solo para demostración, no se recomienda en producción):
-            TempData["UrlRecuperacion"] = url;
+            //TempData["UrlRecuperacion"] = urlConfirmacion;
 
             // Aquí NO enviamos el correo todavía, solo redirigimos a la confirmación.
             return RedirectToAction("OlvidoContrasenaConfirmacion");
@@ -180,7 +213,7 @@ namespace ProyectoIdentity.Controllers
         [HttpGet]
         public IActionResult ResetPassword(string email, string token)
         {
-            if(email is null || token is null) 
+            if (email is null || token is null)
                 return RedirectToAction("OlvidoContrasenaConfirmacion");
 
             ResetPasswordViewModel model = new()
@@ -200,23 +233,47 @@ namespace ProyectoIdentity.Controllers
 
             var usuario = await userManager.FindByEmailAsync(model.Email);
 
-            if (usuario is null) 
+            if (usuario is null)
                 return RedirectToAction("ResetPasswordConfirmacion");
 
             // El Token necesita ser decodificado:
-            var tokenDecodificado=Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(model.Token));
+            var tokenDecodificado = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(model.Token));
 
-            var resultado=await userManager.ResetPasswordAsync(usuario, tokenDecodificado, model.Password);
+            var resultado = await userManager.ResetPasswordAsync(usuario, tokenDecodificado, model.Password);
 
-            if(!resultado.Succeeded)
+            if (!resultado.Succeeded)
             {
                 foreach (var error in resultado.Errors)
                     ModelState.AddModelError(string.Empty, error.Description);
-                
+
                 return View(model);
             }
 
             return RedirectToAction("ResetPasswordConfirmacion");
+        }
+
+        [HttpGet]
+        public IActionResult ResetPasswordConfirmacion() => View();
+
+        [HttpGet]
+        public async Task<IActionResult> ConfirmarEmail(string userId, string token)
+        {
+            if (userId is null || token is null)
+                return RedirectToAction("Error", "Home");
+
+            var usuario = await userManager.FindByIdAsync(userId);
+
+            if (usuario is null)
+                return NotFound("No se encontró el usuario");
+
+            var tokenDecodificado = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(token));
+
+            var resultado = await userManager.ConfirmEmailAsync(usuario, tokenDecodificado);
+
+            if (resultado.Succeeded)
+                return View("ConfirmarEmail");
+
+            return View("ErrorConfirmarEmail");
         }
     }
 }

@@ -18,6 +18,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
 builder.Services
     .AddIdentity<AppUsuarios, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
+    // Necesario para usar los tokens de confirmación de email, restablecimiento de contraseña, etc.
+    // Si no los necesitas, puedes omitir esta línea.
     .AddDefaultTokenProviders();
 
 // Registrar el servicio de envío de emails con Google(inyección de dependencias).
@@ -79,9 +81,9 @@ builder.Services.Configure<IdentityOptions>(opciones =>
     //opciones.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.-_@";
 
     // SignIn. (requisitos para iniciar sesión).
-    opciones.SignIn.RequireConfirmedEmail = false;
+    opciones.SignIn.RequireConfirmedEmail = true;
     opciones.SignIn.RequireConfirmedPhoneNumber = false;
-    opciones.SignIn.RequireConfirmedAccount = false; // si usas pantillas para la confirmación de cuenta, puedes ponerlo en true.
+    opciones.SignIn.RequireConfirmedAccount = false; // si usas plantillas para la confirmación de cuenta, puedes ponerlo en true.
 });
 
 // Add services to the container.

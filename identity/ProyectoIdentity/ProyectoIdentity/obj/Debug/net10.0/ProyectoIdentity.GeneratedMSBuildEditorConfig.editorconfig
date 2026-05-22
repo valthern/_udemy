@@ -35,6 +35,14 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/omar/source/ejemplos/_udemy/identity/ProyectoIdentity/ProyectoIdentity/Views/Account/ConfirmarEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDb25maXJtYXJFbWFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omar/source/ejemplos/_udemy/identity/ProyectoIdentity/ProyectoIdentity/Views/Account/ErrorConfirmarEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxFcnJvckNvbmZpcm1hckVtYWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/omar/source/ejemplos/_udemy/identity/ProyectoIdentity/ProyectoIdentity/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -49,6 +57,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/omar/source/ejemplos/_udemy/identity/ProyectoIdentity/ProyectoIdentity/Views/Account/Registro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Ryby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omar/source/ejemplos/_udemy/identity/ProyectoIdentity/ProyectoIdentity/Views/Account/RegistroConfirmacion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Ryb0NvbmZpcm1hY2lvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/omar/source/ejemplos/_udemy/identity/ProyectoIdentity/ProyectoIdentity/Views/Account/ResetPassword.cshtml]
