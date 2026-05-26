@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.IdentityModel.Abstractions;
 using ProyectoIdentity.Models;
+using System.Security.Claims;
 using System.Text;
 
 namespace ProyectoIdentity.Controllers
@@ -110,17 +111,17 @@ namespace ProyectoIdentity.Controllers
             if (!ModelState.IsValid) return View(model);
 
             // Buscar usuario por correo electrónico
-            var usuario=await userManager.FindByEmailAsync(model.Email);
+            var usuario = await userManager.FindByEmailAsync(model.Email);
 
             // Validar si el usuario existe
-            if(usuario is null)
+            if (usuario is null)
             {
                 ModelState.AddModelError("UsuarioNoExiste", "Credenciales de acceso incorrectas");
                 return View(model);
             }
 
             // Validar si el usuario ha confirmado su correo electrónico
-            if(!await userManager.IsEmailConfirmedAsync(usuario))
+            if (!await userManager.IsEmailConfirmedAsync(usuario))
             {
                 ModelState.AddModelError("EmailNoConfirmado", "Debes confirmar tu correo electrónico para iniciar sesión.");
                 return View(model);
@@ -285,6 +286,110 @@ namespace ProyectoIdentity.Controllers
                 return View("ConfirmarEmail");
 
             return View("ErrorConfirmarEmail");
+        }
+
+        [HttpGet]
+        public IActionResult LoginExterno(string provider, string returnUrl = null)
+        {
+            var redirect = Url.Action("LoginExternoCallback", "Account", new { returnUrl });
+            var propiedades = signInManager.ConfigureExternalAuthenticationProperties(provider, redirect);
+
+            return Challenge(propiedades, provider);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> LoginExternoCallback(string returnUrl = null)
+        {
+            // Si no hay ReturnUrl, usa la raiz del sitio
+            returnUrl ??= Url.Content("~/");
+
+            // Obtener la información del usuario desde el proveedor externo
+            var info = await signInManager.GetExternalLoginInfoAsync();
+
+            if (info is null)
+            {
+                // Si no hay info, muestra un error
+                TempData["Error"] = "Error al obtener la información del proveedor externo.";
+                // Redirige al Login normal
+                return RedirectToAction("Login");
+            }
+
+            // Verifica si el usuario ya tiene vinculado este login externo a su cuenta
+            var resultado = await signInManager.ExternalLoginSignInAsync(
+                info.LoginProvider,
+                info.ProviderKey,
+                isPersistent: false
+                );
+
+            // Si ya está registrado, lo loguea y redirige
+            if (resultado.Succeeded) return LocalRedirect(returnUrl);
+
+            // Si es un nuevo usuario, intenta obener su email del proveedor externo
+            var email = info.Principal.FindFirstValue(ClaimTypes.Email);
+
+            if (email is null)
+            {
+                TempData["Error"] = "No se pudo obtener el correo electrónico del proveedor externo.";
+                return RedirectToAction("Login");
+            }
+
+            ConfirmarAccesoExternoViewModel modelo = new()
+            {
+                Email = email,
+                ReturnUrl = returnUrl
+            };
+
+            return View("ConfirmarAccesoExterno", modelo);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ConfirmarAccesoExterno(ConfirmarAccesoExternoViewModel model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            // Obtener info externa
+            var info = await signInManager.GetExternalLoginInfoAsync();
+
+            if (info is null)
+            {
+                TempData["Error"] = "Error al obtener la información del proveedor externo.";
+                return RedirectToAction("Login");
+            }
+
+            // Crear usuario en nuestra BD
+            AppUsuarios usuario = new()
+            {
+                UserName = model.Email,
+                Email = model.Email,
+                // El proveedor externo ya validó el el email.
+                EmailConfirmed = true
+            };
+
+            var crear = await userManager.CreateAsync(usuario);
+
+            if (!crear.Succeeded)
+            {
+                foreach (var error in crear.Errors)
+                    ModelState.AddModelError(string.Empty, error.Description);
+
+                return View(model);
+            }
+
+            // Vincular el login externo al usuario
+            var resultado = await userManager.AddLoginAsync(usuario, info);
+
+            if (!resultado.Succeeded)
+            {
+                foreach (var error in resultado.Errors)
+                    ModelState.AddModelError(string.Empty, error.Description);
+
+                return View(model);
+            }
+
+            // Ingresar al usuario
+            await signInManager.SignInAsync(usuario, isPersistent: false);
+
+            return LocalRedirect(model.ReturnUrl ?? "/");
         }
     }
 }

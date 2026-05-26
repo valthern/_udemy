@@ -35,6 +35,10 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/omar/source/ejemplos/_udemy/identity/ProyectoIdentity/ProyectoIdentity/Views/Account/ConfirmarAccesoExterno.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDb25maXJtYXJBY2Nlc29FeHRlcm5vLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/omar/source/ejemplos/_udemy/identity/ProyectoIdentity/ProyectoIdentity/Views/Account/ConfirmarEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDb25maXJtYXJFbWFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
