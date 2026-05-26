@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\identity\\proyectoidentity\\proyectoidentity\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|solutionrelative:proyectoidentity\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\identity\\proyectoidentity\\proyectoidentity\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|solutionrelative:proyectoidentity\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\identity\\proyectoidentity\\proyectoidentity\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|solutionrelative:proyectoidentity\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\identity\\proyectoidentity\\proyectoidentity\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9B25A5DD-8C5D-2447-0688-D6A489892FBA}|ProyectoIdentity\\ProyectoIdentity.csproj|solutionrelative:proyectoidentity\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,14 +31,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "ProyectoIdentity\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "ProyectoIdentity\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAAA0wIAAAAAMAAAAAAAAAA==",
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "ProyectoIdentity\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "ProyectoIdentity\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-25T23:19:14.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Program.cs",
+              "RelativeDocumentMoniker": "ProyectoIdentity\\Program.cs",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\Program.cs",
+              "RelativeToolTip": "ProyectoIdentity\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-22T17:19:28.314Z",
+              "WhenOpened": "2026-05-25T22:40:01.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\appsettings.json",
+              "RelativeDocumentMoniker": "ProyectoIdentity\\appsettings.json",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\identity\\ProyectoIdentity\\ProyectoIdentity\\appsettings.json",
+              "RelativeToolTip": "ProyectoIdentity\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-25T22:49:27.98Z",
               "EditorCaption": ""
             }
           ]

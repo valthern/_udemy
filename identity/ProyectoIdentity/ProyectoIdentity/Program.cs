@@ -22,6 +22,16 @@ builder.Services
     // Si no los necesitas, puedes omitir esta línea.
     .AddDefaultTokenProviders();
 
+// Autenticación con Facebook®
+builder.Services
+    .AddAuthentication()
+    .AddFacebook(opciones =>
+    {
+        opciones.AppId = builder.Configuration["Authentication:Facebook:AppId"];
+        opciones.AppSecret = builder.Configuration["Authentication:Facebook:AppSecret"];
+        opciones.AccessDeniedPath = "/Account/Login";
+    });
+
 // Registrar el servicio de envío de emails con Google(inyección de dependencias).
 // Ahora cualquer parte del sistema puede enviar correos utilizando IEmailSender.
 builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
