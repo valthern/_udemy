@@ -1,7 +1,15 @@
+using CursoEFCore10.Datos;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Añadimos el servicio de Sql Server para Entity Framework Core
+var cadconnName = "CsiTiDevConnection";
+var connStr = builder.Configuration.GetConnectionString(cadconnName);
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connStr));
 
 var app = builder.Build();
 

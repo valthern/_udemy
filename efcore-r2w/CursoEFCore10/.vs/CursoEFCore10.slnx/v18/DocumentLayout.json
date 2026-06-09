@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEFCore10\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{16F172F9-9E30-8E52-6346-C5CB249225BE}|CursoEFCore10\\CursoEFCore10.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\cursoefcore10\\cursoefcore10\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16F172F9-9E30-8E52-6346-C5CB249225BE}|CursoEFCore10\\CursoEFCore10.csproj|solutionrelative:cursoefcore10\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F172F9-9E30-8E52-6346-C5CB249225BE}|CursoEFCore10\\CursoEFCore10.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\cursoefcore10\\cursoefcore10\\datos\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16F172F9-9E30-8E52-6346-C5CB249225BE}|CursoEFCore10\\CursoEFCore10.csproj|solutionrelative:cursoefcore10\\datos\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +18,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEFCore10\\CursoEFCore10\\Datos\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "CursoEFCore10\\Datos\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEFCore10\\CursoEFCore10\\Datos\\ApplicationDbContext.cs",
+              "RelativeToolTip": "CursoEFCore10\\Datos\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T23:02:46.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Categoria.cs",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEFCore10\\CursoEFCore10\\Models\\Categoria.cs",
+              "RelativeDocumentMoniker": "CursoEFCore10\\Models\\Categoria.cs",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEFCore10\\CursoEFCore10\\Models\\Categoria.cs",
+              "RelativeToolTip": "CursoEFCore10\\Models\\Categoria.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T22:58:46.169Z",
+              "EditorCaption": ""
             }
           ]
         }
