@@ -1,28 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEntityFrameworkCore\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{B83DBC9E-017E-400C-82EC-9F610DC534A2}|CursoEntityFrameworkCore\\CursoEntityFrameworkCore.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\cursoentityframeworkcore\\cursoentityframeworkcore\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B83DBC9E-017E-400C-82EC-9F610DC534A2}|CursoEntityFrameworkCore\\CursoEntityFrameworkCore.csproj|solutionrelative:cursoentityframeworkcore\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B83DBC9E-017E-400C-82EC-9F610DC534A2}|CursoEntityFrameworkCore\\CursoEntityFrameworkCore.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\cursoentityframeworkcore\\cursoentityframeworkcore\\models\\constants\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B83DBC9E-017E-400C-82EC-9F610DC534A2}|CursoEntityFrameworkCore\\CursoEntityFrameworkCore.csproj|solutionrelative:cursoentityframeworkcore\\models\\constants\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B83DBC9E-017E-400C-82EC-9F610DC534A2}|CursoEntityFrameworkCore\\CursoEntityFrameworkCore.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\cursoentityframeworkcore\\cursoentityframeworkcore\\models\\vms\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B83DBC9E-017E-400C-82EC-9F610DC534A2}|CursoEntityFrameworkCore\\CursoEntityFrameworkCore.csproj|solutionrelative:cursoentityframeworkcore\\models\\vms\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B83DBC9E-017E-400C-82EC-9F610DC534A2}|CursoEntityFrameworkCore\\CursoEntityFrameworkCore.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\cursoentityframeworkcore\\cursoentityframeworkcore\\cursoentityframeworkcore.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{B83DBC9E-017E-400C-82EC-9F610DC534A2}|CursoEntityFrameworkCore\\CursoEntityFrameworkCore.csproj|solutionrelative:cursoentityframeworkcore\\cursoentityframeworkcore.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B83DBC9E-017E-400C-82EC-9F610DC534A2}|CursoEntityFrameworkCore\\CursoEntityFrameworkCore.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\cursoentityframeworkcore\\cursoentityframeworkcore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B83DBC9E-017E-400C-82EC-9F610DC534A2}|CursoEntityFrameworkCore\\CursoEntityFrameworkCore.csproj|solutionrelative:cursoentityframeworkcore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -30,72 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEntityFrameworkCore\\CursoEntityFrameworkCore\\Models\\VMs\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "CursoEntityFrameworkCore\\Models\\VMs\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEntityFrameworkCore\\CursoEntityFrameworkCore\\Models\\VMs\\ErrorViewModel.cs",
-              "RelativeToolTip": "CursoEntityFrameworkCore\\Models\\VMs\\ErrorViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-02T05:26:01.311Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Categoria.cs",
-              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEntityFrameworkCore\\CursoEntityFrameworkCore\\Models\\Constants\\Categoria.cs",
-              "RelativeDocumentMoniker": "CursoEntityFrameworkCore\\Models\\Constants\\Categoria.cs",
-              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEntityFrameworkCore\\CursoEntityFrameworkCore\\Models\\Constants\\Categoria.cs",
-              "RelativeToolTip": "CursoEntityFrameworkCore\\Models\\Constants\\Categoria.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-02T05:25:16.764Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEntityFrameworkCore\\CursoEntityFrameworkCore\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "CursoEntityFrameworkCore\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEntityFrameworkCore\\CursoEntityFrameworkCore\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "CursoEntityFrameworkCore\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-02T05:09:45.773Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CursoEntityFrameworkCore",
-              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEntityFrameworkCore\\CursoEntityFrameworkCore\\CursoEntityFrameworkCore.csproj",
-              "RelativeDocumentMoniker": "CursoEntityFrameworkCore\\CursoEntityFrameworkCore.csproj",
-              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEntityFrameworkCore\\CursoEntityFrameworkCore\\CursoEntityFrameworkCore.csproj",
-              "RelativeToolTip": "CursoEntityFrameworkCore\\CursoEntityFrameworkCore.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-10-02T05:09:19.589Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEntityFrameworkCore\\CursoEntityFrameworkCore\\Program.cs",
-              "RelativeDocumentMoniker": "CursoEntityFrameworkCore\\Program.cs",
-              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEntityFrameworkCore\\CursoEntityFrameworkCore\\Program.cs",
-              "RelativeToolTip": "CursoEntityFrameworkCore\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-02T05:05:45.14Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             }
           ]
         }

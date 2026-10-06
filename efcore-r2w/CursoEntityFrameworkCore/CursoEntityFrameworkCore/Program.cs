@@ -7,7 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 // Configuración de la base de datos
-var strConnName="csOptiPlex3050";
+//var strConnName = "csOptiPlex3050";
+var strConnName = "csZ1TowerG1i";
 IServiceCollection serviceCollection = builder.Services.AddDbContext<ApplicationDbContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString(strConnName))
 );

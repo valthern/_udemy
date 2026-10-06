@@ -1,0 +1,1 @@
+Scaffold-DbContext 'Name=ConnectionStrings:csZ1TowerG1i' Microsoft.EntityFrameworkCore.SqlServer -UseDatabaseNames -DataAnnotatons -ContextDir Data

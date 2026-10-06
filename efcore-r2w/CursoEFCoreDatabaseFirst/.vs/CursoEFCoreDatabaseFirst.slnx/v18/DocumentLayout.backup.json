@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEFCoreDatabaseFirst\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{78A6CCF7-19E6-41EA-A9C1-AFE48B512A7F}|CursoEFCoreDatabaseFirst\\CursoEFCoreDatabaseFirst.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\cursoefcoredatabasefirst\\cursoefcoredatabasefirst\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{78A6CCF7-19E6-41EA-A9C1-AFE48B512A7F}|CursoEFCoreDatabaseFirst\\CursoEFCoreDatabaseFirst.csproj|solutionrelative:cursoefcoredatabasefirst\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEFCoreDatabaseFirst\\CursoEFCoreDatabaseFirst\\appsettings.json",
+              "RelativeDocumentMoniker": "CursoEFCoreDatabaseFirst\\appsettings.json",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEFCoreDatabaseFirst\\CursoEFCoreDatabaseFirst\\appsettings.json",
+              "RelativeToolTip": "CursoEFCoreDatabaseFirst\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACpAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-05T22:01:30.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 using CursoEntityFrameworkCore.Models;
+using CursoEntityFrameworkCore.Models.VMs;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
