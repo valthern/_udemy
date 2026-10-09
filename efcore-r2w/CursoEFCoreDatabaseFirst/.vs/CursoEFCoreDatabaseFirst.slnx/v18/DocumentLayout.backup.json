@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEFCoreDatabaseFirst\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{78A6CCF7-19E6-41EA-A9C1-AFE48B512A7F}|CursoEFCoreDatabaseFirst\\CursoEFCoreDatabaseFirst.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\cursoefcoredatabasefirst\\cursoefcoredatabasefirst\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{78A6CCF7-19E6-41EA-A9C1-AFE48B512A7F}|CursoEFCoreDatabaseFirst\\CursoEFCoreDatabaseFirst.csproj|solutionrelative:cursoefcoredatabasefirst\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{0AE5A275-C061-3B0D-5630-92911AB9F6C6}|CursoEFCoreDatabaseFirst\\CursoEFCoreDatabaseFirst.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\cursoefcoredatabasefirst\\cursoefcoredatabasefirst\\models\\etiqueta.cs.swp||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AE5A275-C061-3B0D-5630-92911AB9F6C6}|CursoEFCoreDatabaseFirst\\CursoEFCoreDatabaseFirst.csproj|solutionrelative:cursoefcoredatabasefirst\\models\\etiqueta.cs.swp||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AE5A275-C061-3B0D-5630-92911AB9F6C6}|CursoEFCoreDatabaseFirst\\CursoEFCoreDatabaseFirst.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\cursoefcoredatabasefirst\\cursoefcoredatabasefirst\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AE5A275-C061-3B0D-5630-92911AB9F6C6}|CursoEFCoreDatabaseFirst\\CursoEFCoreDatabaseFirst.csproj|solutionrelative:cursoefcoredatabasefirst\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,24 +18,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEFCoreDatabaseFirst\\CursoEFCoreDatabaseFirst\\appsettings.json",
-              "RelativeDocumentMoniker": "CursoEFCoreDatabaseFirst\\appsettings.json",
-              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEFCoreDatabaseFirst\\CursoEFCoreDatabaseFirst\\appsettings.json",
-              "RelativeToolTip": "CursoEFCoreDatabaseFirst\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACpAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-10-05T22:01:30.228Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEFCoreDatabaseFirst\\CursoEFCoreDatabaseFirst\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "CursoEFCoreDatabaseFirst\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEFCoreDatabaseFirst\\CursoEFCoreDatabaseFirst\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "CursoEFCoreDatabaseFirst\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-08T23:13:21.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "etiqueta.cs.swp",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEFCoreDatabaseFirst\\CursoEFCoreDatabaseFirst\\Models\\etiqueta.cs.swp",
+              "RelativeDocumentMoniker": "CursoEFCoreDatabaseFirst\\Models\\etiqueta.cs.swp",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEFCoreDatabaseFirst\\CursoEFCoreDatabaseFirst\\Models\\etiqueta.cs.swp",
+              "RelativeToolTip": "CursoEFCoreDatabaseFirst\\Models\\etiqueta.cs.swp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-10-08T22:59:09.108Z",
+              "EditorCaption": ""
             }
           ]
         }

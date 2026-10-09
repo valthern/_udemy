@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CursoEFCoreDatabaseFirst")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f403cdb82af550861144a78d9e90dfe97b3a159a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79a326ac3ec29816c93064cf703ade5eb25cdbbf")]
 [assembly: System.Reflection.AssemblyProductAttribute("CursoEFCoreDatabaseFirst")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CursoEFCoreDatabaseFirst")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

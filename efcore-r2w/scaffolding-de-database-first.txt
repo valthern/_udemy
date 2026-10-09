@@ -1,1 +1,3 @@
-Scaffold-DbContext 'Name=ConnectionStrings:csZ1TowerG1i' Microsoft.EntityFrameworkCore.SqlServer -UseDatabaseNames -DataAnnotatons -ContextDir Data
+https://learn.microsoft.com/es-mx/ef/core/managing-schemas/scaffolding/
+
+Scaffold-DbContext 'Name=ConnectionStrings:csZ1TowerG1i' Microsoft.EntityFrameworkCore.SqlServer -UseDatabaseNames -NoPluralize -DataAnnotations -ContextDir Data -Context ApplicationDbContext -OutputDir Models
