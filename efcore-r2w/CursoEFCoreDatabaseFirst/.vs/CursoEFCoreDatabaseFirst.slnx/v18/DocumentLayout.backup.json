@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEFCoreDatabaseFirst\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0AE5A275-C061-3B0D-5630-92911AB9F6C6}|CursoEFCoreDatabaseFirst\\CursoEFCoreDatabaseFirst.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\cursoefcoredatabasefirst\\cursoefcoredatabasefirst\\models\\etiqueta.cs.swp||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0AE5A275-C061-3B0D-5630-92911AB9F6C6}|CursoEFCoreDatabaseFirst\\CursoEFCoreDatabaseFirst.csproj|solutionrelative:cursoefcoredatabasefirst\\models\\etiqueta.cs.swp||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEFCoreDatabaseFirst\\CursoEFCoreDatabaseFirst\\Migrations\\20261009171332_CreateTablaEtiquetas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CursoEFCoreDatabaseFirst\\Migrations\\20261009171332_CreateTablaEtiquetas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0AE5A275-C061-3B0D-5630-92911AB9F6C6}|CursoEFCoreDatabaseFirst\\CursoEFCoreDatabaseFirst.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\cursoefcoredatabasefirst\\cursoefcoredatabasefirst\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0AE5A275-C061-3B0D-5630-92911AB9F6C6}|CursoEFCoreDatabaseFirst\\CursoEFCoreDatabaseFirst.csproj|solutionrelative:cursoefcoredatabasefirst\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEFCoreDatabaseFirst\\CursoEFCoreDatabaseFirst\\Migrations\\20261009165640_InitialBaseline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CursoEFCoreDatabaseFirst\\Migrations\\20261009165640_InitialBaseline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,11 +22,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20261009171332_CreateTablaEtiquetas.cs",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEFCoreDatabaseFirst\\CursoEFCoreDatabaseFirst\\Migrations\\20261009171332_CreateTablaEtiquetas.cs",
+              "RelativeDocumentMoniker": "CursoEFCoreDatabaseFirst\\Migrations\\20261009171332_CreateTablaEtiquetas.cs",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEFCoreDatabaseFirst\\CursoEFCoreDatabaseFirst\\Migrations\\20261009171332_CreateTablaEtiquetas.cs",
+              "RelativeToolTip": "CursoEFCoreDatabaseFirst\\Migrations\\20261009171332_CreateTablaEtiquetas.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-09T17:13:32.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20261009165640_InitialBaseline.cs",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEFCoreDatabaseFirst\\CursoEFCoreDatabaseFirst\\Migrations\\20261009165640_InitialBaseline.cs",
+              "RelativeDocumentMoniker": "CursoEFCoreDatabaseFirst\\Migrations\\20261009165640_InitialBaseline.cs",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEFCoreDatabaseFirst\\CursoEFCoreDatabaseFirst\\Migrations\\20261009165640_InitialBaseline.cs",
+              "RelativeToolTip": "CursoEFCoreDatabaseFirst\\Migrations\\20261009165640_InitialBaseline.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAiwA0AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-09T16:56:40.946Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -32,22 +62,9 @@
               "RelativeDocumentMoniker": "CursoEFCoreDatabaseFirst\\Data\\ApplicationDbContext.cs",
               "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEFCoreDatabaseFirst\\CursoEFCoreDatabaseFirst\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "CursoEFCoreDatabaseFirst\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-08T23:13:21.29Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "etiqueta.cs.swp",
-              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEFCoreDatabaseFirst\\CursoEFCoreDatabaseFirst\\Models\\etiqueta.cs.swp",
-              "RelativeDocumentMoniker": "CursoEFCoreDatabaseFirst\\Models\\etiqueta.cs.swp",
-              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\CursoEFCoreDatabaseFirst\\CursoEFCoreDatabaseFirst\\Models\\etiqueta.cs.swp",
-              "RelativeToolTip": "CursoEFCoreDatabaseFirst\\Models\\etiqueta.cs.swp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-10-08T22:59:09.108Z",
               "EditorCaption": ""
             }
           ]

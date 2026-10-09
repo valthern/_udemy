@@ -15,5 +15,5 @@ public partial class ApplicationDbContext : DbContext
     public virtual DbSet<categoria> categorias { get; set; }
     public virtual DbSet<nota> notas { get; set; }
     public virtual DbSet<usuario> usuarios { get; set; }
-    //public virtual DbSet<etiqueta> etiquetas { get; set; }
+    public virtual DbSet<etiqueta> etiquetas { get; set; }
 }
