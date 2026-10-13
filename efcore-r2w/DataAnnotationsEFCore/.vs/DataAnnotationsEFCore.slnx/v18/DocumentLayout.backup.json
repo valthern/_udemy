@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\DataAnnotationsEFCore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\DataAnnotationsEFCore\\DataAnnotationsEFCore\\Migrations\\20261010002827_CreateTablaArticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DataAnnotationsEFCore\\Migrations\\20261010002827_CreateTablaArticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{919C20A7-CC53-910F-8A1E-C4DE63108D16}|DataAnnotationsEFCore\\DataAnnotationsEFCore.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\dataannotationsefcore\\dataannotationsefcore\\models\\entities\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919C20A7-CC53-910F-8A1E-C4DE63108D16}|DataAnnotationsEFCore\\DataAnnotationsEFCore.csproj|solutionrelative:dataannotationsefcore\\models\\entities\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DFAF8CB-7AD5-40AA-B63B-CF6F119915BC}|DataAnnotationsEFCore\\DataAnnotationsEFCore.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\dataannotationsefcore\\dataannotationsefcore\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DFAF8CB-7AD5-40AA-B63B-CF6F119915BC}|DataAnnotationsEFCore\\DataAnnotationsEFCore.csproj|solutionrelative:dataannotationsefcore\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{919C20A7-CC53-910F-8A1E-C4DE63108D16}|DataAnnotationsEFCore\\DataAnnotationsEFCore.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\dataannotationsefcore\\dataannotationsefcore\\models\\entities\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919C20A7-CC53-910F-8A1E-C4DE63108D16}|DataAnnotationsEFCore\\DataAnnotationsEFCore.csproj|solutionrelative:dataannotationsefcore\\models\\entities\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DFAF8CB-7AD5-40AA-B63B-CF6F119915BC}|DataAnnotationsEFCore\\DataAnnotationsEFCore.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\dataannotationsefcore\\dataannotationsefcore\\models\\entities\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DFAF8CB-7AD5-40AA-B63B-CF6F119915BC}|DataAnnotationsEFCore\\DataAnnotationsEFCore.csproj|solutionrelative:dataannotationsefcore\\models\\entities\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{919C20A7-CC53-910F-8A1E-C4DE63108D16}|DataAnnotationsEFCore\\DataAnnotationsEFCore.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\dataannotationsefcore\\dataannotationsefcore\\models\\entities\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919C20A7-CC53-910F-8A1E-C4DE63108D16}|DataAnnotationsEFCore\\DataAnnotationsEFCore.csproj|solutionrelative:dataannotationsefcore\\models\\entities\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DFAF8CB-7AD5-40AA-B63B-CF6F119915BC}|DataAnnotationsEFCore\\DataAnnotationsEFCore.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\dataannotationsefcore\\dataannotationsefcore\\models\\entities\\categeoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DFAF8CB-7AD5-40AA-B63B-CF6F119915BC}|DataAnnotationsEFCore\\DataAnnotationsEFCore.csproj|solutionrelative:dataannotationsefcore\\models\\entities\\categeoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{919C20A7-CC53-910F-8A1E-C4DE63108D16}|DataAnnotationsEFCore\\DataAnnotationsEFCore.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\dataannotationsefcore\\dataannotationsefcore\\models\\entities\\comentario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919C20A7-CC53-910F-8A1E-C4DE63108D16}|DataAnnotationsEFCore\\DataAnnotationsEFCore.csproj|solutionrelative:dataannotationsefcore\\models\\entities\\comentario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919C20A7-CC53-910F-8A1E-C4DE63108D16}|DataAnnotationsEFCore\\DataAnnotationsEFCore.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\dataannotationsefcore\\dataannotationsefcore\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919C20A7-CC53-910F-8A1E-C4DE63108D16}|DataAnnotationsEFCore\\DataAnnotationsEFCore.csproj|solutionrelative:dataannotationsefcore\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919C20A7-CC53-910F-8A1E-C4DE63108D16}|DataAnnotationsEFCore\\DataAnnotationsEFCore.csproj|c:\\users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\dataannotationsefcore\\dataannotationsefcore\\dataannotationsefcore.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{919C20A7-CC53-910F-8A1E-C4DE63108D16}|DataAnnotationsEFCore\\DataAnnotationsEFCore.csproj|solutionrelative:dataannotationsefcore\\dataannotationsefcore.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,45 +34,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20261010002827_CreateTablaArticulo.cs",
-              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\DataAnnotationsEFCore\\DataAnnotationsEFCore\\Migrations\\20261010002827_CreateTablaArticulo.cs",
-              "RelativeDocumentMoniker": "DataAnnotationsEFCore\\Migrations\\20261010002827_CreateTablaArticulo.cs",
-              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\DataAnnotationsEFCore\\DataAnnotationsEFCore\\Migrations\\20261010002827_CreateTablaArticulo.cs",
-              "RelativeToolTip": "DataAnnotationsEFCore\\Migrations\\20261010002827_CreateTablaArticulo.cs",
+              "DocumentIndex": 5,
+              "Title": "DataAnnotationsEFCore",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\DataAnnotationsEFCore\\DataAnnotationsEFCore\\DataAnnotationsEFCore.csproj",
+              "RelativeDocumentMoniker": "DataAnnotationsEFCore\\DataAnnotationsEFCore.csproj",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\DataAnnotationsEFCore\\DataAnnotationsEFCore\\DataAnnotationsEFCore.csproj",
+              "RelativeToolTip": "DataAnnotationsEFCore\\DataAnnotationsEFCore.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-10T00:28:27.951Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-10-13T00:01:57.68Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Articulo.cs",
-              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\DataAnnotationsEFCore\\DataAnnotationsEFCore\\Models\\Entities\\Articulo.cs",
-              "RelativeDocumentMoniker": "DataAnnotationsEFCore\\Models\\Entities\\Articulo.cs",
-              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\DataAnnotationsEFCore\\DataAnnotationsEFCore\\Models\\Entities\\Articulo.cs",
-              "RelativeToolTip": "DataAnnotationsEFCore\\Models\\Entities\\Articulo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAVAAAAAAAAAA==",
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\DataAnnotationsEFCore\\DataAnnotationsEFCore\\Models\\Entities\\Usuario.cs",
+              "RelativeDocumentMoniker": "DataAnnotationsEFCore\\Models\\Entities\\Usuario.cs",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\DataAnnotationsEFCore\\DataAnnotationsEFCore\\Models\\Entities\\Usuario.cs",
+              "RelativeToolTip": "DataAnnotationsEFCore\\Models\\Entities\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-10T00:25:01.141Z",
+              "WhenOpened": "2026-10-12T23:03:28.688Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "Comentario.cs",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\DataAnnotationsEFCore\\DataAnnotationsEFCore\\Models\\Entities\\Comentario.cs",
+              "RelativeDocumentMoniker": "DataAnnotationsEFCore\\Models\\Entities\\Comentario.cs",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\DataAnnotationsEFCore\\DataAnnotationsEFCore\\Models\\Entities\\Comentario.cs",
+              "RelativeToolTip": "DataAnnotationsEFCore\\Models\\Entities\\Comentario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-12T19:24:21.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\DataAnnotationsEFCore\\DataAnnotationsEFCore\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "DataAnnotationsEFCore\\Data\\ApplicationDbContext.cs",
               "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\DataAnnotationsEFCore\\DataAnnotationsEFCore\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "DataAnnotationsEFCore\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-09T19:54:18.527Z",
+              "WhenOpened": "2026-10-12T15:39:23.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Articulo.cs",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\DataAnnotationsEFCore\\DataAnnotationsEFCore\\Models\\Entities\\Articulo.cs",
+              "RelativeDocumentMoniker": "DataAnnotationsEFCore\\Models\\Entities\\Articulo.cs",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\DataAnnotationsEFCore\\DataAnnotationsEFCore\\Models\\Entities\\Articulo.cs",
+              "RelativeToolTip": "DataAnnotationsEFCore\\Models\\Entities\\Articulo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-12T15:36:10.188Z",
               "EditorCaption": ""
             },
             {
@@ -73,13 +107,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Categeoria.cs",
-              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\DataAnnotationsEFCore\\DataAnnotationsEFCore\\Models\\Entities\\Categeoria.cs",
-              "RelativeDocumentMoniker": "DataAnnotationsEFCore\\Models\\Entities\\Categeoria.cs",
-              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\DataAnnotationsEFCore\\DataAnnotationsEFCore\\Models\\Entities\\Categeoria.cs",
-              "RelativeToolTip": "DataAnnotationsEFCore\\Models\\Entities\\Categeoria.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABhAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Categoria.cs",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\DataAnnotationsEFCore\\DataAnnotationsEFCore\\Models\\Entities\\Categoria.cs",
+              "RelativeDocumentMoniker": "DataAnnotationsEFCore\\Models\\Entities\\Categoria.cs",
+              "ToolTip": "C:\\Users\\omar\\source\\ejemplos\\_udemy\\efcore-r2w\\DataAnnotationsEFCore\\DataAnnotationsEFCore\\Models\\Entities\\Categoria.cs",
+              "RelativeToolTip": "DataAnnotationsEFCore\\Models\\Entities\\Categoria.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-09T19:44:16.954Z",
               "EditorCaption": ""

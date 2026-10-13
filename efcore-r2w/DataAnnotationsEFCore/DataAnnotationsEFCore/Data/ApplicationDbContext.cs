@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DataAnnotationsEFCore.Data;
 
+
 public class ApplicationDbContext : DbContext
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
@@ -10,4 +11,6 @@ public class ApplicationDbContext : DbContext
 
     public DbSet<Categoria> Categorias { get; set; }
     public DbSet<Articulo> Articulos { get; set; }
+    public DbSet<Comentario> Comentarios { get; set; }
+    public DbSet<Usuario> Usuarios { get; set; }
 }

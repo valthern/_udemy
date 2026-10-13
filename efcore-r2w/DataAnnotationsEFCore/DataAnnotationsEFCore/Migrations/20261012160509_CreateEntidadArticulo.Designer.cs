@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAnnotationsEFCore.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20261010002827_CreateTablaArticulo")]
-    partial class CreateTablaArticulo
+    [Migration("20261012160509_CreateEntidadArticulo")]
+    partial class CreateEntidadArticulo
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,6 +33,7 @@ namespace DataAnnotationsEFCore.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Contenido")
+                        .IsRequired()
                         .HasMaxLength(1000)
                         .HasColumnType("nvarchar(1000)");
 
@@ -40,6 +41,7 @@ namespace DataAnnotationsEFCore.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Titulo")
+                        .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 

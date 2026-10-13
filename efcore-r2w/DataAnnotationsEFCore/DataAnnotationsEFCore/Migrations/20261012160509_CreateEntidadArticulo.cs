@@ -5,7 +5,7 @@
 namespace DataAnnotationsEFCore.Migrations
 {
     /// <inheritdoc />
-    public partial class CreateTablaArticulo : Migration
+    public partial class CreateEntidadArticulo : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -16,8 +16,8 @@ namespace DataAnnotationsEFCore.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Titulo = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
-                    Contenido = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: true),
+                    Titulo = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
+                    Contenido = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: false),
                     TiempoLectura = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
