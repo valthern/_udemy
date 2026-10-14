@@ -5,6 +5,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataAnnotationsEFCore.Models.Entities;
 
+//[Keyless] Para establecer una entidad sin clave primaria, útil para vistas o consultas complejas.
+//[ConcurrencyCheck] Marca una propiedad para la verificación de concurrencia optimista.
+[Comment("Tabla de Categorías del Blog")]
 [Index(nameof(Slug), IsUnique = true, Name = "IX_Categorias_Slug")]
 [Table("Categorias", Schema = "blog")]
 public class Categoria
@@ -16,6 +19,7 @@ public class Categoria
     [Column("Nombre", TypeName = "nvarchar(80)")]
     [Required, MaxLength(80)]
     [Display(Name = "Nombre de la Categoría")]
+    [Comment("Nombre de la categoría del blog")]
     public string Nombre { get; set; }
 
     [Column("Slug", TypeName = "varchar(100)")]

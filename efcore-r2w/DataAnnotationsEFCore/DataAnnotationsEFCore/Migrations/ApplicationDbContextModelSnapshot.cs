@@ -41,8 +41,13 @@ namespace DataAnnotationsEFCore.Migrations
                     b.Property<int>("NumeroVisitas")
                         .HasColumnType("int");
 
+                    b.Property<decimal>("PrecioPublicidad")
+                        .HasPrecision(12, 2)
+                        .HasColumnType("decimal(12,2)");
+
                     b.Property<DateTime>("PublicadoEn")
-                        .HasColumnType("datetime2");
+                        .HasPrecision(0)
+                        .HasColumnType("datetime2(0)");
 
                     b.Property<int>("TiempoLectura")
                         .HasColumnType("int");
@@ -73,7 +78,8 @@ namespace DataAnnotationsEFCore.Migrations
                         .IsRequired()
                         .HasMaxLength(80)
                         .HasColumnType("nvarchar(80)")
-                        .HasColumnName("Nombre");
+                        .HasColumnName("Nombre")
+                        .HasComment("Nombre de la categoría del blog");
 
                     b.Property<string>("Slug")
                         .IsRequired()
@@ -83,7 +89,13 @@ namespace DataAnnotationsEFCore.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categorias", "blog");
+                    b.HasIndex(new[] { "Slug" }, "IX_Categorias_Slug")
+                        .IsUnique();
+
+                    b.ToTable("Categorias", "blog", t =>
+                        {
+                            t.HasComment("Tabla de Categorías del Blog");
+                        });
                 });
 
             modelBuilder.Entity("DataAnnotationsEFCore.Models.Entities.Comentario", b =>
@@ -123,7 +135,8 @@ namespace DataAnnotationsEFCore.Migrations
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(150)");
 
                     b.Property<string>("Nombre")
                         .IsRequired()
