@@ -21,4 +21,3 @@ public class PerfilUsuario
 
     public Usuario Usuario { get; set; }
 }
-

@@ -16,10 +16,25 @@ namespace RelacionesConEFCore.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "10.0.12")
+                .HasAnnotation("ProductVersion", "10.0.13")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("ArticuloEtiqueta", b =>
+                {
+                    b.Property<int>("ArticulosId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("EtiquetasId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ArticulosId", "EtiquetasId");
+
+                    b.HasIndex("EtiquetasId");
+
+                    b.ToTable("ArticuloEtiqueta", "blog");
+                });
 
             modelBuilder.Entity("RelacionesConEFCore.Models.Entities.Articulo", b =>
                 {
@@ -66,6 +81,50 @@ namespace RelacionesConEFCore.Migrations
                     b.ToTable("Categorias", "blog");
                 });
 
+            modelBuilder.Entity("RelacionesConEFCore.Models.Entities.Comentario", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ArticuloId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Texto")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UsuarioId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ArticuloId");
+
+                    b.HasIndex("UsuarioId");
+
+                    b.ToTable("Comentarios", "blog");
+                });
+
+            modelBuilder.Entity("RelacionesConEFCore.Models.Entities.Etiqueta", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Etiquetas", "blog");
+                });
+
             modelBuilder.Entity("RelacionesConEFCore.Models.Entities.PerfilUsuario", b =>
                 {
                     b.Property<int>("UsuarioId")
@@ -107,6 +166,21 @@ namespace RelacionesConEFCore.Migrations
                     b.ToTable("Usuarios", "blog");
                 });
 
+            modelBuilder.Entity("ArticuloEtiqueta", b =>
+                {
+                    b.HasOne("RelacionesConEFCore.Models.Entities.Articulo", null)
+                        .WithMany()
+                        .HasForeignKey("ArticulosId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("RelacionesConEFCore.Models.Entities.Etiqueta", null)
+                        .WithMany()
+                        .HasForeignKey("EtiquetasId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("RelacionesConEFCore.Models.Entities.Articulo", b =>
                 {
                     b.HasOne("RelacionesConEFCore.Models.Entities.Categoria", "Categoria")
@@ -116,6 +190,25 @@ namespace RelacionesConEFCore.Migrations
                         .IsRequired();
 
                     b.Navigation("Categoria");
+                });
+
+            modelBuilder.Entity("RelacionesConEFCore.Models.Entities.Comentario", b =>
+                {
+                    b.HasOne("RelacionesConEFCore.Models.Entities.Articulo", "Articulo")
+                        .WithMany("Comentarios")
+                        .HasForeignKey("ArticuloId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("RelacionesConEFCore.Models.Entities.Usuario", "Usuario")
+                        .WithMany("Comentarios")
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Articulo");
+
+                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("RelacionesConEFCore.Models.Entities.PerfilUsuario", b =>
@@ -129,6 +222,11 @@ namespace RelacionesConEFCore.Migrations
                     b.Navigation("Usuario");
                 });
 
+            modelBuilder.Entity("RelacionesConEFCore.Models.Entities.Articulo", b =>
+                {
+                    b.Navigation("Comentarios");
+                });
+
             modelBuilder.Entity("RelacionesConEFCore.Models.Entities.Categoria", b =>
                 {
                     b.Navigation("Articulos");
@@ -136,6 +234,8 @@ namespace RelacionesConEFCore.Migrations
 
             modelBuilder.Entity("RelacionesConEFCore.Models.Entities.Usuario", b =>
                 {
+                    b.Navigation("Comentarios");
+
                     b.Navigation("Perfil");
                 });
 #pragma warning restore 612, 618

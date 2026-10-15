@@ -12,5 +12,6 @@ public class ApplicationDbContext : DbContext
     public DbSet<Articulo> Articulos { get; set; }
     public DbSet<Usuario> Usuarios { get; set; }
     public DbSet<PerfilUsuario> PerfilesUsuarios { get; set; }
-
+    public DbSet<Comentario> Comentarios { get; set; }
+    public DbSet<Etiqueta> Etiquetas { get; set; }
 }

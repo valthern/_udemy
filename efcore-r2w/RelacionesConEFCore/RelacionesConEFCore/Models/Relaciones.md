@@ -1,4 +1,5 @@
 # Relaciones del proyecto con EF Core
 1. **Relación Uno a Uno (One-to-One)**: En esta relación, una entidad está asociada con exactamente una instancia de otra entidad. Por ejemplo, un `Usuario` puede tener un `Perfil` único.
-2. **Relación Uno a Muchos (One-to-Many)**: En esta relación, una entidad puede estar asociada con múltiples instancias de otra entidad. Por ejemplo, una `Categoria` puede tener muchos `Articulos`.
-3. 
+2. **Relación Uno a Muchos (One-to-Many)**: En esta relación, una entidad puede estar asociada con múltiples instancias de otra entidad. Por ejemplo, una `Categoria` puede tener muchos `Articulos`, o bien un `Usuario` puede tener muchos `Comentarios`.
+3. **Relación Muchos a Muchos (Many-to-Many)**: En esta relación, múltiples instancias de una entidad pueden estar asociadas con múltiples instancias de otra entidad. Por ejemplo, a un `Articulo` se le puede asignar múltiples `Etiquetas`, y una `Etiqueta` puede describir múltiples `Articulos`. Esta relación en particular no requiere que sea creada una tabla intermedia. La genera automáticamente EF Core.
+4. **Relación Muchos a Muchos (Many-to-Many)**:

@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using RelacionesConEFCore.Data;
+using RelacionesConEFCore.Helpers;  
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,11 @@ var connStr = builder.Configuration.GetConnectionString(connStrName);
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connStr));
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    Helpers.SiembraDeDatos(scope.ServiceProvider.GetRequiredService<ApplicationDbContext>());
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

@@ -15,5 +15,7 @@ public class Usuario
     public required string Email { get; set; }
 
     public PerfilUsuario Perfil { get; set; } = null;
+
+    public List<Comentario> Comentarios { get; set; }
 }
 

@@ -17,4 +17,8 @@ public class Articulo
     public int CategoriaId { get; set; }
 
     public Categoria Categoria { get; set; }
+
+    public List<Etiqueta> Etiquetas { get; set; }
+
+    public List<Comentario> Comentarios { get; set; }
 }
