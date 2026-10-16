@@ -9,6 +9,8 @@ public class Comentario
 
     public string Texto { get; set; } = null;
 
+    public bool Aprobado { get; set; }
+
     // Este atributo sería necesario si no se siguieran las convenciones de EF Core para nombrar las propiedades de clave foránea.
     // En este caso, como la propiedad de navegación se llama "Usuario", EF Core puede inferir automáticamente que "UsuarioId"
     // es la clave foránea correspondiente.

@@ -14,9 +14,10 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
 
 var app = builder.Build();
 
+// Manejo de datos para la demostración del DbContext en Consola
 using (var scope = app.Services.CreateScope())
 {
-    Helpers.SiembraDeDatos(scope.ServiceProvider.GetRequiredService<ApplicationDbContext>());
+    Helpers.ManejoDeDatos(scope.ServiceProvider.GetRequiredService<ApplicationDbContext>());
 }
 
 // Configure the HTTP request pipeline.

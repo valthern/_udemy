@@ -89,6 +89,9 @@ namespace RelacionesConEFCore.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<bool>("Aprobado")
+                        .HasColumnType("bit");
+
                     b.Property<int>("ArticuloId")
                         .HasColumnType("int");
 
