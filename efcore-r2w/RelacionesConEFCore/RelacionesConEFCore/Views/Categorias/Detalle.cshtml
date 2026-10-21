@@ -1,0 +1,30 @@
+﻿@model RelacionesConEFCore.Models.Entities.Categoria
+@{
+    ViewBag.Title = "Detalle de Categoría";
+}
+
+<h1>@ViewBag.Title</h1>
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Nombre: @Model.Nombre</h4>
+        <p><strong>ID: </strong>@Model.Id</p>
+
+        <h5>Artículos relacionados</h5>
+        @if(Model.Articulos is not null && Model.Articulos.Any())
+        {
+            <ul>
+                @foreach(var articulo in Model.Articulos)
+                {
+                    <li>@articulo.Titulo</li>
+                }
+            </ul>
+        }
+        else
+        {
+            <p>No hay cartículos en esta categoría.</p>
+        }
+    </div>
+</div>
+
+<a asp-action="Index" class="btn btn-secondary mt-3">Volver</a>

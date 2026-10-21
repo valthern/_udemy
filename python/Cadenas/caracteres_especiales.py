@@ -11,10 +11,10 @@ print(mensaje2)
 mensaje3 = "Ella dijo: \"Hola a todos\", a sus estudiantes"
 print(mensaje3)
 
-# Escapar Backslash
+# Backslash (Barra Invertida)
 mensaje4 = "C:\\Users\\omar\\Documents"
 print("Ruta:", mensaje4)
 
-# Cadenas
+# Cadenas crudas (raw-strings) No se necesitan escapar los caracteres.
 mensaje5 = r"C:\Users\omar\Documents"
 print("Ruta:", mensaje5)

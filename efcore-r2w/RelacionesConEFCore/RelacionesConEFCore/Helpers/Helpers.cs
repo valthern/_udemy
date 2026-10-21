@@ -10,7 +10,7 @@ public static class Helpers
     public static void ManejoDeDatos(ApplicationDbContext context)
     {
         //SiembraDeDatos(context);
-        MuestraDeDatos(context);
+        //MuestraDeDatos(context);
         //ModificacionDeDatos(context);
     }
 
@@ -112,26 +112,65 @@ public static class Helpers
     {
         Console.WriteLine("=== lectura de datos con relaciones ===");
 
-        var articulos = context.Articulos
-            .Include(a => a.Categoria)
-            .Include(a => a.Etiquetas)
-            .Include(a => a.Comentarios)
-                .ThenInclude(c => c.Usuario)
-                    .ThenInclude(u => u.Perfil)
-            .ToList();
+        //var articulos = context.Articulos
+        //    .Include(a => a.Categoria)
+        //    .Include(a => a.Etiquetas)
+        //    .Include(a => a.Comentarios)
+        //    .AsSplitQuery()
+        //        //.ThenInclude(c => c.Usuario)
+        //        //    .ThenInclude(u => u.Perfil)
+        //    .ToList();
 
-        foreach (var articulo in articulos)
-        {
-            Console.WriteLine($" Artículo: {articulo.Titulo}");
-            Console.WriteLine($" Categoría: {articulo.Categoria.Nombre}");
-            Console.WriteLine($" Etiquetas: {string.Join(", ", articulo.Etiquetas.Select(e => e.Nombre))}");
+        //foreach (var articulo in articulos)
+        //{
+        //    Console.WriteLine($" Artículo: {articulo.Titulo}");
+        //    Console.WriteLine($" Categoría: {articulo.Categoria.Nombre}");
+        //    Console.WriteLine($" Etiquetas: {string.Join(", ", articulo.Etiquetas.Select(e => e.Nombre))}");
 
-            foreach (var comentario in articulo.Comentarios)
-            {
-                Console.WriteLine($"  Comentario: {comentario.Texto} (Por: {comentario.Usuario.Nombre})");
-                Console.WriteLine($"  Perfil del usuario: {comentario.Usuario.Perfil?.Biografia}");
-            }
-        }
+        //    //foreach (var comentario in articulo.Comentarios)
+        //    //{
+        //    //    Console.WriteLine($"  Comentario: {comentario.Texto} (Por: {comentario.Usuario.Nombre})");
+        //    //    Console.WriteLine($"  Perfil del usuario: {comentario.Usuario.Perfil?.Biografia}");
+        //    //}
+        //}
+
+        // Filter Include (o filtro en la relación)
+        //var articulosConComentariosFiltrados = context.Articulos
+        //    .Include(a => a.Comentarios.Where(c => c.Texto.Contains("duda")))
+        //    .ToList();
+
+        //foreach(var articulo in articulosConComentariosFiltrados)
+        //{
+        //    Console.WriteLine($"Artículo: {articulo.Titulo} (ID: {articulo.Id})");
+
+        //    if(articulo.Comentarios is not null && articulo.Comentarios.Any())
+        //    {
+        //        foreach (var comentario in articulo.Comentarios)
+        //            Console.WriteLine($"Comentario #{comentario.Id}: {comentario.Texto} - Aprobado: {comentario.Aprobado}");
+        //    }
+        //    else
+        //        Console.WriteLine ("No hay comentarios aprobados.");
+        //}
+
+        // Consultas proyectadas(Select en relaciones)
+        // Lista de artículos con Título, nomvbre de categoría y cantidad de comentarios
+        //var lista = context.Articulos
+        //    .Select(a => new
+        //    {
+        //        a.Titulo,
+        //        Categoria = a.Categoria.Nombre,
+        //        CantidadComentarios = a.Comentarios.Count()
+        //    })
+        //    .ToList();
+
+        //foreach (var item in lista)
+        //    Console.WriteLine($"Artículo: {item.Titulo}, Categoría: {item.Categoria}, Cantidad de comentarios: {item.CantidadComentarios}");
+
+        //Carga explícita (explicit loading)
+        var articulo = context.Articulos.First();
+        context.Entry(articulo)
+            .Collection(a => a.Comentarios)
+            .Load();
     }
 
     private static void SiembraDeDatos(ApplicationDbContext context)
