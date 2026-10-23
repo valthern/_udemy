@@ -5,7 +5,6 @@ using RelacionesConEFCore.Models.Entities;
 
 namespace RelacionesConEFCore.Controllers;
 
-[Controller]
 public class ArticulosController : Controller
 {
     private readonly ApplicationDbContext context;
@@ -26,20 +25,31 @@ public class ArticulosController : Controller
 
     public IActionResult Crear()
     {
+        ViewBag.Categorias = context.Categorias.ToList();
+        ViewBag.Etiquetas = context.Etiquetas.ToList();
         return View();
     }
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Crear([Bind("Id, Nombre")] Categoria categoria)
+    public async Task<IActionResult> Crear(Articulo articulo, int[] etiquetasSeleccionadas)
     {
         if (ModelState.IsValid)
         {
-            context.Add(categoria);
-            await context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            if(etiquetasSeleccionadas is not null && etiquetasSeleccionadas.Any())
+            {
+                articulo.Etiquetas = new List<Etiqueta>();
+                foreach (var id in etiquetasSeleccionadas)
+                {
+                    var etiqueta = await context.Etiquetas.FindAsync(id);
+                    if (etiqueta is not null)
+                        articulo.Etiquetas.Add(etiqueta);
+                }
+            }
         }
 
-        return View(categoria);
+        context.Add(articulo);
+        await context.SaveChangesAsync();
+        return RedirectToAction(nameof(Index));
     }
 }

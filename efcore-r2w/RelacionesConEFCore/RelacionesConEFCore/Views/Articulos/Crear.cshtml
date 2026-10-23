@@ -1,0 +1,56 @@
+﻿@model RelacionesConEFCore.Models.Entities.Articulo
+@{
+    ViewBag.Title = "Nuevo Artículo";
+}
+
+<h1 class="mb-4">@ViewBag.Title</h1>
+
+<hr />
+
+<form asp-action="Crear" method="post" class="mt-3">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="mb-3">
+        <label asp-for="Titulo" class="form-label"></label>
+        <input asp-for="Titulo" class="form-control" placeholder="Ingresa el nombre de la categoría" />
+        <span asp-validation-for="Titulo" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Contenido" class="form-label"></label>
+        <textarea asp-for="Contenido" class="form-control" placeholder="Ingrese contenido"></textarea>
+        <span asp-validation-for="Contenido" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Categorías</label>
+        @* <select asp-for="CategoriaId" class="form-control" asp-items="@(new SelectList(ViewBag.Categorías, "Id", "Nombre"))"> *@
+        <select asp-for="CategoriaId" class="dropdown form-select">
+            <option value="">--Seleccione una Categoría</option>
+            @foreach (var categoria in ViewBag.Categorias)
+            {
+                <option value="@categoria.Id">@categoria.Nombre</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Etiquetas</label>
+        @foreach (var etiqueta in ViewBag.Etiquetas)
+            {
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="etiquetasSeleccionadas" value="etiqueta.Id" />
+                    <label class="form-check-label">@etiqueta.Nombre</label>
+                </div> 
+            }
+        </div>
+
+    <button type="submit" class="btn btn-success">Guardar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
