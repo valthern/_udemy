@@ -1,4 +1,5 @@
-﻿@model RelacionesConEFCore.Models.Entities.Articulo
+﻿@* Crear.cshtml *@
+@model RelacionesConEFCore.Models.Entities.Articulo
 @{
     ViewBag.Title = "Nuevo Artículo";
 }
@@ -24,13 +25,13 @@
 
     <div class="mb-3">
         <label class="form-label">Categorías</label>
-        @* <select asp-for="CategoriaId" class="form-control" asp-items="@(new SelectList(ViewBag.Categorías, "Id", "Nombre"))"> *@
-        <select asp-for="CategoriaId" class="dropdown form-select">
+        <select asp-for="CategoriaId" class="form-control" asp-items="@(new SelectList(ViewBag.Categorias, "Id", "Nombre"))">
+        @* <select asp-for="CategoriaId" class="dropdown form-select"> *@
             <option value="">--Seleccione una Categoría--</option>
-            @foreach (var categoria in ViewBag.Categorias)
+            @* @foreach (var categoria in ViewBag.Categorias)
             {
                 <option value="@categoria.Id">@categoria.Nombre</option>
-            }
+            } *@
         </select>
     </div>
 
