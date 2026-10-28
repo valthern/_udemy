@@ -15,7 +15,7 @@ public class Articulo
     public required string Contenido { get; set; }
 
     // Convención: CategoriaId es FK hacia Categoria.Id
-    [ForeignKey(nameof(Categoria))] // Se refeiere a la navegación
+    //[ForeignKey(nameof(Categoria))] // Se refeiere a la navegación
     public int CategoriaId { get; set; }
 
     public Categoria Categoria { get; set; }

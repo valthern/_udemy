@@ -32,7 +32,7 @@ public class ArticulosController : Controller
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Crear(Articulo articulo, int[] etiquetasSeleccionadas) // etiquetasSeleccionadas: int[0], ModelState.IsValid: true/false
+    public async Task<IActionResult> Crear(Articulo articulo, int[] etiquetasSeleccionadas)
     {
         if (!ModelState.IsValid) return View(articulo);
 
