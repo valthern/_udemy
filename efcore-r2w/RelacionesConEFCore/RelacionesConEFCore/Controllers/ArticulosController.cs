@@ -15,9 +15,9 @@ public class ArticulosController : Controller
     public async Task<IActionResult> Index()
     {
         var articulos = await context.Articulos
-            .Include(a => a.Categoria)
-            .Include(a => a.Etiquetas)
-            .Include(a => a.Comentarios)
+            .Include(a => a.Categoria) //1:N
+            .Include(a => a.Etiquetas) //N:N
+            .Include(a => a.Comentarios) //1:N
             .ToListAsync();
 
         return View(articulos);
@@ -32,19 +32,18 @@ public class ArticulosController : Controller
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Crear(Articulo articulo, int[] etiquetasSeleccionadas)
+    public async Task<IActionResult> Crear(Articulo articulo, int[] etiquetasSeleccionadas) // etiquetasSeleccionadas: int[0], ModelState.IsValid: true/false
     {
-        if (ModelState.IsValid)
+        if (!ModelState.IsValid) return View(articulo);
+
+        if (etiquetasSeleccionadas is not null && etiquetasSeleccionadas.Any())
         {
-            if(etiquetasSeleccionadas is not null && etiquetasSeleccionadas.Any())
+            articulo.Etiquetas = new List<Etiqueta>();
+            foreach (var id in etiquetasSeleccionadas)
             {
-                articulo.Etiquetas = new List<Etiqueta>();
-                foreach (var id in etiquetasSeleccionadas)
-                {
-                    var etiqueta = await context.Etiquetas.FindAsync(id);
-                    if (etiqueta is not null)
-                        articulo.Etiquetas.Add(etiqueta);
-                }
+                var etiqueta = await context.Etiquetas.FindAsync(id);
+                if (etiqueta is not null)
+                    articulo.Etiquetas.Add(etiqueta);
             }
         }
 
