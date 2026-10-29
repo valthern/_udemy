@@ -1,0 +1,43 @@
+﻿@model RelacionesConEFCore.Models.Entities.Articulo
+@{
+    ViewBag.Title = "Detalle del Artículo";
+}
+
+<h1>@ViewBag.Title</h1>
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">@Model.Titulo</h4>
+        <p class="card-text">@Model.Contenido</p>
+
+        <p><strong>Categoría:</strong> @Model.Categoria?.Nombre</p>
+
+        <p>
+            <strong>Etiquetas:</strong>
+            @if (Model.Etiquetas is not null && Model.Etiquetas.Any())
+            {
+                @string.Join(", ", Model.Etiquetas.Select(e => e.Nombre))
+            }
+            else
+            {
+                <span class="text-muted">Sin etiquetas</span>
+            }
+        </p>
+
+        <h5>Comentarios (@(Model.Comentarios?.Count ?? 0))</h5>
+
+        <ul class="list-group">
+            @foreach (var comentario in Model.Comentarios ?? new List<RelacionesConEFCore.Models.Entities.Comentario>())
+            {
+                <li class="list-group-item">
+                    <strong>@comentario.Usuario?.Nombre:</strong>@comentario.Texto
+                    <span class="badge bg-@(comentario.Aprobado ? "success" : "secondary") ms-2">
+                        @(comentario.Aprobado ? "Aprobado" : "Pendiente")
+                    </span>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+
+<a asp-action="Index" class="btn btn-secondary mt-3">Volver</a>

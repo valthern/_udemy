@@ -23,28 +23,28 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var articulo in Model)
         {
             <tr>
-                <td>@item.Id</td>
-                <td>@item.Titulo</td>
-                <td>@(item.Contenido.Length > 50 ? item.Contenido.Substring(0, 50) + "..." : item.Contenido)</td>
-                <td>@item.Categoria?.Nombre</td>
+                <td>@articulo.Id</td>
+                <td>@articulo.Titulo</td>
+                <td>@(articulo.Contenido.Length > 50 ? articulo.Contenido.Substring(0, 50) + "..." : articulo.Contenido)</td>
+                <td>@articulo.Categoria?.Nombre</td>
                 <td>
-                    @if (item.Etiquetas is not null && item.Etiquetas.Any())
+                    @if (articulo.Etiquetas is not null && articulo.Etiquetas.Any())
                     {
-                        @string.Join(", ", item.Etiquetas.Select(e => e.Nombre))
+                        @string.Join(", ", articulo.Etiquetas.Select(e => e.Nombre))
                     }
                     else
                     {
                         <span class="text-muted">Sin etiquetas.</span>
                     }
                 </td>
-                <td>@(item.Comentarios?.Count ?? 0)</td>
+                <td>@(articulo.Comentarios?.Count ?? 0)</td>
                 <td>
-                    <a asp-action="Editar" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Editar</a>
-                    <a asp-action="Detalle" asp-route-id="@item.Id" class="btn btn-sm btn-info">Detalles</a>
-                    <a asp-action="Borrar" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Eliminar</a>
+                    <a asp-action="Editar" asp-route-id="@articulo.Id" class="btn btn-sm btn-warning">Editar</a>
+                    <a asp-action="Detalle" asp-route-id="@articulo.Id" class="btn btn-sm btn-info">Detalles</a>
+                    <a asp-action="Borrar" asp-route-id="@articulo.Id" class="btn btn-sm btn-danger">Eliminar</a>
                 </td>
             </tr>
         }

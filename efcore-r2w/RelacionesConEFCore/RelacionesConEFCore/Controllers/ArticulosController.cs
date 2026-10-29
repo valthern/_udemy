@@ -51,4 +51,37 @@ public class ArticulosController : Controller
         await context.SaveChangesAsync();
         return RedirectToAction(nameof(Index));
     }
+
+    [HttpGet]
+    public async Task<IActionResult> Detalle(int? id)
+    {
+        if (id is null) return NotFound();
+
+        var articulo = await context.Articulos
+            .Include(a => a.Categoria) //1:N
+            .Include(a => a.Etiquetas) //N:N
+            .Include(a => a.Comentarios) //1:N
+            .FirstOrDefaultAsync(a => a.Id == id);
+
+        if (articulo is null) return NotFound();
+
+        return View(articulo);
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> Editar(int? id)
+    {
+        if (id is null) return NotFound();
+
+        var articulo = await context.Articulos
+            .Include(a => a.Etiquetas) //N:N
+            .FirstOrDefaultAsync(a => a.Id == id);
+
+        if (articulo is null) return NotFound();
+
+        ViewBag.Categorias = context.Categorias.ToList();
+        ViewBag.Etiquetas = context.Etiquetas.ToList();
+
+        return View(articulo);
+    }
 }
