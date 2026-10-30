@@ -34,7 +34,12 @@ public class ArticulosController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Crear(Articulo articulo, int[] etiquetasSeleccionadas)
     {
-        if (!ModelState.IsValid) return View(articulo);
+        if (!ModelState.IsValid)
+        {
+            ViewBag.Categorias = context.Categorias.ToList();
+            ViewBag.Etiquetas = context.Etiquetas.ToList();
+            return View(articulo);
+        }
 
         if (etiquetasSeleccionadas is not null && etiquetasSeleccionadas.Any())
         {
@@ -83,5 +88,88 @@ public class ArticulosController : Controller
         ViewBag.Etiquetas = context.Etiquetas.ToList();
 
         return View(articulo);
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Editar(int id, Articulo articulo, int[] etiquetasSeleccionadas)
+    {
+        if (id != articulo.Id) return NotFound();
+
+        if (ModelState.IsValid)
+        {
+            try
+            {
+                var articuloExistente = await context.Articulos
+                    .Include(a => a.Etiquetas)
+                    .FirstOrDefaultAsync(a => a.Id == id);
+
+                if (articuloExistente is null) return NotFound();
+
+                articuloExistente.Titulo = articulo.Titulo;
+                articuloExistente.Contenido = articulo.Contenido;
+                articuloExistente.CategoriaId = articulo.CategoriaId;
+
+                if (etiquetasSeleccionadas is not null)
+                {
+                    articuloExistente.Etiquetas.Clear();
+
+                    foreach (var eid in etiquetasSeleccionadas)
+                    {
+                        var etiqueta = await context.Etiquetas.FindAsync(eid);
+                        if (etiqueta is not null)
+                            articuloExistente.Etiquetas.Add(etiqueta);
+                    }
+                }
+
+                context.Update(articuloExistente);
+                await context.SaveChangesAsync();
+            }
+            catch (Exception)
+            {
+                if (!context.Articulos.Any(a => a.Id == articulo.Id))
+                    return NotFound();
+                else throw;
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        return View(articulo);
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> Borrar(int? id)
+    {
+        if (id is null) return NotFound();
+
+        var articulo = await context.Articulos
+            .Include(a => a.Categoria)
+            .FirstOrDefaultAsync(a => a.Id == id);
+
+        if (articulo is null) return NotFound();
+
+        return View(articulo);
+    }
+
+    [HttpPost, ActionName("Borrar")]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> BorrarConfirmado(int? id)
+    {
+        var articulo = await context.Articulos
+            .Include(a => a.Comentarios) //1:N
+            .FirstOrDefaultAsync(a => a.Id == id);
+
+        if (articulo is not null)
+        {
+            if(articulo.Comentarios is not null)
+            {
+                context.Comentarios.RemoveRange(articulo.Comentarios);
+                context.Articulos.Remove(articulo);
+                await context.SaveChangesAsync();
+            }
+        }
+
+        return RedirectToAction(nameof(Index));
     }
 }

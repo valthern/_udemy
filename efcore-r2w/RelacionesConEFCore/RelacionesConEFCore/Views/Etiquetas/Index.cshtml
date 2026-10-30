@@ -1,0 +1,46 @@
+﻿@* Index.cshtml *@
+@model IEnumerable<RelacionesConEFCore.Models.Entities.Etiqueta>
+@{
+    ViewBag.Title = "Lista de Etiquetas";
+}
+
+<h1 class="mb-4">@ViewBag.Title</h1>
+
+<p>
+    <a asp-action="Crear" class="btn btn-primary">Nueva Etiqueta</a>
+</p>
+
+<table class="table table-striped table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Id)</th>
+            <th>@Html.DisplayNameFor(model => model.Nombre)</th>
+            <th>Artículos usando la Etiqueta</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var etiqueta in Model)
+        {
+            <tr>
+                <td>@etiqueta.Id</td>
+                <td>@etiqueta.Nombre</td>
+                <td>
+                    @if (etiqueta.Articulos is not null && etiqueta.Articulos.Any())
+                    {
+                        @string.Join(", ", etiqueta.Articulos.Select(e => e.Titulo.Length > 30 ? e.Titulo.Substring(0, 30) + "..." : e.Titulo))
+                    }
+                    else
+                    {
+                        <span class="text-muted text">Sin artículos asignados.</span>
+                    }
+                </td>
+                <td>
+                    <a asp-action="Editar" asp-route-id="@etiqueta.Id" class="btn btn-sm btn-warning">Editar</a>
+                    <a asp-action="Detalle" asp-route-id="@etiqueta.Id" class="btn btn-sm btn-info">Detalles</a>
+                    <a asp-action="Borrar" asp-route-id="@etiqueta.Id" class="btn btn-sm btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

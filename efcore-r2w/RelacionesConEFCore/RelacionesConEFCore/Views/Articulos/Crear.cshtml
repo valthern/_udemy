@@ -37,15 +37,22 @@
 
     <div class="mb-3">
         <label class="form-label">Etiquetas</label>
-        @foreach (var etiqueta in ViewBag.Etiquetas)
-        {
-            <div class="form-check">
-                <input type="checkbox" name="etiquetasSeleccionadas" value="@etiqueta.Id" class="form-check-input" />
-                &nbsp;
-                <label class="form-check-label">@etiqueta.Nombre</label>
-            </div>
-        }
-    </div>
+        @if (ViewBag.Etiquetas is not null)
+            {
+                @foreach (var etiqueta in ViewBag.Etiquetas)
+                {
+                    <div class="form-check">
+                        <input type="checkbox" name="etiquetasSeleccionadas" value="@etiqueta.Id" class="form-check-input" />
+                        &nbsp;
+                        <label class="form-check-label">@etiqueta.Nombre</label>
+                    </div>
+                }
+            }
+            else
+            {
+                <p class="text-muted">No hay etiquetas disponibles.</p>
+            }
+        </div>
 
     <button type="submit" class="btn btn-success">Guardar</button>
     <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
