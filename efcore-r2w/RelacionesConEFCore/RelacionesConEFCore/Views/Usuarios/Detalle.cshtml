@@ -1,0 +1,45 @@
+﻿@model RelacionesConEFCore.Models.Entities.Usuario
+@{
+    ViewBag.Title = "Detalles de Usuario";
+}
+
+<h1>@ViewBag.Title</h1>
+
+<div class="card">
+    <div class="card-body">
+        <p class="text-center"><strong>ID: </strong>@Model.Id</p>
+        <h4><strong>Nombre: </strong>@Model.Nombre</h4>
+        <h4><strong>Email: </strong>@Model.Email</h4>
+
+        <h5><strong>Perfil: </strong></h5>
+        @if (Model.Perfil is not null)
+        {
+            <ul>
+                <li class="list-group-item"><p><span>&nbsp;&nbsp;</span><strong>Biografía: </strong>@Model.Perfil.Biografia</p></li>
+                <li class="list-group-item"><p><span>&nbsp;&nbsp;</span><strong>Foto: </strong>@Model.Perfil.FotoUrl</p></li>
+            </ul>
+        }
+        else
+        {
+            <p class="text-muted">No tiene perfil asignado.</p>
+        }
+
+        <h5><strong>Comentarios relacionados</strong></h5>
+        @if (Model.Comentarios is not null && Model.Comentarios.Any())
+        {
+            <ul class="list-group">
+                @foreach (var comentario in Model.Comentarios)
+                {
+                    <li class="list-group-item"><span>&nbsp;&nbsp;</span><strong>Comentario: </strong>@comentario.Texto</li>
+                    <li class="list-group-item"><span>&nbsp;&nbsp;</span><strong>ArticuloID: </strong>@comentario.ArticuloId</li>
+                }
+            </ul>
+        }
+        else
+        {
+            <p class="text-muted">No hay comentarios para este usuario.</p>
+        }
+    </div>
+</div>
+
+<a asp-action="Index" class="btn btn-secondary mt-3">Volver</a>

@@ -1,0 +1,17 @@
+﻿@model RelacionesConEFCore.Models.Entities.Etiqueta
+@{
+    ViewBag.Title = "Borrar Etiqueta";
+}
+
+<h1 class="mb-4">@ViewBag.Title</h1>
+
+<div class="alert alert-warning">
+    <p>¿está seguro que desea borrar esta etiqueta?</p>
+    <strong>@Model.Nombre</strong>
+</div>
+
+<form asp-action="Borrar" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button class="btn btn-danger" type="submit">Borrar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

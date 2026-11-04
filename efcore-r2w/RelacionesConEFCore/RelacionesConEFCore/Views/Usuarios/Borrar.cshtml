@@ -1,0 +1,21 @@
+﻿@model RelacionesConEFCore.Models.Entities.Usuario
+@{
+    ViewBag.Title = "Borrar Usuario";
+}
+
+<h1 class="mb-4">@ViewBag.Title</h1>
+
+<div class="alert alert-warning">
+    <p>¿está seguro que desea borrar este usuario?</p>
+    <strong>@Model.Nombre</strong>
+    <strong>@Model.Email</strong>
+</div>
+
+<form asp-action="Borrar" method="post">
+
+    <input type="hidden" asp-for="Id" />
+    
+    <button class="btn btn-danger" type="submit">Borrar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+
+</form>

@@ -8,14 +8,13 @@ public class Usuario
 {
     public int Id { get; set; }
 
-    [Required, MaxLength(100)]
+    [Required(ErrorMessage = "El campo {0} es obligatorio."), MaxLength(100)]
     public required string Nombre { get; set; }
 
-    [Required, EmailAddress, MaxLength(150)]
+    [Required(ErrorMessage = "El campo {0} es obligatorio."), EmailAddress, MaxLength(150)]
     public required string Email { get; set; }
 
     public PerfilUsuario Perfil { get; set; } = null;
 
     public List<Comentario> Comentarios { get; set; }
 }
-

@@ -1,0 +1,35 @@
+﻿@model RelacionesConEFCore.Models.Entities.Usuario
+@{
+    ViewBag.Title = "Editar Usuario";
+}
+
+<h1 class="mb-4">@ViewBag.Title</h1>
+
+<form class="mt-3" asp-action="Editar" method="post">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <input type="hidden" asp-for="Id" />
+
+    <div class="mb-3">
+        <label asp-for="Nombre" class="form-label"></label>
+        <input asp-for="Nombre" class="form-control" placeholder="Ingresa el nombre del usuario" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" class="form-control" placeholder="Ingresa el email del usuario" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

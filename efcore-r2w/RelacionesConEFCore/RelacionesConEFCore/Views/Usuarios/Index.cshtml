@@ -1,0 +1,51 @@
+﻿@model IEnumerable<RelacionesConEFCore.Models.Entities.Usuario>
+@{
+    ViewBag.Title = "Lista de Usuarios";
+}
+
+<h1 class="mb-4">@ViewBag.Title</h1>
+
+<p>
+    <a asp-action="Crear" class="btn btn-primary">Crear Usuario</a>
+</p>
+
+<table class="table table-striped table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Id)</th>
+            <th>@Html.DisplayNameFor(model => model.Nombre)</th>
+            <th>@Html.DisplayNameFor(model => model.Email)</th>
+            <th>Perfil</th>
+            <th>Comentarios</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var usuario in Model)
+        {
+            <tr>
+                <td>@usuario.Id</td>
+                <td>@usuario.Nombre</td>
+                <td>@usuario.Email</td>
+                <td>
+                    @if (usuario.Perfil is not null)
+                    {
+                        <p>@usuario.Perfil.Biografia</p>
+                    }
+                    else
+                    {
+                        <span class="text-muted">No tiene perfil asignado.</span>
+                    }
+                </td>
+                <td>
+                    @(usuario.Comentarios?.Count ?? 0)
+                </td>
+                <td>
+                    <a asp-action="Editar" asp-route-id="@usuario.Id" class="btn btn-sm btn-warning">Editar</a>
+                    <a asp-action="Detalle" asp-route-id="@usuario.Id" class="btn btn-sm btn-info">Detalles</a>
+                    <a asp-action="Borrar" asp-route-id="@usuario.Id" class="btn btn-sm btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

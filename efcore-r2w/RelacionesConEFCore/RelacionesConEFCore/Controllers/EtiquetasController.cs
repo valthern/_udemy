@@ -87,4 +87,29 @@ public class EtiquetasController : Controller
 
         return View(etiqueta);
     }
+
+    public async Task<IActionResult> Borrar(int? id)
+    {
+        if (id is null) return NotFound();
+
+        var etiqueta = await context.Etiquetas.FirstOrDefaultAsync(e => e.Id == id);
+        if (etiqueta is null) return NotFound();
+
+        return View(etiqueta);
+    }
+
+    [HttpPost, ActionName("Borrar")]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> BorrarConfirmar(int id)
+    {
+        var etiqueta = await context.Etiquetas.FindAsync(id);
+
+        if (etiqueta is not null)
+        {
+            context.Etiquetas.Remove(etiqueta);
+            await context.SaveChangesAsync();
+        }
+
+        return RedirectToAction(nameof(Index));
+    }
 }
