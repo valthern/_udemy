@@ -1,0 +1,17 @@
+﻿@model RelacionesConEFCore.Models.Entities.PerfilUsuario
+@{
+    ViewBag.Title = "Detalle de Perfil de Usuario";
+}
+
+<h1>@ViewBag.Title</h1>
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title"><strong>Nombre: </strong>@Model.Usuario.Nombre</h4>
+        <p><strong>ID: </strong>@Model.UsuarioId</p>
+        <p><strong>Biografía: </strong>@Model.Biografia</p>
+        <p><strong>URL de la Foto: </strong>@Model.FotoUrl</p>
+    </div>
+</div>
+
+<a asp-action="Index" class="btn btn-secondary mt-3">Volver</a>
