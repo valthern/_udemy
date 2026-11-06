@@ -54,4 +54,42 @@ public class PerfilesUsuariosController : Controller
         ViewBag.Usuarios = context.Usuarios.Where(u => u.Perfil == null).ToList();
         return View(perfilUsuario);
     }
+
+    public async Task<IActionResult> Editar(int? id)
+    {
+        if (id is null) return NotFound();
+
+        var perfil = await context.PerfilesUsuarios.FindAsync(id);
+
+        //ViewBag.Usuarios = context.Usuarios.Where(u => u.Perfil == null).ToList();
+        return View(perfil);
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Editar(int id, [Bind("UsuarioId, Biografia, FotoUrl")] PerfilUsuario perfilUsuario)
+    {
+        if (id != perfilUsuario.UsuarioId) return NotFound();
+
+        if (ModelState.IsValid)
+        {
+            try
+            {
+                context.Update(perfilUsuario);
+                await context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!context.PerfilesUsuarios.Any(pu => pu.UsuarioId == perfilUsuario.UsuarioId))
+                    return NotFound();
+                else
+                    throw;
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        //ViewBag.Usuarios = context.Usuarios.Where(u => u.Perfil == null).ToList();
+        return View(perfilUsuario);
+    }
 }
