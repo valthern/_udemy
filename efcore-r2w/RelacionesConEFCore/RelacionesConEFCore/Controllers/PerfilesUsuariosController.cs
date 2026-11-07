@@ -59,9 +59,23 @@ public class PerfilesUsuariosController : Controller
     {
         if (id is null) return NotFound();
 
-        var perfil = await context.PerfilesUsuarios.FindAsync(id);
+        var perfil = await context.PerfilesUsuarios
+            .Include(pu => pu.Usuario)
+            .SingleOrDefaultAsync(pu => pu.UsuarioId == id);
+        //.FindAsync(id);
 
-        //ViewBag.Usuarios = context.Usuarios.Where(u => u.Perfil == null).ToList();
+        //var perfil = (from pu in context.PerfilesUsuarios
+        //             where pu.UsuarioId == id
+        //             let NombreUsuario = pu.Usuario.Nombre
+        //             select new
+        //             {
+        //                 pu.UsuarioId,
+        //                 pu.Biografia,
+        //                 pu.FotoUrl,
+        //                 NombreUsuario
+        //             }).SingleOrDefault();
+
+        //ViewBag.NombreUsuario = context.Usuarios.Where(u => u.Id == id).Single().Nombre;
         return View(perfil);
     }
 
@@ -89,7 +103,34 @@ public class PerfilesUsuariosController : Controller
             return RedirectToAction(nameof(Index));
         }
 
-        //ViewBag.Usuarios = context.Usuarios.Where(u => u.Perfil == null).ToList();
         return View(perfilUsuario);
+    }
+
+    public async Task<IActionResult> Borrar(int? id)
+    {
+        if (id is null) return NotFound();
+
+        var perfil = await context.PerfilesUsuarios
+            .Include(pu => pu.Usuario)
+            .FirstOrDefaultAsync(pu => pu.UsuarioId == id);
+
+        if (perfil is null) return NotFound();
+
+        return View(perfil);
+    }
+
+    [HttpPost, ActionName("Borrar")]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> BorrarConfirmar(int id)
+    {
+        var perfil = await context.PerfilesUsuarios.FindAsync(id);
+
+        if (perfil is not null)
+        {
+            context.PerfilesUsuarios.Remove(perfil);
+            await context.SaveChangesAsync();
+        }
+
+        return RedirectToAction(nameof(Index));
     }
 }

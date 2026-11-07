@@ -1,0 +1,40 @@
+﻿@model IEnumerable<RelacionesConEFCore.Models.Entities.Comentario>
+@{
+    ViewBag.Title = "Lista de Comentarios";
+}
+
+<h1 class="mb-4">@ViewBag.Title</h1>
+
+<p>
+    <a asp-action="Crear" class="btn btn-primary">Crear Comentario</a>
+</p>
+
+<table class="table table-striped table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Id)</th>
+            <th>@Html.DisplayNameFor(model => model.Texto)</th>
+            <th>@Html.DisplayNameFor(model => model.Usuario)</th>
+            <th>@Html.DisplayNameFor(model => model.Articulo)</th>
+            <th>@Html.DisplayNameFor(model => model.Aprobado)</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var comentario in Model)
+        {
+            <tr>
+                <td>@comentario.Id</td>
+                <td>@comentario.Texto</td>
+                <td>@comentario.Usuario.Nombre</td>
+                <td>@comentario.Articulo.Titulo</td>
+                <td>@comentario.Aprobado</td>
+                <td>
+                    <a asp-action="Editar" asp-route-id="@comentario.Id" class="btn btn-sm btn-warning">Editar</a>
+                    <a asp-action="Detalle" asp-route-id="@comentario.Id" class="btn btn-sm btn-info">Detalles</a>
+                    <a asp-action="Borrar" asp-route-id="@comentario.Id" class="btn btn-sm btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

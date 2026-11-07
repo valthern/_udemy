@@ -10,6 +10,10 @@
     <div asp-validation-summary="All" class="text-danger"></div>
     
     <input type="hidden" asp-for="UsuarioId" />
+
+    <div class="mb-3">
+        <label class="form-label"><strong>@Model.Usuario.Nombre</strong></label>
+    </div>
     
     <div class="mb-3">
         <label asp-for="Biografia" class="form-label"></label>
