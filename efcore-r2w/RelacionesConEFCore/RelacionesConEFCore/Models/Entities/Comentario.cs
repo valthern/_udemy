@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RelacionesConEFCore.Models.Entities;
 
@@ -9,6 +10,7 @@ public class Comentario
 
     public string Texto { get; set; } = null;
 
+    [DisplayName("¿Está Aprobado?")]
     public bool Aprobado { get; set; }
 
     // Este atributo sería necesario si no se siguieran las convenciones de EF Core para nombrar las propiedades de clave foránea.

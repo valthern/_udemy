@@ -1,0 +1,48 @@
+﻿@model RelacionesConEFCore.Models.Entities.Comentario
+@{
+    ViewBag.Title = "Nuevo Comentario";
+}
+
+<h1 class="mb-4">@ViewBag.Title</h1>
+
+<form class="mt-3" asp-action="Crear" method="post">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="mb-3">
+        <label asp-for="Texto" class="form-label"></label>
+        <textarea asp-for="Texto" class="form-control" placeholder="Ingresa el texto del comentario" rows="4"></textarea>
+        <span asp-validation-for="Texto" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Usuario</label>
+        <select asp-for="UsuarioId" class="form-select" asp-items="@(new SelectList(ViewBag.Usuarios, "Id", "Nombre"))">
+            <option value="">--Seleccione un Usuario--</option>
+        </select>
+        <span asp-validation-for="UsuarioId" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Artículo</label>
+        <select asp-for="ArticuloId" class="form-select" asp-items="@(new SelectList(ViewBag.Articulos, "Id", "Titulo"))">
+            <option value="">--Seleccione un Artículo--</option>
+        </select>
+        <span asp-validation-for="ArticuloId" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <input asp-for="Aprobado" class="form-check-input" type="checkbox" />
+        <label asp-for="Aprobado" class="form-label"></label>
+    </div>
+
+    <button type="submit" class="btn btn-success">Guardar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

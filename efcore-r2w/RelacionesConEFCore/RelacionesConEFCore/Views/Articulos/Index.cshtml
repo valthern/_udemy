@@ -42,9 +42,9 @@
                 </td>
                 <td>@(articulo.Comentarios?.Count ?? 0)</td>
                 <td>
-                    <a asp-action="Editar" asp-route-id="@articulo.Id" class="btn btn-sm btn-warning">Editar</a>
-                    <a asp-action="Detalle" asp-route-id="@articulo.Id" class="btn btn-sm btn-info">Detalles</a>
-                    <a asp-action="Borrar" asp-route-id="@articulo.Id" class="btn btn-sm btn-danger">Eliminar</a>
+                    <a asp-action="Editar" asp-route-id="@articulo.Id" class="btn btn-sm btn-warning m-1">Editar</a>
+                    <a asp-action="Detalle" asp-route-id="@articulo.Id" class="btn btn-sm btn-info m-1">Detalles</a>
+                    <a asp-action="Borrar" asp-route-id="@articulo.Id" class="btn btn-sm btn-danger m-1">Eliminar</a>
                 </td>
             </tr>
         }

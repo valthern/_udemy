@@ -1,0 +1,20 @@
+﻿@model RelacionesConEFCore.Models.Entities.Comentario
+@{
+    ViewBag.Title = "Borrar Comentario";
+}
+
+<h1 class="mb-4">@ViewBag.Title</h1>
+
+<div class="alert alert-warning">
+    <p><strong>Texto: </strong>@Model.Texto</p>
+    <p><strong>ID: </strong>@Model.Id</p>
+    <p><strong>Usuario: </strong>@Model.Usuario.Nombre</p>
+    <p><strong>Artículo: </strong>@(Model.Articulo.Titulo.Length > 50 ? Model.Articulo.Titulo.Substring(0, 50) + "..." : Model.Articulo.Titulo)</p>
+    <p><strong>Aprobado: </strong>@(Model.Aprobado ? "Sí" : "No")</p>
+</div>
+
+<form asp-action="Borrar" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button class="btn btn-danger" type="submit">Borrar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

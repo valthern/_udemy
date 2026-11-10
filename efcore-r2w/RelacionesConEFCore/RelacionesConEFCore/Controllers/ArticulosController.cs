@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using RelacionesConEFCore.Data;
 using RelacionesConEFCore.Models.Entities;
@@ -10,18 +11,6 @@ public class ArticulosController : Controller
     private readonly ApplicationDbContext context;
 
     public ArticulosController(ApplicationDbContext context) => this.context = context;
-
-    [HttpGet]
-    public async Task<IActionResult> Index()
-    {
-        var articulos = await context.Articulos
-            .Include(a => a.Categoria) //1:N
-            .Include(a => a.Etiquetas) //N:N
-            .Include(a => a.Comentarios) //1:N
-            .ToListAsync();
-
-        return View(articulos);
-    }
 
     public IActionResult Crear()
     {
@@ -171,5 +160,23 @@ public class ArticulosController : Controller
         }
 
         return RedirectToAction(nameof(Index));
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> ArticuloPorCategoría(int? categoriaId)
+    {
+        var articulos = context.Articulos
+            .Include(a => a.Categoria) //1:N
+            .Include(a => a.Etiquetas) //N:N
+            .AsQueryable();
+
+        if (categoriaId.HasValue)
+        {
+            articulos = articulos.Where(a => a.CategoriaId == categoriaId.Value);
+        }
+
+        ViewBag.Categorias = new SelectList(context.Categorias, "Id", "Nombre");
+
+        return View(articulos);
     }
 }

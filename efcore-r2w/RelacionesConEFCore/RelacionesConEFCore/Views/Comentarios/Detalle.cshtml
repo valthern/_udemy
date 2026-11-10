@@ -7,23 +7,14 @@
 
 <div class="card">
     <div class="card-body">
-        <h4 class="card-title">Nombre: @Model.Nombre</h4>
+        <p><strong>Texto: </strong>@Model.Texto</p>
         <p><strong>ID: </strong>@Model.Id</p>
-
-        <h5>Artículos relacionados</h5>
-        @if (Model.Articulos is not null && Model.Articulos.Any())
-        {
-            <ul>
-                @foreach (var articulo in Model.Articulos)
-                {
-                    <li>@articulo.Titulo</li>
-                }
-            </ul>
-        }
-        else
-        {
-            <p>No hay cartículos en esta categoría.</p>
-        }
+        <p><strong>Usuario: </strong>@Model.Usuario.Nombre</p>
+        <p><strong>Artículo: </strong>@(Model.Articulo.Titulo.Length > 50 ? Model.Articulo.Titulo.Substring(0, 50) + "..." : Model.Articulo.Titulo)</p>
+        <div class="mb-3">
+            <input asp-for="Aprobado" class="form-check-input" type="checkbox" disabled />
+            <label asp-for="Aprobado" class="form-label"></label>
+        </div>
     </div>
 </div>
 
