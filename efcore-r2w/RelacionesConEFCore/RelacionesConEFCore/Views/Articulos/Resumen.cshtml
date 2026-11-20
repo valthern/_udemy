@@ -1,0 +1,28 @@
+﻿@model IEnumerable<RelacionesConEFCore.DTOs.ArticuloResumenDTO>
+@{
+    ViewBag.Title = "Resumen de Artículos";
+}
+
+<h1 class="mb-4">@ViewBag.Title</h1>
+
+<table class="table table-striped table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Título</th>
+            <th>Categoría</th>
+            <th>Total de Comentarios</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var artRes in Model)
+        {
+            <tr>
+                <td>@artRes.Titulo</td>
+                <td>@artRes.Categoria</td>
+                <td>@artRes.TotalComentarios</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Index" class="btn btn-secondary">Volver atrás</a>
