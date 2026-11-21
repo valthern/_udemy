@@ -1,0 +1,26 @@
+﻿@model IEnumerable<RelacionesConEFCore.DTOs.UsuarioComentariosDTO>
+@{
+    ViewBag.Title = "Estadísticas de Comentarios por Usuario";
+}
+
+<h1 class="mb-4">@ViewBag.Title</h1>
+
+<table class="table table-striped table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Usuario</th>
+            <th>Total de Comentarios</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var usrComs in Model)
+        {
+            <tr>
+                <td>@usrComs.Usuario</td>
+                <td>@usrComs.TotalComentarios</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Index" class="btn btn-secondary">Volver atrás</a>

@@ -213,6 +213,7 @@ public class ArticulosController : Controller
                 Categoria=a.Categoria.Nombre,
                 TotalComentarios=a.Comentarios.Count()
             }).ToListAsync();
+
         return View(resumen);
     }
 }

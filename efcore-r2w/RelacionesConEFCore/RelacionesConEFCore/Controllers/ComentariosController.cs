@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RelacionesConEFCore.Data;
+using RelacionesConEFCore.DTOs;
 using RelacionesConEFCore.Models.Entities;
 
 namespace RelacionesConEFCore.Controllers;
@@ -19,6 +20,46 @@ public class ComentariosController : Controller
             .ToListAsync();
 
         return View(comentarios);
+    }
+
+    public async Task<IActionResult> IndexPaginado(int pagina = 1, int tamanoPagina = 5)
+    {
+        // Validaciones
+        if (pagina < 1) pagina = 1;
+        if (tamanoPagina < 1 || tamanoPagina > 100) tamanoPagina = 5;
+
+        var query = context.Comentarios
+            .Include(c => c.Usuario)
+            .Include(c => c.Articulo)
+            .AsNoTracking();
+
+        // Calcular el total de registros (para calcular el número de páginas).
+        var total = await query.CountAsync();
+
+        // Total de páginas (al menos 1 para no romper la vista).
+        var totalPaginas = (int)Math.Ceiling(total / (double)tamanoPagina);
+        if (totalPaginas == 0) totalPaginas = 1;
+        if (pagina > totalPaginas) pagina = totalPaginas;
+
+        // orden estable antes de paginar.
+        var comentarios = await query
+            .OrderByDescending(c => c.Id)
+            // salta los registros de las páginas anteriores y ...
+            .Skip((pagina - 1) * tamanoPagina)
+            // toma los registros de la página actual.
+            .Take(tamanoPagina)
+            .ToListAsync();
+
+        var vm = new ComentariosIndexDTO
+        {
+            Comentarios = comentarios,
+            PaginaActual = pagina,
+            TotalPaginas = totalPaginas,
+            TamanoPagina = tamanoPagina,
+            TotalRegistros = total
+        };
+
+        return View(vm);
     }
 
     public async Task<IActionResult> Detalle(int? id)
@@ -129,5 +170,22 @@ public class ComentariosController : Controller
         }
 
         return RedirectToAction(nameof(Index));
+    }
+
+    public async Task<IActionResult> Estadisticas()
+    {
+        var datos = await context.Comentarios
+            .GroupBy(c => c.Usuario.Nombre)
+            .Select(g => new DTOs.UsuarioComentariosDTO
+            {
+                Usuario = g.Key,
+                TotalComentarios = g.Count()
+            })
+            .OrderByDescending(c => c.TotalComentarios)
+            .ToListAsync();
+
+        if (datos is null) return NotFound();
+
+        return View(datos);
     }
 }
