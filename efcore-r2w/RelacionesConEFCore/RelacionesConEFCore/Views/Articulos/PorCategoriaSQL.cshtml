@@ -1,0 +1,31 @@
+﻿@model IEnumerable<RelacionesConEFCore.Models.Entities.Articulo>
+@{
+    ViewBag.Title = "Artículos por categoría (SQL crudo)";
+}
+
+<h1 class="mb-4">@ViewBag.Title</h1>
+
+@if (Model is not null && Model.Any())
+{
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>Título</th>
+                <th>Categoría</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var articulo in Model)
+            {
+                <tr>
+                    <td>@articulo.Titulo</td>
+                    <td>@articulo.Categoria?.Nombre</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No se encontraron artículos para la categoría especificada.</p>
+}

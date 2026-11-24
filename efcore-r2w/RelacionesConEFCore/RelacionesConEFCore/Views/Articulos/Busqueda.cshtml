@@ -1,0 +1,39 @@
+﻿@model IEnumerable<RelacionesConEFCore.Models.Entities.Articulo>
+@{
+    ViewBag.Title = "Lista de Artículos";
+}
+
+<h1 class="mb-4">@ViewBag.Title</h1>
+
+<form method="get" asp-action="Busqueda" class="mb-3">
+
+    <div class="input-group">
+        <input type="text" name="busqueda" value="@ViewBag.Busqueda" class="form-control" placeholder="Ingresa el texto a buscar..." />
+        <button type="submit" class="btn btn-primary mt-2">Buscar</button>
+    </div>
+
+</form>
+
+<table class="table table-striped table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Título</th>
+            <th>Categoría</th>
+            <th>Etiquetas</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var articulo in Model)
+        {
+            <tr>
+                <td>@articulo.Titulo</td>
+                <td>@articulo.Categoria?.Nombre</td>
+                <td>
+                    @string.Join(", ", articulo.Etiquetas.Select(e => e.Nombre))
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Index" class="btn btn-secondary">Volver atrás</a>

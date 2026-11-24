@@ -206,14 +206,64 @@ public class ArticulosController : Controller
 
     public async Task<IActionResult> Resumen()
     {
-        var resumen=await context.Articulos
-            .Select(a=>new ArticuloResumenDTO
+        var resumen = await context.Articulos
+            .Select(a => new ArticuloResumenDTO
             {
-                Titulo=a.Titulo,
-                Categoria=a.Categoria.Nombre,
-                TotalComentarios=a.Comentarios.Count()
+                Titulo = a.Titulo,
+                Categoria = a.Categoria.Nombre,
+                TotalComentarios = a.Comentarios.Count()
             }).ToListAsync();
 
         return View(resumen);
+    }
+
+    public async Task<IActionResult> Busqueda(string busqueda)
+    {
+        var query = context.Articulos
+            .Include(a => a.Categoria)
+            .Include(a => a.Etiquetas)
+            .AsQueryable();
+
+        if (!string.IsNullOrEmpty(busqueda))
+            query = query.Where(a => a.Titulo.Contains(busqueda));
+        //query = query.Where(a => a.Titulo.StartsWith(busqueda));
+        //query = query.Where(a => a.Titulo.EndsWith(busqueda));
+
+        var articulos = await query.ToListAsync();
+        // para que recuerde el texto en la vista.
+        ViewBag.Busqueda = busqueda;
+
+        return View(articulos);
+    }
+
+    public async Task<IActionResult> RecienteSQL()
+    {
+        var articulos = await context.Articulos
+            .FromSqlRaw(@"
+                SELECT TOP 5 a.*
+                FROM blog.Articulos a
+                INNER JOIN blog.Categorias c
+                ON a.CategoriaId = c.Id
+                ORDER BY a.Id DESC
+            ")
+            .Include(a => a.Categoria)
+            .ToListAsync();
+
+        return View(articulos);
+    }
+
+    public async Task<IActionResult> PorCategoriaSQL(int categoriaId)
+    {
+        var articulos = await context.Articulos
+            .FromSqlInterpolated(@$"
+                SELECT *
+                FROM blog.Articulos
+                WHERE blog.Articulos.CategoriaId = {categoriaId}
+                ORDER BY blog.Articulos.Id DESC
+            ")
+            .Include(a => a.Categoria)
+            .ToListAsync();
+
+        return View("RecientesSQL", articulos);
     }
 }

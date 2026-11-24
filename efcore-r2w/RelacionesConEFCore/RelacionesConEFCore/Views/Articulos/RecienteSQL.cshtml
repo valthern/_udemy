@@ -1,0 +1,24 @@
+﻿@model IEnumerable<RelacionesConEFCore.Models.Entities.Articulo>
+@{
+    ViewBag.Title = "Artículos recientes (SQL crudo)";
+}
+
+<h1 class="mb-4">@ViewBag.Title</h1>
+
+<table class="table table-striped table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Título</th>
+            <th>Categorías</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var articulo in Model)
+        {
+            <tr>
+                <td>@articulo.Titulo</td>
+                <td>@articulo.Categoria?.Nombre</td>
+            </tr>
+        }
+    </tbody>
+</table>

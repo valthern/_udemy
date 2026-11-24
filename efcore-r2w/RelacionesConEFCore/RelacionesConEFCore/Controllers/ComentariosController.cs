@@ -41,7 +41,7 @@ public class ComentariosController : Controller
         if (totalPaginas == 0) totalPaginas = 1;
         if (pagina > totalPaginas) pagina = totalPaginas;
 
-        // orden estable antes de paginar.
+        // orden estable antes de paginar. Orden invertido para que los comentarios más recientes aparezcan primero.
         var comentarios = await query
             .OrderByDescending(c => c.Id)
             // salta los registros de las páginas anteriores y ...
