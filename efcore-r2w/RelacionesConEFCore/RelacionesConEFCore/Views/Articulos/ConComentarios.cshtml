@@ -1,0 +1,26 @@
+﻿@model IEnumerable<dynamic>
+@{
+    ViewBag.Title = "Usuarios con Comentarios (RIGHT JOIN simulado)";
+}
+
+<h1 class="mb-4">@ViewBag.Title</h1>
+
+<table class="table table-striped table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Usuario</th>
+            <th>Comentario</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Usuario</td>
+                <td>@item.Comentario</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Index" class="btn btn-secondary">Volver atrás</a>

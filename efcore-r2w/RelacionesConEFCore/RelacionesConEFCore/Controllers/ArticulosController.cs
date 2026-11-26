@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using RelacionesConEFCore.Data;
 using RelacionesConEFCore.DTOs;
 using RelacionesConEFCore.Models.Entities;
+using System.Text;
 
 namespace RelacionesConEFCore.Controllers;
 
@@ -259,11 +260,86 @@ public class ArticulosController : Controller
                 SELECT *
                 FROM blog.Articulos
                 WHERE blog.Articulos.CategoriaId = {categoriaId}
-                ORDER BY blog.Articulos.Id DESC
+                --ORDER BY blog.Articulos.Id DESC
             ")
             .Include(a => a.Categoria)
+            .OrderByDescending(a => a.Id)
             .ToListAsync();
 
-        return View("RecientesSQL", articulos);
+        return View(articulos);
+    }
+
+    public async Task<IActionResult> CantidadArticulosSQL()
+    {
+        int total = await context.Database
+            .SqlQuery<int>($"SELECT COUNT(*) FROM blog.Articulos")
+            .SingleAsync();
+
+        ViewBag.TotalArticulos = total;
+        return View(total);
+    }
+
+    public async Task<IActionResult> RankingArticulosSQL()
+    {
+        // Debido a que el método .SqlQuery<T>() admite sólo objetos de tipo "FormattableString" se puede resolver
+        // este inconveniente de la forma en que se usen las líneas comentadas, o bien, como se deja operando
+        // actualmente.
+        // Además, en la consulta cruda SQL se renombraron los nombres de las columnas devueltas para que coincidan
+        // con los campos del DTO de ArticuloRankingDTO.
+
+        //FormattableString sql = $@"
+        var sql = $@"
+            SELECT 
+                a.Id AS ArticuloId, 
+                a.Titulo, 
+                COUNT(c.Id) AS ComentariosCount
+            FROM blog.Articulos a
+            LEFT JOIN blog.Comentarios c 
+            ON c.ArticuloId = a.Id
+            GROUP BY a.Id, a.Titulo
+            ORDER BY ComentariosCount DESC";
+
+        var ranking = await context.Database
+            //.SqlQuery<ArticuloRankingDTO>(sql)
+            .SqlQuery<ArticuloRankingDTO>($"{sql}")
+            .ToListAsync();
+
+        return View(ranking);
+    }
+
+    public async Task<IActionResult> ConComentarios()
+    {
+        var query = from a in context.Articulos
+                    join c in context.Comentarios
+                    on a.Id equals c.ArticuloId into grupoComentarios
+                    // Esto genera el LEFT JOIN
+                    from comentario in grupoComentarios.DefaultIfEmpty()
+                    select new
+                    {
+                        Articulo = a.Titulo,
+                        Comentario = comentario != null ? comentario.Texto : "(Sin comentarios)"
+                    };
+
+        var resultado = await query.ToListAsync();
+
+        return View(resultado);
+    }
+
+    public async Task<IActionResult> UsuariosConComentarios()
+    {
+        var query = from u in context.Usuarios
+                    join c in context.Comentarios
+                    on u.Id equals c.UsuarioId into grupo
+                    // Esto genera el LEFT JOIN
+                    from comentario in grupo.DefaultIfEmpty()
+                    select new
+                    {
+                        Usuario = u.Nombre,
+                        Comentario = comentario != null ? comentario.Texto : "(Sin comentarios)"
+                    };
+
+        var resultado = await query.ToListAsync();
+
+        return View(resultado);
     }
 }
