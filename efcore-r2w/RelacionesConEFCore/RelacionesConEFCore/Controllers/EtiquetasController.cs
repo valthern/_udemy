@@ -11,6 +11,12 @@ public class EtiquetasController : Controller
 
     public EtiquetasController(ApplicationDbContext context) => this.context = context;
 
+    public string Mensaje
+    {
+        get => TempData["Mensaje"] as string;
+        set => TempData["Mensaje"] = value;
+    }
+
     [HttpGet]
     public async Task<IActionResult> Index()
     {
@@ -111,5 +117,33 @@ public class EtiquetasController : Controller
         }
 
         return RedirectToAction(nameof(Index));
+    }
+
+    public IActionResult CrearMultiple()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> CrearMultiple(List<string> nombresEtiquetas)
+    {
+        if(nombresEtiquetas is not null||!nombresEtiquetas.Any())
+        {
+            ModelState.AddModelError("", "Debes ingresar al menos una etiqueta.");
+            return View();
+        }
+
+        var nuevasEtiquetas = nombresEtiquetas
+            .Where(e => !string.IsNullOrWhiteSpace(e))
+            .Select(e => new Etiqueta { Nombre = e.Trim() })
+            .ToList();
+
+        context.Etiquetas.AddRange(nuevasEtiquetas);
+        await context.SaveChangesAsync();
+
+        Mensaje = $"{nuevasEtiquetas.Count} etiquetas fueron agregadas correctamente.";
+
+        return View();
     }
 }

@@ -1,0 +1,24 @@
+﻿@model RelacionesConEFCore.Models.Entities.Etiqueta
+@{
+    ViewBag.Title = "Crear múltiples Etiquetas";
+    string ph = "Ejemplo:\nIA\n.Net\nBlazor\nEntity Framework Core";
+
+}
+
+<h1>@ViewBag.Title</h1>
+
+<hr />
+
+@if (TempData["Mensaje"] is not null)
+{
+    <div class="alert alert-success">@TempData["Mensaje"]</div>
+}
+
+<form asp-action="CrearMultiple" method="post" >
+    <div class="mb-3">
+        <label for="nombreEtiquetas" class="form-label">Etiquetas (una por linea)</label>
+        <textarea name="nombresEtiquetas" class="form-control" rows="5" placeholder="@ph"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Agregar Etiquetas</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>
