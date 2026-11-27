@@ -309,20 +309,35 @@ public class ArticulosController : Controller
 
     public async Task<IActionResult> ConComentarios()
     {
-        var query = from a in context.Articulos
-                    join c in context.Comentarios
-                    on a.Id equals c.ArticuloId into grupoComentarios
-                    // Esto genera el LEFT JOIN
-                    from comentario in grupoComentarios.DefaultIfEmpty()
-                    select new
-                    {
-                        Articulo = a.Titulo,
-                        Comentario = comentario != null ? comentario.Texto : "(Sin comentarios)"
-                    };
+        //var query = from a in context.Articulos
+        //            join c in context.Comentarios
+        //            on a.Id equals c.ArticuloId into grupoComentarios
+        //            // Esto genera el LEFT JOIN
+        //            from comentario in grupoComentarios.DefaultIfEmpty()
+        //            select new
+        //            {
+        //                Articulo = a.Titulo,
+        //                Comentario = comentario != null ? comentario.Texto : "(Sin comentarios)"
+        //            };
 
-        var resultado = await query.ToListAsync();
+        //var resultado = await query.ToListAsync();
+        //return View(resultado);
 
-        return View(resultado);
+        // LEFT JOIN equivalente a la consulta anteriormente comentada
+        var articulosConComentarios = await context.Articulos
+            .GroupJoin(context.Comentarios,
+            a => a.Id,
+            c => c.ArticuloId,
+            (a, comentarios) => new { a, comentarios })
+            .SelectMany(x => x.comentarios.DefaultIfEmpty(),
+            (x, comentario) => new
+            {
+                Articulo = x.a.Titulo,
+                Comentario = comentario != null ? comentario.Texto : "(Sin comentarios)"
+            })
+            .ToListAsync();
+
+        return View(articulosConComentarios);
     }
 
     public async Task<IActionResult> UsuariosConComentarios()
@@ -339,7 +354,66 @@ public class ArticulosController : Controller
                     };
 
         var resultado = await query.ToListAsync();
-
         return View(resultado);
+    }
+
+    public async Task<IActionResult> LeftJoinSQL()
+    {
+        var articulos = await context.Articulos
+            .FromSqlRaw(@"
+                SELECT
+                    a.Id,
+                    a.Titulo,
+                    a.CategoriaId,
+                    a.Contenido
+                FROM blog.Articulos a
+                LEFT JOIN blog.Comentarios c
+                ON a.Id = c.ArticuloId
+                ")
+            .Include(a => a.Categoria)
+            .AsNoTracking()
+            .ToListAsync();
+
+        return View(articulos);
+    }
+
+    public async Task<IActionResult> LeftJoinDTO()
+    {
+        FormattableString sql = @$"
+            SELECT
+                a.Titulo,
+                c.Texto AS Comentario,
+                u.Nombre AS Usuario
+            FROM blog.Articulos a
+            LEFT JOIN blog.Comentarios c
+            ON a.Id = c.ArticuloId
+            LEFT JOIN blog.Usuarios u
+            ON c.UsuarioId = u.Id
+            ORDER BY a.Id DESC";
+
+        var datos = await context.Database
+            .SqlQuery<ArticuloComentarioDTO>(sql)
+            .ToListAsync();
+
+        return View(datos);
+    }
+
+    public async Task<IActionResult> RightJoinSQL()
+    {
+        var sql = @"
+            SELECT
+	            c.Id,
+	            c.Texto,
+	            a.Titulo AS Articulo
+            FROM blog.Articulos a
+            RIGHT JOIN blog.Comentarios c
+            ON a.Id = c.ArticuloId
+            ORDER BY c.Id DESC";
+
+        var datos = await context.Database
+            .SqlQuery<ComentarioArticuloDTO>($"{sql}")
+            .ToListAsync();
+
+        return View(datos);
     }
 }
